@@ -3,8 +3,24 @@
 " ----------------------------------------------------------------------------
 "  Vim package manager
 " ----------------------------------------------------------------------------
-execute pathogen#infect()
-syntax enable " Turn on syntax highlighting
+set nocompatible              " choose no compatibility with legacy vi
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim' " let Vundle manage Vundle, required
+Plugin 'tpope/vim-sensible' " Defaults everyone can agree on
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'wincent/command-t'
+Plugin 'tpope/vim-git'
+Plugin 'tpope/vim-haml'
+Plugin 'tpope/vim-markdown'
+Plugin 'tpope/vim-rails'
+Plugin 'vim-ruby/vim-ruby'
+
+call vundle#end()            " required
 filetype plugin indent on " Turn on Filetype detection, plugins, and indentation
 
 " ----------------------------------------------------------------------------
@@ -30,9 +46,12 @@ set number " show line numbers
 " ----------------------------------------------------------------------------
 "  Syntax, highlighting and spelling
 " ----------------------------------------------------------------------------
+syntax enable " Turn on syntax highlighting
 colorscheme solarized
 set background=dark
 set colorcolumn=80 " display colour column at 80 characters
+set hlsearch       " highlight matches
+set ignorecase     " searches are case insensitive
 
 " ----------------------------------------------------------------------------
 "  Multiple windows
