@@ -23,7 +23,7 @@ Plugin 'vim-ruby/vim-ruby'
 call vundle#end()            " required
 filetype plugin indent on " Turn on Filetype detection, plugins, indentation
 
-" ----------------------------------------------------------------------------
+
 "  Moving around, searching and patterns
 " ----------------------------------------------------------------------------
 if &term =~ "xterm" || &term =~ "screen"
@@ -52,10 +52,13 @@ set number " show line numbers
 " ----------------------------------------------------------------------------
 "  Syntax, highlighting and spelling
 " ----------------------------------------------------------------------------
+set t_Co=256 " force vim to use 256 colours
+let g:solarized_termcolors=256 " use solarized 256 color fallback       
 syntax enable " Turn on syntax highlighting
-set colorcolumn=80 " display colour column at 80 characters
 set background=dark
 colorscheme solarized
+set cc=81 " display colour column at 81 characters
+highlight ColorColumn ctermbg=238 " make colorcolumn a light grey
 set hlsearch       " highlight matches
 set ignorecase     " searches are case insensitive
 " ----------------------------------------------------------------------------
