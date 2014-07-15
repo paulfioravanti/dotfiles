@@ -21,7 +21,7 @@ Plugin 'tpope/vim-rails'
 Plugin 'vim-ruby/vim-ruby'
 
 call vundle#end()            " required
-filetype plugin indent on " Turn on Filetype detection, plugins, and indentation
+filetype plugin indent on " Turn on Filetype detection, plugins, indentation
 
 " ----------------------------------------------------------------------------
 "  Moving around, searching and patterns
@@ -33,6 +33,12 @@ if &term =~ "xterm" || &term =~ "screen"
   let g:CommandTSelectNextMap = ['<C-j>', '<ESC>OB']
   let g:CommandTSelectPrevMap = ['<C-k>', '<ESC>OA']
 endif
+
+" Allow easier moving between split tabs
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 " ----------------------------------------------------------------------------
 "  Tags
@@ -47,12 +53,11 @@ set number " show line numbers
 "  Syntax, highlighting and spelling
 " ----------------------------------------------------------------------------
 syntax enable " Turn on syntax highlighting
-colorscheme solarized
-set background=dark
 set colorcolumn=80 " display colour column at 80 characters
+set background=dark
+colorscheme solarized
 set hlsearch       " highlight matches
 set ignorecase     " searches are case insensitive
-
 " ----------------------------------------------------------------------------
 "  Multiple windows
 " ----------------------------------------------------------------------------
@@ -95,7 +100,9 @@ set ruler " always display current cursor position in status bar
 " ----------------------------------------------------------------------------
 "  Tabs and indenting
 " ----------------------------------------------------------------------------
-
+set expandtab
+set shiftwidth=2
+set shiftwidth=2
 " ----------------------------------------------------------------------------
 "  Folding
 " ----------------------------------------------------------------------------
@@ -123,7 +130,8 @@ endfunction
 " ----------------------------------------------------------------------------
 "  The swap file
 " ----------------------------------------------------------------------------
-
+set nobackup " no backup files
+set noswapfile " no swap files
 " ----------------------------------------------------------------------------
 "  Command line editing
 " ----------------------------------------------------------------------------
