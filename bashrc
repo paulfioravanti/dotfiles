@@ -7,6 +7,11 @@ source ~/git-completion.bash
 PS1='[\W$(__git_ps1 " (%s)")]$ '
 export PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/~}\007"'
 
+# Get ANSI colours in iTerm2
+export CLICOLOR=1
+# Set colors to match iTerm Terminal colours
+export TERM=xterm-256color  
+
 ## PATH ##
 export PATH=/usr/local/bin:$PATH
 export PATH=$PATH:/usr/local/sbin # Add sbin to PATH for icu4c
