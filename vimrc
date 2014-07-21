@@ -18,6 +18,7 @@ Plugin 'tpope/vim-git'
 Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-commentary'
 Plugin 'vim-ruby/vim-ruby'
 
 call vundle#end()            " required
@@ -159,7 +160,7 @@ set noswapfile " no swap files
 " ----------------------------------------------------------------------------
 "  Various
 " ----------------------------------------------------------------------------
-
+set nrformats= " treat all numerals as decimal and not octal etc
 " ----------------------------------------------------------------------------
 " Autocmds
 " ----------------------------------------------------------------------------
