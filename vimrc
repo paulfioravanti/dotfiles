@@ -12,15 +12,16 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim' " let Vundle manage Vundle, required
 Plugin 'tpope/vim-sensible' " Defaults everyone can agree on
-Plugin 'altercation/vim-colors-solarized' " Solarized colour scheme
-Plugin 'wincent/command-t' " Fast Sublime Text-style file searching
 Plugin 'tpope/vim-git' " Git-related syntax, highlight, filetype plugins
 Plugin 'tpope/vim-fugitive' " Use Git in Vim
 Plugin 'tpope/vim-haml' " Runtime files for Haml and Sass
 Plugin 'tpope/vim-markdown' " Syntax highlighting, matching rules, mappings
 Plugin 'tpope/vim-rails' " rails.vim
 Plugin 'tpope/vim-commentary' " Commenting code
+Plugin 'tpope/vim-surround' " Mappings for text 'surroundings'
+Plugin 'wincent/command-t' " Fast Sublime Text-style file searching
 Plugin 'vim-ruby/vim-ruby' " Config files for editing, compiling Ruby
+Plugin 'altercation/vim-colors-solarized' " Solarized colour scheme
 " vim-textobj-entire depends on vim-textobj-user
 Plugin 'kana/vim-textobj-user' " Create your own text objects
 Plugin 'kana/vim-textobj-entire' " Text objects for entire buffers
