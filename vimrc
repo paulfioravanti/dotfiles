@@ -57,7 +57,7 @@ set number " show line numbers
 "  Syntax, highlighting and spelling
 " ----------------------------------------------------------------------------
 set t_Co=256 " force vim to use 256 colours
-let g:solarized_termcolors=256 " use solarized 256 color fallback       
+let g:solarized_termcolors=256 " use solarized 256 color fallback
 syntax enable " Turn on syntax highlighting
 set background=dark
 colorscheme solarized
@@ -106,7 +106,8 @@ set splitright
 "  Messages and info
 " ----------------------------------------------------------------------------
 set ruler " always display current cursor position in status bar
-
+" Show git branch in Vim status line
+set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 " ----------------------------------------------------------------------------
 "  Selecting text
 " ----------------------------------------------------------------------------
