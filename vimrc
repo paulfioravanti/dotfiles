@@ -12,18 +12,20 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim' " let Vundle manage Vundle, required
 Plugin 'tpope/vim-sensible' " Defaults everyone can agree on
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'wincent/command-t'
-Plugin 'tpope/vim-git'
-Plugin 'tpope/vim-haml'
-Plugin 'tpope/vim-markdown'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-commentary'
-Plugin 'vim-ruby/vim-ruby'
+Plugin 'altercation/vim-colors-solarized' " Solarized colour scheme
+Plugin 'wincent/command-t' " Fast Sublime Text-style file searching
+Plugin 'tpope/vim-git' " Git-related syntax, highlight, filetype plugins
+Plugin 'tpope/vim-haml' " Runtime files for Haml and Sass
+Plugin 'tpope/vim-markdown' " Syntax highlighting, matching rules, mappings
+Plugin 'tpope/vim-rails' " rails.vim
+Plugin 'tpope/vim-commentary' " Commenting code
+Plugin 'vim-ruby/vim-ruby' " Config files for editing, compiling Ruby
+" vim-textobj-entire depends on vim-textobj-user
+Plugin 'kana/vim-textobj-user' " Create your own text objects
+Plugin 'kana/vim-textobj-entire' " Text objects for entire buffers
 
 call vundle#end()            " required
 filetype plugin indent on " Turn on Filetype detection, plugins, indentation
-
 
 "  Moving around, searching and patterns
 " ----------------------------------------------------------------------------
@@ -62,6 +64,16 @@ set cc=81 " display colour column at 81 characters
 highlight ColorColumn ctermbg=238 " make colorcolumn a light grey
 set hlsearch       " highlight matches
 set ignorecase     " searches are case insensitive
+
+" 1. Highlight trailing whitespace in red
+" 2. Don't show highlighting in insert mode
+" 3. Have highlighting apply when new buffers opened
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
 " ----------------------------------------------------------------------------
 "  Multiple windows
 " ----------------------------------------------------------------------------
