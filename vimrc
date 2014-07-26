@@ -25,6 +25,7 @@ Plugin 'altercation/vim-colors-solarized' " Solarized colour scheme
 " vim-textobj-entire depends on vim-textobj-user
 Plugin 'kana/vim-textobj-user' " Create your own text objects
 Plugin 'kana/vim-textobj-entire' " Text objects for entire buffers
+Plugin 'kchmck/vim-coffee-script' " Syntax, indenting, compiling of Coffeescript
 
 call vundle#end()            " required
 filetype plugin indent on " Turn on Filetype detection, plugins, indentation
