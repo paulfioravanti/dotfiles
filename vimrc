@@ -61,7 +61,15 @@ let g:solarized_termcolors=256 " use solarized 256 color fallback
 syntax enable " Turn on syntax highlighting
 set background=dark
 colorscheme solarized
-set cc=81 " display colour column at 81 characters
+
+set cursorline " Highlight current line
+augroup CursorLine " Only highlight cursor line in current window
+  au!
+  au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+  au WinLeave * setlocal nocursorline
+augroup END
+
+set colorcolumn=81 " display colour column at 81 characters
 highlight ColorColumn ctermbg=238 " make colorcolumn a light grey
 set hlsearch       " highlight matches
 set ignorecase     " searches are case insensitive
