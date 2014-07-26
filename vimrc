@@ -15,6 +15,7 @@ Plugin 'tpope/vim-sensible' " Defaults everyone can agree on
 Plugin 'altercation/vim-colors-solarized' " Solarized colour scheme
 Plugin 'wincent/command-t' " Fast Sublime Text-style file searching
 Plugin 'tpope/vim-git' " Git-related syntax, highlight, filetype plugins
+Plugin 'tpope/vim-fugitive' " Use Git in Vim
 Plugin 'tpope/vim-haml' " Runtime files for Haml and Sass
 Plugin 'tpope/vim-markdown' " Syntax highlighting, matching rules, mappings
 Plugin 'tpope/vim-rails' " rails.vim
