@@ -184,6 +184,7 @@ set noswapfile " no swap files
 "  Various
 " ----------------------------------------------------------------------------
 set nrformats= " treat all numerals as decimal and not octal etc
+set visualbell " disable system bell and have cursor flash on errors
 " ----------------------------------------------------------------------------
 " Autocmds
 " ----------------------------------------------------------------------------
