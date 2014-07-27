@@ -10,7 +10,7 @@ export PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/~}\007"'
 # Get ANSI colours in iTerm2
 export CLICOLOR=1
 # Set colors to match iTerm Terminal colours
-export TERM=xterm-256color  
+export TERM=xterm-256color
 
 ## PATH ##
 export PATH=/usr/local/bin:$PATH
