@@ -34,6 +34,7 @@ Plugin 'airblade/vim-gitgutter' " Show git diff in left 'gutter'
 call vundle#end()            " required
 filetype plugin indent on " Turn on Filetype detection, plugins, indentation
 
+" ----------------------------------------------------------------------------
 "  Moving around, searching and patterns
 " ----------------------------------------------------------------------------
 if &term =~ "xterm" || &term =~ "screen"
