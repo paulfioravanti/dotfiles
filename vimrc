@@ -27,6 +27,7 @@ Plugin 'kana/vim-textobj-user' " Create your own text objects
 Plugin 'kana/vim-textobj-entire' " Text objects for entire buffers
 Plugin 'kchmck/vim-coffee-script' " Syntax, indenting, compiling of Coffeescript
 Plugin 'bling/vim-airline' " Status line
+Plugin 'airblade/vim-gitgutter' " Show git diff in left 'gutter'
 
 call vundle#end()            " required
 filetype plugin indent on " Turn on Filetype detection, plugins, indentation
