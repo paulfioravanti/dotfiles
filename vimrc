@@ -19,6 +19,8 @@ Plugin 'tpope/vim-markdown' " Syntax highlighting, matching rules, mappings
 Plugin 'tpope/vim-rails' " rails.vim
 Plugin 'tpope/vim-commentary' " Commenting code
 Plugin 'tpope/vim-surround' " Mappings for text 'surroundings'
+Plugin 'tpope/vim-unimpaired' " Bracket mappings for various commands
+Plugin 'tpope/vim-repeat' " Allow plugins to tap into the . command
 Plugin 'wincent/command-t' " Fast Sublime Text-style file searching
 Plugin 'vim-ruby/vim-ruby' " Config files for editing, compiling Ruby
 Plugin 'altercation/vim-colors-solarized' " Solarized colour scheme
@@ -121,6 +123,7 @@ set encoding=utf-8
 "  Messages and info
 " ----------------------------------------------------------------------------
 set noshowmode " Suppress default mode messages and just use vim-airline
+let g:airline#extensions#tabline#enabled = 1
 
 " Reset colours for vim-gitgutter due to solarized overrides ie
 " 1. Change the gutter background from grey to black
