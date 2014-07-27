@@ -51,6 +51,17 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+set incsearch " Show search pattern as it is typed
+set smartcase " Search case-sensitively if search string includes uppercase
+set ignorecase     " searches are case insensitive
+" Allows incsearch highlighting for range commands
+" Intention is to be used in forward/backward searches ie
+" /foo$t ?bar$m etc.  Idea from:
+" reddit.com/r/vim/comments/1yfzg2/does_anyone_actually_use_easymotion/cfkaxw5
+cnoremap $t <CR>:t''<CR> " Copy to position before last jump
+cnoremap $m <CR>:m''<CR> " Move to position before last jump
+cnoremap $d <CR>:d<CR>`` " Delete and move to position before last jump
+
 " ----------------------------------------------------------------------------
 "  Tags
 " ----------------------------------------------------------------------------
@@ -80,8 +91,6 @@ augroup END
 set colorcolumn=81 " display colour column at 81 characters
 highlight ColorColumn ctermbg=238 " make colorcolumn a light grey
 
-set hlsearch       " highlight matches
-set ignorecase     " searches are case insensitive
 
 " 1. Highlight trailing whitespace in red
 " 2. Don't show highlighting in insert mode
