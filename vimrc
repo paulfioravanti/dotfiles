@@ -26,6 +26,7 @@ Plugin 'altercation/vim-colors-solarized' " Solarized colour scheme
 Plugin 'kana/vim-textobj-user' " Create your own text objects
 Plugin 'kana/vim-textobj-entire' " Text objects for entire buffers
 Plugin 'kchmck/vim-coffee-script' " Syntax, indenting, compiling of Coffeescript
+Plugin 'bling/vim-airline' " Status line
 
 call vundle#end()            " required
 filetype plugin indent on " Turn on Filetype detection, plugins, indentation
@@ -58,8 +59,6 @@ set number " show line numbers
 " ----------------------------------------------------------------------------
 "  Syntax, highlighting and spelling
 " ----------------------------------------------------------------------------
-set t_Co=256 " force vim to use 256 colours
-let g:solarized_termcolors=256 " use solarized 256 color fallback
 syntax enable " Turn on syntax highlighting
 set background=dark
 colorscheme solarized
@@ -73,6 +72,7 @@ augroup END
 
 set colorcolumn=81 " display colour column at 81 characters
 highlight ColorColumn ctermbg=238 " make colorcolumn a light grey
+
 set hlsearch       " highlight matches
 set ignorecase     " searches are case insensitive
 
@@ -85,6 +85,7 @@ autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
+
 " ----------------------------------------------------------------------------
 "  Multiple windows
 " ----------------------------------------------------------------------------
@@ -116,8 +117,6 @@ set splitright
 "  Messages and info
 " ----------------------------------------------------------------------------
 set ruler " always display current cursor position in status bar
-" Show git branch in Vim status line
-set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 " ----------------------------------------------------------------------------
 "  Selecting text
 " ----------------------------------------------------------------------------
@@ -129,8 +128,8 @@ set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 " ----------------------------------------------------------------------------
 "  Tabs and indenting
 " ----------------------------------------------------------------------------
+" Tabs are spaces and indents are 2 spaces
 set expandtab
-set shiftwidth=2
 set shiftwidth=2
 " ----------------------------------------------------------------------------
 "  Folding
