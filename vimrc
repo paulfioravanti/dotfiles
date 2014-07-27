@@ -21,6 +21,8 @@ Plugin 'tpope/vim-commentary' " Commenting code
 Plugin 'tpope/vim-surround' " Mappings for text 'surroundings'
 Plugin 'tpope/vim-unimpaired' " Bracket mappings for various commands
 Plugin 'tpope/vim-repeat' " Allow plugins to tap into the . command
+Plugin 'tpope/vim-bundler' " Vim wrapper around bundler
+Plugin 'tpope/vim-endwise' " End Ruby structures automatically
 Plugin 'wincent/command-t' " Fast Sublime Text-style file searching
 Plugin 'vim-ruby/vim-ruby' " Config files for editing, compiling Ruby
 Plugin 'altercation/vim-colors-solarized' " Solarized colour scheme
