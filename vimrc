@@ -56,7 +56,10 @@ nnoremap <C-H> <C-W><C-H>
 "  Displaying text
 " ----------------------------------------------------------------------------
 set number " show line numbers
-
+" Enable powerline fonts in vim-airline (like the branch icon)
+" I'm using Consolas font for powerline, set in the iTerm Profile text settings:
+" https://github.com/runsisi/consolas-font-for-powerline
+let g:airline_powerline_fonts=1
 " ----------------------------------------------------------------------------
 "  Syntax, highlighting and spelling
 " ----------------------------------------------------------------------------
@@ -99,7 +102,7 @@ set splitright
 " ----------------------------------------------------------------------------
 "  Terminal
 " ----------------------------------------------------------------------------
-
+set encoding=utf-8
 " ----------------------------------------------------------------------------
 "  Using the mouse
 " ----------------------------------------------------------------------------
