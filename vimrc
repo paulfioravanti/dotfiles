@@ -24,6 +24,7 @@ Plugin 'tpope/vim-repeat' " Allow plugins to tap into the . command
 Plugin 'tpope/vim-bundler' " Vim wrapper around bundler
 Plugin 'tpope/vim-endwise' " End Ruby structures automatically
 Plugin 'wincent/command-t' " Fast Sublime Text-style file searching
+Plugin 'rking/ag.vim' " Ag/The Silver Searcher for text searching
 Plugin 'vim-ruby/vim-ruby' " Config files for editing, compiling Ruby
 Plugin 'altercation/vim-colors-solarized' " Solarized colour scheme
 " vim-textobj-entire depends on vim-textobj-user
@@ -32,6 +33,7 @@ Plugin 'kana/vim-textobj-entire' " Text objects for entire buffers
 Plugin 'kchmck/vim-coffee-script' " Syntax, indenting, compiling of Coffeescript
 Plugin 'bling/vim-airline' " Status line
 Plugin 'airblade/vim-gitgutter' " Show git diff in left 'gutter'
+Plugin 'rizzatti/dash.vim' " Plugin for Dash.app
 
 call vundle#end()            " required
 filetype plugin indent on " Turn on Filetype detection, plugins, indentation
@@ -181,6 +183,9 @@ function! ExecuteMacroOverVisualRange()
   execute ":'<,'>normal @".nr2char(getchar())
 endfunction
 
+"Configuration for Dash.vim
+nmap <silent> <leader>d <Plug>DashSearch " Search syntax specific docs
+nmap <silent> <leader>D <Plug>DashGlobalSearch " Search all docs
 " ----------------------------------------------------------------------------
 "  Reading and writing files
 " ----------------------------------------------------------------------------
