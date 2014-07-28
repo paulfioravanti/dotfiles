@@ -34,6 +34,7 @@ Plugin 'kchmck/vim-coffee-script' " Syntax, indenting, compiling of Coffeescript
 Plugin 'bling/vim-airline' " Status line
 Plugin 'airblade/vim-gitgutter' " Show git diff in left 'gutter'
 Plugin 'rizzatti/dash.vim' " Plugin for Dash.app
+Plugin 'vim-scripts/change-hash-syntax' " Change Ruby hash syntax to 1.9
 
 call vundle#end()            " required
 filetype plugin indent on " Turn on Filetype detection, plugins, indentation
@@ -149,6 +150,7 @@ highlight GitGutterAdd ctermfg=darkgreen
 highlight GitGutterChange ctermfg=darkyellow
 highlight GitGutterDelete ctermfg=darkred
 highlight GitGutterChangeDelete ctermfg=darkyellow
+
 " ----------------------------------------------------------------------------
 "  Selecting text
 " ----------------------------------------------------------------------------
