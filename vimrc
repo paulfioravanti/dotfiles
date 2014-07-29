@@ -36,6 +36,7 @@ Plugin 'airblade/vim-gitgutter' " Show git diff in left 'gutter'
 Plugin 'rizzatti/dash.vim' " Plugin for Dash.app
 Plugin 'vim-scripts/change-hash-syntax' " Change Ruby hash syntax to 1.9
 Plugin 'scrooloose/syntastic' " Syntax checking
+Plugin 'myusuf3/numbers.vim' " Relative/Absolute numbering for different modes
 
 call vundle#end()            " required
 filetype plugin indent on " Turn on Filetype detection, plugins, indentation
@@ -76,6 +77,7 @@ cnoremap $d <CR>:d<CR>`` " Delete and move to position before last jump
 "  Displaying text
 " ----------------------------------------------------------------------------
 set number " show line numbers
+
 " Enable powerline fonts in vim-airline (like the branch icon)
 " I'm using Consolas font for powerline, set in the iTerm Profile text settings:
 " https://github.com/runsisi/consolas-font-for-powerline
