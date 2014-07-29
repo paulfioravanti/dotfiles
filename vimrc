@@ -35,6 +35,7 @@ Plugin 'bling/vim-airline' " Status line
 Plugin 'airblade/vim-gitgutter' " Show git diff in left 'gutter'
 Plugin 'rizzatti/dash.vim' " Plugin for Dash.app
 Plugin 'vim-scripts/change-hash-syntax' " Change Ruby hash syntax to 1.9
+Plugin 'scrooloose/syntastic' " Syntax checking
 
 call vundle#end()            " required
 filetype plugin indent on " Turn on Filetype detection, plugins, indentation
@@ -95,7 +96,6 @@ augroup END
 
 set colorcolumn=81 " display colour column at 81 characters
 highlight ColorColumn ctermbg=238 " make colorcolumn a light grey
-
 
 " 1. Highlight trailing whitespace in red
 " 2. Don't show highlighting in insert mode
@@ -213,6 +213,11 @@ set noswapfile " no swap files
 "  Language specific
 " ----------------------------------------------------------------------------
 
+" Syntastic config
+let g:syntastic_check_on_open=1 " Check syntax on file open using MRI
+let g:syntastic_check_on_save=1 " Check syntax on save using MRI
+let g:syntastic_enable_signs=1 " Display syntax error markers in gutter
+let g:syntastic_auto_jump=1 " Automatically jump to first error reported
 " ----------------------------------------------------------------------------
 "  Multi-byte characters
 " ----------------------------------------------------------------------------
