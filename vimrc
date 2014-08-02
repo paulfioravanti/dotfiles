@@ -1,13 +1,17 @@
-" Headings based on Vim :options
+" .vimrc
+" Author: Paul Fioravanti <paul.fioravanti@gmail.com
+" Source: https://github.com/paulfioravanti/dotfiles/blob/master/vimrc
 
-" ----------------------------------------------------------------------------
+" Use Vim settings rather than Vi
+set nocompatible
+
+" -----------------------------------------------------------------------------
 "  Vim package manager
-" ----------------------------------------------------------------------------
-set nocompatible              " choose no compatibility with legacy vi
+" -----------------------------------------------------------------------------
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
+set runtimepath+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim' " let Vundle manage Vundle, required
