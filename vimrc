@@ -1,5 +1,5 @@
 " .vimrc
-" Author: Paul Fioravanti <paul.fioravanti@gmail.com
+" Author: Paul Fioravanti <paul.fioravanti@gmail.com>
 " Source: https://github.com/paulfioravanti/dotfiles/blob/master/vimrc
 
 " Use Vim settings rather than Vi
@@ -17,45 +17,12 @@ syntax enable
  " Map leader key from slash to comma
 let mapleader = ","
 
-" -----------------------------------------------------------------------------
-"  Vim package manager
-" -----------------------------------------------------------------------------
-filetype off " required
-
-" set the runtime path to include Vundle and initialize
-set runtimepath+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'gmarik/Vundle.vim' " let Vundle manage Vundle, required
-Plugin 'tpope/vim-sensible' " Defaults everyone can agree on
-Plugin 'tpope/vim-git' " Git-related syntax, highlight, filetype plugins
-Plugin 'tpope/vim-fugitive' " Use Git in Vim
-Plugin 'tpope/vim-haml' " Runtime files for Haml and Sass
-Plugin 'tpope/vim-markdown' " Syntax highlighting, matching rules, mappings
-Plugin 'tpope/vim-rails' " rails.vim
-Plugin 'tpope/vim-commentary' " Commenting code
-Plugin 'tpope/vim-surround' " Mappings for text 'surroundings'
-Plugin 'tpope/vim-unimpaired' " Bracket mappings for various commands
-Plugin 'tpope/vim-repeat' " Allow plugins to tap into the . command
-Plugin 'tpope/vim-bundler' " Vim wrapper around bundler
-Plugin 'tpope/vim-endwise' " End Ruby structures automatically
-Plugin 'wincent/command-t' " Fast Sublime Text-style file searching
-Plugin 'rking/ag.vim' " Ag/The Silver Searcher for text searching
-Plugin 'vim-ruby/vim-ruby' " Config files for editing, compiling Ruby
-Plugin 'altercation/vim-colors-solarized' " Solarized colour scheme
-" vim-textobj-entire depends on vim-textobj-user
-Plugin 'kana/vim-textobj-user' " Create your own text objects
-Plugin 'kana/vim-textobj-entire' " Text objects for entire buffers
-Plugin 'kchmck/vim-coffee-script' " Syntax, indenting, compiling of Coffeescript
-Plugin 'bling/vim-airline' " Status line
-Plugin 'airblade/vim-gitgutter' " Show git diff in left 'gutter'
-Plugin 'rizzatti/dash.vim' " Plugin for Dash.app
-Plugin 'vim-scripts/change-hash-syntax' " Change Ruby hash syntax to 1.9
-Plugin 'scrooloose/syntastic' " Syntax checking
-Plugin 'myusuf3/numbers.vim' " Relative/Absolute numbering for different modes
-
-call vundle#end()            " required
-filetype plugin indent on " Turn on Filetype detection, plugins, indentation
+" =============== Plugin Initialisation ========
+" Loads all plugins specified under ~/.vim/plugins.vim
+" Currently uses Vundle to manage all other plugins
+if filereadable(expand("~/.vim/plugins.vim"))
+  source ~/.vim/plugins.vim
+endif
 
 " ----------------------------------------------------------------------------
 "  Moving around, searching and patterns
