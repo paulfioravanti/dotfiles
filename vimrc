@@ -5,10 +5,22 @@
 " Use Vim settings rather than Vi
 set nocompatible
 
+" =============== General Config ===============
+set number " show line numbers
+set visualbell " disable system bell and have cursor flash on errors
+set autoread " Reload file changes outside Vim
+
+" Enable buffers to exist in the background without being in a window
+set hidden
+" Enable user configured syntax highlighting and turn on syntax
+syntax enable
+ " Map leader key from slash to comma
+let mapleader = ","
+
 " -----------------------------------------------------------------------------
 "  Vim package manager
 " -----------------------------------------------------------------------------
-filetype off                  " required
+filetype off " required
 
 " set the runtime path to include Vundle and initialize
 set runtimepath+=~/.vim/bundle/Vundle.vim
@@ -80,7 +92,6 @@ cnoremap $d <CR>:d<CR>`` " Delete and move to position before last jump
 " ----------------------------------------------------------------------------
 "  Displaying text
 " ----------------------------------------------------------------------------
-set number " show line numbers
 
 " Enable powerline fonts in vim-airline (like the branch icon)
 " I'm using Consolas font for powerline, set in the iTerm Profile text settings:
@@ -89,7 +100,6 @@ let g:airline_powerline_fonts=1
 " ----------------------------------------------------------------------------
 "  Syntax, highlighting and spelling
 " ----------------------------------------------------------------------------
-syntax enable " Turn on syntax highlighting
 set background=dark
 colorscheme solarized
 
@@ -182,7 +192,6 @@ set shiftwidth=2
 " ----------------------------------------------------------------------------
 "  Mapping
 " ----------------------------------------------------------------------------
-let mapleader = "," " Map leader key to comma from slash
 xnoremap . :normal .<CR> " Enable dot command in Visual Mode
 " Enable a macro to be executed over a visual range
 xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
@@ -231,7 +240,6 @@ let g:syntastic_auto_jump=1 " Automatically jump to first error reported
 "  Various
 " ----------------------------------------------------------------------------
 set nrformats= " treat all numerals as decimal and not octal etc
-set visualbell " disable system bell and have cursor flash on errors
 " ----------------------------------------------------------------------------
 " Autocmds
 " ----------------------------------------------------------------------------
