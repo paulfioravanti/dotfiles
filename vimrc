@@ -5,7 +5,9 @@
 " Use Vim settings rather than Vi
 set nocompatible
 
-" =============== General Config ===============
+" ==============================================================================
+" General Config
+" ==============================================================================
 set number " show line numbers
 set visualbell " disable system bell and have cursor flash on errors
 set autoread " Reload file changes outside Vim
@@ -17,7 +19,9 @@ syntax enable
  " Map leader key from slash to comma
 let mapleader = ","
 
-" =============== Plugin Initialisation ========
+" ==============================================================================
+" Plugin Initialisation
+" ==============================================================================
 " Loads all plugins specified under ~/.vim/plugins.vim
 " Currently uses Vundle to manage all other plugins
 if filereadable(expand("~/.vim/plugins.vim"))
@@ -177,8 +181,9 @@ nmap <silent> <leader>D <Plug>DashGlobalSearch " Search all docs
 " ----------------------------------------------------------------------------
 "  The swap file
 " ----------------------------------------------------------------------------
-set nobackup " no backup files
 set noswapfile " no swap files
+set nobackup " no backup files
+set nowritebackup " no making a backup before overwriting a file
 " ----------------------------------------------------------------------------
 "  Command line editing
 " ----------------------------------------------------------------------------
