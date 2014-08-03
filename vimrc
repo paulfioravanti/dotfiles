@@ -12,13 +12,21 @@ syntax enable " Enable user configured syntax highlighting and turn on syntax
 let mapleader = "," " Map leader key from slash to comma
 set encoding=utf-8
 set number " show line numbers
+set gcr=a:blinkon0 " Disable cursor blinking
 set visualbell " disable system bell and have cursor flash on errors
 set autoread " Reload file changes outside Vim
 set nrformats= " treat all numerals as decimal and not octal etc
 set splitbelow " Make horizonal splits split below
 set splitright " Make vertical splits split to the right
+
+set autoindent
+set smartindent
+set smarttab
 set expandtab " Make tabs insert spaces
 set shiftwidth=2 " Default indent of two spaces
+set softtabstop=2
+set tabstop=2
+
 set noswapfile " no swap files
 set nobackup " no backup files
 set nowritebackup " no making a backup before overwriting a file
