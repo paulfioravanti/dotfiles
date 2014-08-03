@@ -5,6 +5,7 @@ filetype off " required by Vundle
 " set the runtime path to include Vundle and initialize
 set runtimepath+=~/.vim/bundle/Vundle.vim
 call vundle#begin() " required by Vundle
+
 Plugin 'gmarik/Vundle.vim' " let Vundle manage Vundle, required
 Plugin 'tpope/vim-sensible' " Defaults everyone can agree on
 Plugin 'tpope/vim-git' " Git-related syntax, highlight, filetype plugins
@@ -32,6 +33,7 @@ Plugin 'rizzatti/dash.vim' " Plugin for Dash.app
 Plugin 'vim-scripts/change-hash-syntax' " Change Ruby hash syntax to 1.9
 Plugin 'scrooloose/syntastic' " Syntax checking
 Plugin 'myusuf3/numbers.vim' " Relative/Absolute numbering for different modes
+Plugin 'ntpeters/vim-better-whitespace' " Whitespace handling
 
 call vundle#end() " required by Vundle
 

@@ -18,6 +18,7 @@ set autoread " Reload file changes outside Vim
 set nrformats= " treat all numerals as decimal and not octal etc
 set splitbelow " Make horizonal splits split below
 set splitright " Make vertical splits split to the right
+set showbreak=↪ " Indicate linebreaks at the beginning of broken lines
 
 set autoindent
 set smartindent
@@ -30,6 +31,15 @@ set tabstop=2
 set noswapfile " no swap files
 set nobackup " no backup files
 set nowritebackup " no making a backup before overwriting a file
+
+set wildmenu " enhanced command-line completion
+set wildignore+=.git " Don't include vcs files
+set wildignore+=*.DS_Store " Don't include OSX-specific files in wildcards
+
+" Save when losing focus from the window
+au FocusLost * :silent! wall
+" Resize splits when the window is resized
+au VimResized * :wincmd =
 
 " ==============================================================================
 " Plugin Initialisation
@@ -50,8 +60,12 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 set smartcase " Search case-sensitively if search string includes uppercase
-set ignorecase     " searches are case insensitive
+set ignorecase " searches are case insensitive
 set incsearch " Show search pattern as it is typed
+set hlsearch " Highlight searches
+" Clear all search matches
+noremap <silent> <leader><space> :noh<cr>:call clearmatches()<cr>
+
 " Allows incsearch highlighting for range commands
 " Intention is to be used in forward/backward searches ie
 " /foo$t ?bar$m etc.  Idea from:
@@ -59,6 +73,15 @@ set incsearch " Show search pattern as it is typed
 cnoremap $t <CR>:t''<CR> " Copy to position before last jump
 cnoremap $m <CR>:m''<CR> " Move to position before last jump
 cnoremap $d <CR>:d<CR>`` " Delete and move back to position before last jump
+
+" Keep search matches in the middle of the window.
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
+" Same when jumping around
+nnoremap g; g;zz
+nnoremap g, g,zz
+nnoremap <c-o> <c-o>zz
 
 " ==============================================================================
 "  Syntax, highlighting and spelling
@@ -76,15 +99,17 @@ augroup END
 set colorcolumn=81 " display colour column at 81 characters
 highlight ColorColumn ctermbg=238 " make colorcolumn a light grey
 
-" 1. Highlight trailing whitespace in red
-" 2. Don't show highlighting in insert mode
-" 3. Have highlighting apply when new buffers opened
-highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
-autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-autocmd BufWinLeave * call clearmatches()
+" Clean trailing whitespace
+nnoremap <leader>ww mz:%s/\s\+$//<cr>:let @/=''<cr>`z
+
+" Make Vim return to the same line when you reopen a file.
+augroup line_return
+  au!
+  au BufReadPost *
+    \ if line("'\"") > 0 && line("'\"") <= line("$") |
+    \     execute 'normal! g`"zvzz' |
+    \ endif
+augroup END
 
 " ==============================================================================
 "  Mapping
@@ -96,6 +121,38 @@ function! ExecuteMacroOverVisualRange()
   echo "@".getcmdline()
   execute ":'<,'>normal @".nr2char(getchar())
 endfunction
+
+map <tab> % " Easier way to navigate between opening/closing parentheses
+
+nnoremap <leader>ev :vsplit ~/.vimrc<cr> " Edit vimrc whenever I need to
+
+" Add emacs/shell bindings in command mode for beginning/end of command
+cnoremap <c-a> <home>
+cnoremap <c-e> <end>
+
+" Toggleable indent highlighting with <Leader>I
+let g:indentguides_state = 0
+function! IndentGuides()
+  if g:indentguides_state
+    let g:indentguides_state = 0
+    2match None
+  else
+    let g:indentguides_state = 1
+    execute '2match IndentGuides /\%(\_^\s*\)\@<=\%(\%'.(0*&sw+1).'v\|\%'.(1*&sw+1).'v\|\%'.(2*&sw+1).'v\|\%'.(3*&sw+1).'v\|\%'.(4*&sw+1).'v\|\%'.(5*&sw+1).'v\|\%'.(6*&sw+1).'v\|\%'.(7*&sw+1).'v\)\s/'
+  endif
+endfunction
+highlight def IndentGuides ctermbg=238
+nnoremap <leader>I :call IndentGuides()<cr>
+
+" Change cursor shape depending on mode: block for normal, line for insert
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+
+" Don't use those arrow keys
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
 
 " ==============================================================================
 " Load plugin and custom settings
