@@ -2,22 +2,26 @@
 " Author: Paul Fioravanti <paul.fioravanti@gmail.com>
 " Source: https://github.com/paulfioravanti/dotfiles/blob/master/vimrc
 
-" Use Vim settings rather than Vi
-set nocompatible
+set nocompatible " Use Vim settings rather than Vi
 
 " ==============================================================================
 " General Config
 " ==============================================================================
+set hidden " Enable buffers to exist in the background without being in a window
+syntax enable " Enable user configured syntax highlighting and turn on syntax
+let mapleader = "," " Map leader key from slash to comma
+set encoding=utf-8
 set number " show line numbers
 set visualbell " disable system bell and have cursor flash on errors
 set autoread " Reload file changes outside Vim
-
-" Enable buffers to exist in the background without being in a window
-set hidden
-" Enable user configured syntax highlighting and turn on syntax
-syntax enable
- " Map leader key from slash to comma
-let mapleader = ","
+set nrformats= " treat all numerals as decimal and not octal etc
+set splitbelow " Make horizonal splits split below
+set splitright " Make vertical splits split to the right
+set expandtab " Make tabs insert spaces
+set shiftwidth=2 " Default indent of two spaces
+set noswapfile " no swap files
+set nobackup " no backup files
+set nowritebackup " no making a backup before overwriting a file
 
 " ==============================================================================
 " Plugin Initialisation
@@ -28,49 +32,29 @@ if filereadable(expand("~/.vim/plugins.vim"))
   source ~/.vim/plugins.vim
 endif
 
-" ----------------------------------------------------------------------------
+" ==============================================================================
 "  Moving around, searching and patterns
-" ----------------------------------------------------------------------------
-if &term =~ "xterm" || &term =~ "screen"
-  " Ensure Escape key can close the match listing in Command-T
-  let g:CommandTCancelMap = ['<ESC>', '<C-c>']
-  " Ensure <C-j> and <C-k> can move up and down a list of file matches
-  let g:CommandTSelectNextMap = ['<C-j>', '<ESC>OB']
-  let g:CommandTSelectPrevMap = ['<C-k>', '<ESC>OA']
-endif
-
+" ==============================================================================
 " Allow easier moving between split tabs
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-set incsearch " Show search pattern as it is typed
 set smartcase " Search case-sensitively if search string includes uppercase
 set ignorecase     " searches are case insensitive
+set incsearch " Show search pattern as it is typed
 " Allows incsearch highlighting for range commands
 " Intention is to be used in forward/backward searches ie
 " /foo$t ?bar$m etc.  Idea from:
 " reddit.com/r/vim/comments/1yfzg2/does_anyone_actually_use_easymotion/cfkaxw5
 cnoremap $t <CR>:t''<CR> " Copy to position before last jump
 cnoremap $m <CR>:m''<CR> " Move to position before last jump
-cnoremap $d <CR>:d<CR>`` " Delete and move to position before last jump
+cnoremap $d <CR>:d<CR>`` " Delete and move back to position before last jump
 
-" ----------------------------------------------------------------------------
-"  Tags
-" ----------------------------------------------------------------------------
-
-" ----------------------------------------------------------------------------
-"  Displaying text
-" ----------------------------------------------------------------------------
-
-" Enable powerline fonts in vim-airline (like the branch icon)
-" I'm using Consolas font for powerline, set in the iTerm Profile text settings:
-" https://github.com/runsisi/consolas-font-for-powerline
-let g:airline_powerline_fonts=1
-" ----------------------------------------------------------------------------
+" ==============================================================================
 "  Syntax, highlighting and spelling
-" ----------------------------------------------------------------------------
+" ==============================================================================
 set background=dark
 colorscheme solarized
 
@@ -94,75 +78,9 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
-" ----------------------------------------------------------------------------
-"  Multiple windows
-" ----------------------------------------------------------------------------
-
-" ----------------------------------------------------------------------------
-"  Multiple tab pages
-" ----------------------------------------------------------------------------
-set splitbelow
-set splitright
-" ----------------------------------------------------------------------------
-"  Terminal
-" ----------------------------------------------------------------------------
-set encoding=utf-8
-" ----------------------------------------------------------------------------
-"  Using the mouse
-" ----------------------------------------------------------------------------
-
-" ----------------------------------------------------------------------------
-"  GUI
-"  Set these options in .gvimrc
-"  See help for 'setting-guifont' for tips on how to set guifont on Mac/Windows
-" ----------------------------------------------------------------------------
-
-" ----------------------------------------------------------------------------
-"  Printing
-" ----------------------------------------------------------------------------
-
-" ----------------------------------------------------------------------------
-"  Messages and info
-" ----------------------------------------------------------------------------
-set noshowmode " Suppress default mode messages and just use vim-airline
-let g:airline#extensions#tabline#enabled = 1
-
-" Reset colours for vim-gitgutter due to solarized overrides ie
-" 1. Change the gutter background from grey to black
-" 2. Clear the background color when signs appear
-" 3. Set the foreground colours for each sign to be dark so they can be seen
-highlight clear SignColumn
-highlight SignColumn ctermfg=black
-highlight GitGutterAdd ctermfg=darkgreen
-highlight GitGutterChange ctermfg=darkyellow
-highlight GitGutterDelete ctermfg=darkred
-highlight GitGutterChangeDelete ctermfg=darkyellow
-
-" ----------------------------------------------------------------------------
-"  Selecting text
-" ----------------------------------------------------------------------------
-
-" ----------------------------------------------------------------------------
-"  Editing text
-" ----------------------------------------------------------------------------
-
-" ----------------------------------------------------------------------------
-"  Tabs and indenting
-" ----------------------------------------------------------------------------
-" Tabs are spaces and indents are 2 spaces
-set expandtab
-set shiftwidth=2
-" ----------------------------------------------------------------------------
-"  Folding
-" ----------------------------------------------------------------------------
-
-" ----------------------------------------------------------------------------
-"  Diff mode
-" ----------------------------------------------------------------------------
-
-" ----------------------------------------------------------------------------
+" ==============================================================================
 "  Mapping
-" ----------------------------------------------------------------------------
+" ==============================================================================
 xnoremap . :normal .<CR> " Enable dot command in Visual Mode
 " Enable a macro to be executed over a visual range
 xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
@@ -171,47 +89,9 @@ function! ExecuteMacroOverVisualRange()
   execute ":'<,'>normal @".nr2char(getchar())
 endfunction
 
-"Configuration for Dash.vim
-nmap <silent> <leader>d <Plug>DashSearch " Search syntax specific docs
-nmap <silent> <leader>D <Plug>DashGlobalSearch " Search all docs
-" ----------------------------------------------------------------------------
-"  Reading and writing files
-" ----------------------------------------------------------------------------
-
-" ----------------------------------------------------------------------------
-"  The swap file
-" ----------------------------------------------------------------------------
-set noswapfile " no swap files
-set nobackup " no backup files
-set nowritebackup " no making a backup before overwriting a file
-" ----------------------------------------------------------------------------
-"  Command line editing
-" ----------------------------------------------------------------------------
-
-" ----------------------------------------------------------------------------
-"  Executing external commands
-" ----------------------------------------------------------------------------
-
-" ----------------------------------------------------------------------------
-"  Running make and jumping to errors
-" ----------------------------------------------------------------------------
-
-" ----------------------------------------------------------------------------
-"  Language specific
-" ----------------------------------------------------------------------------
-
-" Syntastic config
-let g:syntastic_check_on_save=1 " Check syntax on save using MRI
-let g:syntastic_enable_signs=1 " Display syntax error markers in gutter
-let g:syntastic_auto_jump=1 " Automatically jump to first error reported
-" ----------------------------------------------------------------------------
-"  Multi-byte characters
-" ----------------------------------------------------------------------------
-
-" ----------------------------------------------------------------------------
-"  Various
-" ----------------------------------------------------------------------------
-set nrformats= " treat all numerals as decimal and not octal etc
-" ----------------------------------------------------------------------------
-" Autocmds
-" ----------------------------------------------------------------------------
+" ==============================================================================
+" Load plugin and custom settings
+" ==============================================================================
+for setting in split(globpath('~/.vim/settings', '*.vim'), '\n')
+  exe 'source' setting
+endfor
