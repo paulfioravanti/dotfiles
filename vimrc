@@ -10,6 +10,8 @@ set nocompatible " Use Vim settings rather than Vi
 set hidden " Enable buffers to exist in the background without being in a window
 syntax enable " Enable user configured syntax highlighting and turn on syntax
 let mapleader = "," " Map leader key from slash to comma
+" Map reverse character search to backslash
+noremap \ ,
 set encoding=utf-8
 set number " show line numbers
 set gcr=a:blinkon0 " Disable cursor blinking
@@ -114,7 +116,8 @@ augroup END
 " ==============================================================================
 "  Mapping
 " ==============================================================================
-xnoremap . :normal .<CR> " Enable dot command in Visual Mode
+" Enable dot command in Visual Mode
+xnoremap . :normal .<CR>
 " Enable a macro to be executed over a visual range
 xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
 function! ExecuteMacroOverVisualRange()
@@ -122,9 +125,8 @@ function! ExecuteMacroOverVisualRange()
   execute ":'<,'>normal @".nr2char(getchar())
 endfunction
 
-map <tab> % " Easier way to navigate between opening/closing parentheses
-
-nnoremap <leader>ev :vsplit ~/.vimrc<cr> " Edit vimrc whenever I need to
+" Edit vimrc whenever I need to
+nnoremap <leader>ev :vsplit ~/.vimrc<cr>
 
 " Add emacs/shell bindings in command mode for beginning/end of command
 cnoremap <c-a> <home>
@@ -157,10 +159,6 @@ inoremap <Up> <NOP>
 inoremap <Down> <NOP>
 inoremap <Left> <NOP>
 inoremap <Right> <NOP>
-
-" I use cmd mode way more than repeat T/tF/f, so make it easier to use
-nnoremap : ;
-nnoremap ; :
 
 " ==============================================================================
 " Load plugin and custom settings
