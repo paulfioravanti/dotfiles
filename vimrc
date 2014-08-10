@@ -63,6 +63,7 @@ nnoremap <C-H> <C-W><C-H>
 
 set smartcase " Search case-sensitively if search string includes uppercase
 set ignorecase " searches are case insensitive
+set infercase " adjust autocomplete words depending on typed text
 set incsearch " Show search pattern as it is typed
 set hlsearch " Highlight searches
 " Clear all search matches
