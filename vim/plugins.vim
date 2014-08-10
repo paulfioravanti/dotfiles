@@ -19,6 +19,7 @@ Plugin 'tpope/vim-unimpaired' " Bracket mappings for various commands
 Plugin 'tpope/vim-repeat' " Allow plugins to tap into the . command
 Plugin 'tpope/vim-bundler' " Vim wrapper around bundler
 Plugin 'tpope/vim-endwise' " End Ruby structures automatically
+Plugin 'tpope/vim-abolish' " Work with variants of words
 Plugin 'wincent/command-t' " Fast Sublime Text-style file searching
 Plugin 'rking/ag.vim' " Ag/The Silver Searcher for text searching
 Plugin 'vim-ruby/vim-ruby' " Config files for editing, compiling Ruby
