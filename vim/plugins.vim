@@ -26,6 +26,7 @@ Plugin 'altercation/vim-colors-solarized' " Solarized colour scheme
 " vim-textobj-entire depends on vim-textobj-user
 Plugin 'kana/vim-textobj-user' " Create your own text objects
 Plugin 'kana/vim-textobj-entire' " Text objects for entire buffers
+Plugin 'kana/vim-textobj-lastpat' " Text object for search matches
 Plugin 'kchmck/vim-coffee-script' " Syntax, indenting, compiling of Coffeescript
 Plugin 'bling/vim-airline' " Status line
 Plugin 'airblade/vim-gitgutter' " Show git diff in left 'gutter'
