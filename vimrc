@@ -85,6 +85,9 @@ nnoremap g; g;zz
 nnoremap g, g,zz
 nnoremap <c-o> <c-o>zz
 
+" Show count of matches for the current search
+nnoremap <leader>c :%s///gn<CR>
+
 " ==============================================================================
 "  Syntax, highlighting and spelling
 " ==============================================================================
