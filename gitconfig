@@ -11,6 +11,7 @@
   cam = commit -am
   cm = commit -m
   mm = merge master
+	lg = log --oneline --decorate --all --graph
 [core]
 	editor = vim
 	autocrlf = input
