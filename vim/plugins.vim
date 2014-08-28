@@ -36,6 +36,7 @@ Plugin 'vim-scripts/change-hash-syntax' " Change Ruby hash syntax to 1.9
 Plugin 'scrooloose/syntastic' " Syntax checking
 Plugin 'myusuf3/numbers.vim' " Relative/Absolute numbering for different modes
 Plugin 'ntpeters/vim-better-whitespace' " Whitespace handling
+Plugin 'scrooloose/nerdtree' " File tree browser
 
 call vundle#end() " required by Vundle
 
