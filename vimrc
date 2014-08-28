@@ -37,6 +37,7 @@ set nowritebackup " no making a backup before overwriting a file
 set wildmenu " enhanced command-line completion
 set wildignore+=.git " Don't include vcs files
 set wildignore+=*.DS_Store " Don't include OSX-specific files in wildcards
+set wildignore+=coverage/** " Don't include code coverage files in wildcards
 
 " Save when losing focus from the window
 au FocusLost * :silent! wall
@@ -154,7 +155,10 @@ nnoremap <leader>I :call IndentGuides()<cr>
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
-" Don't use those arrow keys
+" <C-z> is awkward to reach
+nnoremap <leader>z <C-z>
+
+" Pro Mode: Don't use those arrow keys
 nnoremap <Up> <NOP>
 nnoremap <Down> <NOP>
 nnoremap <Left> <NOP>
