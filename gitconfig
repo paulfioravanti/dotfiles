@@ -13,6 +13,7 @@
         mm = merge master
 [core]
 	editor = vim
+	autocrlf = input
 [push]
 	default = simple
 [color]
@@ -30,3 +31,7 @@
 [color "status"]
   added = green
   changed = yellow
+[pull]
+	rebase = true
+[rerere]
+	enabled = true
