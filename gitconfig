@@ -3,14 +3,14 @@
 	email = paul.fioravanti@gmail.com
 [alias]
 	co = checkout
-	s = status
-        b = branch
-        fu = fetch upstream
-        mum = merge upstream/master
-        pum = pull upstream master
-        cam = commit -am
-        cm = commit -m
-        mm = merge master
+	s = status -s
+  b = branch
+  fu = fetch upstream
+  mum = merge upstream/master
+  pum = pull upstream master
+  cam = commit -am
+  cm = commit -m
+  mm = merge master
 [core]
 	editor = vim
 	autocrlf = input
