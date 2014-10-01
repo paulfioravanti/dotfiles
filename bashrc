@@ -25,6 +25,7 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export LSCOLORS=gxfxcxdxbxegedabagacad # give ls some colour
 alias ls='ls -FAagG'
 alias be='bundle exec'
+alias git=hub # use git to execute hub commands as well
 
 # Allow <C-s> to be used by Command-T in Vim
 # http://stackoverflow.com/q/8616843/567863
