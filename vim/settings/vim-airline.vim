@@ -8,4 +8,4 @@ let g:airline_powerline_fonts=1
 " Suppress default mode messages and just use vim-airline
 set noshowmode
 " Show open buffer top tabline
-let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#enabled = 1
