@@ -12,6 +12,7 @@
   cm = commit -m
   mm = merge master
 	lg = log --oneline --decorate --all --graph
+  pr = pull-request
 [core]
 	editor = vim
 	autocrlf = input
