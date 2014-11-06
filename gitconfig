@@ -17,9 +17,9 @@
   editor = vim
   autocrlf = input
 [push]
-	default = simple
+  default = simple
 [color]
-	ui = true
+  ui = true
 [color "branch"]
   current = yellow reverse
   local = yellow
