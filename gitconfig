@@ -1,9 +1,9 @@
 [user]
-	name = Paul Fioravanti
-	email = paul.fioravanti@gmail.com
+  name = Paul Fioravanti
+  email = paul.fioravanti@gmail.com
 [alias]
-	co = checkout
-	s = status -s
+  co = checkout
+  s = status -s
   b = branch
   fu = fetch upstream
   mum = merge upstream/master
@@ -11,11 +11,11 @@
   cam = commit -am
   cm = commit -m
   mm = merge master
-	lg = log --oneline --decorate --all --graph
+  lg = log --oneline --decorate --all --graph
   pr = pull-request
 [core]
-	editor = vim
-	autocrlf = input
+  editor = vim
+  autocrlf = input
 [push]
 	default = simple
 [color]
@@ -34,6 +34,6 @@
   added = green
   changed = yellow
 [pull]
-	rebase = true
+  rebase = true
 [rerere]
-	enabled = true
+  enabled = true
