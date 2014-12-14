@@ -8,7 +8,7 @@ brew tap homebrew/versions
 brew tap raggi/ale
 brew tap thoughtbot/formulae
 
-brew install cask
+brew install brew-cask
 brew install cmatrix
 brew install ctags
 brew install elixir
