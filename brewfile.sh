@@ -1,85 +1,114 @@
 #!/bin/bash
 
+# Install Brew
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
 brew update
 brew upgrade
 
-brew tap homebrew/dupes
-brew tap homebrew/versions
-brew tap raggi/ale
-brew tap thoughtbot/formulae
+taps=(
+  homebrew/dupes
+  homebrew/versions
+  raggi/ale
+  thoughtbot/formulae
+)
 
-brew install brew-cask
-brew install cmatrix
-brew install ctags
-brew install elixir
-brew install emacs
-brew install erlang
-brew install fontconfig
-brew install gcc48
-brew install gettext
-brew install ghostscript
-brew install git
-brew install hub
-brew install imagemagick
-brew install keybase
-brew install libksba
-brew install libxml2
-brew install libyaml
-brew install macvim
-brew install mercurial
-brew install phantomjs
-brew install postgresql
-brew install rcm
-brew install rust
-brew install sqlite
-brew install the_silver_searcher
-brew install tmux
-brew install tree
-brew install wget
+for tap in ${taps[@]}; do
+  brew tap $tap
+done
 
-brew cask install 1password
-brew cask install alfred
-brew cask install audacity
-brew cask install balsamiq-mockups
-brew cask install bettertouchtool
-brew cask install calibre
-brew cask install chicken
-brew cask install colloquy
-brew cask install controllermate
-brew cask install dash
-brew cask install divvy
-brew cask install dropbox
-brew cask install duplicate-annihilator
-brew cask install filezilla
-brew cask install firefox
-brew cask install fitbit-connect
-brew cask install flip4mac
-brew cask install flowdock
-brew cask install google-chrome
-brew cask install google-drive
-brew cask install google-japanese-ime
-brew cask install gpgtools
-brew cask install growlnotify
-brew cask install handbrake
-brew cask install iterm2
-brew cask install karabiner
-brew cask install little-snitch
-brew cask install omnigraffle
-brew cask install pgadmin3
-brew cask install picasa
-brew cask install screenflow
-brew cask install silverlight
-brew cask install simple-comic
-brew cask install skitch
-brew cask install skype
-brew cask install slack
-brew cask install smcfancontrol
-brew cask install sqlitebrowser
-brew cask install steam
-brew cask install sublime-text
-brew cask install teensy
-brew cask install unrarx
-brew cask install vlc
-brew cask install vox
-brew cask install wjoy
-brew cask install zipeg
+# $ brew leaves | pbcopy
+# Paste in using Vim: "+p
+packages=(
+  brew-cask
+  cmatrix
+  ctags
+  elixir
+  emacs
+  erlang
+  fontconfig
+  gcc48
+  gettext
+  ghostscript
+  git
+  hub
+  imagemagick
+  keybase
+  libksba
+  libxml2
+  libyaml
+  macvim
+  mercurial
+  phantomjs
+  postgresql
+  rcm
+  rust
+  sqlite
+  the_silver_searcher
+  tmux
+  tree
+  wget
+)
+
+for package in ${packages[@]}; do
+  brew install $package
+done
+
+# $ brew cask list | pbcopy
+# Paste in using Vim: "+p
+casks=(
+  1password
+  alfred
+  audacity
+  balsamiq-mockups
+  bettertouchtool
+  calibre
+  chicken
+  colloquy
+  controllermate
+  dash
+  divvy
+  dropbox
+  duplicate-annihilator
+  filezilla
+  firefox
+  fitbit-connect
+  flip4mac
+  flowdock
+  google-chrome
+  google-drive
+  google-japanese-ime
+  gpgtools
+  growlnotify
+  handbrake
+  iterm2
+  karabiner
+  little-snitch
+  omnigraffle
+  pgadmin3
+  picasa
+  remote-buddy
+  screenflow
+  silverlight
+  simple-comic
+  skitch
+  skype
+  slack
+  smcfancontrol
+  sqlitebrowser
+  steam
+  sublime-text
+  teensy
+  unrarx
+  vlc
+  vox
+  wjoy
+  zipeg
+)
+
+for cask in ${casks[@]}; do
+  brew cask install $cask
+done
+
+brew cask cleanup
+brew cleanup
