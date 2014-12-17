@@ -19,6 +19,8 @@ done
 
 # $ brew leaves | pbcopy
 # Paste in using Vim: "+p
+# Leave Rust programming language out until there is adequate support
+# for both rust and cargo in brew
 packages=(
   brew-cask
   cmatrix
@@ -42,7 +44,6 @@ packages=(
   phantomjs
   postgresql
   rcm
-  rust
   sqlite
   the_silver_searcher
   tmux
