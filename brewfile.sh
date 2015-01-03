@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# Install the following programs from the App Store:
+# Numbers
+# Pages
+# Kindle
+# Twitter
+# PDF Squeezer
+
 # Install Brew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
@@ -11,6 +18,7 @@ taps=(
   homebrew/versions
   raggi/ale
   thoughtbot/formulae
+  larsimmisch/homebrew-avr
 )
 
 for tap in ${taps[@]}; do
@@ -22,6 +30,7 @@ done
 # Leave Rust programming language out until there is adequate support
 # for both rust and cargo in brew
 packages=(
+  avr-libc
   brew-cask
   cmatrix
   ctags
@@ -41,10 +50,10 @@ packages=(
   libyaml
   macvim
   mercurial
+  ossp-uuid
   phantomjs
   postgresql
   rcm
-  sqlite
   the_silver_searcher
   tmux
   tree
