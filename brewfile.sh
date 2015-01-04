@@ -54,6 +54,7 @@ packages=(
   phantomjs
   postgresql
   rcm
+  redis
   the_silver_searcher
   tmux
   tree
