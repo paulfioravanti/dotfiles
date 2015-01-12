@@ -42,6 +42,7 @@ packages=(
   gettext
   ghostscript
   git
+  git-flow
   hub
   imagemagick
   keybase
