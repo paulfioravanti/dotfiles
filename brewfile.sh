@@ -78,6 +78,7 @@ casks=(
   chicken
   colloquy
   controllermate
+  cyberduck
   dash
   divvy
   dropbox
