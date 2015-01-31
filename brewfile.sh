@@ -34,6 +34,7 @@ packages=(
   brew-cask
   cmatrix
   ctags
+  curl
   elixir
   emacs
   erlang
@@ -51,11 +52,14 @@ packages=(
   libyaml
   macvim
   mercurial
+  nmap
   ossp-uuid
   phantomjs
   postgresql
   rcm
   redis
+  screen
+  sphinx
   the_silver_searcher
   tmux
   tree
@@ -94,6 +98,7 @@ casks=(
   gpgtools
   growlnotify
   handbrake
+  hipchat
   iterm2
   karabiner
   little-snitch
