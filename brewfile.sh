@@ -87,6 +87,7 @@ casks=(
   divvy
   dropbox
   duplicate-annihilator
+  expandrive
   filezilla
   firefox
   fitbit-connect
@@ -113,10 +114,13 @@ casks=(
   skype
   slack
   smcfancontrol
+  sonic-pi
   sqlitebrowser
   steam
   sublime-text
   teensy
+  things
+  typed
   unrarx
   vlc
   vox
