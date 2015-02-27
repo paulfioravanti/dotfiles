@@ -52,6 +52,7 @@ packages=(
   libyaml
   macvim
   mercurial
+  mysql
   nmap
   ossp-uuid
   phantomjs
