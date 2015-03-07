@@ -121,6 +121,7 @@ casks=(
   sublime-text
   teensy
   things
+  torbrowser
   typed
   unrarx
   vlc
