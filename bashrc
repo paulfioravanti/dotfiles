@@ -23,7 +23,7 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 export LSCOLORS=gxfxcxdxbxegedabagacad # give ls some colour
-alias ls='ls -FAagG'
+alias ls='ls -FlAagG'
 alias be='bundle exec'
 alias git=hub # use git to execute hub commands as well
 
