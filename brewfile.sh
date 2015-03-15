@@ -82,6 +82,7 @@ casks=(
   calibre
   chicken
   colloquy
+  colorpicker-skalacolor
   controllermate
   cyberduck
   dash
