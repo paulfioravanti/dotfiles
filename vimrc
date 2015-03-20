@@ -152,9 +152,16 @@ endfunction
 highlight def IndentGuides ctermbg=238
 nnoremap <leader>I :call IndentGuides()<cr>
 
-" Change cursor shape depending on mode: block for normal, line for insert
-let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+" Change cursor shape depending on mode: block for normal, line for insert.
+" tmux will only forward escape sequences to the terminal if surrounded by
+" a DCS sequence: https://gist.github.com/andyfowler/1195581
+if exists('$TMUX')
+  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+else
+  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+endif
 
 " <C-z> is awkward to reach
 nnoremap <leader>z <C-z>
