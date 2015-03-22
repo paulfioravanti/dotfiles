@@ -30,22 +30,26 @@ done
 # Leave Rust programming language out until there is adequate support
 # for both rust and cargo in brew
 packages=(
+  alpine
   avr-libc
   brew-cask
+  chicken
   cmatrix
   ctags
   curl
+  dash
   elixir
   emacs
   erlang
   fontconfig
   gcc48
-  gettext
+  gcc49
   ghostscript
   git
   git-flow
   hub
   imagemagick
+  irssi
   keybase
   libksba
   libxml2
@@ -54,14 +58,18 @@ packages=(
   mercurial
   mysql
   nmap
+  openssl098
   ossp-uuid
   phantomjs
   postgresql
   rcm
   redis
+  s3cmd
   screen
   sphinx
+  sqlitebrowser
   the_silver_searcher
+  tmate
   tmux
   tree
   wget
@@ -79,6 +87,7 @@ casks=(
   audacity
   balsamiq-mockups
   bettertouchtool
+  brackets
   calibre
   chicken
   colloquy
@@ -86,6 +95,7 @@ casks=(
   controllermate
   cyberduck
   dash
+  data-rescue
   divvy
   dropbox
   duplicate-annihilator
@@ -108,6 +118,7 @@ casks=(
   omnigraffle
   pgadmin3
   picasa
+  recordit
   remote-buddy
   screenflow
   silverlight
