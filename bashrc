@@ -11,6 +11,8 @@ export PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/~}\007"'
 export CLICOLOR=1
 # Set colors to match iTerm Terminal colours
 export TERM=xterm-256color
+# Declare a default editor
+export EDITOR=vim
 
 ## PATH ##
 export PATH=/usr/local/bin:$PATH
