@@ -38,6 +38,7 @@ Plugin 'myusuf3/numbers.vim' " Relative/Absolute numbering for different modes
 Plugin 'ntpeters/vim-better-whitespace' " Whitespace handling
 Plugin 'scrooloose/nerdtree' " File tree browser
 Plugin 'wting/rust' " Rust file detection and syntax hightlighting
+Plugin 'dermusikman/sonicpi.vim' " SonicPi plugin for Vim
 
 call vundle#end() " required by Vundle
 
