@@ -39,6 +39,7 @@ set wildignore+=.git " Don't include vcs files
 set wildignore+=*.DS_Store " Don't include OSX-specific files in wildcards
 set wildignore+=coverage/** " Don't include code coverage files in wildcards
 set wildignore+=build/** " Don't include any Rubymotion build files
+set wildignore+=tmp/cache/** " Don't include any Rails cache files
 
 " Save when losing focus from the window
 au FocusLost * :silent! wall
