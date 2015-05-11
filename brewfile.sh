@@ -122,7 +122,6 @@ casks=(
   remote-buddy
   screenflow
   silverlight
-  simple-comic
   skitch
   skype
   slack
@@ -131,6 +130,7 @@ casks=(
   sqlitebrowser
   steam
   sublime-text
+  techstoreclub-simple-comic
   teensy
   things
   torbrowser
