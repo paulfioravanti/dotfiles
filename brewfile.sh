@@ -1,11 +1,16 @@
 #!/bin/bash
 
 # Install the following programs from the App Store:
+# XCode
 # Numbers
 # Pages
+# iMovie
+# Garageband
 # Kindle
 # Twitter
 # PDF Squeezer
+# Monosnap
+# Form
 
 # Install Brew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
