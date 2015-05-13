@@ -109,7 +109,6 @@ casks=(
   filezilla
   firefox
   fitbit-connect
-  flip4mac
   flowdock
   google-chrome
   google-drive
