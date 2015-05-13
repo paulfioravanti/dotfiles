@@ -29,7 +29,6 @@ Plugin 'kana/vim-textobj-user' " Create your own text objects
 Plugin 'kana/vim-textobj-entire' " Text objects for entire buffers
 Plugin 'kana/vim-textobj-lastpat' " Text object for search matches
 Plugin 'kchmck/vim-coffee-script' " Syntax, indenting, compiling of Coffeescript
-Plugin 'bling/vim-airline' " Status line
 Plugin 'airblade/vim-gitgutter' " Show git diff in left 'gutter'
 Plugin 'rizzatti/dash.vim' " Plugin for Dash.app
 Plugin 'vim-scripts/change-hash-syntax' " Change Ruby hash syntax to 1.9
