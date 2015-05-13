@@ -121,6 +121,7 @@ casks=(
   iterm2
   karabiner
   little-snitch
+  logitech-control-center
   omnigraffle
   pgadmin3
   picasa
