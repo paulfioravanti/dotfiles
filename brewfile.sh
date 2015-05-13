@@ -52,6 +52,7 @@ packages=(
   ghostscript
   git
   git-flow
+  heroku-toolbelt
   hub
   imagemagick
   irssi
