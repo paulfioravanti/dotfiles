@@ -1,11 +1,17 @@
 # Don't check for mail on opening new terminal
 unset MAILCHECK
 
-# Git tab completion
-source ~/git-completion.bash
-# Show branch in status line
-PS1='[\W$(__git_ps1 " (%s)")]$ '
-export PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/~}\007"'
+# Enable git tab completion via homebrew
+if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash ]; then
+  . `brew --prefix`/etc/bash_completion.d/git-completion.bash
+fi
+# Enable git status in prompt via homebrew
+if [ -f `brew --prefix`/etc/bash_completion.d/git-prompt.sh ]; then
+  . `brew --prefix`/etc/bash_completion.d/git-prompt.sh
+  # Show branch in status line
+  PS1='[\W$(__git_ps1 " (%s)")]$ '
+  export PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/~}\007"'
+fi
 
 # Get ANSI colours in iTerm2
 export CLICOLOR=1
