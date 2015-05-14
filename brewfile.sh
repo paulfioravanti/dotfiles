@@ -123,7 +123,6 @@ casks=(
   logitech-control-center
   omnigraffle
   pgadmin3
-  picasa
   recordit
   remote-buddy
   screenflow
