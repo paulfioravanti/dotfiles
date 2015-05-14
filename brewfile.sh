@@ -143,7 +143,6 @@ casks=(
   vlc
   vox
   wjoy
-  zipeg
 )
 
 for cask in ${casks[@]}; do
