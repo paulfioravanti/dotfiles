@@ -104,7 +104,6 @@ casks=(
   data-rescue
   divvy
   dropbox
-  duplicate-annihilator
   expandrive
   filezilla
   firefox
