@@ -24,7 +24,6 @@ export EDITOR=vim
 export PATH=/usr/local/bin:$PATH
 export PATH=$PATH:/usr/local/sbin # Add sbin to PATH for icu4c
 export PATH=$PATH:/usr/local/heroku/bin:$PATH # added by Heroku toolbelt
-source /Users/paul/.travis/travis.sh # added by travis gem
 PATH=$PATH:/usr/local/share/npm/bin # Add npm to PATH for bower
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 # Load RVM into a shell session *as a function*
