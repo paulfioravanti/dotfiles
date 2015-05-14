@@ -130,7 +130,6 @@ casks=(
   skitch
   skype
   slack
-  smcfancontrol
   sonic-pi
   sqlitebrowser
   steam
