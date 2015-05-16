@@ -39,6 +39,7 @@ packages=(
   avr-libc
   brew-cask
   chicken
+  chruby
   cmatrix
   ctags
   curl
@@ -70,6 +71,7 @@ packages=(
   postgresql
   rcm
   redis
+  ruby-install
   s3cmd
   screen
   sphinx

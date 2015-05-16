@@ -25,14 +25,21 @@ export PATH=/usr/local/bin:$PATH
 export PATH=$PATH:/usr/local/sbin # Add sbin to PATH for icu4c
 export PATH=$PATH:/usr/local/heroku/bin:$PATH # added by Heroku toolbelt
 PATH=$PATH:/usr/local/share/npm/bin # Add npm to PATH for bower
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-# Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
+## Aliases ##
 export LSCOLORS=gxfxcxdxbxegedabagacad # give ls some colour
 alias ls='ls -FlAagG'
 alias be='bundle exec'
 alias git=hub # use git to execute hub commands as well
+
+## Ruby ##
+if [[ -e /usr/local/share/chruby ]]; then
+  # Load chruby
+  source /usr/local/share/chruby/chruby.sh
+  # Allow auto-switching of Ruby version when
+  # directory has a .ruby-version file
+  source /usr/local/share/chruby/auto.sh
+fi
 
 # Allow <C-s> to be used by Command-T in Vim
 # http://stackoverflow.com/q/8616843/567863
