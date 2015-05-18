@@ -110,6 +110,7 @@ casks=(
   filezilla
   firefox
   fitbit-connect
+  flash
   flowdock
   flux
   google-chrome
