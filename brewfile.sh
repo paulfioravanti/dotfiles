@@ -70,6 +70,7 @@ packages=(
   phantomjs
   postgresql
   rcm
+  reattach-to-user-namespace
   redis
   ruby-install
   s3cmd
