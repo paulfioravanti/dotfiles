@@ -1,0 +1,1 @@
+:editor: "/usr/local/bin/tmux new-window 'vim $file'"
