@@ -129,6 +129,7 @@ casks=(
   pgadmin3
   recordit
   remote-buddy
+  rubymotion
   screenflow
   silverlight
   skitch
