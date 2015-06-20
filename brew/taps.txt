@@ -1,0 +1,6 @@
+caskroom/cask
+homebrew/dupes
+homebrew/versions
+larsimmisch/avr
+raggi/ale
+thoughtbot/formulae
