@@ -36,8 +36,8 @@ done
 # for both rust and cargo in brew
 packages=(
   alpine
-  avr-libc
-  brew-cask
+  larsimmisch/avr/avr-libc
+  caskroom/cask/brew-cask
   chicken
   chruby
   cmatrix
@@ -47,12 +47,15 @@ packages=(
   elixir
   emacs
   erlang
+  ffmpeg
   fontconfig
-  gcc48
-  gcc49
+  homebrew/versions/gcc48
+  homebrew/versions/gcc49
+  gdbm
   ghostscript
   git
   git-flow
+  gnupg
   heroku-toolbelt
   hub
   imagemagick
@@ -65,20 +68,19 @@ packages=(
   mercurial
   mysql
   nmap
-  openssl098
+  homebrew/versions/openssl098
   ossp-uuid
   phantomjs
   postgresql
-  rcm
+  thoughtbot/formulae/rcm
   reattach-to-user-namespace
   redis
   ruby-install
   s3cmd
-  screen
+  homebrew/dupes/screen
   sphinx
   sqlitebrowser
   the_silver_searcher
-  tmate
   tmux
   tree
   wget
