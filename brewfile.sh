@@ -143,6 +143,7 @@ casks=(
   sublime-text
   techstoreclub-simple-comic
   teensy
+  textmate
   things
   torbrowser
   typed
