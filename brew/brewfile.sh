@@ -19,18 +19,18 @@ brew update
 brew upgrade
 
 # $ brew tap > taps.txt
-for tap in `cat taps.txt`; do
+for tap in `cat ~/.dotfiles/brew/taps.txt`; do
   brew tap $tap
 done
 
 # $ brew leaves > packages.txt
-for package in `cat packages.txt`; do
+for package in `cat ~/.dotfiles/brew/packages.txt`; do
   brew install $package
   brew upgrade $package
 done
 
 # $ brew cask list > casks.txt
-for cask in `cat casks.txt`; do
+for cask in `cat ~/.dotfiles/brew/casks.txt`; do
   # There's currently no way to cleanly upgrade a cask yet
   # so in order to prevent multiple versions of a cask
   # polluting the Caskroom (and hence turning up in Alfred searches),
