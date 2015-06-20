@@ -38,6 +38,7 @@ Plugin 'ntpeters/vim-better-whitespace' " Whitespace handling
 Plugin 'scrooloose/nerdtree' " File tree browser
 Plugin 'rust-lang/rust.vim' " Rust file detection and syntax hightlighting
 Plugin 'dermusikman/sonicpi.vim' " SonicPi plugin for Vim
+Plugin 'bling/vim-airline' " Status line for Vim
 
 call vundle#end() " required by Vundle
 
