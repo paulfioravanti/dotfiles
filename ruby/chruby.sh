@@ -24,3 +24,4 @@ done < $CHRUBY_DIR/rubies.txt
 
 chruby $(cat ~/.ruby-version)
 gem install bundler
+gem install rails
