@@ -3,7 +3,7 @@
 # Install the preferred Ruby versions
 
 # get current directory
-CHRUBY_DIR=`dirname $BASH_SOURCE`
+CHRUBY_DIR=$(dirname $BASH_SOURCE)
 
 # Use chruby and Ruby to generate a list of Rubies to install
 # $ chruby | ruby -n -e 'puts $_.gsub(/^[^\w]+|-p[0-9]+|\n/, "").gsub("-", " ")' > ~/.dotfiles/ruby/rubies.txt
@@ -15,4 +15,4 @@ while read ruby_version; do
   ruby-install $ruby_version
 done < $CHRUBY_DIR/rubies.txt
 
-chruby `cat ~/.ruby-version`
+chruby $(cat ~/.ruby-version)
