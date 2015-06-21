@@ -1,10 +1,14 @@
 #!/bin/bash
 # Set up a new Mac to get up and running for development.
 # Assumes that
-# $ git clone https://github.com/paulfioravanti/dotfiles.git ~/.dotfiles
-# has been run. On a new machine, using `git` may prompt you to install XCode
-# command line tools, which is expected behaviour and okay to do.
+# 1. XCode has been installed from the App Store.  Its presence is needed
+#    for some of the brew packages.
+# 2. $ git clone https://github.com/paulfioravanti/dotfiles.git ~/.dotfiles
+#    has been run. On a new machine, using `git` may prompt you to install XCode
+#    command line tools, which is expected behaviour and okay to do if you
+#    haven't installed XCode already.
 
+# Get current directory
 DIR=`dirname $BASH_SOURCE`
 
 # Install brew packages and casks
