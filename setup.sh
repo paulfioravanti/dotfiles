@@ -2,7 +2,8 @@
 # Set up a new Mac to get up and running for development.
 # Assumes that
 # 1. XCode has been installed from the App Store.  Its presence is needed
-#    for some of the brew packages.
+#    for some of the brew packages, and agreement to the license is required
+#    to compile some Ruby versions.
 # 2. $ git clone https://github.com/paulfioravanti/dotfiles.git ~/.dotfiles
 #    has been run. On a new machine, using `git` may prompt you to install XCode
 #    command line tools, which is expected behaviour and okay to do if you
