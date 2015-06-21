@@ -1,1 +1,1 @@
-EXCLUDES="README.md *:brew"
+EXCLUDES="README.md *:brew *:ruby"

@@ -21,18 +21,18 @@ brew upgrade
 # get current directory
 BREW_DIR=`dirname $BASH_SOURCE`
 
-# $ brew tap > taps.txt
+# $ brew tap > ~/.dotfiles/brew/taps.txt
 for tap in `cat $BREW_DIR/taps.txt`; do
   brew tap $tap
 done
 
-# $ brew leaves > packages.txt
+# $ brew leaves > ~/.dotfiles/brew/packages.txt
 for package in `cat $BREW_DIR/packages.txt`; do
   brew install $package
   brew upgrade $package
 done
 
-# $ brew cask list > casks.txt
+# $ brew cask list > ~/.dotfiles/brew/casks.txt
 for cask in `cat $BREW_DIR/casks.txt`; do
   # There's currently no way to cleanly upgrade a cask yet
   # so in order to prevent multiple versions of a cask
