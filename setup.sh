@@ -9,7 +9,7 @@
 #    haven't installed XCode already.
 
 # Get current directory
-DIR=`dirname $BASH_SOURCE`
+DIR=$(dirname $BASH_SOURCE)
 
 # Install brew packages and casks
 source $DIR/brew/brewfile.sh

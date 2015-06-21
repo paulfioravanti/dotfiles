@@ -13,27 +13,27 @@
 # Form
 
 # Install Brew
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+ruby -e $(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)
 
 brew update
 brew upgrade
 
 # get current directory
-BREW_DIR=`dirname $BASH_SOURCE`
+BREW_DIR=$(dirname $BASH_SOURCE)
 
 # $ brew tap > ~/.dotfiles/brew/taps.txt
-for tap in `cat $BREW_DIR/taps.txt`; do
+for tap in $(cat $BREW_DIR/taps.txt); do
   brew tap $tap
 done
 
 # $ brew leaves > ~/.dotfiles/brew/packages.txt
-for package in `cat $BREW_DIR/packages.txt`; do
+for package in $(cat $BREW_DIR/packages.txt); do
   brew install $package
   brew upgrade $package
 done
 
 # $ brew cask list > ~/.dotfiles/brew/casks.txt
-for cask in `cat $BREW_DIR/casks.txt`; do
+for cask in $(cat $BREW_DIR/casks.txt); do
   # There's currently no way to cleanly upgrade a cask yet
   # so in order to prevent multiple versions of a cask
   # polluting the Caskroom (and hence turning up in Alfred searches),
