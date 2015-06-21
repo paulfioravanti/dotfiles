@@ -1,5 +1,5 @@
 #!/bin/bash
 
 # Set up a new Mac to get up and running with development
-source ~/.dotfiles/brew/brewfile.sh
+source `dirname $BASH_SOURCE`/brew/brewfile.sh
 
