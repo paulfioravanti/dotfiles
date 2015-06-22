@@ -10,5 +10,4 @@ echo "Generating packages..."
 brew leaves > $DIR/packages.txt
 echo "Generating casks..."
 brew cask list > $DIR/casks.txt
-echo "Complete! Run the following to install:"
-echo "source ~/.dotfiles/brew/brewfile.sh"
+echo "Complete!"
