@@ -11,7 +11,9 @@ while read ruby_version; do
   if [ "$ruby_version" == "ruby 1.8.7" ]; then
     # Reference for no more support of 1.8.7 with ruby-install:
     # http://stackoverflow.com/questions/21891402/chruby-install-ruby-1-8-7
-    echo "$ruby_version is unsupported by ruby-install. Skipping..."
+    # Install with ruby-build instead into the default folder where
+    # chruby will find it:
+    CC=gcc-4.8 ruby-build 1.8.7-p375 ~/.rubies/ruby-1.8.7-p375
   else
     ruby-install $ruby_version
   fi

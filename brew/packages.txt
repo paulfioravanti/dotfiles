@@ -39,6 +39,7 @@ postgresql
 thoughtbot/formulae/rcm
 reattach-to-user-namespace
 redis
+ruby-build
 ruby-install
 s3cmd
 homebrew/dupes/screen
