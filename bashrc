@@ -5,6 +5,7 @@ unset MAILCHECK
 if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash ]; then
   . `brew --prefix`/etc/bash_completion.d/git-completion.bash
 fi
+
 # Enable git status in prompt via homebrew
 if [ -f `brew --prefix`/etc/bash_completion.d/git-prompt.sh ]; then
   . `brew --prefix`/etc/bash_completion.d/git-prompt.sh
@@ -17,7 +18,7 @@ fi
 export CLICOLOR=1
 # Set colors to match iTerm Terminal colours
 export TERM=xterm-256color
-# Declare a default editor
+# Declare vim to be the default editor
 export EDITOR=vim
 
 ## PATH ##
@@ -28,7 +29,7 @@ PATH=$PATH:/usr/local/share/npm/bin # Add npm to PATH for bower
 
 ## Aliases ##
 export LSCOLORS=gxfxcxdxbxegedabagacad # give ls some colour
-alias ls='ls -FlAagG'
+alias ls='ls -FlAagG' # more detail with default `ls`
 alias be='bundle exec'
 alias git=hub # use git to execute hub commands as well
 
