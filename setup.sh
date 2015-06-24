@@ -61,7 +61,8 @@ source $DIR/ruby/chruby.sh
 #    - Form
 #    Other:
 #    - Mavis Beacon
-# 6. Organise the OSX dock to have the following apps in it:
+# 6. Organise the OSX dock to have the following apps in it (and set them up
+#    appropriately):
 #    - Finder
 #    - Launchpad
 #    - Chrome
