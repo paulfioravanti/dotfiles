@@ -12,7 +12,7 @@ while read ruby_version; do
     # Reference for no more support of 1.8.7 with ruby-install:
     # http://stackoverflow.com/questions/21891402/chruby-install-ruby-1-8-7
     # Install with ruby-build instead into the default folder where
-    # chruby will find it:
+    # chruby will find it, and use gcc48 to compile as gcc49 will not work:
     CC=gcc-4.8 ruby-build 1.8.7-p375 ~/.rubies/ruby-1.8.7-p375
   else
     ruby-install $ruby_version
