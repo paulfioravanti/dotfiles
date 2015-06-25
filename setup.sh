@@ -39,18 +39,12 @@ source $DIR/ruby/chruby.sh
 # TODO: Attempt to automate as much as the tasks below as possible
 #
 # Manual App-related follow-up tasks:
-# 1. Install Solarized colours into iTerm2 default profile
-#    $ cd ~/solarized/iterm2-colors-solarized
-#    $ open .
-#    - Double click Solarized Dark.itermcolors and Solarized Light.itermcolors
-#    to install them into iTerm2
-#    - Delete the ~/solarized directory
-# 2. Set up Dropbox app to get 1Password vault and Mavis Beacon app
-# 3. Set up 1Password
+# - Set up Dropbox app to get 1Password vault and Mavis Beacon app
+# - Set up 1Password
 #    - Use vault from Dropbox
 #    - Install extension for Chrome, Firefox, and Safari
-# 4. Set up Google Drive
-# 5. Install the following programs:
+# - Set up Google Drive
+# - Install the following programs:
 #    From the App Store:
 #    - XCode (should be installed already)
 #    - Numbers
@@ -64,7 +58,7 @@ source $DIR/ruby/chruby.sh
 #    - Form
 #    Other:
 #    - Mavis Beacon
-# 6. Organise the OSX dock to have the following apps in it (and set them up
+# - Organise the OSX dock to have the following apps in it (and set them up
 #    appropriately):
 #    - Finder
 #    - Launchpad
@@ -82,15 +76,15 @@ source $DIR/ruby/chruby.sh
 #    - Mavis Beacon
 #    - System Preferences
 #    - Activity Monitor
-# 7. Install the following extensions for Google Chrome:
+# - Install the following extensions for Google Chrome:
 #    - AdBlock
 #    - Google Mail Checker
 #    - Reddit Enhancement Suite
 #    - rikaikun
 #    - Vimium
-# 8. Install the following extensions for Firefox:
+# - Install the following extensions for Firefox:
 #    - Rikaichan (plus dictionaries)
-# 9. Configure Karabiner to change Caps Lock to Ctrl/Esc
+# - Configure Karabiner to change Caps Lock to Ctrl/Esc
 #    - Open Karabiner and allow it access to accessibility settings
 #    - In the key remappings, under the Change Control_L_Key (Left Control)
 #      settings, check:
@@ -102,7 +96,7 @@ source $DIR/ruby/chruby.sh
 ################################################################################
 #
 # Manual Mac system settings follow-up tasks:
-# 1. Organise the Finder favourites bar:
+# - Organise the Finder favourites bar:
 #    - Create a Homebrew Apps Saved Search
 #      a. In the Finder, go to /opt/homebrew-cask/Caskroom
 #      b. Type something in the search field and delete it in order to bring
@@ -130,6 +124,6 @@ source $DIR/ruby/chruby.sh
 #      - Dropbox (Personal)
 #      - Google Drive
 #      - Airdrop
-# 2. Under System Preferences > Keyboard > Modifier Keys:
+# - Under System Preferences > Keyboard > Modifier Keys:
 #    - On the Caps Lock dropdown, select  "^ Control"
 #      (This is preparation for the Karabiner step below)
