@@ -29,6 +29,9 @@ vim +PluginInstall +qall
 
 # Get Solarized colors for iTerm. Follow up with installation manually.
 git clone https://github.com/altercation/solarized.git ~/solarized
+open ~/solarized/iterm2-colors-solarized/Solarized\ Dark.itermcolors
+open ~/solarized/iterm2-colors-solarized/Solarized\ Light.itermcolors
+# rm -rf ~/solarized
 
 # Install Ruby versions
 source $DIR/ruby/chruby.sh
@@ -94,6 +97,7 @@ source $DIR/ruby/chruby.sh
 #      - Control_L to Control_L (+ When you type Control_L only, send Escape)
 #    - In the key remappings, under the Change Return Key settings, check:
 #      - Return to Control_L (+ When you type Return only, send Return)
+#
 ################################################################################
 ################################################################################
 #
