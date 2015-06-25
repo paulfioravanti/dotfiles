@@ -79,11 +79,22 @@ source $DIR/ruby/chruby.sh
 #    - Mavis Beacon
 #    - System Preferences
 #    - Activity Monitor
-# 6. Configure Karabiner to change Caps Lock to Ctrl/Esc
+# 7. Install the following extensions for Google Chrome:
+#    - AdBlock
+#    - Google Mail Checker
+#    - Reddit Enhancement Suite
+#    - rikaikun
+#    - Vimium
+# 8. Install the following extensions for Firefox:
+#    - Rikaichan (plus dictionaries)
+# 9. Configure Karabiner to change Caps Lock to Ctrl/Esc
 #    - Open Karabiner and allow it access to accessibility settings
 #    - In the key remappings, under the Change Control_L_Key (Left Control)
 #      settings, check:
 #      - Control_L to Control_L (+ When you type Control_L only, send Escape)
+#    - In the key remappings, under the Change Return Key settings, check:
+#      - Return to Control_L (+ When you type Return only, send Return)
+################################################################################
 ################################################################################
 #
 # Manual Mac system settings follow-up tasks:
