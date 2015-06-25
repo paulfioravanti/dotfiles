@@ -1,10 +1,11 @@
 #!/bin/bash
 # Set up a new Mac to get up and running for development.
 # Assumes the following preconditions:
-# 1. XCode has been installed from the App Store.  Its presence is needed
+# - FileVault has been turned on
+# - XCode has been installed from the App Store.  Its presence is needed
 #    for some of the brew packages, and agreement to the license is required
 #    to compile some Ruby versions.
-# 2. $ git clone https://github.com/paulfioravanti/dotfiles.git ~/.dotfiles
+# - $ git clone https://github.com/paulfioravanti/dotfiles.git ~/.dotfiles
 #    has been run. On a new machine, using `git` may prompt you to install XCode
 #    command line tools, which is expected behaviour and okay to do if you
 #    haven't installed XCode already.
@@ -76,7 +77,7 @@ source $DIR/ruby/chruby.sh
 #    - Mavis Beacon
 #    - System Preferences
 #    - Activity Monitor
-# - Install the following extensions for Google Chrome:
+# - Install the following extensions for Google Chrome (synced via Chrome?):
 #    - AdBlock
 #    - Google Mail Checker
 #    - Reddit Enhancement Suite
@@ -124,6 +125,42 @@ source $DIR/ruby/chruby.sh
 #      - Dropbox (Personal)
 #      - Google Drive
 #      - Airdrop
-# - Under System Preferences > Keyboard > Modifier Keys:
-#    - On the Caps Lock dropdown, select  "^ Control"
-#      (This is preparation for the Karabiner step below)
+# - Under System Preferences
+#   - Under Keyboard > Modifier Keys:
+#     - On the Caps Lock dropdown, select  "^ Control"
+#       (This is preparation for the Karabiner step below)
+#   - Under Desktop & Screen Saver:
+#     - Create hot corner for Screen saver at top right corner
+#   - Under Dock:
+#     - Check Automatically hide and show the Dock
+#   - Under Language and Region:
+#     - Add Japanese
+#     - Under English, check use 24-hour clock
+#   - Under Keyboard:
+#     - Under Keyboard Tab:
+#       - Max out Key Repeat
+#       - Check Show Keyboard & Character Viewers in menu bar
+#     - Under Shortcuts Tab:
+#       - For Input Sources, check both shortcuts
+#       - The above will conflict with Spotlight shortcuts, so change the
+#         Spotlight shortcuts to: ^CmdSpace and ^OptionSpace
+#     - Under Input Sources Tab:
+#       - Add Alphanumeric (Google)
+#       - Add U.S.
+#       - Add Hiragana (Google)
+#       - Remove Australian
+#    - Under Energy Saver:
+#      - Under Battery Tab, set turn off display after 15 mins
+#      - Under Power Adapter Tab, set turn off display after 3 hours
+#    - Under Trackpad:
+#      - Set Tracking Speed to max
+#      - Uncheck Scroll direction: natural
+#    - Under User & Groups > Login Items, set the following list:
+#      - Dropbox, Alfred 2, Divvy, Karabiner, Flux, Google Drive
+#    - Under App Store:
+#      - Uncheck Install App updates and Install OSX updates
+#    - Under Date & Time
+#      - Check Show Date and Time in menu bar, show the day of the week,
+#        and show date
+#    - Under Time Machine
+#      - Check Show Time Machine in Menu Bar
