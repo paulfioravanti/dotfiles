@@ -13,8 +13,10 @@ the future.
 Before setting up a new development environment on a new machine,
 ensure XCode and XCode command line tools have been installed, then run:
 
-`$ git clone https://github.com/paulfioravanti/dotfiles.git ~/.dotfiles`
-`$ source ~/.dotfiles/setup.sh`
+```
+$ git clone https://github.com/paulfioravanti/dotfiles.git ~/.dotfiles
+$ source ~/.dotfiles/setup.sh
+```
 
 Regenerate the lists for brew (taps, packages, casks):
 
