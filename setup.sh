@@ -11,10 +11,10 @@
 #    haven't installed XCode already.
 
 # Get current directory
-DIR=$(dirname $BASH_SOURCE)
+DOTFILES_DIR=$(dirname $BASH_SOURCE)
 
 # Install brew packages and casks
-source $DIR/brew/brewfile.sh
+source $DOTFILES_DIR/brew/brewfile.sh
 
 # Bootstrap rcup: the exclusions here are enumerated in the rcrc file so
 # you should be able to just run $ rcup when doing this again
@@ -35,7 +35,7 @@ open ~/solarized/iterm2-colors-solarized/Solarized\ Light.itermcolors
 # rm -rf ~/solarized
 
 # Install Ruby versions
-source $DIR/ruby/chruby.sh
+source $DOTFILES_DIR/ruby/chruby.sh
 
 cd ~/.dotfiles
 git remote set-url origin git@github.com:paulfioravanti/dotfiles.git

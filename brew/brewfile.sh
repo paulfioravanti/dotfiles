@@ -9,18 +9,18 @@ brew update
 brew upgrade
 
 # get current directory
-DIR=$(dirname $BASH_SOURCE)
+BREW_DIR=$(dirname $BASH_SOURCE)
 
-for tap in $(cat $DIR/taps.txt); do
+for tap in $(cat $BREW_DIR/taps.txt); do
   brew tap $tap
 done
 
-for package in $(cat $DIR/packages.txt); do
+for package in $(cat $BREW_DIR/packages.txt); do
   brew install $package
   brew upgrade $package
 done
 
-for cask in $(cat $DIR/casks.txt); do
+for cask in $(cat $BREW_DIR/casks.txt); do
   # There's currently no way to cleanly upgrade a cask yet
   # so in order to prevent multiple versions of a cask
   # polluting the Caskroom (and hence turning up in Alfred searches),

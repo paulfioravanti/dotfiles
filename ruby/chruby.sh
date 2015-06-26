@@ -2,7 +2,7 @@
 # Install Ruby versions using chruby
 
 # get current directory
-DIR=$(dirname $BASH_SOURCE)
+RUBY_DIR=$(dirname $BASH_SOURCE)
 
 # This file read requires a while loop (as apposed to for loops used elsewhere
 # in the dotfiles) due to there being spaces in the rubies.txt file. We want to
@@ -17,7 +17,7 @@ while read ruby_version; do
   else
     ruby-install $ruby_version
   fi
-done < $DIR/rubies.txt
+done < $RUBY_DIR/rubies.txt
 
 chruby $(cat ~/.ruby-version)
 gem install bundler
