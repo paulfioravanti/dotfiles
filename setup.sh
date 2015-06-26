@@ -21,15 +21,15 @@ source $DOTFILES_DIR/brew/brewfile.sh
 # Ignores the README, setup script, brew, and ruby directory for symlinking
 rcup -x README.md -x setup.sh -x *:brew -x *:ruby
 
-# Install Vundle to get vim plugins defined in .vimrc up and running
-git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-vim +PluginInstall +qall
-
 # Get Solarized colors for iTerm. Follow up with installation manually.
 git clone https://github.com/altercation/solarized.git ~/solarized
 open ~/solarized/iterm2-colors-solarized/Solarized\ Dark.itermcolors
 open ~/solarized/iterm2-colors-solarized/Solarized\ Light.itermcolors
 rm -rf ~/solarized
+
+# Install Vundle to get vim plugins defined in .vimrc up and running
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
 
 # Install Ruby versions
 source $DOTFILES_DIR/ruby/chruby.sh
