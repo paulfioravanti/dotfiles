@@ -10,6 +10,9 @@
 #    command line tools, which is expected behaviour and okay to do if you
 #    haven't installed XCode already.
 
+cd ~/.dotfiles
+git remote set-url origin git@github.com:paulfioravanti/dotfiles.git
+
 # Get current directory
 DIR=$(dirname $BASH_SOURCE)
 
