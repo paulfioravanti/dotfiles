@@ -19,7 +19,7 @@ source $DOTFILES_DIR/brew/brewfile.sh
 # Bootstrap rcup: the exclusions here are enumerated in the rcrc file so
 # you should be able to just run $ rcup when doing this again
 # Ignores the README, brew, and ruby directory for symlinking
-rcup -x README.md setup.sh *:brew *:ruby
+rcup -x README.md -x setup.sh -x *:brew -x *:ruby
 
 # Apply new terminal settings
 source ~/.bash_profile
