@@ -4,7 +4,7 @@ Set up for use with [rcm](https://github.com/thoughtbot/rcm).
 
 Regenerate dotfile directory:
 
-`$ rcup -x README.md -x setup.sh -x *:brew -x *:ruby`
+`$ rcup -x README.md -x setup.sh -x *:brew -x *:ruby -x *:karabiner`
 
 Once this has been run, the `.rcrc` config file for `rcup` will have been
 created that contains the exclusions, so only `$ rcup` will need to be run in
