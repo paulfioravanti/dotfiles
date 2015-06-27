@@ -12,20 +12,21 @@ ssh-add ~/.ssh/id_rsa
 # Install brew packages and casks
 source $DOTFILES_DIR/osx/brew/brew.sh
 
-# Bootstrap rcup: the exclusions here are enumerated in the rcrc file so
-# you should be able to just run $ rcup when doing this again
-# Ignores the README, setup script, brew, and ruby directory for symlinking
-rcup -x README.md -x setup.sh -x *:ruby -x *:osx
-
 # Get Solarized colors for iTerm.
 git clone https://github.com/altercation/solarized.git ~/solarized
 open ~/solarized/iterm2-colors-solarized/Solarized\ Dark.itermcolors
 open ~/solarized/iterm2-colors-solarized/Solarized\ Light.itermcolors
 rm -rf ~/solarized
 
+# Bootstrap rcup: the exclusions here are enumerated in the rcrc file so
+# you should be able to just run $ rcup when doing this again
+# Ignores the README, setup script, brew, and ruby directory for symlinking
+rcup -x README.md -x setup.sh -x *:ruby -x *:osx
+
 # Install Vundle to get vim plugins defined in .vimrc up and running
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-vim +PluginInstall +qall
+# Execute vim without running a vimrc
+vim +PluginInstall +qall -u NONE
 
 # Configure Karabiner
 source $DOTFILES_DIR/osx/karabiner/karabiner.sh
