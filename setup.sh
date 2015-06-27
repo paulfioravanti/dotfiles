@@ -16,7 +16,6 @@ source $DOTFILES_DIR/osx/brew/brew.sh
 git clone https://github.com/altercation/solarized.git ~/solarized
 open ~/solarized/iterm2-colors-solarized/Solarized\ Dark.itermcolors
 open ~/solarized/iterm2-colors-solarized/Solarized\ Light.itermcolors
-rm -rf ~/solarized
 
 # Bootstrap rcup: the exclusions here are enumerated in the rcrc file so
 # you should be able to just run $ rcup when doing this again
@@ -37,6 +36,9 @@ source $DOTFILES_DIR/ruby/chruby.sh
 # Change the remote url to use the ssh version
 cd ~/.dotfiles
 git remote set-url origin git@github.com:paulfioravanti/dotfiles.git
+
+# Clean up
+rm -rf ~/solarized
 
 echo "Finished initial setup!"
 
