@@ -37,4 +37,5 @@ done
 brew cask cleanup
 brew cleanup
 
+# Bring over the saved search for Homebrew apps that will go in the Finder
 mkdir -p ~/Library/Saved\ Searches && cp $BREW_DIR/Homebrew\ Apps.savedSearch "$_"
