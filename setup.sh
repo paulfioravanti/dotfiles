@@ -94,34 +94,20 @@ echo "Finished initial setup!"
 # Manual Mac system settings follow-up tasks:
 # - Add new public key to Github and any other accounts that need it:
 #   - $ pbcopy < ~/.ssh/id_rsa.pub
-# - Organise the Finder favourites bar:
-#    - Create a Homebrew Apps Saved Search
-#      a. In the Finder, go to /opt/homebrew-cask/Caskroom
-#      b. Type something in the search field and delete it in order to bring
-#         up Saved search settings
-#      c. Create a saved search with the following conditions:
-#        - Kind is Application
-#        - Name is not Little Snitch Installer
-#        - Name is not Little Snitch Uninstaller
-#        - Name is not ControllerMate Uninstaller
-#        - Name is not Logitech Control Center Installer
-#        - Name is not Skala Color Installer
-#        - Name is not Uninstall
-#        - Name is not Uninstall Fitbit Connect
-#    - Organise the favourites bar in the following order:
-#      - Macintosh HD
-#      - <home>
-#      - Applications
-#      - Homebrew Apps
-#      - Desktop
-#      - Downloads
-#      - Documents
-#      - Pictures
-#      - Music
-#      - Movies
-#      - Dropbox (Personal)
-#      - Google Drive
-#      - Airdrop
+# - Organise the Finder favourites bar in the following order:
+#   - Macintosh HD
+#   - <home>
+#   - Applications
+#   - Homebrew Apps (in ~/Library/Saved Searches/Homebrew Apps.savedSearch)
+#   - Desktop
+#   - Downloads
+#   - Documents
+#   - Pictures
+#   - Music
+#   - Movies
+#   - Dropbox (Personal)
+#   - Google Drive
+#   - Airdrop
 # - Under System Preferences
 #   - Under Keyboard > Modifier Keys:
 #     - On the Caps Lock dropdown, select  "^ Control"

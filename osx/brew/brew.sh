@@ -36,3 +36,5 @@ done
 
 brew cask cleanup
 brew cleanup
+
+mkdir -p ~/Library/Saved\ Searches && cp $BREW_DIR/Homebrew\ Apps.savedSearch "$_"
