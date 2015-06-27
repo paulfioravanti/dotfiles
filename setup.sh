@@ -6,7 +6,7 @@
 DOTFILES_DIR=$(dirname $BASH_SOURCE)
 
 # Generate ssh key
-ssh-keygen -t rsa -b 4096 -N ""
+ssh-keygen -t rsa -b 4096 -N "" -f ~/.ssh/id_rsa
 ssh-add ~/.ssh/id_rsa
 
 # Install brew packages and casks
