@@ -1,5 +1,6 @@
 #!/bin/bash
 # Set up a new Mac to get up and running for development.
+#
 # Assumes the following preconditions:
 # - FileVault has been turned on
 # - XCode has been installed from the App Store.  Its presence is needed
@@ -18,7 +19,7 @@ ssh-keygen -t rsa -b 4096 -N ""
 ssh-add ~/.ssh/id_rsa
 
 # Install brew packages and casks
-source $DOTFILES_DIR/brew/brewfile.sh
+source $DOTFILES_DIR/brew/brew.sh
 
 # Bootstrap rcup: the exclusions here are enumerated in the rcrc file so
 # you should be able to just run $ rcup when doing this again
