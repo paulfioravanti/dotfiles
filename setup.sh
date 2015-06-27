@@ -34,9 +34,6 @@ vim +PluginInstall +qall
 # Install Ruby versions
 source $DOTFILES_DIR/ruby/chruby.sh
 
-# Apply new terminal settings
-source ~/.bash_profile
-
 # Change the remote url to use the ssh version
 cd ~/.dotfiles
 git remote set-url origin git@github.com:paulfioravanti/dotfiles.git

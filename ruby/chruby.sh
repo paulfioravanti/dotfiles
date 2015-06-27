@@ -19,6 +19,9 @@ while read ruby_version; do
   fi
 done < $RUBY_DIR/rubies.txt
 
+# Apply new terminal settings
+source ~/.bash_profile
+
 chruby $(cat ~/.ruby-version)
 gem install bundler
 gem install rails
