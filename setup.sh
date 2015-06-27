@@ -44,6 +44,7 @@ git remote set-url origin git@github.com:paulfioravanti/dotfiles.git
 rm -rf ~/solarized
 
 echo "Finished initial setup!"
+echo "You should probably restart the computer now."
 
 # TODO: Attempt to automate as much as the tasks below as possible
 #
