@@ -100,6 +100,12 @@ echo "Finished initial setup!"
 ################################################################################
 #
 # Manual Mac system settings follow-up tasks:
+# - Generate a ssh key for the user and add to Github:
+#   - $ ssh-keygen -t rsa -b 4096 -C "paul.fioravanti@gmail.com"
+#   - Keep all default settings
+#   - $ ssh-add ~/.ssh/id_rsa
+#   - $ pbcopy < ~/.ssh/id_rsa.pub
+#   - Add ssh key to relevant accounts
 # - Organise the Finder favourites bar:
 #    - Create a Homebrew Apps Saved Search
 #      a. In the Finder, go to /opt/homebrew-cask/Caskroom
