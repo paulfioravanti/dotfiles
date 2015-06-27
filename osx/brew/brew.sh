@@ -8,9 +8,6 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 # Ask for the administrator password upfront.
 sudo -v
 
-# Keep-alive: update existing `sudo` time stamp until the script has finished.
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-
 brew update
 brew upgrade --all
 
@@ -22,6 +19,9 @@ for tap in $(cat $BREW_DIR/taps.txt); do
 done
 
 for package in $(cat $BREW_DIR/packages.txt); do
+  # Keep sudo alive during package installation as sudo will be needed
+  # to install some of the brew casks
+  sudo -n true
   brew install $package
   brew upgrade $package
 done
@@ -30,8 +30,13 @@ for cask in $(cat $BREW_DIR/casks.txt); do
   # There's currently no way to cleanly upgrade a cask yet
   # so in order to prevent multiple versions of a cask
   # polluting the Caskroom (and hence turning up in Alfred searches),
-  # you need to go into the Caskroom and manually remove older versions
-  brew cask install $cask
+  # you need to go into the Caskroom and manually remove older versions.
+  #
+  # Sudo is being used to install every cask because, at the very least, casks
+  # that have a pkg file require it, and there's no way to distinguish at the
+  # outset whether it will be needed or not and we don't want the script to halt
+  # midway prompting for a password.
+  sudo brew cask install $cask
 done
 
 brew cask cleanup
