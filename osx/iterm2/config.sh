@@ -5,5 +5,5 @@
 ITERM_DIR=$(dirname $BASH_SOURCE)
 
 echo "Generating iterm2 config..."
-cp ~/Library/Preferences/com.googlecode.iterm2.plist $ITERM_DIR/com.googlecode.iterm2.plist
+cp ~/Library/Preferences/com.googlecode.iterm2.plist $ITERM_DIR/.
 echo "Complete!"
