@@ -4,7 +4,7 @@ Set up for use with [rcm](https://github.com/thoughtbot/rcm).
 
 Regenerate dotfile directory:
 
-`$ rcup -x README.md -x setup.sh -x *:ruby -x *:osx`
+`$ rcup -x README.md -x setup.sh -x config.sh -x *:ruby -x *:osx`
 
 Once this has been run, the `.rcrc` config file for `rcup` will have been
 created that contains the exclusions, so only `$ rcup` will need to be run in
@@ -18,15 +18,16 @@ App Store, then run:
 $ git clone https://github.com/paulfioravanti/dotfiles.git ~/.dotfiles
 $ source ~/.dotfiles/setup.sh
 ```
-Regenerate the Ruby versions list:
 
-`$ source ~/.dotfiles/ruby/rubies.sh`
+Regenerate config for all apps and libraries under dotfiles:
 
-Regenerate the lists for brew (taps, packages, casks):
+`$ source ~/.dotfiles/config.sh`
 
-`$ source ~/.dotfiles/osx/brew/brews.sh`
+Or individually (choose relevant script to regenerate config):
 
-Regenerate the Karabiner config:
-
-`$ source ~/.dotfiles/osx/karabiner/config.sh`
-
+```
+$ source ~/.dotfiles/ruby/rubies.sh
+$ source ~/.dotfiles/osx/brew/brews.sh
+$ source ~/.dotfiles/osx/karabiner/config.sh
+$ source ~/.dotfiles/osx/iterm2/config.sh
+```

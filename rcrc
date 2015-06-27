@@ -1,1 +1,1 @@
-EXCLUDES="README.md setup.sh *:ruby *:osx"
+EXCLUDES="README.md setup.sh config.sh *:ruby *:osx"
