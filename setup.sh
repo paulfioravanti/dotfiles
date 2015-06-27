@@ -1,15 +1,6 @@
 #!/bin/bash
 # Set up a new Mac to get up and running for development.
-#
-# Assumes the following preconditions:
-# - FileVault has been turned on
-# - XCode has been installed from the App Store.  Its presence is needed
-#    for some of the brew packages, and agreement to the license is required
-#    to compile some Ruby versions.
-# - $ git clone https://github.com/paulfioravanti/dotfiles.git ~/.dotfiles
-#    has been run. On a new machine, using `git` may prompt you to install XCode
-#    command line tools, which is expected behaviour and okay to do if you
-#    haven't installed XCode already.
+# See the README.md file for install preconditions before running this script.
 
 # Get current directory
 DOTFILES_DIR=$(dirname $BASH_SOURCE)
@@ -19,14 +10,14 @@ ssh-keygen -t rsa -b 4096 -N ""
 ssh-add ~/.ssh/id_rsa
 
 # Install brew packages and casks
-source $DOTFILES_DIR/brew/brew.sh
+source $DOTFILES_DIR/osx/brew/brew.sh
 
 # Bootstrap rcup: the exclusions here are enumerated in the rcrc file so
 # you should be able to just run $ rcup when doing this again
 # Ignores the README, setup script, brew, and ruby directory for symlinking
-rcup -x README.md -x setup.sh -x *:brew -x *:ruby -x *:karabiner
+rcup -x README.md -x setup.sh -x *:ruby -x *:osx
 
-# Get Solarized colors for iTerm. Follow up with installation manually.
+# Get Solarized colors for iTerm.
 git clone https://github.com/altercation/solarized.git ~/solarized
 open ~/solarized/iterm2-colors-solarized/Solarized\ Dark.itermcolors
 open ~/solarized/iterm2-colors-solarized/Solarized\ Light.itermcolors
@@ -37,7 +28,7 @@ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 
 # Configure Karabiner
-source $DOTFILES_DIR/karabiner/karabiner.sh
+source $DOTFILES_DIR/osx/karabiner/karabiner.sh
 
 # Install Ruby versions
 source $DOTFILES_DIR/ruby/chruby.sh

@@ -2,12 +2,12 @@
 # Re-generate the lists of brew taps, packages, and casks for brew-cask
 
 # get current directory
-DIR=$(dirname $BASH_SOURCE)
+BREW_DIR=$(dirname $BASH_SOURCE)
 
 echo "Generating taps..."
-brew tap > $DIR/taps.txt
+brew tap > $BREW_DIR/taps.txt
 echo "Generating packages..."
-brew leaves > $DIR/packages.txt
+brew leaves > $BREW_DIR/packages.txt
 echo "Generating casks..."
-brew cask list > $DIR/casks.txt
+brew cask list > $BREW_DIR/casks.txt
 echo "Complete!"

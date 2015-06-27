@@ -1,1 +1,1 @@
-EXCLUDES="README.md setup.sh *:brew *:ruby *:karabiner"
+EXCLUDES="README.md setup.sh *:ruby *:osx"
