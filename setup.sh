@@ -55,7 +55,6 @@ echo "You should probably restart the computer now."
 # - Set up Google Drive
 # - Install the following programs:
 #    From the App Store:
-#    - XCode (should be installed already)
 #    - Numbers
 #    - Pages
 #    - iMovie
