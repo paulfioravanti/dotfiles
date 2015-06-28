@@ -97,9 +97,10 @@ nnoremap <leader>c :%s///gn<CR>
 "  Syntax, highlighting and spelling
 " ==============================================================================
 set background=dark
-if filereadable(expand("$HOME/.vim/bundle/vim-colors-solarized/colors/solarized.vim"))
-  colorscheme solarized
-endif
+" If solarized hasn't been installed, suppress error.
+" This was added due to using vim in setup scripts
+" before vim plugins have been installed
+silent! colorscheme solarized
 
 set cursorline " Highlight current line
 augroup CursorLine " Only highlight cursor line in current window
