@@ -28,7 +28,6 @@ done
 for package in $(cat $BREW_DIR/packages.txt); do
   # Keep sudo alive during package installation as sudo will be needed
   # to install some of the brew casks
-  sudo -n true
   brew install $package
   brew upgrade $package
 done
