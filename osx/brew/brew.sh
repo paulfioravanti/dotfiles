@@ -8,6 +8,13 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 # Ask for the administrator password upfront.
 sudo -v
 
+# Sudo keep-alive: update existing timestamp if set, otherwise do nothing
+while true; do
+  sudo -v
+  sleep 60
+  kill -0 "$$" || exit
+done &
+
 brew update
 brew upgrade --all
 
