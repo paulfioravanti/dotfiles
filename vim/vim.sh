@@ -8,5 +8,5 @@ vim +PluginInstall +qall
 
 # Command-T requires compiling against the system Ruby
 chruby system
-ruby ~/.vim/bundle/command-t/ruby/command-t/extconf.rb
+ruby -C ~/.vim/bundle/command-t/ruby/command-t/ extconf.rb
 make -C ~/.vim/bundle/command-t/ruby/command-t/
