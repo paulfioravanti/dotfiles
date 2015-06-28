@@ -57,8 +57,6 @@ echo "You should probably restart the computer now."
 #    From the App Store:
 #    - Numbers
 #    - Pages
-#    - iMovie
-#    - Garageband
 #    - Kindle
 #    - Twitter
 #    - PDF Squeezer
