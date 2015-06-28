@@ -19,20 +19,12 @@ open ~/solarized/iterm2-colors-solarized/Solarized\ Light.itermcolors
 
 # Bootstrap rcup: the exclusions here are enumerated in the rcrc file so
 # you should be able to just run `$ rcup` when doing this again
-# Ignores the README, setup scripts, ruby, and osx directory for symlinking
-rcup -x README.md -x setup.sh -x config.sh -x ruby -x osx
+# Ignores the README, setup scripts, and the ruby and osx directories
+# for symlinking
+rcup -x README.md -x setup.sh -x config.sh -x *:vim:vim.sh -x ruby -x osx
 
-# Install Vundle to get vim plugins defined in .vimrc up and running
-git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-# Execute vim without running a vimrc
-vim +PluginInstall +qall -u NONE
-
-# Command-T requires compiling against the system Ruby
-chruby system
-cd ~/.vim/bundle/command-t/ruby/command-t
-ruby extconf.rb
-make
-cd $DOTFILES_DIR
+# Configure vim
+source $DOTFILES_DIR/vim/vim.sh
 
 # Configure Karabiner
 source $DOTFILES_DIR/osx/karabiner/karabiner.sh
