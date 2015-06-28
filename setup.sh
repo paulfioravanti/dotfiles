@@ -51,7 +51,7 @@ echo "You should probably restart the computer now."
 # - Set up Dropbox app to get 1Password vault and Mavis Beacon app
 # - Set up 1Password
 #    - Use vault from Dropbox
-#    - Install extension for Chrome, Firefox, and Safari
+#    - Install 1Password extension for Chrome, Firefox, and Safari
 # - Set up Google Drive
 # - Install the following programs:
 #    From the App Store:
@@ -63,31 +63,7 @@ echo "You should probably restart the computer now."
 #    - Monosnap
 #    - Form
 #    Other:
-#    - Mavis Beacon
-# - Organise the OSX dock to have the following apps in it (and set them up
-#    appropriately):
-#    - Finder
-#    - Launchpad
-#    - Chrome
-#    - Keynote
-#    - Photos
-#    - App Store
-#    - iMessages
-#    - Skype
-#    - Twitter
-#    - Flowdock
-#    - Slack
-#    - 1Password
-#    - iTerm2
-#    - Mavis Beacon
-#    - System Preferences
-#    - Activity Monitor
-# - Install the following extensions for Google Chrome (synced via Chrome?):
-#    - AdBlock
-#    - Google Mail Checker
-#    - Reddit Enhancement Suite
-#    - rikaikun
-#    - Vimium
+#    - Mavis Beacon (also install update and import user data)
 # - Install the following extensions for Firefox:
 #    - Rikaichan (plus dictionaries)
 #
@@ -111,6 +87,24 @@ echo "You should probably restart the computer now."
 #   - Dropbox (Personal)
 #   - Google Drive
 #   - Airdrop
+# - Organise the OSX dock to have the following apps in it (and set them up
+#    appropriately):
+#    - Finder
+#    - Launchpad
+#    - Chrome
+#    - Keynote
+#    - Photos
+#    - App Store
+#    - iMessages
+#    - Skype
+#    - Twitter
+#    - Flowdock
+#    - Slack
+#    - 1Password
+#    - iTerm2
+#    - Mavis Beacon
+#    - System Preferences
+#    - Activity Monitor
 # - Under System Preferences
 #   - Under Keyboard > Modifier Keys:
 #     - On the Caps Lock dropdown, select  "^ Control"
