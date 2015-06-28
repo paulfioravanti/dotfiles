@@ -11,7 +11,7 @@ created that contains the exclusions, so only `$ rcup` will need to be run in
 the future.
 
 Before setting up a new development environment on a new machine,
-ensure XCode and XCode command line tools have been installed from the
+ensure XCode _and_ XCode command line tools have been installed from the
 App Store, then run:
 
 ```
