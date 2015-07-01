@@ -39,6 +39,7 @@ Plugin 'scrooloose/nerdtree' " File tree browser
 Plugin 'rust-lang/rust.vim' " Rust file detection and syntax hightlighting
 Plugin 'dermusikman/sonicpi.vim' " SonicPi plugin for Vim
 Plugin 'bling/vim-airline' " Status line for Vim
+Plugin 'elixir-lang/vim-elixir' " Syntax highlighting for Elixir
 
 call vundle#end() " required by Vundle
 
