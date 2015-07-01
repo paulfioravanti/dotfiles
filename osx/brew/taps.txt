@@ -1,4 +1,5 @@
 caskroom/cask
+codeclimate/formulae
 homebrew/dupes
 homebrew/versions
 larsimmisch/avr

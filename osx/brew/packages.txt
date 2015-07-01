@@ -1,6 +1,7 @@
 alpine
 asciinema
 larsimmisch/avr/avr-libc
+boot2docker
 caskroom/cask/brew-cask
 chicken
 chruby
