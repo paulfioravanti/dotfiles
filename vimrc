@@ -41,6 +41,9 @@ set wildignore+=coverage/** " Don't include code coverage files in wildcards
 set wildignore+=build/** " Don't include any Rubymotion build files
 set wildignore+=tmp/cache/** " Don't include any Rails cache files
 set wildignore+=docs/** " Don't include any files under docs/
+set wildignore+=_build/** " Don't include Elixir Phoenix _build files
+set wildignore+=node_modules/** " Don't include node_modules files
+set wildignore+=deps/** " Don't include Elixir Phoenix deps files
 
 " Save when losing focus from the window
 au FocusLost * :silent! wall
