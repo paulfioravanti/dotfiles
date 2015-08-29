@@ -22,7 +22,8 @@ done < $RUBY_DIR/rubies.txt
 # Apply new terminal settings
 source ~/.bash_profile
 
-# Install bundler and rails into the latest version of Ruby
+# Install favourite gems into the latest version of Ruby
 chruby $(cat ~/.ruby-version)
 gem install bundler
 gem install rails
+gem install tmuxinator
