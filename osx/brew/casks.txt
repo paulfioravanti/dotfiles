@@ -1,5 +1,6 @@
 1password
 alfred
+applepi-baker
 balsamiq-mockups
 bettertouchtool
 brackets
@@ -19,6 +20,7 @@ filezilla
 firefox
 fitbit-connect
 flash
+flavours
 flowdock
 flux
 google-chrome
@@ -30,9 +32,12 @@ handbrake
 hipchat
 iterm2
 karabiner
+keka
+linein
 little-snitch
 logitech-control-center
 omnigraffle
+paparazzi
 pgadmin3
 recordit
 remote-buddy
@@ -53,6 +58,7 @@ things
 torbrowser
 typed
 unrarx
+unsplash-wallpaper
 vlc
 vox
 wjoy
