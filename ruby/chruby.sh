@@ -27,3 +27,4 @@ chruby $(cat ~/.ruby-version)
 gem install bundler
 gem install rails
 gem install tmuxinator
+gem install flay

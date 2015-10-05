@@ -174,6 +174,9 @@ endif
 " <C-z> is awkward to reach
 nnoremap <leader>z <C-z>
 
+" Toggle Flay for Ruby code
+nnoremap <Leader>f :FlayToggle<CR>
+
 " Pro Mode: Don't use those arrow keys
 nnoremap <Up> <NOP>
 nnoremap <Down> <NOP>
