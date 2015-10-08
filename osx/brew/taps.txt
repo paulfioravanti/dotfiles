@@ -2,6 +2,6 @@ caskroom/cask
 codeclimate/formulae
 homebrew/dupes
 homebrew/versions
-larsimmisch/avr
+osx-cross/avr
 raggi/ale
 thoughtbot/formulae
