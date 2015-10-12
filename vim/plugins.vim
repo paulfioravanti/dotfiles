@@ -15,6 +15,7 @@ Plugin 'tpope/vim-markdown' " Syntax highlighting, matching rules, mappings
 Plugin 'tpope/vim-rails' " rails.vim
 Plugin 'tpope/vim-commentary' " Commenting code
 Plugin 'tpope/vim-surround' " Mappings for text 'surroundings'
+Plugin 'tpope/vim-ragtag' " Mappings for various types of tags
 Plugin 'tpope/vim-unimpaired' " Bracket mappings for various commands
 Plugin 'tpope/vim-repeat' " Allow plugins to tap into the . command
 Plugin 'tpope/vim-bundler' " Vim wrapper around bundler
