@@ -21,10 +21,13 @@ open ~/solarized/iterm2-colors-solarized/Solarized\ Light.itermcolors
 # you should be able to just run `$ rcup` when doing this again
 # Ignores the README, setup scripts, and the ruby and osx directories
 # for symlinking
-rcup -x README.md -x setup.sh -x config.sh -x *:vim:vim.sh -x ruby -x osx
+rcup -x README.md -x setup.sh -x config.sh -x *:vim:vim.sh -x *:tmux:tmux.sh -x ruby -x osx
 
 # Configure vim
 source $DOTFILES_DIR/vim/vim.sh
+
+# Configure tmux
+source $DOTFILES_DIR/tmux/tmux.sh
 
 # Configure Karabiner
 source $DOTFILES_DIR/osx/karabiner/karabiner.sh
