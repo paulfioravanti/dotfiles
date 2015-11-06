@@ -13,6 +13,7 @@ dash
 elixir
 emacs
 erlang
+exercism
 ffmpeg
 fontconfig
 homebrew/versions/gcc48
