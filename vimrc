@@ -44,6 +44,7 @@ set wildignore+=docs/** " Don't include any files under docs/
 set wildignore+=_build/** " Don't include Elixir Phoenix _build files
 set wildignore+=node_modules/** " Don't include node_modules files
 set wildignore+=deps/** " Don't include Elixir Phoenix deps files
+set wildignore+=vendor/cache/** " Don't include Rails cached vendor files
 
 " Save when losing focus from the window
 au FocusLost * :silent! wall
