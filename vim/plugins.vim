@@ -42,6 +42,7 @@ Plugin 'dermusikman/sonicpi.vim' " SonicPi plugin for Vim
 Plugin 'bling/vim-airline' " Status line for Vim
 Plugin 'elixir-lang/vim-elixir' " Syntax highlighting for Elixir
 Plugin 'prophittcorey/vim-flay' " Analyze Ruby code for structural similarities
+Plugin 'mattn/emmet-vim' " Expand abbreviations into html tags using Emmet
 
 call vundle#end() " required by Vundle
 
