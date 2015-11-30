@@ -28,3 +28,4 @@ gem install bundler
 gem install rails
 gem install tmuxinator
 gem install flay
+gem install sonic-pi-cli

@@ -27,6 +27,7 @@ heroku-toolbelt
 hub
 imagemagick
 irssi
+jbig2dec
 keybase
 libksba
 libyaml
@@ -35,6 +36,7 @@ mercurial
 mongodb
 mysql
 nmap
+node
 homebrew/versions/openssl098
 ossp-uuid
 phantomjs

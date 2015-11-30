@@ -10,7 +10,6 @@ colloquy
 colorpicker-skalacolor
 controllermate
 cyberduck
-d235j-xbox360-controller-driver
 dash
 data-rescue
 divvy
@@ -63,3 +62,4 @@ unsplash-wallpaper
 vlc
 vox
 wjoy
+xbox360-controller-driver
