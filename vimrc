@@ -4,12 +4,15 @@
 
 set nocompatible " Use Vim settings rather than Vi
 
-" ==============================================================================
+" ======================================================================
 " General Config
-" ==============================================================================
-set hidden " Enable buffers to exist in the background without being in a window
-syntax enable " Enable user configured syntax highlighting and turn on syntax
-let mapleader = "," " Map leader key from slash to comma
+" ======================================================================
+" Enable buffers to exist in the background without being in a window
+set hidden
+" Enable user configured syntax highlighting and turn on syntax
+syntax enable
+" Map leader key from slash to comma
+let mapleader = ","
 " Map reverse character search to backslash
 noremap \ ,
 set encoding=utf-8
@@ -36,40 +39,42 @@ set nowritebackup " no making a backup before overwriting a file
 
 set wildmenu " enhanced command-line completion
 set wildignore+=.git " Don't include vcs files
-set wildignore+=*.DS_Store " Don't include OSX-specific files in wildcards
-set wildignore+=coverage/** " Don't include code coverage files in wildcards
+set wildignore+=*.DS_Store " Don't include OSX-specific files
+set wildignore+=coverage/** " Don't include code coverage files
 set wildignore+=build/** " Don't include any Rubymotion build files
 set wildignore+=tmp/cache/** " Don't include any Rails cache files
 set wildignore+=docs/** " Don't include any files under docs/
 set wildignore+=_build/** " Don't include Elixir Phoenix _build files
 set wildignore+=node_modules/** " Don't include node_modules files
 set wildignore+=deps/** " Don't include Elixir Phoenix deps files
-set wildignore+=vendor/cache/** " Don't include Rails cached vendor files
+" Don't include Rails cached vendor files
+set wildignore+=vendor/cache/**
 
 " Save when losing focus from the window
 au FocusLost * :silent! wall
 " Resize splits when the window is resized
 au VimResized * :wincmd =
 
-" ==============================================================================
+" ======================================================================
 " Plugin Initialisation
-" ==============================================================================
+" ======================================================================
 " Loads all plugins specified under ~/.vim/plugins.vim
 " Currently uses Vundle to manage all other plugins
 if filereadable(expand("~/.vim/plugins.vim"))
   source ~/.vim/plugins.vim
 endif
 
-" ==============================================================================
+" =====================================================================
 "  Moving around, searching and patterns
-" ==============================================================================
+" ======================================================================
 " Allow easier moving between split tabs
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-set smartcase " Search case-sensitively if search string includes uppercase
+" Search case-sensitively if search string includes uppercase
+set smartcase
 set ignorecase " searches are case insensitive
 set infercase " adjust autocomplete words depending on typed text
 set incsearch " Show search pattern as it is typed
@@ -83,7 +88,8 @@ noremap <silent> <leader><space> :noh<cr>:call clearmatches()<cr>
 " reddit.com/r/vim/comments/1yfzg2/does_anyone_actually_use_easymotion/cfkaxw5
 cnoremap $t <CR>:t''<CR> " Copy to position before last jump
 cnoremap $m <CR>:m''<CR> " Move to position before last jump
-cnoremap $d <CR>:d<CR>`` " Delete and move back to position before last jump
+" Delete and move back to position before last jump
+cnoremap $d <CR>:d<CR>``
 
 " Keep search matches in the middle of the window.
 nnoremap n nzzzv
@@ -97,9 +103,9 @@ nnoremap <c-o> <c-o>zz
 " Show count of matches for the current search
 nnoremap <leader>c :%s///gn<CR>
 
-" ==============================================================================
+" ======================================================================
 "  Syntax, highlighting and spelling
-" ==============================================================================
+" ======================================================================
 set background=dark
 " If solarized hasn't been installed, suppress error.
 " This was added due to using vim in setup scripts
@@ -128,9 +134,9 @@ augroup line_return
     \ endif
 augroup END
 
-" ==============================================================================
+" ======================================================================
 "  Mapping
-" ==============================================================================
+" ======================================================================
 " Enable dot command in Visual Mode
 xnoremap . :normal .<CR>
 " Enable a macro to be executed over a visual range
@@ -161,9 +167,11 @@ endfunction
 highlight def IndentGuides ctermbg=238
 nnoremap <leader>I :call IndentGuides()<cr>
 
-" Change cursor shape depending on mode: block for normal, line for insert.
-" tmux will only forward escape sequences to the terminal if surrounded by
-" a DCS sequence: https://gist.github.com/andyfowler/1195581
+" Change cursor shape depending on mode: block for normal,
+" line for insert.
+" tmux will only forward escape sequences to the terminal if
+" surrounded by a DCS sequence:
+" https://gist.github.com/andyfowler/1195581
 if exists('$TMUX')
   let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
   let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
@@ -178,6 +186,9 @@ nnoremap <leader>z <C-z>
 " Toggle Flay for Ruby code
 nnoremap <Leader>f :FlayToggle<CR>
 
+" Toggle NERDTree
+map <C-n> :NERDTreeToggle<CR>
+
 " Pro Mode: Don't use those arrow keys
 nnoremap <Up> <NOP>
 nnoremap <Down> <NOP>
@@ -188,9 +199,9 @@ inoremap <Down> <NOP>
 inoremap <Left> <NOP>
 inoremap <Right> <NOP>
 
-" ==============================================================================
+" ======================================================================
 " Load plugin and custom settings
-" ==============================================================================
+" ======================================================================
 for setting in split(globpath('~/.vim/settings', '*.vim'), '\n')
   exe 'source' setting
 endfor
