@@ -41,6 +41,7 @@ homebrew/versions/openssl098
 ossp-uuid
 phantomjs
 postgis
+qcachegrind
 thoughtbot/formulae/rcm
 reattach-to-user-namespace
 redis
