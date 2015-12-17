@@ -49,6 +49,8 @@ set wildignore+=node_modules/** " Don't include node_modules files
 set wildignore+=deps/** " Don't include Elixir Phoenix deps files
 " Don't include Rails cached vendor files
 set wildignore+=vendor/cache/**
+" Don't include locally uploaded files in Rails apps
+set wildignore+=public/uploads/**
 
 " Save when losing focus from the window
 au FocusLost * :silent! wall
