@@ -23,6 +23,7 @@ ghostscript
 git
 git-flow
 gnupg
+graphviz
 heroku-toolbelt
 hub
 imagemagick
