@@ -30,3 +30,4 @@ gem install tmuxinator
 gem install flay
 gem install sonic-pi-cli
 gem install ruby-prof
+gem install pry-byebug
