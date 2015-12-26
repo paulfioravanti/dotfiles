@@ -24,11 +24,6 @@ source ~/.bash_profile
 
 # Install favourite gems into the latest version of Ruby
 chruby $(cat ~/.ruby-version)
-gem install bundler
-gem install rails
-gem install tmuxinator
-gem install flay
-gem install sonic-pi-cli
-gem install ruby-prof
-gem install graphviz
-gem install pry-byebug
+for gem in $(cat $RUBY_DIR/gems.txt); do
+  gem install $gem
+done
