@@ -23,7 +23,6 @@ set autoread " Reload file changes outside Vim
 set nrformats= " treat all numerals as decimal and not octal etc
 set splitbelow " Make horizonal splits split below
 set splitright " Make vertical splits split to the right
-set showbreak=↪ " Indicate linebreaks at the beginning of broken lines
 
 set autoindent
 set smartindent
