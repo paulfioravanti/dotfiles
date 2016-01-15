@@ -4,3 +4,6 @@
 Host github.com
   Hostname ssh.github.com
   Port 443
+# Patches a bug that allows a server to get your private key
+# http://undeadly.org/cgi?action=article&sid=20160114142733
+UseRoaming no
