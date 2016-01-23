@@ -43,6 +43,8 @@ Plugin 'tpope/vim-surround' " Mappings for text 'surroundings'
 Plugin 'tpope/vim-unimpaired' " Bracket mappings for various commands
 Plugin 'vim-ruby/vim-ruby' " Config files for editing, compiling Ruby
 Plugin 'vim-scripts/change-hash-syntax' " Change Ruby hash syntax to 1.9
+Plugin 'vim-scripts/ingo-library' " Vimscript library of common functions
+Plugin 'vim-scripts/syntaxrange' " Define a different filetype syntax on regions of a buffer
 Plugin 'wincent/command-t' " Fast Sublime Text-style file searching
 
 call vundle#end() " required by Vundle
