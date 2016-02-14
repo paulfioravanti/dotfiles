@@ -16,6 +16,7 @@ erlang
 exercism
 ffmpeg
 fontconfig
+fswatch
 homebrew/versions/gcc48
 homebrew/versions/gcc49
 gdbm
@@ -38,7 +39,6 @@ mongodb
 mysql
 nmap
 node
-homebrew/versions/openssl098
 ossp-uuid
 phantomjs
 postgis

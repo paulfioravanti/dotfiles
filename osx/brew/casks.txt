@@ -32,6 +32,7 @@ hipchat
 iterm2
 karabiner
 keka
+keycastr
 linein
 logitech-control-center
 omnigraffle
@@ -46,6 +47,7 @@ skitch
 skype
 slack
 sonic-pi
+sonic-visualiser
 sqlitebrowser
 steam
 sublime-text
