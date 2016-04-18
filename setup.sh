@@ -65,6 +65,7 @@ echo "You should probably restart the computer now."
 #    - PDF Squeezer
 #    - Monosnap
 #    - Form
+#    - Deckset
 #    Other:
 #    - Mavis Beacon (also install update and import user data)
 # - Install the following extensions for Firefox:
