@@ -4,6 +4,9 @@
 # Get current directory
 DOTFILES_DIR=$(dirname $BASH_SOURCE)
 
+# Get the aliases and functions from .bashrc settings
+# (specifically for chruby)
+source ~/.bashrc
 source $DOTFILES_DIR/ruby/rubies.sh
 source $DOTFILES_DIR/osx/brew/brews.sh
 source $DOTFILES_DIR/osx/karabiner/config.sh
