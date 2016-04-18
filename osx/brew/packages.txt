@@ -32,6 +32,7 @@ irssi
 jbig2dec
 keybase
 libksba
+libvo-aacenc
 libyaml
 macvim
 mercurial
@@ -55,4 +56,5 @@ sqlitebrowser
 the_silver_searcher
 tmux
 tree
+unixodbc
 wget
