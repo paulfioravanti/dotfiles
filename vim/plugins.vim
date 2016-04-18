@@ -9,6 +9,7 @@ call vundle#begin() " required by Vundle
 Plugin 'airblade/vim-gitgutter' " Show git diff in left 'gutter'
 Plugin 'altercation/vim-colors-solarized' " Solarized colour scheme
 Plugin 'bling/vim-airline' " Status line for Vim
+Plugin 'bwmcadams/vim-deckset' " Tells Deckset to update it's preview window
 Plugin 'dermusikman/sonicpi.vim' " SonicPi plugin for Vim
 Plugin 'elixir-lang/vim-elixir' " Syntax highlighting for Elixir
 Plugin 'gmarik/Vundle.vim' " let Vundle manage Vundle, required
