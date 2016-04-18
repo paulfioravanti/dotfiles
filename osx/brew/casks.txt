@@ -61,5 +61,4 @@ unrarx
 unsplash-wallpaper
 vlc
 vox
-wjoy
 xbox360-controller-driver
