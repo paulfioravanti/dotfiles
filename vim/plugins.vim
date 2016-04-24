@@ -8,7 +8,6 @@ call vundle#begin() " required by Vundle
 
 Plugin 'airblade/vim-gitgutter' " Show git diff in left 'gutter'
 Plugin 'altercation/vim-colors-solarized' " Solarized colour scheme
-Plugin 'bling/vim-airline' " Status line for Vim
 Plugin 'bwmcadams/vim-deckset' " Tells Deckset to update it's preview window
 Plugin 'dermusikman/sonicpi.vim' " SonicPi plugin for Vim
 Plugin 'elixir-lang/vim-elixir' " Syntax highlighting for Elixir
@@ -42,6 +41,8 @@ Plugin 'tpope/vim-repeat' " Allow plugins to tap into the . command
 Plugin 'tpope/vim-sensible' " Defaults everyone can agree on
 Plugin 'tpope/vim-surround' " Mappings for text 'surroundings'
 Plugin 'tpope/vim-unimpaired' " Bracket mappings for various commands
+Plugin 'vim-airline/vim-airline' " Status line for Vim
+Plugin 'vim-airline/vim-airline-themes' " Themes for Vim airline
 Plugin 'vim-ruby/vim-ruby' " Config files for editing, compiling Ruby
 Plugin 'vim-scripts/change-hash-syntax' " Change Ruby hash syntax to 1.9
 Plugin 'vim-scripts/ingo-library' " Vimscript library of common functions
