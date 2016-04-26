@@ -2,7 +2,6 @@ alpine
 asciinema
 osx-cross/avr/avr-libc
 boot2docker
-caskroom/cask/brew-cask
 chicken
 chruby
 cloog
@@ -27,6 +26,7 @@ gnupg
 graphviz
 heroku-toolbelt
 hub
+icu4c
 imagemagick
 irssi
 jbig2dec
