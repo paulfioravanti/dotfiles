@@ -8,11 +8,14 @@ call vundle#begin() " required by Vundle
 
 Plugin 'airblade/vim-gitgutter' " Show git diff in left 'gutter'
 Plugin 'altercation/vim-colors-solarized' " Solarized colour scheme
+Plugin 'AndrewRadev/splitjoin.vim' " single/multiline code toggle
+Plugin 'AndrewRadev/switch.vim' " predefined replacements for text segments
 Plugin 'bwmcadams/vim-deckset' " Tells Deckset to update it's preview window
 Plugin 'dermusikman/sonicpi.vim' " SonicPi plugin for Vim
 Plugin 'elixir-lang/vim-elixir' " Syntax highlighting for Elixir
 Plugin 'gmarik/Vundle.vim' " let Vundle manage Vundle, required
 Plugin 'jiangmiao/auto-pairs' " Insert or delete brackets, parens, quotes
+Plugin 'junegunn/vim-easy-align' " Easy code alignment
 " vim-textobj-entire depends on vim-textobj-user
 Plugin 'kana/vim-textobj-entire' " Text objects for entire buffers
 Plugin 'kana/vim-textobj-lastpat' " Text object for search matches
@@ -27,6 +30,7 @@ Plugin 'rking/ag.vim' " Ag/The Silver Searcher for text searching
 Plugin 'rust-lang/rust.vim' " Rust file detection and syntax hightlighting
 Plugin 'scrooloose/nerdtree' " File tree browser
 Plugin 'scrooloose/syntastic' " Syntax checking
+Plugin 'terryma/vim-expand-region' " visually select larger regions of text
 Plugin 'tpope/vim-abolish' " Work with variants of words
 Plugin 'tpope/vim-bundler' " Vim wrapper around bundler
 Plugin 'tpope/vim-commentary' " Commenting code
