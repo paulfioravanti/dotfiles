@@ -1,21 +1,23 @@
 [user]
-  name = Paul Fioravanti
   email = paul.fioravanti@gmail.com
+  name = Paul Fioravanti
 [alias]
-  co = checkout
-  s = status -s
   b = branch -vv
-  fu = fetch upstream
-  mum = merge upstream/master
-  pum = pull upstream master
+  bl = blame -wM
   cam = commit -am
   cm = commit -m
-  mm = merge master
+  co = checkout
+  df = diff -w
+  fu = fetch upstream
   lg = log --oneline --decorate --all --graph
+  mm = merge master
+  mum = merge upstream/master
   pr = pull-request
+  pum = pull upstream master
+  s = status -s
 [core]
-  editor = vim
   autocrlf = input
+  editor = vim
   excludesfile = ~/.gitignore
 [push]
   default = simple
@@ -26,10 +28,10 @@
   local = yellow
   remote = green
 [color "diff"]
-  meta = yellow
   frag = magenta
-  old = red bold
+  meta = yellow
   new = green
+  old = red bold
   whitespace = red reverse
 [color "status"]
   added = green
