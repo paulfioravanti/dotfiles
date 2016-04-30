@@ -25,6 +25,7 @@ git-flow
 gnupg
 graphviz
 heroku-toolbelt
+httpie
 hub
 icu4c
 imagemagick
