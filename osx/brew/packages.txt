@@ -55,6 +55,7 @@ homebrew/dupes/screen
 sphinx
 sqlitebrowser
 the_silver_searcher
+tig
 tmux
 tree
 unixodbc
