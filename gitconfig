@@ -1,7 +1,7 @@
 [user]
   email = paul.fioravanti@gmail.com
   name = Paul Fioravanti
-  signingkey = 545D9D54
+  signingkey = 085A6D9C
 [commit]
   gpgsign = true
 [alias]
@@ -46,4 +46,4 @@
 [heroku]
 	account = personal
 [gpg]
-  program = gpg
+  program = gpg2
