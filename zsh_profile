@@ -1,0 +1,6 @@
+# Import .zshrc settings
+if [ -f ~/.zshrc ]; then
+  source ~/.zshrc
+fi
+
+[[ -f /Users/paul/.sentinel/current/bin/sentinel ]] && eval "$(/Users/paul/.sentinel/current/bin/sentinel init -)"
