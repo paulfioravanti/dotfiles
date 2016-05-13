@@ -1,4 +1,3 @@
-adns
 alpine
 asciinema
 osx-cross/avr/avr-libc
@@ -23,8 +22,7 @@ gdbm
 ghostscript
 git
 git-flow
-gnupg
-gnutls
+homebrew/versions/gnupg21
 graphviz
 heroku
 httpie
@@ -34,9 +32,6 @@ imagemagick
 irssi
 jbig2dec
 keybase
-libgcrypt
-libksba
-libusb-compat
 libvo-aacenc
 libyaml
 macvim
@@ -45,10 +40,8 @@ mongodb
 mysql
 nmap
 node
-npth
 ossp-uuid
 phantomjs
-pinentry
 pinentry-mac
 postgis
 qcachegrind
