@@ -18,7 +18,6 @@ fontconfig
 fswatch
 homebrew/versions/gcc48
 homebrew/versions/gcc49
-gdbm
 ghostscript
 git
 git-flow
@@ -61,3 +60,5 @@ tmux
 tree
 unixodbc
 wget
+zsh
+zsh-completions
