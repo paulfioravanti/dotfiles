@@ -44,6 +44,6 @@
 [rerere]
   enabled = true
 [heroku]
-	account = personal
+  account = personal
 [gpg]
   program = gpg2
