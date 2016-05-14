@@ -45,3 +45,6 @@ fi
 # Allow <C-s> to be used by Command-T in Vim
 # http://stackoverflow.com/q/8616843/567863
 stty -ixon -ixoff
+
+# Zsh specific config
+fpath=(/usr/local/share/zsh-completions $fpath)
