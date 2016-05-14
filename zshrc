@@ -10,7 +10,7 @@ unset MAILCHECK
 if [ -f `brew --prefix`/etc/bash_completion.d/git-prompt.sh ]; then
   . `brew --prefix`/etc/bash_completion.d/git-prompt.sh
   # Show branch in status line
-  PS1='[\W$(__git_ps1 " (%s)")]$ '
+  setopt PROMPT_SUBST; PS1='[%c$(__git_ps1 " (%s)")]\$ '
   export PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/~}\007"'
 fi
 
