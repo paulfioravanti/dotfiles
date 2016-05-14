@@ -2,7 +2,8 @@
 
 Set up for use with [rcm](https://github.com/thoughtbot/rcm).
 
-Regenerate dotfile directory:
+Regenerate dotfile directory, excluding (`-x`) files that don't need to be
+symlinked to the home directory:
 
 `$ rcup -x README.md -x setup.sh -x config.sh -x *:vim:vim.sh -x *:tmux:tmux.sh -x ruby -x osx`
 
