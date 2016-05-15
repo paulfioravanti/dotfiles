@@ -7,11 +7,11 @@ symlinked to the home directory:
 
 `bash`:
 
-`$ rcup -x README.md -x setup.sh -x config.sh -x *:vim:vim.sh -x *:tmux:tmux.sh -x ruby -x osx -x zshrc.pre-oh-my-zsh`
+`$ rcup -x README.md -x setup.sh -x config.sh -x *:vim:vim.sh -x *:tmux:tmux.sh -x *:oh-my-zsh:oh-my-zsh.sh -x ruby -x osx`
 
 `zsh`
 
-`$ rcup -x README.md -x setup.sh -x config.sh -x \*:vim:vim.sh -x \*:tmux:tmux.sh -x ruby -x osx -x zshrc.pre-oh-my-zsh`
+`$ rcup -x README.md -x setup.sh -x config.sh -x \*:vim:vim.sh -x \*:tmux:tmux.sh -x \*:oh-my-zsh:oh-my-zsh.sh -x ruby -x osx`
 
 Once this has been run, the `.rcrc` config file for `rcup` will have been
 created that contains the exclusions, so only `$ rcup` will need to be run in

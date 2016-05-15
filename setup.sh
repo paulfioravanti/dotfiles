@@ -21,7 +21,7 @@ open ~/solarized/iterm2-colors-solarized/Solarized\ Light.itermcolors
 # you should be able to just run `$ rcup` when doing this again
 # Ignores the README, setup scripts, and the ruby and osx directories
 # for symlinking
-rcup -x README.md -x setup.sh -x config.sh -x *:vim:vim.sh -x *:tmux:tmux.sh -x ruby -x osx
+rcup -x README.md -x setup.sh -x config.sh -x *:vim:vim.sh -x *:tmux:tmux.sh -x *:oh-my-zsh:oh-my-zsh.sh -x ruby -x osx
 
 # Configure vim
 source $DOTFILES_DIR/vim/vim.sh
@@ -37,6 +37,9 @@ source $DOTFILES_DIR/osx/iterm2/iterm2.sh
 
 # Install Ruby versions
 source $DOTFILES_DIR/ruby/chruby.sh
+
+# Install oh-my-zsh
+source $DOTFILES_DIR/oh-my-zsh/oh-my-zsh.sh
 
 # Change the remote url to use the ssh version
 cd ~/.dotfiles
