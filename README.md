@@ -1,15 +1,15 @@
-### dotfiles
+## dotfiles
 
 Set up for use with [rcm](https://github.com/thoughtbot/rcm).
 
 Regenerate dotfile directory, excluding (`-x`) files that don't need to be
 symlinked to the home directory:
 
-`bash`:
+#### `bash`:
 
 `$ rcup -x README.md -x setup.sh -x config.sh -x *:vim:vim.sh -x *:tmux:tmux.sh -x *:oh-my-zsh:oh-my-zsh.sh -x ruby -x osx`
 
-`zsh`
+#### `zsh`:
 
 `$ rcup -x README.md -x setup.sh -x config.sh -x \*:vim:vim.sh -x \*:tmux:tmux.sh -x \*:oh-my-zsh:oh-my-zsh.sh -x ruby -x osx`
 
