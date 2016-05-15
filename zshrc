@@ -50,12 +50,14 @@ stty -ixon -ixoff
 
 # Checks to see whether there is a binstub in the working directory
 # for rspec and uses it.  If not, it falls back to normal behaviour.
-function _rspec_command() {
-  if [ -e "bin/rspec" ]; then
-    bin/rspec $@
-  else
-    command rspec $@
-  fi
-}
-alias rspec='_rspec_command'
-compdef _rspec_command=rspec
+# NOTE: Currently not working: returns the error
+# compdef: unknown command or service: rspec
+# function _rspec_command() {
+#   if [ -e "bin/rspec" ]; then
+#     bin/rspec $@
+#   else
+#     command rspec $@
+#   fi
+# }
+# alias rspec='_rspec_command'
+# compdef _rspec_command=rspec
