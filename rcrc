@@ -1,1 +1,1 @@
-EXCLUDES="README.md setup.sh config.sh *:vim:vim.sh *:tmux:tmux.sh ruby osx"
+EXCLUDES="README.md setup.sh config.sh *:vim:vim.sh *:tmux:tmux.sh ruby osx zshrc.pre-oh-my-zsh"

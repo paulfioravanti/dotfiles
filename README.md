@@ -5,7 +5,13 @@ Set up for use with [rcm](https://github.com/thoughtbot/rcm).
 Regenerate dotfile directory, excluding (`-x`) files that don't need to be
 symlinked to the home directory:
 
-`$ rcup -x README.md -x setup.sh -x config.sh -x *:vim:vim.sh -x *:tmux:tmux.sh -x ruby -x osx`
+`bash`:
+
+`$ rcup -x README.md -x setup.sh -x config.sh -x *:vim:vim.sh -x *:tmux:tmux.sh -x ruby -x osx -x zshrc.pre-oh-my-zsh`
+
+`zsh`
+
+`$ rcup -x README.md -x setup.sh -x config.sh -x \*:vim:vim.sh -x \*:tmux:tmux.sh -x ruby -x osx -x zshrc.pre-oh-my-zsh`
 
 Once this has been run, the `.rcrc` config file for `rcup` will have been
 created that contains the exclusions, so only `$ rcup` will need to be run in
