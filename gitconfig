@@ -1,9 +1,3 @@
-[user]
-  email = paul.fioravanti@gmail.com
-  name = Paul Fioravanti
-  signingkey = 085A6D9C
-[commit]
-  gpgsign = true
 [alias]
   b = branch -vv
   bl = blame -wM
@@ -18,12 +12,6 @@
   pr = pull-request
   pum = pull upstream master
   s = status -s
-[core]
-  autocrlf = input
-  editor = vim
-  excludesfile = ~/.gitignore
-[push]
-  default = simple
 [color]
   ui = true
 [color "branch"]
@@ -39,11 +27,27 @@
 [color "status"]
   added = green
   changed = yellow
-[pull]
-  rebase = true
-[rerere]
-  enabled = true
-[heroku]
-  account = personal
+[commit]
+  gpgsign = true
+[core]
+  autocrlf = input
+  editor = vim
+  excludesfile = ~/.gitignore
 [gpg]
   program = gpg2
+[heroku]
+  account = personal
+[hooks]
+  symlinksourcerepo = ~/githooks
+[init]
+  templatedir = ~/githooks/githooks_bootstrap
+[pull]
+  rebase = true
+[push]
+  default = simple
+[rerere]
+  enabled = true
+[user]
+  email = paul.fioravanti@gmail.com
+  name = Paul Fioravanti
+  signingkey = 085A6D9C
