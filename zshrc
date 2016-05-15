@@ -61,3 +61,6 @@ stty -ixon -ixoff
 # }
 # alias rspec='_rspec_command'
 # compdef _rspec_command=rspec
+
+# Reinteractive OpsCare sentinel tool
+[[ -f ~/.sentinel/current/bin/sentinel ]] && eval "$(~/.sentinel/current/bin/sentinel init -)"
