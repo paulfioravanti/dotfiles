@@ -4,7 +4,7 @@
 # (Very helpful reference: https://robm.me.uk/ruby/2013/11/20/ruby-enp.html)
 
 # get current directory
-RUBY_DIR=$(dirname $BASH_SOURCE)
+RUBY_DIR=$(dirname ${BASH_SOURCE:-$0})
 
 echo "Generating list of Rubies..."
 chruby |

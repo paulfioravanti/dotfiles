@@ -2,7 +2,7 @@
 # Regenerate config for all apps and libraries under dotfiles:
 
 # Get current directory
-DOTFILES_DIR=$(dirname $BASH_SOURCE)
+DOTFILES_DIR=$(dirname ${BASH_SOURCE:-$0})
 
 # Get the aliases and functions from bashrc settings first,
 # specifically for chruby

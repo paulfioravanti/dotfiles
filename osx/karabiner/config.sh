@@ -2,7 +2,7 @@
 # Re-generate the Karabiner config file
 
 # get current directory
-KARABINER_DIR=$(dirname $BASH_SOURCE)
+KARABINER_DIR=$(dirname ${BASH_SOURCE:-$0})
 
 echo "Generating Karabiner config..."
 /Applications/Karabiner.app/Contents/Library/bin/karabiner export > $KARABINER_DIR/karabiner.sh

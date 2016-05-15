@@ -3,7 +3,7 @@
 # See the README.md file for install preconditions before running this script.
 
 # Get current directory
-DOTFILES_DIR=$(dirname $BASH_SOURCE)
+DOTFILES_DIR=$(dirname ${BASH_SOURCE:-$0})
 
 # Generate ssh key
 ssh-keygen -t rsa -b 4096 -N "" -f ~/.ssh/id_rsa

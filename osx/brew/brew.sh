@@ -19,7 +19,7 @@ brew update
 brew upgrade --all
 
 # get current directory
-BREW_DIR=$(dirname $BASH_SOURCE)
+BREW_DIR=$(dirname ${BASH_SOURCE:-$0})
 
 for tap in $(cat $BREW_DIR/taps.txt); do
   brew tap $tap

@@ -2,7 +2,7 @@
 # Install Ruby versions using chruby
 
 # get current directory
-RUBY_DIR=$(dirname $BASH_SOURCE)
+RUBY_DIR=$(dirname ${BASH_SOURCE:-$0})
 
 # This file read requires a while loop (as apposed to for loops used elsewhere
 # in the dotfiles) due to there being spaces in the rubies.txt file. We want to

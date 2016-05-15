@@ -3,7 +3,7 @@
 # - Copy the Saved Search that lists all applications in the Caskroom
 
 # get current directory
-BREW_DIR=$(dirname $BASH_SOURCE)
+BREW_DIR=$(dirname ${BASH_SOURCE:-$0})
 
 echo "Generating taps..."
 brew tap > $BREW_DIR/taps.txt
