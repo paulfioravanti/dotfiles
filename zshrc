@@ -1,50 +1,85 @@
-# Don't check for mail on opening new terminal
-unset MAILCHECK
+# Path to your oh-my-zsh installation.
+export ZSH=/Users/paul/.oh-my-zsh
 
-# Enable git tab completion via homebrew
-# if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash ]; then
-#   . `brew --prefix`/etc/bash_completion.d/git-completion.bash
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each
+# time that oh-my-zsh is loaded.
+# ZSH_THEME="robbyrussell"
+ZSH_THEME="paulfioravanti"
+
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
+
+# Uncomment the following line to use hyphen-insensitive completion. Case
+# sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
+
+# Uncomment the following line to disable bi-weekly auto-update checks.
+# DISABLE_AUTO_UPDATE="true"
+
+# Uncomment the following line to change how often to auto-update (in days).
+# export UPDATE_ZSH_DAYS=13
+
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
+
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+# COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(brew bundler chruby git osx rails rake ruby tmux tmuxinator)
+
+# User configuration
+
+export PATH="/Users/paul/.gem/ruby/2.3.1/bin:/Users/paul/.rubies/ruby-2.3.1/lib/ruby/gems/2.3.0/bin:/Users/paul/.rubies/ruby-2.3.1/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:/usr/local/share/npm/bin"
+# export MANPATH="/usr/local/man:$MANPATH"
+
+source $ZSH/oh-my-zsh.sh
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
 # fi
 
-# Enable git status in prompt via homebrew
-if [ -f `brew --prefix`/etc/bash_completion.d/git-prompt.sh ]; then
-  . `brew --prefix`/etc/bash_completion.d/git-prompt.sh
-  # Show branch in status line
-  setopt PROMPT_SUBST; PS1='[%c$(__git_ps1 " (%s)")]\$ '
-  export PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/~}\007"'
-fi
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
 
-# Get ANSI colours in iTerm2
-export CLICOLOR=1
-# Set colors to match iTerm Terminal colours
-export TERM=xterm-256color
-# Declare vim to be the default editor
-export EDITOR=vim
+# ssh
+# export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-## PATH ##
-export PATH=/usr/local/bin:$PATH
-export PATH=$PATH:/usr/local/sbin # Add sbin to PATH for icu4c
-export PATH=$PATH:/usr/local/heroku/bin:$PATH # added by Heroku toolbelt
-PATH=$PATH:/usr/local/share/npm/bin # Add npm to PATH for bower
-
-## Aliases ##
-export LSCOLORS=gxfxcxdxbxegedabagacad # give ls some colour
-alias ls='ls -FlAagG' # more detail with default `ls`
-alias be='bundle exec'
-alias git=hub # use git to execute hub commands as well
-
-## Ruby ##
-if [[ -e /usr/local/share/chruby ]]; then
-  # Load chruby
-  source /usr/local/share/chruby/chruby.sh
-  # Allow auto-switching of Ruby version when
-  # directory has a .ruby-version file
-  source /usr/local/share/chruby/auto.sh
-fi
-
-# Allow <C-s> to be used by Command-T in Vim
-# http://stackoverflow.com/q/8616843/567863
-stty -ixon -ixoff
-
-# Zsh specific config
-fpath=(/usr/local/share/zsh-completions $fpath)
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
