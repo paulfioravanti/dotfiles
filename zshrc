@@ -43,3 +43,17 @@ alias git=hub # use git to execute hub commands as well
 # Allow <C-s> to be used by Command-T in Vim
 # http://stackoverflow.com/q/8616843/567863
 stty -ixon -ixoff
+
+# Functions
+
+# Checks to see whether there is a binstub in the working directory
+# for rspec and uses it.  If not, it falls back to normal behaviour.
+function _rspec_command() {
+  if [ -e "bin/rspec" ]; then
+    bin/rspec $@
+  else
+    command rspec $@
+  fi
+}
+alias rspec='_rspec_command'
+compdef _rspec_command=rspec
