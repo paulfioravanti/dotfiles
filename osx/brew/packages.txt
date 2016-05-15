@@ -13,6 +13,7 @@ elixir
 emacs
 erlang
 exercism
+fasd
 ffmpeg
 fontconfig
 fswatch
