@@ -39,6 +39,8 @@ export LSCOLORS=gxfxcxdxbxegedabagacad
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ls='ls -FlAagG' # more detail with default `ls`
 alias git=hub # use git to execute hub commands as well
+# delete all local branches that have been merged into master, excluding current branch, develop, and master
+alias gsweep='git branch --merged master | command grep -vE "^(\*|\s*develop\s*|\s*master\s*$)" | command xargs -n 1 git branch -d'
 
 # Allow <C-s> to be used by Command-T in Vim
 # http://stackoverflow.com/q/8616843/567863
