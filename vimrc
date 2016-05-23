@@ -50,6 +50,8 @@ set wildignore+=deps/** " Don't include Elixir Phoenix deps files
 set wildignore+=vendor/cache/**
 " Don't include locally uploaded files in Rails apps
 set wildignore+=public/uploads/**
+" Don't include any compiled beam files from Elixir
+set wildignore+=*.beam " Don't include OSX-specific files
 
 " Save when losing focus from the window
 au FocusLost * :silent! wall
