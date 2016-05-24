@@ -32,15 +32,14 @@
 [core]
   autocrlf = input
   editor = vim
-  excludesfile = ~/.gitignore
 [gpg]
   program = gpg2
 [heroku]
   account = personal
 [hooks]
-  symlinksourcerepo = ~/githooks
+	symlinksourcerepo = /Users/paul/githooks
 [init]
-  templatedir = ~/githooks/githooks_bootstrap
+	templatedir = /Users/paul/githooks/githooks_bootstrap
 [pull]
   rebase = true
 [push]
