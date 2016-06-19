@@ -37,9 +37,10 @@
 [heroku]
   account = personal
 [hooks]
-	symlinksourcerepo = /Users/paul/githooks
+	symlinksourcerepo = /Users/paul/ruby/githooks
+	require-strict-paren-spacing = false
 [init]
-	templatedir = /Users/paul/githooks/githooks_bootstrap
+	templatedir = /Users/paul/ruby/githooks/githooks_bootstrap
 [pull]
   rebase = true
 [push]

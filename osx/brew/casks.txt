@@ -8,16 +8,13 @@ calibre
 chicken
 colloquy
 colorpicker-skalacolor
-controllermate
 cyberduck
 dash
-data-rescue
 divvy
 dropbox
 expandrive
 filezilla
 firefox
-fitbit-connect
 flash
 flavours
 flowdock
@@ -34,7 +31,6 @@ karabiner
 keka
 keycastr
 linein
-logitech-control-center
 omnigraffle
 paparazzi
 pgadmin3
@@ -43,6 +39,7 @@ remote-buddy
 rubymotion
 screenflow
 silverlight
+sketch
 skitch
 skype
 slack
@@ -57,8 +54,6 @@ textmate
 things
 torbrowser
 transmission
-unrarx
 unsplash-wallpaper
 vlc
-vox
 xbox360-controller-driver
