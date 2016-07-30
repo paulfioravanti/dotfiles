@@ -27,10 +27,10 @@ set splitright " Make vertical splits split to the right
 set autoindent
 set smartindent
 set smarttab
-set expandtab " Make tabs insert spaces
+set tabstop=2 " Tab characters are two spaces wide
+set softtabstop=2 " Fine tunes amount of whitespace to be inserted
 set shiftwidth=2 " Default indent of two spaces
-set softtabstop=2
-set tabstop=2
+set expandtab " Make tabs insert spaces
 
 set noswapfile " no swap files
 set nobackup " no backup files
