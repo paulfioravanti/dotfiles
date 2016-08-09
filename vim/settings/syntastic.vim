@@ -9,3 +9,9 @@ let g:syntastic_eruby_ruby_quiet_messages =
   \ {"regex": "possibly useless use of a variable in void context"}
 let g:syntastic_ruby_mri_quiet_messages =
   \ {"regex": "possibly useless use of a variable in void context"}
+" Syntastic shows errors in scss files as it doesn't know about about
+" additional import paths set up by sprockets or other libraries.
+" If the files aren't found, the app will error, so I don't need
+" Syntastic to prompt me.
+let g:syntastic_scss_sass_quiet_messages =
+  \ { "regex": "File to import not found or unreadable" }
