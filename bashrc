@@ -45,3 +45,6 @@ fi
 # Allow <C-s> to be used by Command-T in Vim
 # http://stackoverflow.com/q/8616843/567863
 stty -ixon -ixoff
+
+# added by travis gem
+[ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
