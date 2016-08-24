@@ -52,6 +52,7 @@ set wildignore+=vendor/cache/**
 set wildignore+=public/uploads/**
 " Don't include any compiled beam files from Elixir
 set wildignore+=*.beam " Don't include OSX-specific files
+set wildignore+=*.keep " Don't include .keep files
 
 " Save when losing focus from the window
 au FocusLost * :silent! wall
