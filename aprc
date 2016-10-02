@@ -1,0 +1,19 @@
+AwesomePrint.defaults = {
+  indent: 2,
+  ruby19_syntax: true,
+  sort_keys: true,
+  # NOTE: Due to solarize, I've deliberately taken keys that had
+  # a default color and changed it to its -ish color.
+  color: {
+    bigdecimal: :blueish,
+    class: :yellowish,
+    falseclass: :redish,
+    fixnum: :blueish,
+    float: :blueish,
+    hash: nil,
+    keyword: :cyanish,
+    nilclass: nil,
+    rational: :blueish,
+    trueclass: :greenish
+  }
+}
