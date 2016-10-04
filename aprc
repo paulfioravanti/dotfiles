@@ -1,10 +1,11 @@
 AwesomePrint.defaults = {
-  indent: 2,
+  indent: -2, # left-align keys
   ruby19_syntax: true,
   sort_keys: true,
   # NOTE: Due to solarize, I've deliberately taken keys that had
   # a default color and changed it to its -ish color.
   color: {
+    array: nil,
     bigdecimal: :blueish,
     class: :yellowish,
     falseclass: :redish,
