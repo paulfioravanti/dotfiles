@@ -6,52 +6,128 @@ filetype off " required by Vundle
 set runtimepath+=~/.vim/bundle/Vundle.vim
 call vundle#begin() " required by Vundle
 
-Plugin 'airblade/vim-gitgutter' " Show git diff in left 'gutter'
-Plugin 'altercation/vim-colors-solarized' " Solarized colour scheme
-Plugin 'AndrewRadev/splitjoin.vim' " single/multiline code toggle
-Plugin 'AndrewRadev/switch.vim' " predefined replacements for text segments
-Plugin 'bwmcadams/vim-deckset' " Tells Deckset to update it's preview window
-Plugin 'dermusikman/sonicpi.vim' " SonicPi plugin for Vim
-Plugin 'elixir-lang/vim-elixir' " Syntax highlighting for Elixir
-Plugin 'gmarik/Vundle.vim' " let Vundle manage Vundle, required
-Plugin 'jiangmiao/auto-pairs' " Insert or delete brackets, parens, quotes
-Plugin 'junegunn/vim-easy-align' " Easy code alignment
+" Show git diff indicators in left gutter of screen
+Plugin 'airblade/vim-gitgutter'
+" Solarized colour scheme for Vim
+Plugin 'altercation/vim-colors-solarized'
+" Simplifies the transition between multiline and single-line code
+" gS - to split a one-liner into multiple lines
+" gJ - (with the cursor on the first line of a block) to join a block into a
+" single-line statement.
+Plugin 'AndrewRadev/splitjoin.vim'
+" Switch segments of text with predefined replacements
+" eg true => false, { :foo => true  } => { foo: true  }
+" Default mapping: gs
+Plugin 'AndrewRadev/switch.vim'
+ " Tells Deckset to update it's preview window
+Plugin 'bwmcadams/vim-deckset'
+" SonicPi plugin for Vim
+" <leader>r - send buffer to sonicpi
+" <leader>S - send stop message to sonicpi
+Plugin 'dermusikman/sonicpi.vim'
+" Syntax highlighting for Elixir
+Plugin 'elixir-lang/vim-elixir'
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+" Automatically insert or delete brackets, parens, quotes
+Plugin 'jiangmiao/auto-pairs'
+" Easy code alignment
+" - vipga=
+"     visual-select inner paragraph
+"     Start EasyAlign command (ga)
+"     Align around =
+" - gaip=
+"     Start EasyAlign command (ga) for inner paragraph
+"     Align around =
+Plugin 'junegunn/vim-easy-align'
+" Text objects for entire buffers
 " vim-textobj-entire depends on vim-textobj-user
-Plugin 'kana/vim-textobj-entire' " Text objects for entire buffers
-Plugin 'kana/vim-textobj-lastpat' " Text object for search matches
-Plugin 'kana/vim-textobj-user' " Create your own text objects
-Plugin 'kchmck/vim-coffee-script' " Syntax, indenting, compiling of Coffeescript
-Plugin 'mattn/emmet-vim' " Expand abbreviations into html tags using Emmet
-Plugin 'myusuf3/numbers.vim' " Relative/Absolute numbering for different modes
-Plugin 'ntpeters/vim-better-whitespace' " Whitespace handling
-Plugin 'prophittcorey/vim-flay' " Analyze Ruby code for structural similarities
-Plugin 'rizzatti/dash.vim' " Plugin for Dash.app
-Plugin 'rking/ag.vim' " Ag/The Silver Searcher for text searching
-Plugin 'rust-lang/rust.vim' " Rust file detection and syntax hightlighting
-Plugin 'scrooloose/nerdtree' " File tree browser
-Plugin 'scrooloose/syntastic' " Syntax checking
-Plugin 'terryma/vim-expand-region' " visually select larger regions of text
-Plugin 'tpope/vim-abolish' " Work with variants of words
-Plugin 'tpope/vim-bundler' " Vim wrapper around bundler
-Plugin 'tpope/vim-commentary' " Commenting code
-Plugin 'tpope/vim-endwise' " End Ruby structures automatically
-Plugin 'tpope/vim-fugitive' " Use Git in Vim
-Plugin 'tpope/vim-git' " Git-related syntax, highlight, filetype plugins
-Plugin 'tpope/vim-haml' " Runtime files for Haml and Sass
-Plugin 'tpope/vim-markdown' " Syntax highlighting, matching rules, mappings
-Plugin 'tpope/vim-ragtag' " Mappings for various types of tags
-Plugin 'tpope/vim-rails' " rails.vim
-Plugin 'tpope/vim-repeat' " Allow plugins to tap into the . command
-Plugin 'tpope/vim-sensible' " Defaults everyone can agree on
-Plugin 'tpope/vim-surround' " Mappings for text 'surroundings'
-Plugin 'tpope/vim-unimpaired' " Bracket mappings for various commands
-Plugin 'vim-airline/vim-airline' " Status line for Vim
-Plugin 'vim-airline/vim-airline-themes' " Themes for Vim airline
-Plugin 'vim-ruby/vim-ruby' " Config files for editing, compiling Ruby
-Plugin 'vim-scripts/change-hash-syntax' " Change Ruby hash syntax to 1.9
-Plugin 'vim-scripts/ingo-library' " Vimscript library of common functions
-Plugin 'vim-scripts/syntaxrange' " Define a different filetype syntax on regions of a buffer
-Plugin 'wincent/command-t' " Fast Sublime Text-style file searching
+Plugin 'kana/vim-textobj-entire'
+" Text object for search matches
+Plugin 'kana/vim-textobj-lastpat'
+" Create user-defined text objects
+Plugin 'kana/vim-textobj-user'
+" Syntax, indenting, compiling of Coffeescript
+Plugin 'kchmck/vim-coffee-script'
+" Expand abbreviations into html tags using Emmet
+" https://github.com/mattn/emmet-vim/blob/master/TUTORIAL
+Plugin 'mattn/emmet-vim'
+" Relative/Absolute line numbering for different modes
+Plugin 'myusuf3/numbers.vim'
+" Highlight all trailing Whitespace characters
+Plugin 'ntpeters/vim-better-whitespace'
+" Analyze Ruby code for structural similarities
+" <Leader>f - Run Flay
+Plugin 'prophittcorey/vim-flay'
+" Plugin for Dash.app
+" :Dash - will search for method under cursor in filetype's docset
+" :Dash function_name - will search for named method in filetype's docset
+Plugin 'rizzatti/dash.vim'
+" Ag/The Silver Searcher for text searching
+" :Ag search_term
+Plugin 'rking/ag.vim'
+" Rust file detection and syntax hightlighting
+Plugin 'rust-lang/rust.vim'
+" File tree browser
+" C-n - Open NERDTree
+Plugin 'scrooloose/nerdtree'
+" Automatic syntax checking
+Plugin 'scrooloose/syntastic'
+" Allows you to visually select increasingly larger regions of text using the
+" same key combination.
+" Press + to expand the visual selection and _ to shrink it.
+Plugin 'terryma/vim-expand-region'
+" Work with variants of words
+Plugin 'tpope/vim-abolish'
+" Vim wrapper around bundler
+" :Bundle, which wraps bundle.
+" An internalized version of bundle open: :Bopen (and :Bsplit, :Btabedit, etc.).
+Plugin 'tpope/vim-bundler'
+" Commenting code
+" gcc - Comment out one line of code
+" gc + motion - Comment out target of motion
+Plugin 'tpope/vim-commentary'
+" End Ruby structures automatically
+Plugin 'tpope/vim-endwise'
+" Use Git in Vim
+Plugin 'tpope/vim-fugitive'
+" Git-related syntax, highlight, filetype plugins
+Plugin 'tpope/vim-git'
+" Runtime files for Haml and Sass
+Plugin 'tpope/vim-haml'
+" Syntax highlighting, matching rules, mappings
+Plugin 'tpope/vim-markdown'
+" Mappings for various types of tags
+Plugin 'tpope/vim-ragtag'
+" rails.vim
+Plugin 'tpope/vim-rails'
+" Allow plugins to tap into the . command
+Plugin 'tpope/vim-repeat'
+" Defaults everyone can agree on
+Plugin 'tpope/vim-sensible'
+" Mappings for text 'surroundings'
+" cs"' - change double to single quotes
+" ds" - remove double quote delimiters
+" ys + text object + surrounding - create surrounding on text object
+Plugin 'tpope/vim-surround'
+" Bracket mappings for various commands
+Plugin 'tpope/vim-unimpaired'
+" Status line for Vim
+Plugin 'vim-airline/vim-airline'
+" Themes for Vim airline
+Plugin 'vim-airline/vim-airline-themes'
+" Config files for editing, compiling Ruby
+Plugin 'vim-ruby/vim-ruby'
+" Change Ruby hash syntax to 1.9
+" :ChangeHashSyntax - Changes hash syntax on entire file
+Plugin 'vim-scripts/change-hash-syntax'
+" Vimscript library of common functions
+Plugin 'vim-scripts/ingo-library'
+" Define a different filetype syntax on regions of a buffer
+Plugin 'vim-scripts/syntaxrange'
+" Fast Sublime Text-style file searching
+" <Leader>t - Bring up fuzzy search
+Plugin 'wincent/command-t'
 
 call vundle#end() " required by Vundle
 
