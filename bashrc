@@ -32,6 +32,7 @@ export LSCOLORS=gxfxcxdxbxegedabagacad # give ls some colour
 alias ls='ls -FlAagG' # more detail with default `ls`
 alias be='bundle exec'
 alias git=hub # use git to execute hub commands as well
+alias mux=tmuxinator
 
 ## Ruby ##
 if [[ -e /usr/local/share/chruby ]]; then
