@@ -1,0 +1,22 @@
+# ~/.tmuxinator/elixir_sample.yml
+
+name: elixir_sample
+# root: ~/path/to/elixir_app
+
+# Runs before everything. Use it to start daemons etc.
+pre:
+  # - brew services start postgresql
+  # - brew services start redis
+  # - mailcatcher
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window:
+
+# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
+startup_window: vim
+
+windows:
+  - editor: vim
+  - tests: mix test.watch
+  - console: iex -S mix
+  - server: iex -S mix phoenix.server
