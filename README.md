@@ -9,15 +9,21 @@ symlinked to the home directory:
 
 #### `bash`:
 
-    $ rcup -x README.md -x setup.sh -x config.sh -x *:vim:vim.sh -x *:tmux:tmux.sh -x *:oh-my-zsh:oh-my-zsh.sh -x ruby -x osx
+```
+$ rcup -x README.md -x setup.sh -x config.sh -x *:vim:vim.sh -x *:tmux:tmux.sh -x *:oh-my-zsh:oh-my-zsh.sh -x ruby -x osx
+```
 
 #### `zsh`:
 
-    $ rcup -x README.md -x setup.sh -x config.sh -x \*:vim:vim.sh -x \*:tmux:tmux.sh -x \*:oh-my-zsh:oh-my-zsh.sh -x ruby -x osx
+```
+$ rcup -x README.md -x setup.sh -x config.sh -x \*:vim:vim.sh -x \*:tmux:tmux.sh -x \*:oh-my-zsh:oh-my-zsh.sh -x ruby -x osx
+```
 
 ## Regenerate Dotfiles
 
-    $ rcup
+```
+$ rcup
+```
 
 Once intial setup has been run, the `.rcrc` config file for `rcup` will have
 been created that contains the exclusions, so only `$ rcup` will need to be run
@@ -26,8 +32,8 @@ in the future (unless more files to be excluded from being symlinked are added).
 ## Setup Scripts
 
 Before setting up a new development environment on a new machine,
-ensure XCode _and_ XCode command line tools have been installed from the
-App Store, then run:
+ensure XCode itself _and_ the XCode Command Line Tools have been installed from
+the App Store, then run:
 
 ```
 $ git clone https://github.com/paulfioravanti/dotfiles.git ~/.dotfiles
@@ -36,7 +42,9 @@ $ source ~/.dotfiles/setup.sh
 
 Regenerate config for all apps and libraries under dotfiles:
 
-`$ source ~/.dotfiles/config.sh`
+```
+$ source ~/.dotfiles/config.sh
+```
 
 Or individually (choose relevant script to regenerate config):
 
