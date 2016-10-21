@@ -2,6 +2,13 @@
 
 Set up for use with [rcm](https://github.com/thoughtbot/rcm).
 
+## Apple Machine Setup
+
+Before setting up a new development environment on a new machine:
+
+- Install [XCode](https://itunes.apple.com/au/app/xcode/id497799835?mt=12)
+- Install XCode Command Line Tools (run `$ xcode-select --install`)
+
 ## Initial Setup
 
 Generate dotfile directory, excluding (`-x`) files that don't need to be
@@ -30,10 +37,6 @@ been created that contains the exclusions, so only `$ rcup` will need to be run
 in the future (unless more files to be excluded from being symlinked are added).
 
 ## Setup Scripts
-
-Before setting up a new development environment on a new machine,
-ensure XCode itself _and_ the XCode Command Line Tools have been installed from
-the App Store, then run:
 
 ```
 $ git clone https://github.com/paulfioravanti/dotfiles.git ~/.dotfiles
