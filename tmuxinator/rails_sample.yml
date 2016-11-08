@@ -13,7 +13,7 @@ pre:
 # pre_window: eval "$(chruby $(cat .ruby-version))"
 
 # Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
-startup_window: vim
+startup_window: editor
 
 windows:
   - editor: vim
