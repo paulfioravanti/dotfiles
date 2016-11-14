@@ -128,6 +128,9 @@ Plugin 'vim-scripts/syntaxrange'
 " Fast Sublime Text-style file searching
 " <Leader>t - Bring up fuzzy search
 Plugin 'wincent/command-t'
+" Copy syntax-highlighted code from vim to the OS X clipboard as RTF tex
+" :CopyRTF
+Plugin 'zerowidth/vim-copy-as-rtf'
 
 call vundle#end() " required by Vundle
 
