@@ -2,6 +2,7 @@ caskroom/cask
 codeclimate/formulae
 homebrew/core
 homebrew/dupes
+homebrew/services
 homebrew/versions
 osx-cross/avr
 raggi/ale
