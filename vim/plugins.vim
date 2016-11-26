@@ -6,6 +6,9 @@ filetype off " required by Vundle
 set runtimepath+=~/.vim/bundle/Vundle.vim
 call vundle#begin() " required by Vundle
 
+" NOTE: Only single quoted strings can be used for arguments to `Plugin`.
+" See: https://github.com/junegunn/vim-plug/issues/33
+
 " Show git diff indicators in left gutter of screen
 Plugin 'airblade/vim-gitgutter'
 " Solarized colour scheme for Vim
@@ -56,6 +59,8 @@ Plugin 'mattn/emmet-vim'
 Plugin 'myusuf3/numbers.vim'
 " Highlight all trailing Whitespace characters
 Plugin 'ntpeters/vim-better-whitespace'
+" Vastly improved Javascript indentation and syntax support in Vim
+Plugin 'pangloss/vim-javascript'
 " Analyze Ruby code for structural similarities
 " <Leader>f - Run Flay
 Plugin 'prophittcorey/vim-flay'
