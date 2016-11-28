@@ -80,6 +80,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 " .slim file syntax highlighting
 Plugin 'slim-template/vim-slim'
+" Instant Markdown previews from Vim
+Plugin 'suan/vim-instant-markdown'
 " Allows you to visually select increasingly larger regions of text using the
 " same key combination.
 " Press + to expand the visual selection and _ to shrink it.
