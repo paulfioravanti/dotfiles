@@ -5,6 +5,8 @@ name: rails_sample
 
 # Runs before everything. Use it to start daemons etc.
 pre:
+  # - brew services start mysql@5.6
+  # - brew services start mysql
   # - brew services start postgresql
   # - brew services start redis
   # - mailcatcher
@@ -19,8 +21,10 @@ windows:
   - editor: vim
   # - specs: bin/guard -w app config spec
   # - tests: bin/guard -w app config test
-  - console: bin/rails c
-  - server: bin/rails s
+  # - console: bundle exec rails console
+  - console: bin/rails console
+  # - server: bundle exec rails server
+  - server: bin/rails server
   # - sidekiq: bin/sidekiq
   # - redis: redis-server
   - logs: tail -f log/development.log
