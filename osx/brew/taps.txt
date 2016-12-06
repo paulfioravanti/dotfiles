@@ -4,6 +4,7 @@ homebrew/core
 homebrew/dupes
 homebrew/services
 homebrew/versions
+homebrew/x11
 osx-cross/avr
 raggi/ale
 thoughtbot/formulae

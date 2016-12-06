@@ -57,3 +57,4 @@ torbrowser
 transmission
 vlc
 xbox360-controller-driver
+xquartz
