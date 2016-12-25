@@ -6,6 +6,7 @@ bettertouchtool
 brackets
 calibre
 chicken
+chunky
 colloquy
 colorpicker-skalacolor
 cyberduck
@@ -19,6 +20,7 @@ flash-player
 flavours
 flowdock
 flux
+gitx
 google-chrome
 google-drive
 google-japanese-ime
@@ -27,6 +29,7 @@ growlnotify
 handbrake
 hipchat
 iterm2
+java
 karabiner
 keka
 keycastr
@@ -55,6 +58,8 @@ textmate
 things
 torbrowser
 transmission
+vagrant
+virtualbox
 vlc
 xbox360-controller-driver
 xquartz
