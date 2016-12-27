@@ -107,10 +107,14 @@ nnoremap <C-H> <C-W><C-H>
 
 " Search case-sensitively if search string includes uppercase
 set smartcase
-set ignorecase " searches are case insensitive
-set infercase " adjust autocomplete words depending on typed text
-set incsearch " Show search pattern as it is typed
-set hlsearch " Highlight searches
+" searches are case insensitive
+set ignorecase
+" adjust autocomplete words depending on typed text
+set infercase
+" Show search pattern as it is typed
+set incsearch
+" Highlight searches
+set hlsearch
 " Clear all search matches
 noremap <silent> <leader><space> :noh<cr>:call clearmatches()<cr>
 
@@ -144,15 +148,19 @@ set background=dark
 " before vim plugins have been installed
 silent! colorscheme solarized
 
-set cursorline " Highlight current line
-augroup CursorLine " Only highlight cursor line in current window
+" Highlight current line
+set cursorline
+" Only highlight cursor line in current window
+augroup CursorLine
   au!
   au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
   au WinLeave * setlocal nocursorline
 augroup END
 
-set colorcolumn=81 " display colour column at 81 characters
-highlight ColorColumn ctermbg=238 " make colorcolumn a light grey
+" display colour column at 81 characters
+set colorcolumn=81
+" make colorcolumn a light grey
+highlight ColorColumn ctermbg=238
 
 " Clean trailing whitespace
 nnoremap <leader>ww mz:%s/\s\+$//<cr>:let @/=''<cr>`z
