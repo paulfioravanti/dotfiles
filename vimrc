@@ -16,43 +16,71 @@ let mapleader = ","
 " Map reverse character search to backslash
 noremap \ ,
 set encoding=utf-8
-set number " show line numbers
-set gcr=a:blinkon0 " Disable cursor blinking
-set visualbell " disable system bell and have cursor flash on errors
-set autoread " Reload file changes outside Vim
-set nrformats= " treat all numerals as decimal and not octal etc
-set splitbelow " Make horizonal splits split below
-set splitright " Make vertical splits split to the right
+" show line numbers
+set number
+" Disable cursor blinking
+set gcr=a:blinkon0
+" disable system bell and have cursor flash on errors
+set visualbell
+" Reload file changes outside Vim
+set autoread
+" treat all numerals as decimal and not octal etc
+set nrformats=
+" Make horizonal splits split below
+set splitbelow
+" Make vertical splits split to the right
+set splitright
 
 set autoindent
 set smartindent
 set smarttab
-set tabstop=2 " Tab characters are two spaces wide
-set softtabstop=2 " Fine tunes amount of whitespace to be inserted
-set shiftwidth=2 " Default indent of two spaces
-set expandtab " Make tabs insert spaces
+" Tab characters are two spaces wide
+set tabstop=2
+" Fine tunes amount of whitespace to be inserted
+set softtabstop=2
+" Default indent of two spaces
+set shiftwidth=2
+" Make tabs insert spaces
+set expandtab
 
-set noswapfile " no swap files
-set nobackup " no backup files
-set nowritebackup " no making a backup before overwriting a file
+" no swap files
+set noswapfile
+" no backup files
+set nobackup
+" no making a backup before overwriting a file
+set nowritebackup
 
-set wildmenu " enhanced command-line completion
-set wildignore+=.git " Don't include vcs files
-set wildignore+=*.DS_Store " Don't include OSX-specific files
-set wildignore+=coverage/** " Don't include code coverage files
-set wildignore+=build/** " Don't include any Rubymotion build files
-set wildignore+=tmp/cache/** " Don't include any Rails cache files
-set wildignore+=docs/** " Don't include any files under docs/
-set wildignore+=_build/** " Don't include Elixir Phoenix _build files
-set wildignore+=node_modules/** " Don't include node_modules files
-set wildignore+=deps/** " Don't include Elixir Phoenix deps files
+" enhanced command-line completion
+set wildmenu
+" Don't include vcs files
+set wildignore+=.git
+" Don't include OSX-specific files
+set wildignore+=*.DS_Store
+" Don't include code coverage files
+set wildignore+=coverage/**
+" Don't include any Rubymotion build files
+set wildignore+=build/**
+" Don't include any Rails cache files
+set wildignore+=tmp/cache/**
+" Don't include any files under docs/
+set wildignore+=docs/**
+" Don't include Elixir Phoenix _build files
+set wildignore+=_build/**
+" Don't include node_modules files
+set wildignore+=node_modules/**
+" Don't include Elixir Phoenix deps files
+set wildignore+=deps/**
 " Don't include Rails cached vendor files
 set wildignore+=vendor/cache/**
 " Don't include locally uploaded files in Rails apps
 set wildignore+=public/uploads/**
 " Don't include any compiled beam files from Elixir
-set wildignore+=*.beam " Don't include OSX-specific files
-set wildignore+=*.keep " Don't include .keep files
+" Don't include OSX-specific files
+set wildignore+=*.beam
+" Don't include .keep files
+set wildignore+=*.keep
+" Don't include Elm vendor modules
+set wildignore+=elm-stuff/**
 
 " Save when losing focus from the window
 au FocusLost * :silent! wall

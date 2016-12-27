@@ -30,6 +30,8 @@ Plugin 'bwmcadams/vim-deckset'
 Plugin 'dermusikman/sonicpi.vim'
 " Syntax highlighting for Elixir
 Plugin 'elixir-lang/vim-elixir'
+" Syntax highlighting for Elm
+Plugin 'elmcast/elm-vim'
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 " Automatically insert or delete brackets, parens, quotes

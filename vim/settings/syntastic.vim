@@ -15,3 +15,7 @@ let g:syntastic_ruby_mri_quiet_messages =
 " Syntastic to prompt me.
 let g:syntastic_scss_sass_quiet_messages =
   \ { "regex": "File to import not found or unreadable" }
+" Recommended settings for Elm
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:elm_syntastic_show_warnings = 1
