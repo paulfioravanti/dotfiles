@@ -13,6 +13,7 @@ cyberduck
 dash
 divvy
 dropbox
+elm-platform
 expandrive
 filezilla
 firefox
