@@ -3,11 +3,11 @@ ansible
 homebrew/dupes/apple-gcc42
 asciinema
 osx-cross/avr/avr-libc
+bison
 boot2docker
 cabextract
 chicken
 chruby
-cloog
 cmatrix
 ctags
 curl
@@ -22,8 +22,8 @@ fasd
 ffmpeg
 freetds
 fswatch
-homebrew/versions/gcc48
-homebrew/versions/gcc49
+gcc@4.8
+gcc@4.9
 geckodriver
 ghostscript
 git
@@ -36,6 +36,8 @@ httpie
 hub
 imagemagick
 irssi
+isl
+isl@0.11
 jbig2dec
 keybase
 libusb-compat
@@ -54,7 +56,6 @@ pinentry-mac
 postgis
 python3
 qcachegrind
-qt
 thoughtbot/formulae/rcm
 reattach-to-user-namespace
 redis
