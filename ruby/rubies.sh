@@ -8,6 +8,7 @@ RUBY_DIR=$(dirname ${BASH_SOURCE:-$0})
 
 echo "Generating list of Rubies..."
 chruby |
-ruby -pe '$_.gsub!(/^[^\w]+|-p[0-9]+/, "").gsub!("-", " ")' > $RUBY_DIR/rubies.txt
+ruby -pe '$_.gsub!(/^[^\w]+|-p[0-9]+/, "").gsub!("-", " ")' |
+uniq > $RUBY_DIR/rubies.txt
 echo "Complete!"
 
