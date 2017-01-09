@@ -1,0 +1,35 @@
+# ~/.tmuxinator/action_cable_chat_app.yml
+
+name: action_cable_chat_app
+root: ~/rails_5/action_cable_chat_app
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+pre:
+  # - pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
+  # - brew services start postgresql
+  # - brew services start redis
+  # - mailcatcher
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+pre_window: eval "$(chruby $(cat .ruby-version))"
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
+# startup_window: logs
+
+windows:
+  - editor: vim
+  - tests: bin/guard -w app config test
+  - console: bin/rails c
+  - server: bin/rails s
+  # - sidekiq: bin/sidekiq
+  # - redis: redis-server
+  - logs: tail -f log/development.log

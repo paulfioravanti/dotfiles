@@ -1,0 +1,10 @@
+# ~/.tmuxinator/three_little_pigs.yml
+
+name: three_little_pigs
+root: ~/ruby/three_little_pigs
+pre_window: eval "$(chruby $(cat .ruby-version))"
+startup_window: editor
+windows:
+  - editor: vim
+  - specs: bin/guard -w lib spec
+  - console: bin/console

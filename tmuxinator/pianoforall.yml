@@ -1,0 +1,39 @@
+# ~/.tmuxinator/pianoforall.yml
+
+name: pianoforall
+root: ~/ruby/pianoforall
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# Open the Sonic Pi app otherwise sonic-pi-cli has nothing to hook into,
+# and push its window into the background
+pre: open --hide /opt/homebrew-cask/Caskroom/sonic-pi/2.9.0/Sonic\ Pi.app
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+pre_window: eval "$(chruby 2.3.0)"
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
+# startup_window: logs
+
+# Controls whether the tmux session should be attached to automatically. Defaults to true.
+# attach: false
+
+# Runs after everything. Use it to attach to tmux with custom options etc.
+# post: tmux -CC attach -t pianoforall
+
+windows:
+  - editor: vim
+  - console: irb
+  # NOTE: This doesn't seem to work yet.  Error message is:
+  # Exception!
+  # Connection refused - send(2)
+  # ["/opt/homebrew-cask/Caskroom/sonic-pi/2.8.0/Sonic Pi.app/app/server/sonicpi/lib/sonicpi/osc/udp_client.rb:33:in `send'", "/opt/homebrew-cask/Caskroom/sonic-pi/2.8.0/Sonic Pi.app/app/server/sonicpi/lib/sonicpi/osc/udp_client.rb:33:in `send'", "sonic-pi-server.rb:323:in `block in <main>'"]"'`"]
+  # - server: ruby -C /opt/homebrew-cask/Caskroom/sonic-pi/2.8.0/Sonic\ Pi.app/app/server/bin/ sonic-pi-server.rb

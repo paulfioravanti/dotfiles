@@ -1,0 +1,26 @@
+# ~/.tmuxinator/elm_bingo.yml
+
+name: elm_bingo
+root: ~/elm/pragstudio-elm-code
+
+windows:
+  - editor:
+      root: ~/elm/pragstudio-elm-code/starter-project/bingo
+      panes:
+        - vim
+  # - elm_reactor:
+  #     root: ~/elm/pragstudio-elm-code/starter-project/bingo
+  #     panes:
+  #       - elm-reactor --port=9000
+  - repl:
+      root: ~/elm/pragstudio-elm-code/starter-project/bingo
+      panes:
+        - elm-repl
+  - server:
+      root: ~/elm/pragstudio-elm-code/starter-project/bingo
+      panes:
+        - elm-live Bingo.elm --open --warn --debug --output=bingo.js
+  - buzzword_server:
+      root: ~/elm/pragstudio-elm-code/server
+      panes:
+        - node server.js
