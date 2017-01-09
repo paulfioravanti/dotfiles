@@ -1,3 +1,4 @@
+buo/cask-upgrade
 caskroom/cask
 codeclimate/formulae
 homebrew/core
