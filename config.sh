@@ -10,6 +10,5 @@ if [ -n "$BASH_VERSION" ]; then
   source $DOTFILES_DIR/bashrc
 fi
 source $DOTFILES_DIR/ruby/rubies.sh
-source $DOTFILES_DIR/osx/brew/brews.sh
 source $DOTFILES_DIR/osx/karabiner/config.sh
 source $DOTFILES_DIR/osx/iterm2/config.sh

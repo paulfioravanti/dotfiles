@@ -15,8 +15,16 @@ while true; do
   kill -0 "$$" || exit
 done &
 
+# Enable usage of the `bundle` command with the the `Brewfile`
+brew tap Homebrew/bundle
+# Install Mac App Store so `mas` commands in the `Brewfile`
+# can be used.
+brew install mas
+brew bundle
 brew update
 brew upgrade --all
+# Brew cask upgrade
+brew cu
 
 # get current directory
 BREW_DIR=$(dirname ${BASH_SOURCE:-$0})
