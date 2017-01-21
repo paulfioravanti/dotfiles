@@ -9,6 +9,7 @@ if [ -n "$BASH_VERSION" ]; then
   # specifically for chruby
   source $DOTFILES_DIR/bashrc
 fi
-source $DOTFILES_DIR/ruby/rubies.sh
+source $DOTFILES_DIR/ruby/config.sh
+source $DOTFILES_DIR/osx/homebrew/config.sh
 source $DOTFILES_DIR/osx/karabiner/config.sh
 source $DOTFILES_DIR/osx/iterm2/config.sh

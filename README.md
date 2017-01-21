@@ -17,13 +17,13 @@ symlinked to the home directory:
 #### `bash`:
 
 ```sh
-$ rcup -x README.md -x setup.sh -x config.sh -x *:vim:vim.sh -x *:tmux:tmux.sh -x *:oh-my-zsh:oh-my-zsh.sh -x ruby -x osx
+$ rcup -x README.md -x setup.sh -x config.sh -x *:vim:setup.sh -x *:tmux:setup.sh -x *:oh-my-zsh:setup.sh -x ruby -x osx
 ```
 
 #### `zsh`:
 
 ```sh
-$ rcup -x README.md -x setup.sh -x config.sh -x \*:vim:vim.sh -x \*:tmux:tmux.sh -x \*:oh-my-zsh:oh-my-zsh.sh -x ruby -x osx
+$ rcup -x README.md -x setup.sh -x config.sh -x \*:vim:setup.sh -x \*:tmux:setup.sh -x \*:oh-my-zsh:setup.sh -x ruby -x osx
 ```
 
 ## Regenerate Dotfiles

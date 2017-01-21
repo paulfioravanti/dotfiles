@@ -10,7 +10,7 @@ ssh-keygen -t rsa -b 4096 -N "" -f ~/.ssh/id_rsa
 ssh-add ~/.ssh/id_rsa
 
 # Install brew packages and casks
-source $DOTFILES_DIR/osx/homebrew/config.sh
+source $DOTFILES_DIR/osx/homebrew/setup.sh
 
 # Get Solarized colors for iTerm.
 git clone https://github.com/altercation/solarized.git ~/solarized
@@ -21,25 +21,25 @@ open ~/solarized/iterm2-colors-solarized/Solarized\ Light.itermcolors
 # you should be able to just run `$ rcup` when doing this again
 # Ignores the README, setup scripts, and the ruby and osx directories
 # for symlinking
-rcup -x README.md -x setup.sh -x config.sh -x *:vim:vim.sh -x *:tmux:tmux.sh -x *:oh-my-zsh:oh-my-zsh.sh -x ruby -x osx
+rcup -x README.md -x setup.sh -x config.sh -x *:vim:setup.sh -x *:tmux:setup.sh -x *:oh-my-zsh:setup.sh -x ruby -x osx
 
-# Configure vim
-source $DOTFILES_DIR/vim/vim.sh
+# Setup vim
+source $DOTFILES_DIR/vim/setup.sh
 
-# Configure tmux
-source $DOTFILES_DIR/tmux/tmux.sh
+# Setup tmux
+source $DOTFILES_DIR/tmux/setup.sh
 
-# Configure Karabiner
-source $DOTFILES_DIR/osx/karabiner/karabiner.sh
+# Setup Karabiner
+source $DOTFILES_DIR/osx/karabiner/setup.sh
 
-# Configure iterm2
-source $DOTFILES_DIR/osx/iterm2/iterm2.sh
+# Setup iterm2
+source $DOTFILES_DIR/osx/iterm2/setup.sh
 
-# Install Ruby versions
+# Install and Setup Ruby versions
 source $DOTFILES_DIR/ruby/chruby.sh
 
-# Install oh-my-zsh
-source $DOTFILES_DIR/oh-my-zsh/oh-my-zsh.sh
+# Install and setup oh-my-zsh
+source $DOTFILES_DIR/oh-my-zsh/setup.sh
 
 # Change the remote url to use the ssh version
 cd ~/.dotfiles
