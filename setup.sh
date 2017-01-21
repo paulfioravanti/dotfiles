@@ -10,7 +10,7 @@ ssh-keygen -t rsa -b 4096 -N "" -f ~/.ssh/id_rsa
 ssh-add ~/.ssh/id_rsa
 
 # Install brew packages and casks
-source $DOTFILES_DIR/osx/brew/brew.sh
+source $DOTFILES_DIR/osx/homebrew/config.sh
 
 # Get Solarized colors for iTerm.
 git clone https://github.com/altercation/solarized.git ~/solarized
@@ -60,16 +60,6 @@ echo "You should probably restart the computer now."
 #    - Install 1Password extension for Chrome, Firefox, and Safari
 # - Set up Google Drive
 # - Install the following programs:
-#    From the App Store:
-#    - Numbers
-#    - Pages
-#    - Kindle
-#    - Twitter
-#    - PDF Squeezer
-#    - Monosnap
-#    - Form
-#    - Deckset
-#    Other:
 #    - Mavis Beacon (also install update and import user data)
 # - Install the following extensions for Firefox:
 #    - Rikaichan (plus dictionaries)
@@ -84,7 +74,6 @@ echo "You should probably restart the computer now."
 #   - Macintosh HD
 #   - <home>
 #   - Applications
-#   - Homebrew Apps (in ~/Library/Saved Searches/Homebrew Apps.savedSearch)
 #   - Desktop
 #   - Downloads
 #   - Documents

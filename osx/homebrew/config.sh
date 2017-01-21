@@ -15,41 +15,14 @@ while true; do
   kill -0 "$$" || exit
 done &
 
-# Enable usage of the `bundle` command with the the `Brewfile`
+# Enable usage of the `brew bundle` command with a `Brewfile`
 brew tap Homebrew/bundle
-# Install Mac App Store so `mas` commands in the `Brewfile`
-# can be used.
-brew install mas
-brew bundle
+# NOTE: `brew bundle` needs to have a `Brewfile` specified when run
+# from here, *and* it can't be passed a symlink ie ~/Brewfile
+brew bundle --file=~/.dotfiles/Brewfile
 brew update
-brew upgrade --all
+brew upgrade
 # Brew cask upgrade
 brew cu
-
-# get current directory
-BREW_DIR=$(dirname ${BASH_SOURCE:-$0})
-
-for tap in $(cat $BREW_DIR/taps.txt); do
-  brew tap $tap
-done
-
-for package in $(cat $BREW_DIR/packages.txt); do
-  brew install $package
-  brew upgrade $package
-done
-
-for cask in $(cat $BREW_DIR/casks.txt); do
-  # There's currently no way to cleanly upgrade a cask yet
-  # so in order to prevent multiple versions of a cask
-  # polluting the Caskroom (and hence turning up in Alfred searches),
-  # you need to go into the Caskroom and manually remove older versions.
-  #
-  # Sudo is being used to install every cask because, at the very least, casks
-  # that have a pkg file require it, and there's no way to distinguish at the
-  # outset whether it will be needed or not and we don't want the script to halt
-  # midway prompting for a password.
-  sudo brew cask install $cask
-done
-
 brew cask cleanup
 brew cleanup

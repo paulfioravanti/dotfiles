@@ -143,7 +143,7 @@ brew 'mas'
 brew 'mercurial'
 brew 'mongodb'
 brew 'msgpack'
-brew 'mysql', restart_service: true
+brew 'mysql'
 brew 'mysql@5.6'
 brew 'nmap'
 brew 'node'

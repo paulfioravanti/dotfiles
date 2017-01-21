@@ -16,19 +16,19 @@ symlinked to the home directory:
 
 #### `bash`:
 
-```
+```sh
 $ rcup -x README.md -x setup.sh -x config.sh -x *:vim:vim.sh -x *:tmux:tmux.sh -x *:oh-my-zsh:oh-my-zsh.sh -x ruby -x osx
 ```
 
 #### `zsh`:
 
-```
+```sh
 $ rcup -x README.md -x setup.sh -x config.sh -x \*:vim:vim.sh -x \*:tmux:tmux.sh -x \*:oh-my-zsh:oh-my-zsh.sh -x ruby -x osx
 ```
 
 ## Regenerate Dotfiles
 
-```
+```sh
 $ rcup
 ```
 
@@ -38,22 +38,21 @@ in the future (unless more files to be excluded from being symlinked are added).
 
 ## Setup Scripts
 
-```
+```sh
 $ git clone https://github.com/paulfioravanti/dotfiles.git ~/.dotfiles
 $ source ~/.dotfiles/setup.sh
 ```
 
 Regenerate config for all apps and libraries under dotfiles:
 
-```
+```sh
 $ source ~/.dotfiles/config.sh
 ```
 
 Or individually (choose relevant script to regenerate config):
 
-```
+```sh
 $ source ~/.dotfiles/ruby/rubies.sh
-$ source ~/.dotfiles/osx/brew/brews.sh
 $ source ~/.dotfiles/osx/karabiner/config.sh
 $ source ~/.dotfiles/osx/iterm2/config.sh
 ```
