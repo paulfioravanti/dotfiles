@@ -1,6 +1,10 @@
 #!/bin/bash
 # Re-generate the Homebrew Brewfile
 
-echo "Generating Brewfile..."
+yellow=$(tput setaf 3)
+green=$(tput setaf 2)
+reset=$(tput sgr0)
+
+echo "${yellow}Generating Brewfile...${reset}"
 brew bundle dump --file=~/.dotfiles/Brewfile --force
-echo "Complete!"
+echo "${green}Complete!${reset}"

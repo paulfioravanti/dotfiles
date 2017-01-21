@@ -53,6 +53,7 @@ Or individually (choose relevant script to regenerate config):
 
 ```sh
 $ source ~/.dotfiles/ruby/rubies.sh
+$ source ~/.dotfiles/osx/homebrew/config.sh
 $ source ~/.dotfiles/osx/karabiner/config.sh
 $ source ~/.dotfiles/osx/iterm2/config.sh
 ```

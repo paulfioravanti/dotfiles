@@ -2,10 +2,13 @@
 # Re-generate the Karabiner config file
 
 # get current directory
-KARABINER_DIR=$(dirname ${BASH_SOURCE:-$0})
-SETUP_FILE=$KARABINER_DIR/setup.sh
+karabiner_dir=$(dirname ${BASH_SOURCE:-$0})
+setup_file=$karabiner_dir/setup.sh
+yellow=$(tput setaf 3)
+green=$(tput setaf 2)
+reset=$(tput sgr0)
 
-echo "Generating Karabiner config..."
-/Applications/Karabiner.app/Contents/Library/bin/karabiner export > $SETUP_FILE
-chmod a+x $SETUP_FILE
-echo "Complete!"
+echo "${yellow}Generating Karabiner config...${reset}"
+/Applications/Karabiner.app/Contents/Library/bin/karabiner export > $setup_file
+chmod a+x $setup_file
+echo "${green}Complete!${reset}"

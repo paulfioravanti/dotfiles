@@ -2,7 +2,7 @@
 # Install Ruby versions using chruby
 
 # get current directory
-RUBY_DIR=$(dirname ${BASH_SOURCE:-$0})
+ruby_dir=$(dirname ${BASH_SOURCE:-$0})
 
 # This file read requires a while loop (as apposed to for loops used elsewhere
 # in the dotfiles) due to there being spaces in the rubies.txt file. We want to
@@ -17,13 +17,13 @@ while read ruby_version; do
   else
     ruby-install $ruby_version
   fi
-done < $RUBY_DIR/rubies.txt
+done < $ruby_dir/rubies.txt
 
 # Apply new terminal settings
 source ~/.bash_profile
 
 # Install favourite gems into the latest version of Ruby
 chruby $(cat ~/.ruby-version)
-for gem in $(cat $RUBY_DIR/gems.txt); do
+for gem in $(cat $ruby_dir/gems.txt); do
   gem install $gem
 done

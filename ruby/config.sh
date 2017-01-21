@@ -4,11 +4,14 @@
 # (Very helpful reference: https://robm.me.uk/ruby/2013/11/20/ruby-enp.html)
 
 # get current directory
-RUBY_DIR=$(dirname ${BASH_SOURCE:-$0})
+ruby_dir=$(dirname ${BASH_SOURCE:-$0})
+yellow=$(tput setaf 3)
+green=$(tput setaf 2)
+reset=$(tput sgr0)
 
-echo "Generating list of Rubies..."
+echo "${yellow}Generating list of Rubies...${reset}"
 chruby |
 ruby -pe '$_.gsub!(/^[^\w]+|-p[0-9]+/, "").gsub!("-", " ")' |
-uniq > $RUBY_DIR/rubies.txt
-echo "Complete!"
+uniq > $ruby_dir/rubies.txt
+echo "${green}Complete!${reset}"
 
