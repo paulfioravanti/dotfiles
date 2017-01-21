@@ -26,8 +26,6 @@ for tap in $(cat $BREW_DIR/taps.txt); do
 done
 
 for package in $(cat $BREW_DIR/packages.txt); do
-  # Keep sudo alive during package installation as sudo will be needed
-  # to install some of the brew casks
   brew install $package
   brew upgrade $package
 done
@@ -47,6 +45,3 @@ done
 
 brew cask cleanup
 brew cleanup
-
-# Bring over the saved search for Homebrew apps that will go in the Finder
-mkdir -p ~/Library/Saved\ Searches && cp $BREW_DIR/Homebrew\ Apps.savedSearch "$_"
