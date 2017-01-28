@@ -99,12 +99,6 @@ endif
 " =====================================================================
 "  Moving around, searching and patterns
 " ======================================================================
-" Allow easier moving between vim and tmux split panes
-nnoremap <silent> <C-H> :TmuxNavigateLeft<cr>
-nnoremap <silent> <C-J> :TmuxNavigateDown<cr>
-nnoremap <silent> <C-K> :TmuxNavigateUp<cr>
-nnoremap <silent> <C-L> :TmuxNavigateRight<cr>
-
 " Search case-sensitively if search string includes uppercase
 set smartcase
 " searches are case insensitive
