@@ -121,6 +121,7 @@ brew 'highlight'
 brew 'httpie'
 brew 'hub'
 brew 'imagemagick'
+brew 'imagemagick@6'
 brew 'irssi'
 brew 'isl'
 brew 'isl@0.11'
@@ -148,6 +149,7 @@ brew 'mysql@5.6'
 brew 'nmap'
 brew 'node'
 brew 'npth'
+brew 'openmotif'
 brew 'ossp-uuid'
 brew 'postgresql', restart_service: true
 brew 'pgcli'
@@ -176,14 +178,13 @@ brew 'unixodbc'
 brew 'utf8proc'
 brew 'v8'
 brew 'wget'
+brew 'xpdf'
 brew 'yasm'
 brew 'zsh'
 brew 'zsh-completions'
 brew 'homebrew/dupes/apple-gcc42'
 brew 'homebrew/dupes/screen'
 brew 'homebrew/versions/gnupg21'
-brew 'homebrew/x11/openmotif'
-brew 'homebrew/x11/xpdf'
 brew 'osx-cross/avr/avr-binutils'
 brew 'osx-cross/avr/avr-gcc'
 brew 'osx-cross/avr/avr-libc'
@@ -270,5 +271,6 @@ mas 'PDF Squeezer', id: 504700302
 mas 'Pages', id: 409201541
 mas 'LINE', id: 539883307
 mas 'GarageBand', id: 682658836
+mas 'Navicat Data Modeler Essentials', id: 532423082
 mas 'Numbers', id: 409203825
 mas 'Deckset', id: 847496013
