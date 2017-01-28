@@ -1,16 +1,16 @@
-# ~/.tmuxinator/mpe.yml
+# ~/.tmuxinator/ruby_sample.yml
 
-name: rumbl
-root: ~/elixir/metaprogramming_phoenix
+name: ruby_sample
+# root: ~/path/to/ruby_app
 
 # Optional tmux socket
 # socket_name: foo
 
 # Runs before everything. Use it to start daemons etc.
-# pre: pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
+# pre: sudo /etc/rc.d/mysqld start
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
-# pre_window: rbenv shell 2.0.0-p247
+pre_window: eval "$(chruby $(cat .ruby-version))"
 
 # Pass command line options to tmux. Useful for specifying a different tmux.conf.
 # tmux_options: -f ~/.tmux.mac.conf
@@ -21,13 +21,8 @@ root: ~/elixir/metaprogramming_phoenix
 # Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
 # startup_window: logs
 
-# Controls whether the tmux session should be attached to automatically. Defaults to true.
-# attach: false
-
-# Runs after everything. Use it to attach to tmux with custom options etc.
-# post: tmux -CC attach -t mpe
-
 windows:
   - editor: vim
-  - specs:
-  - iex: iex
+  # - specs: bin/guard -w lib spec
+  # - tests: bin/guard -w lib test
+  - console: bin/console

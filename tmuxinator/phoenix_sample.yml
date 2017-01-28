@@ -1,7 +1,7 @@
-# ~/.tmuxinator/elixir_sample.yml
+# ~/.tmuxinator/phoenix_sample.yml
 
-name: elixir_sample
-# root: ~/path/to/elixir_app
+name: phoenix_sample
+# root: ~/path/to/phoenix_app
 
 # Runs before everything. Use it to start daemons etc.
 pre:
@@ -19,3 +19,4 @@ windows:
   - editor: vim
   # - tests: mix test.watch
   - console: iex -S mix
+  - server: iex -S mix phoenix.server

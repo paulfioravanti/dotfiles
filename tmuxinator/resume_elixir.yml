@@ -29,5 +29,5 @@ root: ~/elixir/resume_elixir
 
 windows:
   - editor: vim
-  - specs:
-  - iex: iex -S mix
+  - tests:
+  - console: iex -S mix
