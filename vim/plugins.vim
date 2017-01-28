@@ -22,8 +22,10 @@ Plugin 'AndrewRadev/splitjoin.vim'
 " eg true => false, { :foo => true  } => { foo: true  }
 " Default mapping: gs
 Plugin 'AndrewRadev/switch.vim'
- " Tells Deckset to update it's preview window
+" Tells Deckset to update it's preview window
 Plugin 'bwmcadams/vim-deckset'
+" Seamless navigation between tmux panes and vim splits
+Plugin 'christoomey/vim-tmux-navigator'
 " SonicPi plugin for Vim
 " <leader>r - send buffer to sonicpi
 " <leader>S - send stop message to sonicpi
