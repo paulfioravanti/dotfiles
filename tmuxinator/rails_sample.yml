@@ -9,6 +9,7 @@ pre:
   # - brew services start mysql
   # - brew services start postgresql
   # - brew services start redis
+  # - brew services start chromedriver
   # - mailcatcher
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.

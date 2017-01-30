@@ -2,7 +2,8 @@
 " Author: Paul Fioravanti <paul.fioravanti@gmail.com>
 " Source: https://github.com/paulfioravanti/dotfiles/blob/master/vimrc
 
-set nocompatible " Use Vim settings rather than Vi
+" Use Vim settings rather than Vi
+set nocompatible
 
 " ======================================================================
 " General Config

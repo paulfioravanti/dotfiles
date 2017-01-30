@@ -48,6 +48,7 @@ brew 'gmp'
 brew 'mpfr'
 brew 'cgal'
 brew 'chicken'
+brew 'chromedriver', restart_service: true
 brew 'chruby'
 brew 'gmp@4'
 brew 'isl@0.12'
