@@ -259,7 +259,6 @@ cask 'transmission'
 cask 'vagrant'
 cask 'virtualbox'
 cask 'vlc'
-cask 'xbox360-controller-driver'
 cask 'zoomus'
 mas 'Kindle', id: 405399194
 mas 'Xcode', id: 497799835
