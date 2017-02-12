@@ -270,6 +270,5 @@ mas 'PDF Squeezer', id: 504700302
 mas 'Pages', id: 409201541
 mas 'LINE', id: 539883307
 mas 'GarageBand', id: 682658836
-mas 'Navicat Data Modeler Essentials', id: 532423082
 mas 'Numbers', id: 409203825
 mas 'Deckset', id: 847496013
