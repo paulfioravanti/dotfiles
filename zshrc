@@ -7,11 +7,28 @@ export ZSH=/Users/paul/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="paulfioravanti"
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Which plugins would you like to load?
+# (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(brew bundler chruby fasd git git-open gitfast github osx rails rake ruby tmux tmuxinator z)
+plugins=(
+  brew
+  bundler
+  chruby
+  fasd
+  git
+  git-open
+  gitfast
+  github
+  osx
+  rails
+  rake
+  ruby
+  tmux
+  tmuxinator
+  z
+)
 
 # User configuration
 
