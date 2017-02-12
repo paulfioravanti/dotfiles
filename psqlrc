@@ -1,0 +1,32 @@
+-- Prevent noisy loading of psqlrc file
+\set QUIET 1
+
+-- Express nullity with ¤ instead of NULL
+\pset null '¤'
+
+-- Customize prompts
+-- eg [database_name]=# select * ...
+\set PROMPT1 '[%[%033[0;36m%]%/%[%033[0m%]]%[%033[0;34m%]%R%[%033[0m%]%[%033[0;31m%]%#%[%033[0m%]%[%033[0;33m%]%x%[%033[0m%] '
+\set PROMPT2 '[%[%033[0;36m%]%/%[%033[0m%]]%[%033[0;34m%]%R%[%033[0m%]%[%033[0;31m%]%#%[%033[0m%]%[%033[0;33m%]%x%[%033[0m%] '
+
+-- Show timing info for queries
+\timing
+
+-- When querying large tables sometimes the output renders text that is
+-- difficult to read. This switches to expanded table format.
+\x auto
+
+-- Verbose error reports
+\set VERBOSITY verbose
+
+-- Use a separate history file per-database
+\set HISTFILE ~/.psql_history- :DBNAME
+
+-- Get rid of duplicates in history
+\set HISTCONTROL ignoredups
+
+-- Autocomplete keywords in upper-case even if started lowercase
+\set COMP_KEYWORD_CASE upper
+
+-- Set noisyness back to normal
+\unset QUIET
