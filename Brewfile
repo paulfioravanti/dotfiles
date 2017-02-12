@@ -143,10 +143,10 @@ brew 'libvpx'
 brew 'macvim', args: ['with-override-system-vim']
 brew 'mas'
 brew 'mercurial'
-brew 'mongodb'
+brew 'mongodb', restart_service: true
 brew 'msgpack'
 brew 'mysql', restart_service: true
-brew 'mysql@5.6'
+brew 'mysql@5.6', restart_service: true
 brew 'nmap'
 brew 'node'
 brew 'npth'
