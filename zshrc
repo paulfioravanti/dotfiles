@@ -11,7 +11,7 @@ ZSH_THEME="paulfioravanti"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(brew bundler chruby fasd git gitfast github osx rails rake ruby tmux tmuxinator z)
+plugins=(brew bundler chruby fasd git git-open gitfast github osx rails rake ruby tmux tmuxinator z)
 
 # User configuration
 
