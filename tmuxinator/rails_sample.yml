@@ -26,6 +26,6 @@ windows:
   - console: bin/rails console
   # - server: bundle exec rails server
   - server: bin/rails server
-  # - sidekiq: bin/sidekiq
+  # - sidekiq: bin/sidekiq -q default -q mailers
   # - redis: redis-server
   - logs: tail -f log/development.log
