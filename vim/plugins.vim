@@ -56,6 +56,8 @@ Plugin 'kana/vim-textobj-lastpat'
 Plugin 'kana/vim-textobj-user'
 " Syntax, indenting, compiling of Coffeescript
 Plugin 'kchmck/vim-coffee-script'
+" Vim runtime files for Swift
+Plugin 'keith/swift.vim'
 " Expand abbreviations into html tags using Emmet
 " https://github.com/mattn/emmet-vim/blob/master/TUTORIAL
 Plugin 'mattn/emmet-vim'
