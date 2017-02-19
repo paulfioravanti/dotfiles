@@ -1,7 +1,7 @@
-# ~/.tmuxinator/elm_test_example.yml
+# ~/.tmuxinator/elm_sample.yml
 
-name: elm_test_example
-root: ~/elm/test-example
+name: elm_sample
+# root: ~/path/to/elm-app
 
 # Runs before everything. Use it to start daemons etc.
 pre:
