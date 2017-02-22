@@ -18,5 +18,8 @@ startup_window: editor
 windows:
   - editor: vim
   - tests: elm test --watch
+  - repl: elm repl
+  # - console: elm reactor
   # - console: iex -S mix
+  # - server: elm-live Bingo.elm --open --warn --debug --output=bingo.js
   # - server: iex -S mix phoenix.server
