@@ -58,7 +58,11 @@ alias ls='ls -FlAagG' # more detail with default `ls`
 alias git=hub # use git to execute hub commands as well
 # delete all local branches that have been merged into master, excluding current branch, develop, and master
 alias gsweep='git branch --merged master | command grep -vE "^(\*|\s*develop\s*|\s*master\s*$)" | command xargs -n 1 git branch -d'
+# For whatever reason, the mux alias built into tmuxinator doesn't seem to
+# be working, so just set it manually
 alias mux=tmuxinator
+# One command to update all develop dependencies
+alias update='bubu && brew cu && vim +PluginUpdate +qall'
 
 # Allow <C-s> to be used by Command-T in Vim
 # http://stackoverflow.com/q/8616843/567863
