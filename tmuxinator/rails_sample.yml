@@ -20,8 +20,8 @@ startup_window: editor
 
 windows:
   - editor: vim
-  # - specs: bin/guard -w app config spec
-  # - tests: bin/guard -w app config test
+  # - specs: bin/guard --watchdir app config spec
+  # - tests: bin/guard --watchdir app config test
   # - console: bundle exec rails console
   - console: bin/rails console
   # - server: bundle exec rails server
