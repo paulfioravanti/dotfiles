@@ -22,7 +22,8 @@ module.exports = {
     borderColor: '#333',
 
     // custom css to embed in the main window
-    css: '',
+    // NOTE: Not *really* sure if this is working as expected...
+    css: 'color: #839496;',
 
     // custom css to embed in the terminal window
     termCSS: '',
