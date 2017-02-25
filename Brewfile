@@ -44,6 +44,7 @@ brew 'pcre'
 brew 'glib'
 brew 'pixman'
 brew 'cairo'
+brew 'carthage'
 brew 'gmp'
 brew 'mpfr'
 brew 'cgal'
@@ -127,7 +128,6 @@ brew 'irssi'
 brew 'isl'
 brew 'isl@0.11'
 brew 'jbig2dec'
-brew 'keybase'
 brew 'libcroco'
 brew 'libevent'
 brew 'libmpc'
@@ -143,10 +143,10 @@ brew 'libvpx'
 brew 'macvim', args: ['with-override-system-vim']
 brew 'mas'
 brew 'mercurial'
-brew 'mongodb', restart_service: true
+brew 'mongodb'
 brew 'msgpack'
 brew 'mysql', restart_service: true
-brew 'mysql@5.6', restart_service: true
+brew 'mysql@5.6'
 brew 'nmap'
 brew 'node'
 brew 'npth'
@@ -191,6 +191,7 @@ brew 'osx-cross/avr/avr-libc'
 brew 'thoughtbot/formulae/rcm'
 cask '1password'
 cask 'alfred'
+cask 'android-studio'
 cask 'applepi-baker'
 cask 'balsamiq-mockups'
 cask 'bettertouchtool'
@@ -222,10 +223,12 @@ cask 'gpgtools'
 cask 'growlnotify'
 cask 'handbrake'
 cask 'hipchat'
+cask 'hyper'
 cask 'iconjar'
 cask 'iterm2'
 cask 'karabiner'
 cask 'keka'
+cask 'keybase'
 cask 'keycastr'
 cask 'linein'
 cask 'omnigraffle'
@@ -261,16 +264,16 @@ cask 'vagrant'
 cask 'virtualbox'
 cask 'vlc'
 cask 'zoomus'
-mas 'Kindle', id: 405399194
-mas 'Xcode', id: 497799835
-mas 'Twitter', id: 409789998
-mas 'Monosnap', id: 540348655
+mas 'Deckset', id: 847496013
 mas 'iMovie', id: 408981434
 mas 'Keynote', id: 409183694
-mas 'TweetDeck', id: 485812721
-mas 'PDF Squeezer', id: 504700302
-mas 'Pages', id: 409201541
+mas 'Kindle', id: 405399194
 mas 'LINE', id: 539883307
-mas 'GarageBand', id: 682658836
+mas 'Monosnap', id: 540348655
 mas 'Numbers', id: 409203825
-mas 'Deckset', id: 847496013
+mas 'Pages', id: 409201541
+mas 'PDF Squeezer', id: 504700302
+mas 'Prepo', id: 476533227
+mas 'TweetDeck', id: 485812721
+mas 'Twitter', id: 409789998
+mas 'Xcode', id: 497799835
