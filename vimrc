@@ -82,6 +82,8 @@ set wildignore+=*.beam
 set wildignore+=*.keep
 " Don't include Elm vendor modules
 set wildignore+=elm-stuff/**
+" Report terminal type
+set term=xterm-256color
 
 " Save when losing focus from the window
 au FocusLost * :silent! wall
@@ -233,6 +235,17 @@ inoremap <Up> <NOP>
 inoremap <Down> <NOP>
 inoremap <Left> <NOP>
 inoremap <Right> <NOP>
+
+" ======================================================================
+" Workarounds/Hacks
+" ======================================================================
+
+" The t_RV (request terminal version string for xterm) needs to be blanked
+" out in order to suppress output in the Hyper terminal when starting
+" Vim.  More information on this strange issue at the following links:
+" - https://github.com/zeit/hyper/issues/1037
+" - https://github.com/vim-airline/vim-airline/issues/393
+set t_RV=
 
 " ======================================================================
 " Load plugin and custom settings
