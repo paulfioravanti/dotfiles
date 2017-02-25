@@ -34,6 +34,8 @@ Plugin 'dermusikman/sonicpi.vim'
 Plugin 'elixir-lang/vim-elixir'
 " Syntax highlighting for Elm
 Plugin 'elmcast/elm-vim'
+" Go development plugin for Vim
+Plugin 'fatih/vim-go'
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 " Automatically insert or delete brackets, parens, quotes
