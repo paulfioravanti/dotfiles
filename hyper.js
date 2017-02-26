@@ -99,12 +99,20 @@ module.exports = {
   //   `@company/project`
   //   `project#1.0.1`
   plugins: [
-    "hyper-solarized-dark",
     "hyperlinks",
-    "hyper-command-gifs"
+    "hyper-command-gifs",
+    "hyper-solarized-dark",
+    "hyper-tabs-enhanced"
   ],
 
+  // Plugin Configuration
   hyperCommandGifs: {},
+
+  hyperTabs: {
+    border: true,
+    tabIconsColored: true,
+    trafficButtons: true
+  },
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
