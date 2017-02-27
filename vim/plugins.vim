@@ -49,6 +49,9 @@ Plugin 'jiangmiao/auto-pairs'
 "     Start EasyAlign command (ga) for inner paragraph
 "     Align around =
 Plugin 'junegunn/vim-easy-align'
+" CSS3 syntax (and syntax defined in some foreign specifications)
+" support for Vim's built-in syntax/css.vim
+Plugin 'hail2u/vim-css3-syntax'
 " Text objects for entire buffers
 " vim-textobj-entire depends on vim-textobj-user
 Plugin 'kana/vim-textobj-entire'
