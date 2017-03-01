@@ -8,8 +8,9 @@ of the [Karabiner-Elements repo](https://github.com/tekezo/Karabiner-Elements).
 
 - When Caps Lock or Left Control buttons are pressed, send Escape
 - When Caps Lock button is held, send Left Control
-- When Return/Enter button is pressed, send Return/Enter (see notes for why)
 - When Return/Enter button is held, send Right Control
+- When Return/Enter button is pressed, send Return/Enter
+  (see [#notes](notes) for why this is even needed)
 
 ## Notes
 
