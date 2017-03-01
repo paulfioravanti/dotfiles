@@ -22,8 +22,9 @@ held,
 }
 ```
 
-the following configuration was added to get the original return/enter
-functionality back as expected.
+the following configuration was added to get the original Return/Enter
+functionality back as expected when pressed (otherwise Return/Enter stopped
+actually functioning as a Return/Enter key).
 
 ```
 "standalone_keys": {
