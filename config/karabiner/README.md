@@ -14,7 +14,7 @@ of the [Karabiner-Elements repo](https://github.com/tekezo/Karabiner-Elements).
 
 ## Notes
 
-Due to the following configuration which maps Return/Enter to Control when
+Due to the following configuration, which maps Return/Enter to Control when
 held,
 
 ```
@@ -23,9 +23,9 @@ held,
 }
 ```
 
-the following configuration was added to get the original Return/Enter
-functionality back as expected when pressed (otherwise Return/Enter stopped
-actually functioning as a Return/Enter key).
+the following (what looks like to be redundant) configuration was added to get
+the original Return/Enter functionality back as expected when pressed
+(otherwise Return/Enter stopped actually functioning as a Return/Enter key).
 
 ```
 "standalone_keys": {
@@ -39,5 +39,5 @@ Karabiner-Elements happens.
 ## Usage Instructions
 
 1. Download the latest release `.dmg` file from the forked repo
-   [here](https://github.com/wwwjfy/Karabiner-Elements/releases/)
-2. Use the `.config/karabiner/karabiner.json` file in these dotfiles.
+   [here](https://github.com/wwwjfy/Karabiner-Elements/releases/).
+2. Use the [`.config/karabiner/karabiner.json`](karabiner.json) file in these dotfiles.
