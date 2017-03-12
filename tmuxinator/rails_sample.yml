@@ -22,10 +22,8 @@ windows:
   - editor: vim
   # - specs: bin/guard --watchdir app config spec
   # - tests: bin/guard --watchdir app config test
-  # - console: bundle exec rails console
   - console: bin/rails console
-  # - server: bundle exec rails server
   - server: bin/rails server
-  # - sidekiq: bin/sidekiq -q default -q mailers
+  # - sidekiq: bin/sidekiq -queue default -queue mailers
   # - redis: redis-server
   - logs: tail -f log/development.log
