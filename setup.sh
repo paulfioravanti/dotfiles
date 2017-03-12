@@ -29,9 +29,6 @@ source $DOTFILES_DIR/vim/setup.sh
 # Setup tmux
 source $DOTFILES_DIR/tmux/setup.sh
 
-# Setup Karabiner
-source $DOTFILES_DIR/osx/karabiner/setup.sh
-
 # Setup iterm2
 source $DOTFILES_DIR/osx/iterm2/setup.sh
 

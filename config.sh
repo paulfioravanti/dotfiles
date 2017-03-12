@@ -11,5 +11,4 @@ if [ -n "$BASH_VERSION" ]; then
 fi
 source $dotfiles_dir/ruby/config.sh
 source $dotfiles_dir/osx/homebrew/config.sh
-source $dotfiles_dir/osx/karabiner/config.sh
 source $dotfiles_dir/osx/iterm2/config.sh
