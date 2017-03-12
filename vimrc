@@ -113,7 +113,7 @@ set incsearch
 " Highlight searches
 set hlsearch
 " Clear all search matches
-noremap <silent> <leader><space> :noh<cr>:call clearmatches()<cr>
+noremap <silent> <leader><space> :nohlsearch<cr>:call clearmatches()<cr>
 
 " Allows incsearch highlighting for range commands
 " Intention is to be used in forward/backward searches ie
@@ -127,14 +127,13 @@ cnoremap $d <CR>:d<CR>``
 " Keep search matches in the middle of the window.
 nnoremap n nzzzv
 nnoremap N Nzzzv
-
 " Same when jumping around
 nnoremap g; g;zz
 nnoremap g, g,zz
 nnoremap <c-o> <c-o>zz
 
 " Show count of matches for the current search
-nnoremap <leader>c :%s///gn<CR>
+nnoremap <leader>c :%s///gn<cr>
 
 " ======================================================================
 "  Syntax, highlighting and spelling
@@ -235,6 +234,10 @@ inoremap <Up> <NOP>
 inoremap <Down> <NOP>
 inoremap <Left> <NOP>
 inoremap <Right> <NOP>
+
+" Don't lose selection on indenting
+vnoremap > >gv
+vnoremap < <gv
 
 " ======================================================================
 " Workarounds/Hacks
