@@ -1,0 +1,119 @@
+" .xvimrc Configuration for XVim on Xcode
+" Author: Paul Fioravanti <paul.fioravanti@gmail.com>
+" Source: https://github.com/paulfioravanti/dotfiles/blob/master/xvimrc
+" Based on my .vimrc file
+"
+" NOTES:
+" - <leader> command substituted out explicitly for , as XVim does not
+"   support the leader key (https://github.com/XVimProject/XVim/issues/669)
+
+" ======================================================================
+" General Config
+" ======================================================================
+" Make tabs insert spaces
+set expandtab
+" no status bar
+set laststatus=0
+" Display relative numbers all the time
+set relativenumber
+" Share system clipboard with unnamed register
+set clipboard=unnamed
+" Disable cursor blinking
+set noblinkcursor
+
+" =====================================================================
+"  Moving around, searching and patterns
+" ======================================================================
+" Search case-sensitively if search string includes uppercase
+set smartcase
+" searches are case insensitive
+set ignorecase
+" adjust autocomplete words depending on typed text
+set infercase
+" Show search pattern as it is typed
+set incsearch
+" Highlight searches
+set hlsearch
+" Clear all search matches
+noremap ,<space> :nohlsearch<cr><cr>
+
+" Keep search matches in the middle of the window.
+nnoremap n nzzzv
+nnoremap N Nzzzv
+" Same when jumping around
+nnoremap g; g;zz
+nnoremap g, g,zz
+nnoremap <c-o> <c-o>zz
+
+" Simpler window navigation
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" ======================================================================
+"  Syntax, highlighting and spelling
+" ======================================================================
+nnoremap ,ww mz:%s/\s+$//g<cr>:w<cr>
+
+" ======================================================================
+"  Mapping
+" ======================================================================
+" Pro Mode: Don't use those arrow keys
+nnoremap <Up> <NOP>
+nnoremap <Down> <NOP>
+nnoremap <Left> <NOP>
+nnoremap <Right> <NOP>
+inoremap <Up> <NOP>
+inoremap <Down> <NOP>
+inoremap <Left> <NOP>
+inoremap <Right> <NOP>
+
+" Poor man's surround.vim
+nnoremap ,` gewi`<ESC>ea`<ESC>
+nnoremap ,' gewi'<ESC>ea'<ESC>
+nnoremap ," gewi"<ESC>ea"<ESC>
+
+" Don't lose selection on indenting
+vnoremap > >gv
+vnoremap < <gv
+
+" ======================================================================
+"  Xcode Mappings
+" ======================================================================
+" Reference here for the Menu item mappings:
+" https://github.com/XVimProject/XVim/blob/master/Documents/Developers/MenuActionList.txt
+" xccmd statement with the action names don't seem to be working for me, so
+" just do as the XVim documentation commands and prefer the use of xcmenucmd:
+" https://github.com/XVimProject/XVim/blob/master/Documents/Users/FeatureList.md#xvim-original-commands
+
+" Code commenting like tpope/vim-commentary
+nnoremap gcc :xcmenucmd Comment Selection<cr>
+vnoremap gc :xcmenucmd Comment Selection<cr>
+
+" Toggle Toolbars
+nnoremap ,<C-h> :xcmenucmd Show Navigator<CR>
+nnoremap ,<C-j> :xcmenucmd Show Debug Area<CR>
+nnoremap ,<C-l> :xcmenucmd Show Utilities<CR>
+
+" Navigation
+" Open Quickly kind of approximates Command-T...
+nnoremap ,t :xcmenucmd Open Quickly...<CR>
+" Go to next issue
+nnoremap ,n :nissue<CR>
+" Go to previous issue
+nnoremap ,p :pissue<CR>
+nnoremap ,i :xcmenucmd Jump to Generated Interface<CR>
+
+" Show
+nnoremap ,g :xcmenucmd Show Previous History<CR>
+nnoremap ,F :xcmenucmd Show in Finder<CR>
+nnoremap ,D :xcmenucmd Documentation and API Reference<CR>
+" Show inline documentation for wherever the cursor is
+nnoremap ,d :xcmenucmd Quick Help for Selected Item<CR>
+
+" Make
+nnoremap ,R :xcmenucmd Run<CR>
+
+" Set breakpoint at current line
+nnoremap ,b :xcmenucmd Add Breakpoint at Current Line<CR>
