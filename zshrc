@@ -32,7 +32,7 @@ plugins=(
 
 # User configuration
 
-export PATH="/Users/paul/.gem/ruby/2.3.1/bin:/Users/paul/.rubies/ruby-2.3.1/lib/ruby/gems/2.3.0/bin:/Users/paul/.rubies/ruby-2.3.1/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:/usr/local/share/npm/bin"
+export PATH="/Users/paul/.gem/ruby/2.3.1/bin:/Users/paul/.rubies/ruby-2.3.1/lib/ruby/gems/2.3.0/bin:/Users/paul/.rubies/ruby-2.3.1/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:/usr/local/heroku/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:/usr/local/share/npm/bin:/usr/local/opt/gnupg@2.1/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
