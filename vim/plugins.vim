@@ -22,6 +22,8 @@ Plugin 'AndrewRadev/splitjoin.vim'
 " eg true => false, { :foo => true  } => { foo: true  }
 " Default mapping: gs
 Plugin 'AndrewRadev/switch.vim'
+" Preview colours in source code while editing
+Plugin 'ap/vim-css-color'
 " Tells Deckset to update it's preview window
 Plugin 'bwmcadams/vim-deckset'
 " Seamless navigation between tmux panes and vim splits
