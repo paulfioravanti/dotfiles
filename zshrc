@@ -54,7 +54,7 @@ export LSCOLORS=gxfxcxdxbxegedabagacad
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias ls='ls -FlAagG' # more detail with default `ls`
+alias ls="ls -FlAagG" # more detail with default `ls`
 alias git=hub # use git to execute hub commands as well
 # delete all local branches that have been merged into master, excluding current branch, develop, and master
 alias gsweep='git branch --merged master | command grep -vE "^(\*|\s*develop\s*|\s*master\s*$)" | command xargs -n 1 git branch -d'
@@ -62,8 +62,9 @@ alias gsweep='git branch --merged master | command grep -vE "^(\*|\s*develop\s*|
 # be working, so just set it manually
 alias mux=tmuxinator
 # One command to update all develop dependencies
-alias update='bubu && brew cu --yes && mas upgrade && gem update && gem cleanup && vim +PluginUpdate +qall'
-
+alias update="bubu && brew cu --yes && mas upgrade && gem update && gem cleanup && vim +PluginUpdate +qall"
+# In order to do things like find . -name "*.ex" | map wc -l
+alias map="xargs -n1"
 # Allow <C-s> to be used by Command-T in Vim
 # http://stackoverflow.com/q/8616843/567863
 stty -ixon -ixoff
