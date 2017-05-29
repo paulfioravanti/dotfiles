@@ -62,7 +62,7 @@ alias gsweep='git branch --merged master | command grep -vE "^(\*|\s*develop\s*|
 # be working, so just set it manually
 alias mux=tmuxinator
 # One command to update all develop dependencies
-alias update="bubu && brew cu --yes && mas upgrade && gem update && gem cleanup && vim +PluginUpdate +qall"
+alias update="bubu && brew cu --yes && brew cask cleanup && mas upgrade && gem update && gem cleanup && vim +PluginUpdate +qall"
 # In order to do things like find . -name "*.ex" | map wc -l
 alias map="xargs -n1"
 # Allow <C-s> to be used by Command-T in Vim
