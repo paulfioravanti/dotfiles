@@ -13,6 +13,7 @@ ZSH_THEME="paulfioravanti"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  asdf
   brew
   bundler
   chruby
@@ -87,3 +88,5 @@ stty -ixon -ixoff
 
 # added by travis gem
 [ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
+
+. $HOME/.asdf/asdf.sh

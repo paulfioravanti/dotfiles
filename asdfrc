@@ -1,0 +1,3 @@
+# asdf uses the .tool-versions for auto-switching between software versions
+# Ignore .ruby-version files
+legacy_version_file = false
