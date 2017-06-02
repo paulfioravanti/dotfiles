@@ -62,8 +62,6 @@ alias gsweep='git branch --merged master | command grep -vE "^(\*|\s*develop\s*|
 # For whatever reason, the mux alias built into tmuxinator doesn't seem to
 # be working, so just set it manually
 alias mux=tmuxinator
-# One command to update all develop dependencies
-alias update="bubu && brew cu --yes && brew cask cleanup && mas upgrade && gem update && gem cleanup && vim +PluginUpdate +qall"
 # In order to do things like find . -name "*.ex" | map wc -l
 alias map="xargs -n1"
 # Allow <C-s> to be used by Command-T in Vim
@@ -85,6 +83,56 @@ stty -ixon -ixoff
 # }
 # alias rspec='_rspec_command'
 # compdef _rspec_command=rspec
+
+# One function to update all development dependencies
+function update() {
+  red=$(tput setaf 1)
+  green=$(tput setaf 2)
+  yellow=$(tput setaf 3)
+  reset=$(tput sgr0)
+
+  echo "${yellow}Running Brew updates...${reset}"
+  if bubu; then
+    echo "${green}Brew updates done.${reset}"
+  else
+    echo "${red}Brew updates failed.${reset}"
+  fi
+
+  echo "${yellow}Running Brew Cask updates...${reset}"
+  if brew cu --yes && brew cask cleanup; then
+    echo "${green}Brew Cask updates done.${reset}"
+  else
+    echo "${red}Brew Cask updates failed.${reset}"
+  fi
+
+  echo "${yellow}Running ASDF updates...${reset}"
+  if asdf plugin-update --all; then
+    echo "${green}ASDF updates done.${reset}"
+  else
+    echo "${red}ASDF updates failed.${reset}"
+  fi
+
+  echo "${yellow}Running App Store updates...${reset}"
+  if mas upgrade; then
+    echo "${green}App Store updates done.${reset}"
+  else
+    echo "${red}App Store updates failed.${reset}"
+  fi
+
+  echo "${yellow}Running Ruby gem updates...${reset}"
+  if gem update && gem cleanup; then
+    echo "${green}Ruby gem updates done.${reset}"
+  else
+    echo "${red}Ruby gem updates failed.${reset}"
+  fi
+
+  echo "${yellow}Running Vim plugin updates...${reset}"
+  if vim +PluginUpdate +qall; then
+    echo "${green}Vim plugin updates done.${reset}"
+  else
+    echo "${red}Vim plugin updates failed.${reset}"
+  fi
+}
 
 # added by travis gem
 [ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
