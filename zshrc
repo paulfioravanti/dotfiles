@@ -105,6 +105,13 @@ function update() {
     echo "${red}Brew Cask updates failed.${reset}"
   fi
 
+  echo "${yellow}Running Brew Bundle updates...${reset}"
+  if brew bundle dump --force && brew bundle; then
+    echo "${green}Brew Bundle updates done.${reset}"
+  else
+    echo "${red}Brew Bundle updates failed.${reset}"
+  fi
+
   echo "${yellow}Running ASDF updates...${reset}"
   if asdf plugin-update --all; then
     echo "${green}ASDF updates done.${reset}"
