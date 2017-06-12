@@ -113,7 +113,7 @@ function update() {
   fi
 
   echo "${yellow}Running ASDF updates...${reset}"
-  if asdf plugin-update --all; then
+  if asdf update && asdf plugin-update --all; then
     echo "${green}ASDF updates done.${reset}"
   else
     echo "${red}ASDF updates failed.${reset}"
