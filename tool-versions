@@ -2,7 +2,7 @@
 # is resolved: https://github.com/asdf-vm/asdf/issues/196
 elixir 1.4.4
 elm 0.18.0
-erlang 19.3
+erlang 20.0
 nodejs 8.0.0
 redis 3.2.6
 ruby 2.4.1
