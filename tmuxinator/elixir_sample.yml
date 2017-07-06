@@ -17,5 +17,6 @@ startup_window: editor
 
 windows:
   - editor: vim
+  # Install https://github.com/lpil/mix-test.watch
   # - tests: mix test.watch
   - console: iex -S mix
