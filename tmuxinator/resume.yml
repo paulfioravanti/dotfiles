@@ -26,3 +26,10 @@ windows:
   - editor: vim
   - specs: bin/guard -w lib spec
   - console: bin/console
+  # Basic Ruby server for running the GitPitch presentation offline.
+  # Assumes that you'll download the offline version of the presentation
+  # into the Downloads directory.
+  - pitch:
+      root: ~/Downloads
+      panes:
+        - ruby -run -e httpd . -p8000
