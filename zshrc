@@ -64,6 +64,10 @@ alias gsweep='git branch --merged master | command grep -vE "^(\*|\s*develop\s*|
 alias mux=tmuxinator
 # In order to do things like find . -name "*.ex" | map wc -l
 alias map="xargs -n1"
+# Rather than use system Vim 7.4, use MacVim 8 in "vi mode", which enables
+# keeping Command-T compiled with system Ruby, and access to Clipboard, which
+# system Vim doesn't have(!)
+alias vim="mvim -v"
 # Allow <C-s> to be used by Command-T in Vim
 # http://stackoverflow.com/q/8616843/567863
 stty -ixon -ixoff
