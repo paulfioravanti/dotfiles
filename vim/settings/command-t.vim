@@ -8,3 +8,7 @@ if &term =~ "xterm" || &term =~ "screen"
   let g:CommandTSelectNextMap = ['<C-j>', '<ESC>OB']
   let g:CommandTSelectPrevMap = ['<C-k>', '<ESC>OA']
 endif
+" It seems that using Command T with mvim isn't quite working with regards
+" to ignoring all files under a specific folder that I would expect,
+" so provide some extra specific config to do that ignoring.
+let g:CommandTWildIgnore=&wildignore . ",*/deps,*/_build"
