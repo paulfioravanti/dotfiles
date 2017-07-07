@@ -51,39 +51,39 @@ set nobackup
 " no making a backup before overwriting a file
 set nowritebackup
 
-" enhanced command-line completion
-set wildmenu
-" Don't include vcs files
-set wildignore+=.git
-" Don't include OSX-specific files
-set wildignore+=*.DS_Store
-" Don't include code coverage files
-set wildignore+=coverage/**
-" Don't include any Rubymotion build files
-set wildignore+=build/**
-" Don't include any Rails cache files
-set wildignore+=tmp/cache/**
-" Don't include any files under docs/
-set wildignore+=docs/**
-" Don't include Elixir Phoenix _build files
-set wildignore+=_build/**
-" Don't include node_modules files
-set wildignore+=node_modules/**
-" Don't include Elixir Phoenix deps files
-set wildignore+=deps/**
-" Don't include Rails cached vendor files
-set wildignore+=vendor/cache/**
-" Don't include locally uploaded files in Rails apps
-set wildignore+=public/uploads/**
-" Don't include any compiled beam files from Elixir
-" Don't include OSX-specific files
-set wildignore+=*.beam
-" Don't include .keep files
-set wildignore+=*.keep
-" Don't include Elm vendor modules
-set wildignore+=elm-stuff/**
 " Report terminal type
 set term=xterm-256color
+
+" enhanced command-line completion
+set wildmenu
+" Don't include any compiled beam files from Elixir
+set wildignore+=*.beam
+" Don't include OSX-specific files
+set wildignore+=*.DS_Store
+" Don't include vcs files
+set wildignore+=.git
+" Don't include .keep files
+set wildignore+=*.keep
+" Don't include any Rubymotion build files
+set wildignore+=build/**
+" Don't include Elixir Phoenix _build files
+set wildignore+=_build/**
+" Don't include code coverage files
+set wildignore+=coverage/**
+" Don't include Elixir Phoenix deps files
+set wildignore+=deps/**
+" Don't include any files under docs/
+set wildignore+=docs/**
+" Don't include Elm vendor modules
+set wildignore+=elm-stuff/**
+" Don't include node_modules files
+set wildignore+=node_modules/**
+" Don't include locally uploaded files in Rails apps
+set wildignore+=public/uploads/**
+" Don't include any Rails cache files
+set wildignore+=tmp/cache/**
+" Don't include Rails cached vendor files
+set wildignore+=vendor/cache/**
 
 " Save when losing focus from the window
 au FocusLost * :silent! wall
