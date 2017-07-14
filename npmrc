@@ -1,0 +1,5 @@
+# Added due to warnings related to using npm with asdf.
+# See the following Github issues:
+# - https://github.com/asdf-vm/asdf/issues/162
+# - https://github.com/npm/npm/issues/14372#issuecomment-274318330
+scripts-prepend-node-path=true
