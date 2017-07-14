@@ -11,4 +11,8 @@ endif
 " It seems that using Command T with mvim isn't quite working with regards
 " to ignoring all files under a specific folder that I would expect,
 " so provide some extra specific config to do that ignoring.
-let g:CommandTWildIgnore=&wildignore . ",*/deps,*/_build"
+let g:CommandTWildIgnore=&wildignore . "
+  \*/deps,
+  \*/_build,
+  \*/assets/node_modules
+  \"
