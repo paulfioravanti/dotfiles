@@ -74,9 +74,6 @@ Plugin 'myusuf3/numbers.vim'
 Plugin 'ntpeters/vim-better-whitespace'
 " Vastly improved Javascript indentation and syntax support in Vim
 Plugin 'pangloss/vim-javascript'
-" Analyze Ruby code for structural similarities
-" <Leader>f - Run Flay
-Plugin 'prophittcorey/vim-flay'
 " Plugin for Dash.app
 " :Dash - will search for method under cursor in filetype's docset
 " :Dash function_name - will search for named method in filetype's docset
