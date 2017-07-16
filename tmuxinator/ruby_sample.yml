@@ -11,6 +11,7 @@ name: ruby_sample
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
 pre_window: eval "$(chruby $(cat .ruby-version))"
+pre_window: asdf local ruby 2.4.1
 
 # Pass command line options to tmux. Useful for specifying a different tmux.conf.
 # tmux_options: -f ~/.tmux.mac.conf
