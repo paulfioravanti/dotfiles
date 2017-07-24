@@ -13,7 +13,8 @@ pre:
   # - mailcatcher
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
-pre_window: eval "$(chruby $(cat .ruby-version))"
+# pre_window: eval "$(chruby $(cat .ruby-version))"
+pre_window: asdf local ruby 2.4.1
 
 # Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
 startup_window: editor
