@@ -66,7 +66,7 @@ set wildignore+=.git
 set wildignore+=*.keep
 " Don't include any Rubymotion build files
 set wildignore+=build/**
-" Don't include Elixir Phoenix _build files
+" Don't include Elixir _build files
 set wildignore+=_build/**
 " Don't include code coverage files
 set wildignore+=coverage/**
