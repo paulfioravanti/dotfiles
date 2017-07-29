@@ -14,5 +14,6 @@ endif
 let g:CommandTWildIgnore = &wildignore . '
   \,*/_build,
   \,*/assets/node_modules
-  \,*/deps,
+  \,*/deps
+  \,*/elm-stuff
   \'
