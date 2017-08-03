@@ -95,6 +95,8 @@ function update() {
   yellow=$(tput setaf 3)
   reset=$(tput sgr0)
 
+
+  cd ~
   echo "${yellow}Running Brew updates...${reset}"
   if bubu; then
     echo "${green}Brew updates done.${reset}"
