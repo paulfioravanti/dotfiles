@@ -46,6 +46,8 @@ export TERM=xterm-256color
 export EDITOR=vim
 # Give ls some colour
 export LSCOLORS=gxfxcxdxbxegedabagacad
+# Enable IEx shell history
+export ERL_AFLAGS="-kernel shell_history enabled"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh

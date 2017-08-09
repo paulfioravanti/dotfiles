@@ -20,6 +20,10 @@ export CLICOLOR=1
 export TERM=xterm-256color
 # Declare vim to be the default editor
 export EDITOR=vim
+# Give ls some colour
+export LSCOLORS=gxfxcxdxbxegedabagacad
+# Enable IEx shell history
+export ERL_AFLAGS="-kernel shell_history enabled"
 
 ## PATH ##
 export PATH=/usr/local/bin:$PATH
