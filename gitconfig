@@ -33,7 +33,7 @@
   autocrlf = input
   editor = vim
 [gpg]
-  program = gpg2
+  program = gpg
 [heroku]
   account = personal
 [hooks]
