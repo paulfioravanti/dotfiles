@@ -33,7 +33,22 @@ plugins=(
 
 # User configuration
 
-export PATH="/Users/paul/.gem/ruby/2.4.1/bin:/Users/paul/.rubies/ruby-2.4.1/bin:/bin:/sbin:/usr/bin:/usr/local/bin:/usr/local/heroku/bin:/usr/local/sbin:/usr/sbin:/usr/local/share/npm/bin:/usr/local/opt/gnupg@2.1/bin"
+# zsh-specific config:
+# https://superuser.com/questions/598810/zsh-config-to-export-or-not-to-export/598924#598924
+path=(
+  $path
+  /Users/paul/.gem/ruby/2.4.1/bin
+  /Users/paul/.asdf/installs/nodejs/8.3.0/.npm/bin
+  /bin
+  /sbin
+  /usr/bin
+  /usr/local/bin
+  /usr/local/heroku/bin
+  /usr/local/sbin
+  /usr/sbin
+  /usr/local/share/npm/bin
+  /usr/local/opt/gnupg@2.1/bin
+)
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
