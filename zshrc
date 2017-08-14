@@ -121,7 +121,8 @@ function update() {
   fi
 
   echo "${yellow}Running Brew Cask updates...${reset}"
-  if brew cu --yes && brew cask cleanup; then
+  # https://github.com/buo/homebrew-cask-upgrade#usage
+  if brew cu --all --cleanup --force --yes && brew cask cleanup; then
     echo "${green}Brew Cask updates done.${reset}"
   else
     echo "${red}Brew Cask updates failed.${reset}"
