@@ -37,7 +37,7 @@ plugins=(
 # https://superuser.com/questions/598810/zsh-config-to-export-or-not-to-export/598924#598924
 path=(
   $path
-  /Users/paul/.asdf/installs/nodejs/8.3.0/.npm/bin
+  /Users/paul/.asdf/installs/nodejs/8.4.0/.npm/bin
   /Users/paul/.gem/ruby/2.4.1/bin
   /usr/local/bin
   /usr/local/heroku/bin
