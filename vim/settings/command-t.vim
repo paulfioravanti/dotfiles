@@ -15,6 +15,8 @@ let g:CommandTWildIgnore = &wildignore . '
   \,*/_build,
   \,*/assets/node_modules
   \,*/deps
+  \,*/dist
   \,*/doc
   \,*/elm-stuff
+  \,*/node_modules
   \'
