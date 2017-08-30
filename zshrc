@@ -150,7 +150,7 @@ function update() {
   fi
 
   echo "${yellow}Running Ruby gem updates...${reset}"
-  if gem update && gem cleanup; then
+  if gem update --system && gem update && gem cleanup; then
     echo "${green}Ruby gem updates done.${reset}"
   else
     echo "${red}Ruby gem updates failed.${reset}"
