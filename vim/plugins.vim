@@ -114,8 +114,6 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-git'
 " Runtime files for Haml and Sass
 Plugin 'tpope/vim-haml'
-" Syntax highlighting, matching rules, mappings
-Plugin 'tpope/vim-markdown'
 " Mappings for various types of tags
 Plugin 'tpope/vim-ragtag'
 " rails.vim
