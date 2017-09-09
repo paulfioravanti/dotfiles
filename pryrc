@@ -1,7 +1,7 @@
 # NOTE: Look for the awesome_print gem without it being an
 # application dependency.  More info:
 # https://github.com/awesome-print/awesome_print/issues/136#issuecomment-89222654
-$LOAD_PATH << "/Users/paul/.gem/ruby/2.3.3/gems/awesome_print-1.7.0/lib/"
+# $LOAD_PATH << "/Users/paul/.gem/ruby/2.3.3/gems/awesome_print-1.7.0/lib/"
 require "awesome_print"
 AwesomePrint.pry!
 
