@@ -4,6 +4,7 @@ flay
 graphviz
 pry-byebug
 rails
+rspec
 ruby-prof
 sonic-pi-cli
 tmuxinator
