@@ -1,5 +1,6 @@
 tap "buo/cask-upgrade"
 tap "caskroom/cask"
+tap "caskroom/versions"
 tap "codeclimate/formulae"
 tap "heroku/brew"
 tap "homebrew/bundle"
@@ -92,6 +93,7 @@ brew "gdal"
 brew "gdk-pixbuf"
 brew "geckodriver"
 brew "ghostscript"
+brew "git-cal"
 brew "libunistring"
 brew "nettle"
 brew "libusb"
@@ -189,6 +191,7 @@ cask "flavours"
 cask "flinto"
 cask "flux"
 cask "framer"
+cask "github-desktop"
 cask "gitx"
 cask "google-chrome"
 cask "google-japanese-ime"
@@ -240,6 +243,7 @@ mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "PDF Squeezer", id: 504700302
 mas "Prepo", id: 476533227
+mas "Trello", id: 1278508951
 mas "TweetDeck", id: 485812721
 mas "Twitter", id: 409789998
 mas "Xcode", id: 497799835
