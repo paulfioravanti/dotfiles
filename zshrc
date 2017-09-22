@@ -40,8 +40,6 @@ plugins=(
 path=(
   $path
   /Users/paul/.asdf/installs/nodejs/8.4.0/.npm/bin
-  /Users/paul/.asdf/installs/ruby/2.4.1/bin
-  /Users/paul/.gem/ruby/2.4.1/bin
   /usr/local/bin
   /usr/local/heroku/bin
   /usr/local/share/npm/bin
