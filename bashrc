@@ -38,15 +38,6 @@ alias be='bundle exec'
 alias git=hub # use git to execute hub commands as well
 alias mux=tmuxinator
 
-## Ruby ##
-if [[ -e /usr/local/share/chruby ]]; then
-  # Load chruby
-  source /usr/local/share/chruby/chruby.sh
-  # Allow auto-switching of Ruby version when
-  # directory has a .ruby-version file
-  source /usr/local/share/chruby/auto.sh
-fi
-
 # Allow <C-s> to be used by Command-T in Vim
 # http://stackoverflow.com/q/8616843/567863
 stty -ixon -ixoff
