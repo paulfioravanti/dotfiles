@@ -20,7 +20,9 @@ plugins=(
   fasd
   git
   git-open
-  gitfast
+  # not sure what happened here, but this started causing pipe errors
+  # all of a sudden, rendering *all* terminals unusable.
+  # gitfast
   github
   osx
   rails
