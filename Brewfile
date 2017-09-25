@@ -128,7 +128,6 @@ brew "libvorbis"
 brew "libvpx"
 brew "libxslt"
 brew "lzlib"
-brew "macvim", args: ["with-override-system-vim"]
 brew "mas"
 brew "mercurial"
 brew "mongodb"
