@@ -12,8 +12,9 @@ endif
 " to ignoring all files under a specific folder that I would expect,
 " so provide some extra specific config to do that ignoring.
 let g:CommandTWildIgnore = &wildignore . '
-  \,*/_build,
+  \,*/_build
   \,*/assets/node_modules
+  \,*/coverage
   \,*/deps
   \,*/dist
   \,*/doc
