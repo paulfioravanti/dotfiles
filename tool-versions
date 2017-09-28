@@ -1,10 +1,10 @@
 # Postgres can be managed with asdf once the issue regarding plugins
 # is resolved: https://github.com/asdf-vm/asdf/issues/196
-elixir 1.5.0
+elixir 1.5.1
 elm 0.18.0
-erlang 20.0
-nodejs 8.4.0
+erlang 20.1
+nodejs 8.6.0
 python 3.6.2
 redis 3.2.6
-ruby 2.4.1
-rust 1.17.0
+ruby 2.4.2
+rust 1.20.0
