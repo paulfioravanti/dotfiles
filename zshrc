@@ -22,7 +22,7 @@ plugins=(
   git-open
   # not sure what happened here, but this started causing pipe errors
   # all of a sudden, rendering *all* terminals unusable.
-  # gitfast
+  gitfast
   github
   osx
   rails
