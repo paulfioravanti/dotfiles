@@ -137,6 +137,7 @@ brew "mysql", restart_service: true
 brew "nmap"
 brew "openmotif"
 brew "ossp-uuid"
+brew "pgcli"
 brew "phantomjs"
 brew "pinentry-mac"
 brew "postgresql", restart_service: true
