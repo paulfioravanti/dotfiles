@@ -1,6 +1,6 @@
 # Postgres can be managed with asdf once the issue regarding plugins
 # is resolved: https://github.com/asdf-vm/asdf/issues/196
-elixir 1.5.1
+elixir 1.5.2
 elm 0.18.0
 erlang 20.1
 nodejs 8.6.0
