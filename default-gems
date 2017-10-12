@@ -3,6 +3,7 @@ bundler
 flay
 graphviz
 pry-byebug
+pry-doc
 rails
 rspec
 ruby-prof
