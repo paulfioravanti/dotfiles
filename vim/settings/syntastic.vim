@@ -22,3 +22,8 @@ let g:syntastic_scss_sass_quiet_messages =
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:elm_syntastic_show_warnings = 1
+" HTML files are only checked if you explicitly run :SyntasticCheck
+" This was done due to syntax issues being brought up with HTML files
+" with Jekyll syntax in them.
+" https://github.com/vim-syntastic/syntastic/issues/240#issuecomment-12957317
+let syntastic_mode_map = { 'passive_filetypes': ['html'] }
