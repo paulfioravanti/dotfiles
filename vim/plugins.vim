@@ -72,8 +72,12 @@ Plugin 'mattn/emmet-vim'
 Plugin 'myusuf3/numbers.vim'
 " Highlight all trailing Whitespace characters
 Plugin 'ntpeters/vim-better-whitespace'
+" HTML5 omnicomplete and syntax
+Plugin 'othree/html5.vim'
 " Vastly improved Javascript indentation and syntax support in Vim
 Plugin 'pangloss/vim-javascript'
+" Automate common Jekyll tasks from Vim
+Plugin 'parkr/vim-jekyll'
 " Plugin for Dash.app
 " :Dash - will search for method under cursor in filetype's docset
 " :Dash function_name - will search for named method in filetype's docset
