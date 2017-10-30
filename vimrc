@@ -80,6 +80,8 @@ set wildignore+=elm-stuff/**
 set wildignore+=node_modules/**
 " Don't include locally uploaded files in Rails apps
 set wildignore+=public/uploads/**
+" Don't include Jekyll site files
+set wildignore+=_site/**
 " Don't include any Rails cache files
 set wildignore+=tmp/cache/**
 " Don't include Rails cached vendor files

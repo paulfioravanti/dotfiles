@@ -13,6 +13,7 @@ endif
 " so provide some extra specific config to do that ignoring.
 let g:CommandTWildIgnore = &wildignore . '
   \,*/_build
+  \,*/_site
   \,*/assets/node_modules
   \,*/coverage
   \,*/deps
