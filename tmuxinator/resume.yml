@@ -33,3 +33,4 @@ windows:
       root: ~/Downloads
       panes:
         - ruby -run -e httpd . -p8000
+  - grip: grip --browser
