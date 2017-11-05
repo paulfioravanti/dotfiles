@@ -2,7 +2,7 @@
 
 name: three_little_pigs
 root: ~/ruby/three_little_pigs
-pre_window: eval "$(chruby $(cat .ruby-version))"
+pre_window: asdf local ruby 2.4.2
 startup_window: editor
 windows:
   - editor: vim

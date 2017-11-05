@@ -12,7 +12,7 @@ root: ~/ruby/pianoforall
 pre: open --hide /opt/homebrew-cask/Caskroom/sonic-pi/2.9.0/Sonic\ Pi.app
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
-pre_window: eval "$(chruby 2.3.0)"
+pre_window: asdf local ruby 2.4.2
 
 # Pass command line options to tmux. Useful for specifying a different tmux.conf.
 # tmux_options: -f ~/.tmux.mac.conf
