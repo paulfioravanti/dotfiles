@@ -39,9 +39,6 @@ plugins=(
 # https://superuser.com/questions/598810/zsh-config-to-export-or-not-to-export/598924#598924
 path=(
   $path
-  # NOTE: Commented out for now as the issue with not finding binaries
-  # installed via npm _seems_ to have gone away.
-  # /Users/paul/.asdf/installs/nodejs/8.5.0/.npm/bin
   /usr/local/bin
   /usr/local/heroku/bin
   /usr/local/share/npm/bin
@@ -161,6 +158,13 @@ function update() {
     echo "${green}Ruby gem updates done.${reset}"
   else
     echo "${red}Ruby gem updates failed.${reset}"
+  fi
+
+  echo "${yellow}Running Node package updates...${reset}"
+  if npm update -g; then
+    echo "${green}Node package updates done.${reset}"
+  else
+    echo "${red}Node package updates failed.${reset}"
   fi
 
   echo "${yellow}Running Vim plugin updates...${reset}"
