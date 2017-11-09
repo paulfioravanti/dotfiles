@@ -1,12 +1,12 @@
 ## dotfiles
 
-Set up for use with [rcm](https://github.com/thoughtbot/rcm).
+Set up for use with [rcm][rcm].
 
 ## Apple Machine Setup
 
 Before setting up a new development environment on a new machine:
 
-- Install [XCode](https://itunes.apple.com/au/app/xcode/id497799835?mt=12)
+- Install [XCode][xcode]
 - Install XCode Command Line Tools (run `$ xcode-select --install`)
 
 ## Initial Setup
@@ -56,3 +56,15 @@ $ source ~/.dotfiles/ruby/rubies.sh
 $ source ~/.dotfiles/osx/homebrew/config.sh
 $ source ~/.dotfiles/osx/iterm2/config.sh
 ```
+
+## Social
+
+[![Contact][twitter-badge]][twitter-url]<br />
+[![Stack Overflow][stackoverflow-badge]][stackoverflow-url]
+
+[rcm]: https://github.com/thoughtbot/rcm
+[stackoverflow-badge]: http://stackoverflow.com/users/flair/567863.png
+[stackoverflow-url]: http://stackoverflow.com/users/567863/paul-fioravanti
+[twitter-badge]: https://img.shields.io/badge/contact-%40paulfioravanti-blue.svg
+[twitter-url]: https://twitter.com/paulfioravanti
+[xcode]: https://itunes.apple.com/au/app/xcode/id497799835?mt=12
