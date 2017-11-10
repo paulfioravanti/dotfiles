@@ -9,7 +9,8 @@ root: ~/ruby/pianoforall
 # Runs before everything. Use it to start daemons etc.
 # Open the Sonic Pi app otherwise sonic-pi-cli has nothing to hook into,
 # and push its window into the background
-pre: open --hide /opt/homebrew-cask/Caskroom/sonic-pi/2.9.0/Sonic\ Pi.app
+# pre: open --hide /opt/homebrew-cask/Caskroom/sonic-pi/2.9.0/Sonic\ Pi.app
+pre: open --hide /Applications/Sonic\ Pi.app
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
 pre_window: asdf local ruby 2.4.2
