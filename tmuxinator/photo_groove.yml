@@ -1,0 +1,23 @@
+# ~/.tmuxinator/photo_groove.yml
+
+name: photo_groove
+root: ~/elm/PhotoGroove
+
+# Runs before everything. Use it to start daemons etc.
+pre:
+  # - brew services start postgresql
+  # - brew services start redis
+  # - mailcatcher
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window:
+
+# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
+startup_window: editor
+
+windows:
+  - editor: vim
+  # - tests: elm test --watch
+  - repl: elm repl
+  - console: elm reactor --port=8080
+  - server: elm-live src/Main.elm --dir=src/ --output=src/elm.js --open --warn --debug

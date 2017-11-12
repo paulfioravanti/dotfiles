@@ -1,0 +1,35 @@
+# ~/.tmuxinator/survey_tool_elm.yml
+
+name: survey_tool_elm
+root: ~/elm/survey_tool_elm
+
+# Runs before everything. Use it to start daemons etc.
+pre:
+  # - brew services start postgresql
+  # - brew services start redis
+  # - mailcatcher
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window:
+
+# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
+startup_window: editor
+
+windows:
+  - editor: vim
+  - server_tests:
+      root: ~/elm/survey_tool_elm/survey_server
+      panes:
+        - mix test.watch
+  # - repl: elm repl
+  # - console: elm reactor
+  - server:
+      root: ~/elm/survey_tool_elm/survey_server
+      panes:
+        - iex -S mix
+  # - server: elm-live Bingo.elm --open --warn --debug --output=bingo.js
+  # - server: iex -S mix phoenix.server
+  # - client_tests:
+  #     root: ~/elm/survey_tool_elm/survey_server
+  #     panes:
+  #       - elm test --watch

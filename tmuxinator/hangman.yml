@@ -1,0 +1,62 @@
+# ~/.tmuxinator/hangman.yml
+
+name: hangman
+root: ~/elixir/game
+
+# Runs before everything. Use it to start daemons etc.
+pre:
+  # - brew services start postgresql
+  # - brew services start redis
+  # - mailcatcher
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+pre_window: asdf local elixir 1.4.5
+
+# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
+startup_window: text_client
+
+windows:
+  - gallows_socket:
+      root: ~/elixir/game/gallows_socket
+      panes:
+        - vim
+  - gs_server:
+      root: ~/elixir/game/gallows_socket
+      panes:
+        - PORT=4001 iex -S mix phx.server
+  - gallows:
+      root: ~/elixir/game/gallows
+      panes:
+        - vim
+  - gallows_server:
+      root: ~/elixir/game/gallows
+      panes:
+        - iex -S mix phx.server
+  - text_client:
+      root: ~/elixir/game/text_client
+      panes:
+        - vim
+  - tc_tests:
+      root: ~/elixir/game/text_client
+      panes:
+        - mix test.watch
+  - tc_console:
+      root: ~/elixir/game/text_client
+      panes:
+        - iex -S mix
+  - hangman:
+      root: ~/elixir/game/hangman
+      panes:
+        - vim
+  - hm_tests:
+      root: ~/elixir/game/hangman
+      panes:
+        - mix test.watch
+  - hm_console:
+      root: ~/elixir/game/hangman
+      panes:
+        - iex -S mix
+  - dictionary:
+      root: ~/elixir/game/dictionary
+      panes:
+        - vim

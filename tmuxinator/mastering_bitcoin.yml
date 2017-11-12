@@ -1,0 +1,15 @@
+# ~/.tmuxinator/mastering_bitcoin.yml
+
+name: mastering_bitcoin
+root: ~/elixir/mastering_bitcoin
+
+pre_window:
+  - asdf local elixir 1.5.2
+  - asdf local erlang 20.1
+
+startup_window: editor
+
+windows:
+  - editor: vim
+  # - tests: mix test.watch
+  - console: iex -S mix

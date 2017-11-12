@@ -1,0 +1,66 @@
+# ~/.tmuxinator/elm_tutorial.yml
+
+name: elm_tutorial
+# root: ~/elm/elm-tutorial-v2/role_playing_game
+
+# Runs before everything. Use it to start daemons etc.
+pre:
+  # - brew services start postgresql
+  # - brew services start redis
+  # - mailcatcher
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window:
+
+# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
+startup_window: editor
+
+# For Role-playing game
+windows:
+  - editor:
+      root: ~/elm/elm-tutorial-v2/role_playing_game
+      panes:
+        - vim
+  # - tests:
+  #     root: ~/elm/elm-tutorial-v2/role_playing_game
+  #     panes:
+  #       - elm test --watch
+  - repl:
+      root: ~/elm/elm-tutorial-v2/role_playing_game
+      panes:
+        - elm repl
+  - api:
+      root: ~/elm/elm-tutorial-v2/role_playing_game
+      panes:
+        - yarn api
+  - client:
+      root: ~/elm/elm-tutorial-v2/role_playing_game
+      panes:
+        - yarn client
+  # - live-reload:
+  #     root: ~/elm/elm-tutorial-v2/role_playing_game
+  #     panes:
+  #       - elm-live App.elm --open --warn --debug --output=app.js
+
+# For Example app
+# windows:
+#   - editor:
+#       root: ~/elm/elm-tutorial-v2/example-app
+#       panes:
+#         - vim
+#   - tests:
+#       root: ~/elm/elm-tutorial-v2/example-app
+#       panes:
+#         - elm test --watch
+#   - repl:
+#       root: ~/elm/elm-tutorial-v2/example-app
+#       panes:
+#         - elm repl
+#   - server:
+#       root: ~/elm/elm-tutorial-v2/example-app
+#       panes:
+#         - elm reactor
+#   - live-reload:
+#       root: ~/elm/elm-tutorial-v2/example-app
+#       panes:
+#         - elm-live App.elm --open --warn --debug --output=app.js

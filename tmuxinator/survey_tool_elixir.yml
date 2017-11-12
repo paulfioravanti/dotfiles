@@ -1,0 +1,23 @@
+# ~/.tmuxinator/survey_tool_elixir.yml
+
+name: survey_tool_elixir
+root: ~/elixir/survey_tool_elixir
+
+# Runs before everything. Use it to start daemons etc.
+pre:
+  # - brew services start postgresql
+  # - brew services start redis
+  # - mailcatcher
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+pre_window:
+  - asdf local elixir 1.5.2
+  - asdf local erlang 20.1
+
+# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
+startup_window: editor
+
+windows:
+  - editor: vim
+  - tests: mix test.watch
+  - console: iex -S mix
