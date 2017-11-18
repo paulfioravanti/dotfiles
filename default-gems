@@ -2,6 +2,7 @@ awesome_print
 bundler
 flay
 graphviz
+license_finder
 pry-byebug
 pry-doc
 rails
