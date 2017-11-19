@@ -8,6 +8,7 @@ root: ~/ruby/resume
 
 # Runs before everything. Use it to start daemons etc.
 # pre: sudo /etc/rc.d/mysqld start
+on_project_first_start: bundle install
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
 # pre_window: eval "$(chruby $(cat .ruby-version))"
