@@ -3,7 +3,8 @@
 elixir 1.5.2
 elm 0.18.0
 erlang 20.1
-nodejs 9.0.0
+golang 1.9.2
+nodejs 9.2.1
 python 3.6.2
 redis 3.2.6
 ruby 2.4.2
