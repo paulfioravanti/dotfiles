@@ -3,6 +3,13 @@
 name: mastering_bitcoin
 root: ~/elixir/mastering_bitcoin
 
+# NOTE: Bitcoin service can't seem to be stopped when shutting down project.
+# (starting works fine, but I don't want to forget to stop it lest Bitcoin
+# traffic eat up all my bandwidth).
+# on_project_start: brew services start bitcoin
+# on_project_stop: brew services stop bitcoin
+# on_project_exit: brew services stop bitcoin
+
 pre_window:
   - asdf local elixir 1.5.2
   - asdf local erlang 20.1
@@ -11,5 +18,6 @@ startup_window: editor
 
 windows:
   - editor: vim
-  # - tests: mix test.watch
+  - tests: mix test.watch
   - console: iex -S mix
+  - grip: grip --browser
