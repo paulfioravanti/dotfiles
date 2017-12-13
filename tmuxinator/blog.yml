@@ -3,7 +3,11 @@
 name: blog
 root: ~/blogs/paulfioravanti.github.io
 
-on_project_first_start: bundle install
+on_project_first_start:
+  - bundle install
+  - bundle update
+  - open https://analytics.google.com/analytics
+  - open https://paulfioravanti.disqus.com
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
 pre_window: asdf local ruby 2.4.2
