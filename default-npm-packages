@@ -5,3 +5,4 @@ create-elm-app
 htmllint-cli
 sass-lint
 markdownlint-cli
+tldr
