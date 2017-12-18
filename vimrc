@@ -150,6 +150,10 @@ silent! colorscheme solarized
 " characters
 autocmd FileType markdown highlight htmlItalic ctermfg=243
 
+" Set spellcheck on Markdown files
+autocmd BufRead,BufNewFile *.md setlocal spell
+set complete+=kspell
+
 " Highlight current line
 set cursorline
 " Only highlight cursor line in current window
