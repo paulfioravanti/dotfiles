@@ -7,6 +7,7 @@ pry-byebug
 pry-doc
 rails
 rspec
+rubocop
 ruby-prof
 sonic-pi-cli
 tmuxinator
