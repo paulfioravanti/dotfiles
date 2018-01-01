@@ -62,6 +62,9 @@ export EDITOR=vim
 export LSCOLORS=gxfxcxdxbxegedabagacad
 # Enable IEx shell history
 export ERL_AFLAGS="-kernel shell_history enabled"
+# Disable Oh-My-Zsh updates: it will get done when the `update` function
+# is run
+export DISABLE_UPDATE_PROMPT=true
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -172,6 +175,13 @@ function update() {
     echo "${green}Vim plugin updates done.${reset}"
   else
     echo "${red}Vim plugin updates failed.${reset}"
+  fi
+
+  echo "${yellow}Running Oh My Zsh updates...${reset}"
+  if upgrade_oh_my_zsh; then
+    echo "${green}Oh My Zsh updates done.${reset}"
+  else
+    echo "${red}Oh My Zsh updates failed.${reset}"
   fi
 }
 
