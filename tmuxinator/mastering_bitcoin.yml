@@ -11,8 +11,8 @@ root: ~/elixir/mastering_bitcoin
 # on_project_exit: brew services stop bitcoin
 
 pre_window:
-  - asdf local elixir 1.5.2
-  - asdf local erlang 20.1
+  - asdf local elixir 1.5.3
+  - asdf local erlang 20.2
 
 startup_window: editor
 
