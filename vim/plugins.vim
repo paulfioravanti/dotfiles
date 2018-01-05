@@ -42,6 +42,8 @@ Plugin 'fatih/vim-go'
 Plugin 'gmarik/Vundle.vim'
 " Automatically insert or delete brackets, parens, quotes
 Plugin 'jiangmiao/auto-pairs'
+" Toggle the cursor shape in the terminal for Vim
+Plugin 'jszakmeister/vim-togglecursor'
 " Easy code alignment
 " - vipga=
 "     visual-select inner paragraph
