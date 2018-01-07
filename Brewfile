@@ -16,7 +16,6 @@ brew "adns"
 brew "openssl"
 brew "alpine"
 brew "libyaml"
-brew "gdbm"
 brew "readline"
 brew "sqlite", args: ["with-functions"]
 brew "python"
