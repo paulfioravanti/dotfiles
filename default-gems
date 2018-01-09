@@ -4,13 +4,13 @@ flay
 graphviz
 guard
 guard-minitest
+guard-rubocop
 license_finder
 minitest-focus
 pry-byebug
 pry-doc
 rails
 rspec
-rubocop
 ruby-prof
 sonic-pi-cli
 tmuxinator
