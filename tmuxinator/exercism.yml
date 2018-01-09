@@ -1,0 +1,28 @@
+# ~/.tmuxinator/exercism.yml
+
+name: exercism
+root: ~/exercism/<%= @args[0] %>/<%= @args[1] %>
+
+pre_window:
+  # NOTE: uncomment if I find that I need to use language versions
+  # other than the latest.
+  # <% if @args[0] == "ruby" %>
+  # - asdf local ruby 2.5.0
+  # <% end %>
+  # <% if @args[0] == "elixir" %>
+  # - asdf local elixir 1.5.3
+  # - asdf local erlang 20.2
+  # <% end %>
+
+startup_window: editor
+
+windows:
+  - editor: vim
+  <% if @args[0] == "ruby" %>
+  - tests:
+  - console: irb
+  <% end %>
+  <% if @args[0] == "elixir" %>
+  - tests:
+  - console: iex
+  <% end %>
