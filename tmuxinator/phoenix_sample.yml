@@ -21,4 +21,4 @@ windows:
   - editor: vim
   # - tests: mix test.watch
   - console: iex -S mix
-  - server: iex -S mix phoenix.server
+  - server: iex -S mix phx.server
