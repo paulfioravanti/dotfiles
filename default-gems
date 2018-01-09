@@ -2,6 +2,8 @@ awesome_print
 bundler
 flay
 graphviz
+guard
+guard-minitest
 license_finder
 minitest-focus
 pry-byebug
