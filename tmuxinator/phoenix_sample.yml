@@ -4,10 +4,17 @@ name: phoenix_sample
 # root: ~/path/to/phoenix_app
 
 # Runs before everything. Use it to start daemons etc.
-pre:
+on_project_first_start: mix deps.get
+# on_project_start:
   # - brew services start postgresql
   # - brew services start redis
   # - mailcatcher
+# on_project_stop: brew services stop bitcoin
+  # - brew services stop postgresql
+  # - brew services stop redis
+# on_project_exit:
+  # - brew services stop postgresql
+  # - brew services stop redis
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
 pre_window:
