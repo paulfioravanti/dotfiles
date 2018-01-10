@@ -4,8 +4,9 @@ name: exercism
 # Eg: mux exercism ruby hello-world => exercism/ruby/hello-world
 root: ~/exercism/<%= @args[0] %>/<%= @args[1] %>
 
+on_project_first_start:
 <% if @args[0] == "elm" %>
-on_project_first_start: npm install
+  - npm install
 <% end %>
 
 pre_window:
@@ -25,7 +26,7 @@ startup_window: editor
 windows:
   - editor: vim
   <% if @args[0] == "ruby" %>
-  - tests:
+  - tests: guard --guardfile ~/exercism/ruby/Guardfile
   - console: irb
   <% elsif @args[0] == "elixir" %>
   - tests:
