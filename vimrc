@@ -151,7 +151,8 @@ silent! colorscheme solarized
 autocmd FileType markdown highlight htmlItalic ctermfg=243
 
 " Set spellcheck on Markdown files
-autocmd BufRead,BufNewFile *.md setlocal spell
+autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_au
+highlight SpellBad cterm=underline ctermfg=red
 set complete+=kspell
 
 " Highlight current line
