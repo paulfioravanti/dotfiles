@@ -157,17 +157,24 @@ function update() {
   fi
 
   echo "${yellow}Running Ruby gem updates...${reset}"
-  if gem update --system && gem update && gem cleanup && asdf reshim ruby; then
+  if gem update --system && gem update && gem cleanup; then
     echo "${green}Ruby gem updates done.${reset}"
   else
     echo "${red}Ruby gem updates failed.${reset}"
   fi
 
   echo "${yellow}Running Node package updates...${reset}"
-  if npm update -g && npm i -g npm && asdf reshim nodejs; then
+  if npm update -g && npm i -g npm; then
     echo "${green}Node package updates done.${reset}"
   else
     echo "${red}Node package updates failed.${reset}"
+  fi
+
+  echo "${yellow}Re-shimming ASDF binaries...${reset}"
+  if rm -rf ~/.asdf/shims && asdf plugin-list | xargs -L 1 asdf reshim; then
+    echo "${green}Re-shimming of ASDF binaries done.${reset}"
+  else
+    echo "${red}Re-shimming of ASDF binaries failed.${reset}"
   fi
 
   echo "${yellow}Running Vim plugin updates...${reset}"
