@@ -29,7 +29,7 @@ windows:
   - tests: guard --guardfile ~/exercism/ruby/Guardfile
   - console: irb
   <% elsif @args[0] == "elixir" %>
-  - tests:
+  - tests: # placeholder window to run tests
   - console: iex
   <% elsif @args[0] == "elm" %>
   - tests: npm run watch
