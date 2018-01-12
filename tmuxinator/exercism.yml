@@ -1,23 +1,26 @@
 # ~/.tmuxinator/exercism.yml
 
+<% lang = @args[0] %>
+<% exercise = @args[1] %>
+
 name: exercism
 # Eg: mux exercism ruby hello-world => exercism/ruby/hello-world
-root: ~/exercism/<%= @args[0] %>/<%= @args[1] %>
+root: ~/exercism/<%= lang %>/<%= exercise %>
 
 on_project_first_start:
-<% if @args[0] == "elm" %>
+<% if lang == "elm" %>
   - npm install
 <% end %>
 
 pre_window:
   # NOTE: uncomment if I find that I need to use language versions
   # other than the latest.
-  # <% if @args[0] == "ruby" %>
+  # <% if lang == "ruby" %>
   # - asdf local ruby 2.5.0
-  # <% elsif @args[0] == "elixir" %>
+  # <% elsif lang == "elixir" %>
   # - asdf local elixir 1.5.3
   # - asdf local erlang 20.2
-  # <% elsif @args[0] == "elm" %>
+  # <% elsif lang == "elm" %>
   # - asdf local elm 0.18.0
   # <% end %>
 
@@ -25,13 +28,13 @@ startup_window: editor
 
 windows:
   - editor: vim
-  <% if @args[0] == "ruby" %>
+  <% if lang == "ruby" %>
   - tests: guard --guardfile ~/exercism/ruby/Guardfile
   - console: irb
-  <% elsif @args[0] == "elixir" %>
+  <% elsif lang == "elixir" %>
   - tests: # placeholder window to run tests
   - console: iex
-  <% elsif @args[0] == "elm" %>
+  <% elsif lang == "elm" %>
   - tests: npm run watch
   - console: elm repl
   <% end %>
