@@ -8,9 +8,9 @@ name: exercism
 root: ~/exercism/<%= lang %>/<%= exercise %>
 
 on_project_first_start:
-<% if lang == "elm" %>
+  <% if lang == "elm" %>
   - npm install
-<% end %>
+  <% end %>
 
 pre_window:
   # NOTE: uncomment if I find that I need to use language versions
