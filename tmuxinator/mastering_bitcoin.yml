@@ -12,7 +12,7 @@ root: ~/elixir/mastering_bitcoin
 
 pre_window:
   - asdf local elixir 1.5.3
-  - asdf local erlang 20.2
+  - asdf local erlang 20.2.2
 
 startup_window: editor
 
