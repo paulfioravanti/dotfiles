@@ -1,0 +1,23 @@
+# ~/.tmuxinator/bitcoin_address.yml
+
+name: bitcoin_address
+root: ~/elixir/bitcoin_address
+
+# NOTE: Bitcoin service can't seem to be stopped when shutting down project.
+# (starting works fine, but I don't want to forget to stop it lest Bitcoin
+# traffic eat up all my bandwidth).
+# on_project_start: brew services start bitcoin
+# on_project_stop: brew services stop bitcoin
+# on_project_exit: brew services stop bitcoin
+
+pre_window:
+  - asdf local elixir 1.5.3
+  - asdf local erlang 20.2.2
+
+startup_window: editor
+
+windows:
+  - editor: vim
+  - tests: mix test.watch
+  - console: iex -S mix
+  # - grip: grip --browser
