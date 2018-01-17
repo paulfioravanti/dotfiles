@@ -24,4 +24,3 @@ vim +PluginInstall +qall
 chruby system
 ruby -C ~/.vim/bundle/command-t/ruby/command-t/ext/command-t/ extconf.rb
 make -C ~/.vim/bundle/command-t/ruby/command-t/ext/command-t/
-
