@@ -137,6 +137,8 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'vim-airline/vim-airline'
 " Themes for Vim airline
 Plugin 'vim-airline/vim-airline-themes'
+" Vim integration for the Elixir formatter.
+Plugin 'mhinz/vim-mix-format'
 " Config files for editing, compiling Ruby
 Plugin 'vim-ruby/vim-ruby'
 " Change Ruby hash syntax to 1.9
