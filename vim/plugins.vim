@@ -33,7 +33,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 " <leader>S - send stop message to sonicpi
 Plugin 'dermusikman/sonicpi.vim'
 " Syntax highlighting for Elixir
-Plugin 'elixir-lang/vim-elixir'
+Plugin 'elixir-editors/vim-elixir'
 " Syntax highlighting for Elm
 Plugin 'elmcast/elm-vim'
 " Go development plugin for Vim
