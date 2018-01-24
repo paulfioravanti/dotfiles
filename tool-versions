@@ -4,7 +4,7 @@ crystal 0.24.1
 elixir 1.6.0
 elm 0.18.0
 erlang 20.2.2
-golang 1.9.2
+golang 1.9.3
 nodejs 9.4.0
 python 3.6.2
 redis 3.2.6
