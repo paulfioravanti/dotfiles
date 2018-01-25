@@ -73,6 +73,7 @@ brew "pth"
 brew "dirmngr"
 brew "elasticsearch", restart_service: true
 brew "emacs"
+brew "exa"
 brew "exercism"
 brew "fasd"
 brew "fdk-aac"

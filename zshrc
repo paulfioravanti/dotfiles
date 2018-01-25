@@ -74,7 +74,9 @@ export DISABLE_UPDATE_PROMPT=true
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias ls="ls -FlAagG" # more detail with default `ls`
+# alias ls="ls -FlAagG" # more detail with default `ls`
+# NOTE: Use Exa (https://the.exa.website/) for ls
+alias ls="exa --header --long --group-directories-first --git --all"
 alias git=hub # use git to execute hub commands as well
 # delete all local branches that have been merged into master, excluding current branch, develop, and master
 alias gsweep='git branch --merged master | command grep -vE "^(\*|\s*develop\s*|\s*master\s*$)" | command xargs -n 1 git branch -d'
