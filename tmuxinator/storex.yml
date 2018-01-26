@@ -29,6 +29,7 @@ startup_window: editor
 
 windows:
   - editor: vim
-  - tests: # mix test.watch
+  - tests: mix test.watch
   - console: iex -S mix
+  - dbconsole: psql storex_dev
   - server: iex -S mix phx.server
