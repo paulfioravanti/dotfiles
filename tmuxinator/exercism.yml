@@ -38,3 +38,6 @@ windows:
   - tests: npm run watch
   - console: elm repl
   <% end %>
+  # brew install grip
+  # https://github.com/joeyespo/grip
+  - grip: grip --browser
