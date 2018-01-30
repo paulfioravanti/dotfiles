@@ -21,7 +21,7 @@ on_project_exit:
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
 pre_window:
-  - asdf local elixir 1.6.0
+  - asdf local elixir 1.6.1
   - asdf local erlang 20.2.2
 
 # Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.

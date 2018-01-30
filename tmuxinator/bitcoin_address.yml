@@ -11,7 +11,7 @@ root: ~/elixir/bitcoin_address
 # on_project_exit: brew services stop bitcoin
 
 pre_window:
-  - asdf local elixir 1.6.0
+  - asdf local elixir 1.6.1
   - asdf local erlang 20.2.2
 
 startup_window: editor
@@ -20,4 +20,4 @@ windows:
   - editor: vim
   - tests: mix test.watch
   - console: iex -S mix
-  # - grip: grip --browser
+  - grip: grip --browser
