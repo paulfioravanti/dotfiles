@@ -1,5 +1,5 @@
-brunch
 create-elm-app
+elm-brunch
 htmllint-cli
 sass-lint
 markdownlint-cli
