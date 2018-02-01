@@ -13,6 +13,7 @@ root: ~/elixir/bitcoin_address
 pre_window:
   - asdf local elixir 1.6.1
   - asdf local erlang 20.2.2
+  - asdf local python 3.6.2
 
 startup_window: editor
 
