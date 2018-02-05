@@ -1,0 +1,40 @@
+# ~/.tmuxinator/phoenix_and_elm.yml
+
+name: phoenix_and_elm
+root: ~/elixir/phoenix_and_elm
+
+# Runs before everything. Use it to start daemons etc.
+on_project_first_start:
+  - mix deps.get
+  - mix compile --force
+  - open --background http://localhost:4000
+  # - open --background http://localhost:3000
+on_project_start:
+  - brew services start postgresql
+  # - brew services start redis
+  # - mailcatcher
+on_project_stop:
+  # - brew services stop postgresql
+  # - brew services stop redis
+on_project_exit:
+  # - brew services stop postgresql
+  # - brew services stop redis
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+pre_window:
+  - asdf local elixir 1.6.1
+  - asdf local erlang 20.2.2
+  - asdf local elm 0.18.0
+  - asdf local nodejs 9.5.0
+
+# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
+startup_window: editor
+
+windows:
+  - editor: vim
+  - tests: mix test.watch
+  - ex_console: iex -S mix
+  - server: iex -S mix phx.server
+  - elm_console: elm repl
+  - dbconsole: psql phoenix_and_elm_dev
+  - grip: grip --browser
