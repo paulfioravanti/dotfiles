@@ -1,5 +1,6 @@
 create-elm-app
 elm-brunch
+elm-github-install
 htmllint-cli
 sass-lint
 markdownlint-cli
