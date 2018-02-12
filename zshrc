@@ -198,3 +198,4 @@ function update() {
 [ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
 
 . $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
