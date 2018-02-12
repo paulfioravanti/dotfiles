@@ -6,9 +6,10 @@ root: ~/blogs/paulfioravanti.github.io
 on_project_first_start:
   - bundle install
   - bundle update
-  - open https://analytics.google.com/analytics
-  - open https://paulfioravanti.disqus.com
-  - open http://localhost:4000
+  - open --background https://analytics.google.com/analytics
+  - open --background https://paulfioravanti.disqus.com
+  - open --background http://localhost:4000
+  - open --background http://localhost:6419
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
 pre_window:
@@ -22,4 +23,4 @@ windows:
   - editor: vim
   - guard: bundle exec guard
   - server: bundle exec jekyll liveserve --drafts
-  - grip: grip --browser
+  - grip: grip
