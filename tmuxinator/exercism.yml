@@ -11,6 +11,8 @@ on_project_first_start:
   <% if lang == "elm" %>
   - npm install
   <% end %>
+  # Grip
+  - open --background http://localhost:6419
 
 pre_window:
   # NOTE: uncomment if I find that I need to use language versions
@@ -40,4 +42,4 @@ windows:
   <% end %>
   # brew install grip
   # https://github.com/joeyespo/grip
-  - grip: grip --browser
+  - grip: grip

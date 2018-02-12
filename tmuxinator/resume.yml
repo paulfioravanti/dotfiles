@@ -3,7 +3,11 @@
 name: resume
 root: ~/ruby/resume
 
-on_project_first_start: bundle install
+on_project_first_start:
+  - bundle install
+  - bundle update
+  # Grip
+  - open --background http://localhost:6419
 
 pre_window: asdf local ruby 2.5.0
 
@@ -20,4 +24,4 @@ windows:
       root: ~/Downloads
       panes:
         - ruby -run -e httpd . -p8000
-  - grip: grip --browser
+  - grip: grip

@@ -7,8 +7,10 @@ root: ~/elixir/phoenix_and_elm
 on_project_first_start:
   - mix deps.get
   - mix compile --force
-  - open --background http://localhost:4000
   # - open --background http://localhost:3000
+  - open --background http://localhost:4000
+  # Grip
+  - open --background http://localhost:6419
 on_project_start:
   - brew services start postgresql
   # - brew services start redis
@@ -37,4 +39,4 @@ windows:
   - server: iex -S mix phx.server
   - elm_console: elm repl
   - dbconsole: psql phoenix_and_elm_dev
-  - grip: grip --browser
+  - grip: grip

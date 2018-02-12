@@ -9,6 +9,9 @@ root: ~/elixir/bitcoin_address
 # on_project_start: brew services start bitcoin
 # on_project_stop: brew services stop bitcoin
 # on_project_exit: brew services stop bitcoin
+on_project_first_start:
+  # Grip
+  - open --background http://localhost:6419
 
 pre_window:
   - asdf local elixir 1.6.1
@@ -21,4 +24,4 @@ windows:
   - editor: vim
   - tests: mix test.watch
   - console: iex -S mix
-  - grip: grip --browser
+  - grip: grip

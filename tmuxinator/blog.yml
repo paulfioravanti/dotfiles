@@ -9,6 +9,7 @@ on_project_first_start:
   - open --background https://analytics.google.com/analytics
   - open --background https://paulfioravanti.disqus.com
   - open --background http://localhost:4000
+  # Grip
   - open --background http://localhost:6419
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
