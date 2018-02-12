@@ -49,9 +49,14 @@ path=(
   /bin
   $path
 )
-export PATH
-# export MANPATH="/usr/local/man:$MANPATH"
 
+# Force ASDF bins and shims to be before anything else in the path, otherwise,
+# for whatever reason, Tmux won't prioritise the shims. This happened
+# specifically for Python, where the `pip` binary was pointing at the ASDF shim,
+# but `python` was pointing at `usr/bin`
+ASDF_DIR="$HOME/.asdf"
+export PATH="$ASDF_DIR/bin:$ASDF_DIR/shims:$PATH"
+# export MANPATH="/usr/local/man:$MANPATH"
 
 # Disable Oh-My-Zsh updates: it will get done when the `update` function
 # is run
