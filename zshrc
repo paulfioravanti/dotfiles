@@ -37,8 +37,8 @@ plugins=(
 
 # zsh-specific config:
 # https://superuser.com/questions/598810/zsh-config-to-export-or-not-to-export/598924#598924
+typeset -U path
 path=(
-  $path
   /usr/local/bin
   /usr/local/heroku/bin
   /usr/local/share/npm/bin
@@ -47,8 +47,11 @@ path=(
   /usr/sbin
   /sbin
   /bin
+  $path
 )
+export PATH
 # export MANPATH="/usr/local/man:$MANPATH"
+
 
 # Disable Oh-My-Zsh updates: it will get done when the `update` function
 # is run
