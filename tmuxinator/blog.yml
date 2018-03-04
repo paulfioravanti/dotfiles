@@ -1,7 +1,9 @@
 # ~/.tmuxinator/blog.yml
 
+# Jekyll runs on 4000 by default
 <% jekyll_port = 5000 %>
-<% grip_port = 6419 %>
+# Grip runs on 6419 by default
+<% grip_port = 7419 %>
 
 name: blog
 root: ~/blogs/paulfioravanti.github.io
