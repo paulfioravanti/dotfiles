@@ -1,5 +1,8 @@
 # ~/.tmuxinator/blog.yml
 
+<% jekyll_port = 5000 %>
+<% grip_port = 6419 %>
+
 name: blog
 root: ~/blogs/paulfioravanti.github.io
 
@@ -8,9 +11,10 @@ on_project_first_start:
   - bundle update
   - open --background https://analytics.google.com/analytics
   - open --background https://paulfioravanti.disqus.com
-  - open --background http://localhost:4000
-  # Grip
-  - open --background http://localhost:6419
+  # Jekyll server
+  - open --background http://localhost:<%= jekyll_port %>
+  # Grip server
+  - open --background http://localhost:<%= grip_port %>
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
 pre_window:
@@ -23,5 +27,5 @@ startup_window: editor
 windows:
   - editor: vim
   - guard: bundle exec guard
-  - server: bundle exec jekyll liveserve --drafts
+  - server: bundle exec jekyll liveserve --drafts --port <%= jekyll_port %>
   - grip: grip
