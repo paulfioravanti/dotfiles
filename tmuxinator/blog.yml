@@ -30,4 +30,4 @@ windows:
   - editor: vim
   - guard: bundle exec guard
   - server: bundle exec jekyll liveserve --drafts --port <%= jekyll_port %>
-  - grip: grip
+  - grip: grip <%= grip_port %>
