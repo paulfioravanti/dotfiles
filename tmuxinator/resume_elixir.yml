@@ -10,7 +10,7 @@ root: ~/elixir/resume_elixir
 # pre: pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
-pre_window: asdf local elixir 1.5.2
+pre_window: asdf local elixir 1.6.3
 
 # Pass command line options to tmux. Useful for specifying a different tmux.conf.
 # tmux_options: -f ~/.tmux.mac.conf

@@ -11,8 +11,8 @@ pre:
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
 pre_window:
-  - asdf local elixir 1.5.3
-  - asdf local erlang 20.2
+  - asdf local elixir 1.6.3
+  - asdf local erlang 20.2.4
 
 # Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
 startup_window: editor
