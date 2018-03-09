@@ -269,7 +269,6 @@ cask "torbrowser"
 cask "transmission"
 cask "vlc"
 cask "zeplin"
-mas "Deckset", id: 847496013
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
 mas "Kindle", id: 405399194
