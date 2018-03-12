@@ -21,3 +21,4 @@ windows:
   - editor: vim
   - tests: mix test.watch
   - console: iex -S mix
+  - grip: grip
