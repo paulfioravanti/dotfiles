@@ -213,6 +213,7 @@ cask "colorpicker-skalacolor"
 cask "cyberduck"
 cask "dash"
 cask "db-browser-for-sqlite"
+cask "deckset"
 cask "discord"
 cask "divvy"
 cask "docker"
@@ -281,5 +282,4 @@ mas "PDF Squeezer", id: 504700302
 mas "Prepo", id: 476533227
 mas "Trello", id: 1278508951
 mas "TweetDeck", id: 485812721
-mas "Twitter", id: 409789998
 mas "Xcode", id: 497799835
