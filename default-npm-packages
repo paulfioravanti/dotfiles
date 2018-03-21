@@ -3,6 +3,8 @@ css-burrito
 elm
 elm-brunch
 elm-github-install
+elm-test
+elm-verify-examples
 htmllint-cli
 sass-lint
 markdownlint-cli
