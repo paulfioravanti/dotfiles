@@ -2,6 +2,7 @@ create-elm-app
 css-burrito
 elm
 elm-brunch
+elm-css
 elm-github-install
 elm-test
 elm-verify-examples
