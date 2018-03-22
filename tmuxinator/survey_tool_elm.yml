@@ -4,10 +4,13 @@ name: survey_tool_elm
 root: ~/elm/survey_tool_elm
 
 # Runs before everything. Use it to start daemons etc.
-pre:
-  # - brew services start postgresql
-  # - brew services start redis
-  # - mailcatcher
+on_project_first_start:
+  # Back end
+  - open --background http://localhost:4000/survey_results
+  # Front end
+  - open --background http://localhost:3000
+  # Grip
+  - open --background http://localhost:6419
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
 # pre_window:
@@ -17,19 +20,24 @@ startup_window: editor
 
 windows:
   - editor: vim
-  - server_tests:
-      root: ~/elm/survey_tool_elm/survey_server
+  - front_tests:
+      root: ~/elm/survey_tool_elm/front_end
+      panes:
+        - elm-app test --watch
+  - front_console:
+      root: ~/elm/survey_tool_elm/front_end
+      panes:
+        - elm-app repl
+  - front_server:
+      root: ~/elm/survey_tool_elm/front_end
+      panes:
+        - elm-app start
+  - back_tests:
+      root: ~/elm/survey_tool_elm/back_end
       panes:
         - mix test.watch
-  # - repl: elm repl
-  # - console: elm reactor
-  - server:
-      root: ~/elm/survey_tool_elm/survey_server
+  - back_server:
+      root: ~/elm/survey_tool_elm/back_end
       panes:
         - iex -S mix
-  # - server: elm-live Bingo.elm --open --warn --debug --output=bingo.js
-  # - server: iex -S mix phoenix.server
-  # - client_tests:
-  #     root: ~/elm/survey_tool_elm/survey_server
-  #     panes:
-  #       - elm test --watch
+  - grip: grip
