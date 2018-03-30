@@ -27,7 +27,10 @@ windows:
   - front_tests:
       root: ~/elm/survey_tool_elm/front_end
       panes:
-        - elm-app test --watch
+        # - elm-app test --watch
+        # Uses `just` and `watchexec` to run both
+        # elm-verify-examples and elm-test
+        - watchexec -w src -w tests just elm-test
   - front_console:
       root: ~/elm/survey_tool_elm/front_end
       panes:
