@@ -30,7 +30,13 @@ windows:
         # - elm-app test --watch
         # Uses `just` and `watchexec` to run both
         # elm-verify-examples and elm-test
-        - watchexec -w src -w tests just elm-test
+        # - watchexec --watch src --watch tests --clear just test
+        # Uses `just` and `watchexec` to run both
+        # elm-verify-examples and elm-coverage (which runs elm-test)
+        # src directory is ignored here because elm-coverage ends up touching
+        # every file during its instrumentation phase, leading to infinite
+        # loops.
+        - watchexec --ignore src --watch tests --ignore tests/elm-package.json --clear just test
   - front_console:
       root: ~/elm/survey_tool_elm/front_end
       panes:
