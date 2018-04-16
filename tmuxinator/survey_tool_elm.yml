@@ -56,5 +56,5 @@ windows:
   - back_server:
       root: ~/elm/survey_tool_elm/back_end
       panes:
-        - iex -S mix
+        - mix run --no-halt
   - grip: grip
