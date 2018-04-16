@@ -9,5 +9,6 @@ elm-test
 elm-verify-examples
 htmllint-cli
 sass-lint
+serve
 markdownlint-cli
 tldr
