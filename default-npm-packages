@@ -5,6 +5,7 @@ elm-brunch
 elm-coverage
 elm-css
 elm-github-install
+elm-outdated
 elm-test
 elm-verify-examples
 htmllint-cli
