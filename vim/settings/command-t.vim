@@ -15,6 +15,7 @@ let g:CommandTWildIgnore = &wildignore . '
   \,*/_build
   \,*/_site
   \,*/assets/node_modules
+  \,*/build
   \,*/coverage
   \,*/deps
   \,*/dist
