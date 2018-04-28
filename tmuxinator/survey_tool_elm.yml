@@ -6,8 +6,8 @@ root: ~/elm/survey_tool_elm
 # Runs before everything. Use it to start daemons etc.
 on_project_first_start:
   - asdf local elixir 1.6.4
-  - asdf local erlang 20.3.2
-  - asdf local nodejs 9.11.1
+  - asdf local erlang 20.3.4
+  - asdf local nodejs 10.0.0
   - asdf local elm 0.18.0
   # Back end
   - open --background http://localhost:4000/survey_results

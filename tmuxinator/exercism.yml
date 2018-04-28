@@ -20,8 +20,8 @@ pre_window:
   # <% if lang == "ruby" %>
   # - asdf local ruby 2.5.0
   # <% elsif lang == "elixir" %>
-  # - asdf local elixir 1.5.3
-  # - asdf local erlang 20.2
+  # - asdf local elixir 1.6.4
+  # - asdf local erlang 20.3.4
   # <% elsif lang == "elm" %>
   # - asdf local elm 0.18.0
   # <% end %>
