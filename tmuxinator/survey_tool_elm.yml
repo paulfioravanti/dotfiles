@@ -32,15 +32,15 @@ windows:
         # Uses `just` and `watchexec` to run both
         # elm-verify-examples and elm-test when any src code is modified
         - watchexec --watch src --clear just test
-  - front_coverage:
-      root: ~/elm/survey_tool_elm/front_end
-      panes:
-        # Uses `just` and `watchexec` to run both
-        # elm-verify-examples and elm-coverage (which runs elm-test) when
-        # the tests are modified. The src directory is not included here because
-        # elm-coverage ends up touching every src file during its
-        # instrumentation phase, leading to infinite loops.
-        - watchexec --watch tests --ignore tests/elm-package.json --clear just coverage
+  # - front_coverage:
+  #     root: ~/elm/survey_tool_elm/front_end
+  #     panes:
+  #       # Uses `just` and `watchexec` to run both
+  #       # elm-verify-examples and elm-coverage (which runs elm-test) when
+  #       # the tests are modified. The src directory is not included here because
+  #       # elm-coverage ends up touching every src file during its
+  #       # instrumentation phase, leading to infinite loops.
+  #       - watchexec --watch tests --ignore tests/elm-package.json --clear just coverage
   - front_console:
       root: ~/elm/survey_tool_elm/front_end
       panes:
