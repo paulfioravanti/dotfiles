@@ -17,13 +17,13 @@ symlinked to the home directory:
 #### `bash`:
 
 ```sh
-$ rcup -x README.md -x LICENSE.txt -x setup.sh -x config.sh -x *:vim:setup.sh -x *:tmux:setup.sh -x *:oh-my-zsh:setup.sh -x ruby -x osx
+$ rcup -x README.md -x LICENSE.txt -x setup.sh -x config.sh -x *:vim:setup.sh -x *:tmux:setup.sh -x *:oh-my-zsh:setup.sh -x ruby -x osx -x keyboards
 ```
 
 #### `zsh`:
 
 ```sh
-$ rcup -x README.md -x LICENSE.txt -x setup.sh -x config.sh -x \*:vim:setup.sh -x \*:tmux:setup.sh -x \*:oh-my-zsh:setup.sh -x ruby -x osx
+$ rcup -x README.md -x LICENSE.txt -x setup.sh -x config.sh -x \*:vim:setup.sh -x \*:tmux:setup.sh -x \*:oh-my-zsh:setup.sh -x ruby -x osx -x keyboards
 ```
 
 ## Regenerate Dotfiles
@@ -32,7 +32,7 @@ $ rcup -x README.md -x LICENSE.txt -x setup.sh -x config.sh -x \*:vim:setup.sh -
 $ rcup
 ```
 
-Once intial setup has been run, the `.rcrc` config file for `rcup` will have
+Once initial setup has been run, the `.rcrc` config file for `rcup` will have
 been created that contains the exclusions, so only `$ rcup` will need to be run
 in the future (unless more files to be excluded from being symlinked are added).
 
