@@ -95,6 +95,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 
 /* Keymap 1: Programmer's toolkit layer
+ * NOTE: This diagram looks borky when viewed on a webpage, but looks fine
+ * in a terminal.
  * ,--------------------------------------------------.    ,--------------------------------------------------.
  * | RESET  |  F1  |  F2  |  F3  |  F4  |  F5  | F11  |    | F12  |  F6  |  F7  |  F8  |  F9  | F10  | power  |
  * |--------+------+------+------+------+-------------|    |------+------+------+------+------+------+--------|
