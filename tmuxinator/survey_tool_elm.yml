@@ -7,7 +7,7 @@ root: ~/elm/survey_tool_elm
 on_project_first_start:
   - asdf local elixir 1.6.5
   - asdf local erlang 20.3.6
-  - asdf local nodejs 10.0.0
+  - asdf local nodejs 10.2.1
   - asdf local elm 0.18.0
   # Back end
   - open --background http://localhost:4000/survey_results
