@@ -6,8 +6,8 @@ elm 0.18.0
 erlang 20.3.6
 golang 1.9.6
 haskell 8.4.2
-nodejs 10.0.0
+nodejs 10.2.1
 python 3.6.2
 redis 3.2.6
 ruby 2.5.1
-rust 1.25.0
+rust 1.26.0
