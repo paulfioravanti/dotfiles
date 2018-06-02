@@ -12,6 +12,7 @@ elm-verify-examples
 htmllint-cli
 sass-lint
 serve
+surge
 markdownlint-cli
 tldr
 yarn
