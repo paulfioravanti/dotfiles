@@ -153,8 +153,8 @@ function update() {
   fi
 
   echo "${yellow}Running ASDF updates...${reset}"
-  if bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring &&
-     asdf update && asdf plugin-update --all; then
+  bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
+  if asdf update && asdf plugin-update --all; then
     echo "${green}ASDF updates done.${reset}"
   else
     echo "${red}ASDF updates failed.${reset}"
