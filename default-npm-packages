@@ -1,6 +1,7 @@
 create-elm-app
 css-burrito
 elm
+elm-analyse
 elm-brunch
 elm-coverage
 elm-css
