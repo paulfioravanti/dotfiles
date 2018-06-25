@@ -1,0 +1,24 @@
+# ~/.tmuxinator/80sfy.yml
+
+name: 80sfy
+root: ~/elm/80sfy
+
+on_project_first_start:
+  - asdf local nodejs 10.5.0
+  - asdf local elm 0.18.0
+  # Server
+  - open --background http://localhost:3000
+  # elm-analyse
+  - open --background http://localhost:3001
+  # Grip
+  - open --background http://localhost:6419
+
+# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
+startup_window: editor
+
+windows:
+  - editor: vim
+  - server: elm-app start
+  - repl: elm-app repl
+  - elm-analyse: elm-analyse --serve --port 3001
+  - grip: grip
