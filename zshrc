@@ -175,7 +175,7 @@ function update() {
   fi
 
   echo "${yellow}Running Node package updates...${reset}"
-  if npm update -g && npm i -g npm; then
+  if npm install -g npm && npm update -g; then
     echo "${green}Node package updates done.${reset}"
   else
     echo "${red}Node package updates failed.${reset}"
