@@ -7,8 +7,12 @@ root: ~/elixir/phoenix_and_elm
 on_project_first_start:
   - mix deps.get
   - mix compile --force
-  # - open --background http://localhost:3000
+  # Application server
   - open --background http://localhost:4000
+  # elm-analyse
+  # Server for this doesn't seem to work within the context of a Phoenix app
+  # at the moment
+  # - open --background http://localhost:3000
   # Grip
   - open --background http://localhost:6419
 on_project_start:
@@ -37,6 +41,14 @@ windows:
   - tests: mix test.watch
   - ex_console: iex -S mix
   - server: iex -S mix phx.server
-  - elm_console: elm repl
   - dbconsole: psql phoenix_and_elm_dev
+  - elm-analyse:
+      root: ~/elixir/phoenix_and_elm/assets/elm
+      panes:
+        # Server for this doesn't seem to work within the context of a Phoenix
+        # app at the moment, so just run elm-analyse and output to console
+        # whenever an Elm file is changed.
+        # - elm-analyse --serve
+        - watchexec --watch src --clear just elm-analyse
+  - elm_console: elm repl
   - grip: grip
