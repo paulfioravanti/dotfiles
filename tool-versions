@@ -1,6 +1,8 @@
 # Postgres can be managed with asdf once the issue regarding plugins
 # is resolved: https://github.com/asdf-vm/asdf/issues/196
-crystal 0.25.1
+# NOTE: Crystal 0.25.x installs are failing, so keep it off the system for now.
+# Try again when the next update is attempted.
+crystal 0.24.2
 elixir 1.6.6
 elm 0.18.0
 erlang 21.0.3
