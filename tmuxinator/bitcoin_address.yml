@@ -14,9 +14,9 @@ on_project_first_start:
   - open --background http://localhost:6419
 
 pre_window:
-  - asdf local elixir 1.6.5
-  - asdf local erlang 20.3.6
-  - asdf local python 3.6.2
+  - asdf local elixir 1.6.6
+  - asdf local erlang 21.0.3
+  - asdf local python 3.7.0
 
 startup_window: editor
 
