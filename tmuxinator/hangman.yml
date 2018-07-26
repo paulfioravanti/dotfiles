@@ -10,7 +10,7 @@ pre:
   # - mailcatcher
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
-pre_window: asdf local elixir 1.6.5
+pre_window: asdf local elixir 1.7.0-otp-21
 
 # Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
 startup_window: text_client
