@@ -11,7 +11,7 @@ pre:
   - brew services start postgresql
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
-pre_window: asdf local elixir 1.7.0-otp-21
+pre_window: asdf local elixir 1.7.2-otp-21
 
 # Pass command line options to tmux. Useful for specifying a different tmux.conf.
 # tmux_options: -f ~/.tmux.mac.conf
