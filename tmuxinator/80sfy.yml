@@ -4,7 +4,7 @@ name: 80sfy
 root: ~/elm/80sfy
 
 on_project_first_start:
-  - asdf local nodejs 10.7.0
+  - asdf local nodejs 10.9.0
   - asdf local elm 0.18.0
   # Server
   - open --background http://localhost:3000
