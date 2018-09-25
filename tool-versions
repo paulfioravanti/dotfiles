@@ -2,14 +2,14 @@
 # is resolved: https://github.com/asdf-vm/asdf/issues/196
 # NOTE: Crystal 0.25.x installs are failing, so keep it off the system for now.
 # Try again when the next update is attempted.
-crystal 0.26.0
-elixir 1.7.2-otp-21
+crystal 0.26.1
+elixir 1.7.3-otp-21
 elm 0.19.0
-erlang 21.0.5
-golang 1.10.3
+erlang 21.0.9
+golang 1.11
 haskell 8.4.3
-nodejs 10.9.0
+nodejs 10.11.0
 python 3.7.0
 redis 4.0.11
 ruby 2.5.1
-rust 1.28.0
+rust 1.29.0
