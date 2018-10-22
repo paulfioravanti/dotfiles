@@ -14,7 +14,7 @@ pre:
   # - mailcatcher
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
-pre_window: asdf local ruby 2.5.1
+pre_window: asdf local ruby 2.5.3
 
 # Pass command line options to tmux. Useful for specifying a different tmux.conf.
 # tmux_options: -f ~/.tmux.mac.conf
