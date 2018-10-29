@@ -29,5 +29,5 @@ startup_window: editor
 windows:
   - editor: vim
   - guard: bundle exec guard
-  - server: bundle exec jekyll liveserve --drafts --port <%= jekyll_port %>
+  - server: bundle exec jekyll liveserve --incremental --drafts --port <%= jekyll_port %> --limit-posts 1
   - grip: grip <%= grip_port %>
