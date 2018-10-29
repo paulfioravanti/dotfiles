@@ -3,13 +3,13 @@
 # NOTE: Crystal 0.25.x installs are failing, so keep it off the system for now.
 # Try again when the next update is attempted.
 crystal 0.26.1
-elixir 1.7.3-otp-21
+elixir 1.7.4-otp-21
 elm 0.19.0
 erlang 21.1.1
 golang 1.11.1
 haskell 8.6.1
-nodejs 10.11.0
+nodejs 11.0.0
 python 3.7.1
 redis 5.0.0
 ruby 2.5.3
-rust 1.29.2
+rust 1.30.0
