@@ -1,0 +1,5 @@
+# Needed to set the default image rendering backend of matplotlib,
+# otherwise there will be `**RuntimeError**: Python is not installed as a
+# framework` errors
+# REF: https://stackoverflow.com/a/21789908/567863
+backend: TkAgg
