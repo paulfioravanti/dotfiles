@@ -173,7 +173,7 @@ brew "ossp-uuid"
 brew "perl"
 brew "pgcli"
 brew "pinentry-mac"
-brew "poppler"
+brew "poppler", link: false
 brew "postgresql", restart_service: true
 brew "sfcgal"
 brew "postgis"
