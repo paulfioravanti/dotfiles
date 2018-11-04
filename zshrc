@@ -175,10 +175,18 @@ function update() {
   fi
 
   echo "${yellow}Running Node package updates...${reset}"
-  if npm install -g npm && npm update -g; then
+  if npm install --global npm && npm update --global; then
     echo "${green}Node package updates done.${reset}"
   else
     echo "${red}Node package updates failed.${reset}"
+  fi
+
+  echo "${yellow}Running Python package updates...${reset}"
+  # REF: https://stackoverflow.com/a/3452888/567863
+  if pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install --upgrade; then
+    echo "${green}Python package updates done.${reset}"
+  else
+    echo "${red}Python package updates failed.${reset}"
   fi
 
   echo "${yellow}Re-shimming ASDF binaries...${reset}"
