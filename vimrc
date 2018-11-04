@@ -64,10 +64,14 @@ set wildignore+=*.DS_Store
 set wildignore+=.git
 " Don't include .keep files
 set wildignore+=*.keep
-" Don't include any Rubymotion build files
-set wildignore+=build/**
 " Don't include Elixir _build files
 set wildignore+=_build/**
+" Don't include Jekyll site files
+set wildignore+=_site/**
+" Don't include Python cache files
+set wildignore+=__pycache__
+" Don't include any Rubymotion build files
+set wildignore+=build/**
 " Don't include code coverage files
 set wildignore+=coverage/**
 " Don't include Elixir Phoenix deps files
@@ -80,8 +84,6 @@ set wildignore+=elm-stuff/**
 set wildignore+=node_modules/**
 " Don't include locally uploaded files in Rails apps
 set wildignore+=public/uploads/**
-" Don't include Jekyll site files
-set wildignore+=_site/**
 " Don't include any Rails cache files
 set wildignore+=tmp/cache/**
 " Don't include Rails cached vendor files
