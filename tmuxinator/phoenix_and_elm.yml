@@ -31,7 +31,7 @@ pre_window:
   - asdf local elixir 1.7.2-otp-21
   - asdf local erlang 21.0.3
   - asdf local elm 0.18.0
-  - asdf local nodejs 10.9.0
+  - asdf local nodejs 11.0.0
 
 # Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
 startup_window: editor

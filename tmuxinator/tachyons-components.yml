@@ -4,7 +4,7 @@ name: tachyons-components
 root: ~/elm/tachyons-components
 
 on_project_first_start:
-  - asdf local nodejs 10.9.0
+  - asdf local nodejs 11.0.0
   - asdf local elm 0.18.0
   # Server
   - open --background http://localhost:3000
