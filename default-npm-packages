@@ -9,7 +9,7 @@ elm-github-install
 elm-i18n-gen
 elm-outdated
 elm-test
-elm-update
+elm-upgrade
 elm-verify-examples
 htmllint-cli
 newman
