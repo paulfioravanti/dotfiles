@@ -5,6 +5,7 @@ elm-analyse
 elm-brunch
 elm-coverage
 elm-css
+elm-format
 elm-github-install
 elm-i18n-gen
 elm-outdated
