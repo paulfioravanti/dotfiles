@@ -299,6 +299,7 @@ cask "vlc"
 cask "whatsapp"
 cask "zeplin"
 mas "iMovie", id: 408981434
+mas "Install macOS Mojave", id: 0
 mas "Keynote", id: 409183694
 mas "Kindle", id: 405399194
 mas "LINE", id: 539883307
