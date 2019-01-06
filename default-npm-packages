@@ -14,6 +14,7 @@ elm-upgrade
 elm-verify-examples
 htmllint-cli
 newman
+npm-check
 sass-lint
 serve
 surge
