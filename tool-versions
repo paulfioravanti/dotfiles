@@ -9,6 +9,6 @@ haskell 8.6.3
 nodejs 11.6.0
 python 3.7.1 2.7.15
 redis 5.0.3
-ruby 2.6.0
+ruby 2.6.1
 rust 1.31.1
 julia 1.0.3
