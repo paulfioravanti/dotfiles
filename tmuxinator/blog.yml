@@ -12,6 +12,7 @@ on_project_first_start:
   - bundle install
   - bundle update
   - open --background https://analytics.google.com/analytics
+  - open --background https://search.google.com/search-console
   - open --background https://paulfioravanti.disqus.com
   # Jekyll server
   - open --background http://localhost:<%= jekyll_port %>
@@ -20,8 +21,8 @@ on_project_first_start:
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
 pre_window:
-  - asdf local ruby 2.5.3
-  - asdf local nodejs 11.2.0
+  - asdf local ruby 2.6.0
+  - asdf local nodejs 11.6.0
 
 # Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
 startup_window: editor
@@ -29,5 +30,6 @@ startup_window: editor
 windows:
   - editor: vim
   - guard: bundle exec guard
-  - server: bundle exec jekyll liveserve --incremental --drafts --port <%= jekyll_port %> --limit-posts 1
+  - server: bundle exec jekyll liveserve --incremental --drafts --port <%= jekyll_port %>
+  # - server: bundle exec jekyll liveserve --incremental --drafts --port <%= jekyll_port %> --limit-posts 1
   - grip: grip <%= grip_port %>

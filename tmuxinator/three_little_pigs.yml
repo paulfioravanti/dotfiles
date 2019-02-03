@@ -2,7 +2,7 @@
 
 name: three_little_pigs
 root: ~/ruby/three_little_pigs
-pre_window: asdf local ruby 2.5.3
+pre_window: asdf local ruby 2.6.1
 startup_window: editor
 windows:
   - editor: vim

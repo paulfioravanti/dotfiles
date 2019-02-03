@@ -18,7 +18,7 @@ pre_window:
   # NOTE: uncomment if I find that I need to use language versions
   # other than the latest.
   # <% if lang == "ruby" %>
-  # - asdf local ruby 2.5.3
+  # - asdf local ruby 2.6.1
   # <% elsif lang == "elixir" %>
   # - asdf local elixir 1.7.2-otp-21
   # <% elsif lang == "elm" %>
