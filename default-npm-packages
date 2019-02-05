@@ -5,6 +5,7 @@ elm-analyse
 elm-brunch
 elm-coverage
 elm-css
+elm-doc
 elm-format
 elm-github-install
 elm-i18n-gen
@@ -12,6 +13,7 @@ elm-outdated
 elm-test
 elm-upgrade
 elm-verify-examples
+elm-xref
 htmllint-cli
 newman
 npm-check
