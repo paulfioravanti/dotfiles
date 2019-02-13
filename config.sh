@@ -5,8 +5,7 @@
 dotfiles_dir=$(dirname ${BASH_SOURCE:-$0})
 
 if [ -n "$BASH_VERSION" ]; then
-  # Get the aliases and functions from bashrc settings first,
-  # specifically for chruby
+  # Get the aliases and functions from bashrc settings first.
   source $dotfiles_dir/bashrc
 fi
 source $dotfiles_dir/ruby/config.sh

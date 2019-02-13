@@ -1,9 +1,0 @@
-awesome_print
-bundler
-flay
-graphviz
-pry-byebug
-rails
-ruby-prof
-sonic-pi-cli
-tmuxinator

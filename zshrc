@@ -16,7 +16,6 @@ plugins=(
   asdf
   brew
   bundler
-  chruby
   fasd
   git
   git-open

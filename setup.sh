@@ -32,9 +32,6 @@ source $DOTFILES_DIR/tmux/setup.sh
 # Setup iterm2
 source $DOTFILES_DIR/osx/iterm2/setup.sh
 
-# Install and Setup Ruby versions
-source $DOTFILES_DIR/ruby/chruby.sh
-
 # Install and setup oh-my-zsh
 source $DOTFILES_DIR/oh-my-zsh/setup.sh
 

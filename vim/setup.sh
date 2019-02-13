@@ -19,8 +19,8 @@ vim +PluginInstall +qall
 #
 # Helpful links:
 # - https://superuser.com/questions/1096438/brew-upgrade-broke-vim-on-os-x-dyld-library-not-loaded
+# - https://gist.github.com/paulfioravanti/f9a55eb1dbb0bac34254e89cc5b5bf7e
 # Issues with ld flags:
 # - https://github.com/wincent/command-t/issues/316
-chruby system
 ruby -C ~/.vim/bundle/command-t/ruby/command-t/ext/command-t/ extconf.rb
 make -C ~/.vim/bundle/command-t/ruby/command-t/ext/command-t/
