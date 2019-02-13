@@ -86,7 +86,7 @@ brew "libgcrypt"
 brew "libksba"
 brew "pth"
 brew "dirmngr"
-brew "docker"
+brew "docker", link: false
 brew "docker-machine"
 brew "elasticsearch", restart_service: true
 brew "libtasn1"
