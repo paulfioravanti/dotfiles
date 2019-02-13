@@ -131,7 +131,7 @@ function update() {
 
   cd ~
   echo "${yellow}Running Brew updates...${reset}"
-  if bubu; then
+  if brew update && brew outdated && brew upgrade && brew cleanup; then
     echo "${green}Brew updates done.${reset}"
   else
     echo "${red}Brew updates failed.${reset}"
