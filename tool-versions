@@ -2,11 +2,11 @@
 # is resolved: https://github.com/asdf-vm/asdf/issues/196
 crystal 0.27.0
 elixir 1.7.4-otp-21
-elm 0.19.0
+elm 0.19.0-bugfix6
 erlang 21.1.1
 golang 1.11.4
 haskell 8.6.3
-nodejs 11.6.0
+nodejs 11.10.0
 python 3.7.1 2.7.15
 redis 5.0.3
 ruby 2.6.1
