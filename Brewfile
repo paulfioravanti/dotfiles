@@ -17,7 +17,6 @@ brew "adns"
 brew "openssl"
 brew "alpine"
 brew "gdbm"
-brew "gmp"
 brew "libyaml"
 brew "readline"
 brew "sqlite"
@@ -37,6 +36,7 @@ brew "glib"
 brew "atk"
 brew "autoconf"
 brew "bdw-gc"
+brew "gmp"
 brew "libtool"
 brew "libunistring"
 brew "pkg-config"
@@ -331,15 +331,15 @@ cask "vlc"
 cask "whatsapp"
 cask "zeplin"
 cask "zoomus"
-mas "", id: 504700302
-mas "", id: 405399194
-mas "", id: 540348655
-mas "iMovie", id: 408981434
-mas "Keynote", id: 409183694
-mas "LINE", id: 539883307
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
-mas "Prepo", id: 476533227
-mas "Trello", id: 1278508951
-mas "TweetDeck", id: 485812721
-mas "Xcode", id: 497799835
+mas "com.amazon.Kindle", id: 405399194
+mas "com.apple.dt.Xcode", id: 497799835
+mas "com.apple.iMovieApp", id: 408981434
+mas "com.apple.iWork.Keynote", id: 409183694
+mas "com.apple.iWork.Numbers", id: 409203825
+mas "com.apple.iWork.Pages", id: 409201541
+mas "com.atlassian.trello", id: 1278508951
+mas "com.mac-attender.PDF-Squeezer", id: 504700302
+mas "com.monosnap.monosnap", id: 540348655
+mas "com.twitter.TweetDeck", id: 485812721
+mas "com.wearemothership.prepo", id: 476533227
+mas "jp.naver.line.mac", id: 539883307
