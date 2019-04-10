@@ -234,6 +234,7 @@ brew "wxmac"
 brew "xpdf", link: false
 brew "yasm"
 brew "youtube-dl"
+brew "zlib"
 brew "zsh"
 brew "zsh-completions"
 brew "heroku/brew/heroku-node"
