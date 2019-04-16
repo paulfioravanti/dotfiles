@@ -5,7 +5,7 @@ root: ~/elm/80sfy
 
 on_project_first_start:
   - asdf local nodejs 11.12.0
-  - asdf local elm 0.18.0
+  - asdf local elm 0.19.0-bugfix6
   # Server
   - open --background http://localhost:3000
   # elm-analyse
@@ -18,7 +18,9 @@ startup_window: editor
 
 windows:
   - editor: vim
-  - server: elm-app start
+  # Reason for disabling Elm debugger:
+  # https://github.com/elm/compiler/issues/1851
+  - server: ELM_DEBUGGER=false elm-app start
   - repl: elm-app repl
   - elm-analyse: elm-analyse --serve --port 3001
   - grip: grip
