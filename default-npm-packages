@@ -11,6 +11,7 @@ elm-github-install
 elm-i18n-gen
 elm-outdated
 elm-test
+elm-typescript-interop
 elm-upgrade
 elm-verify-examples
 elm-xref
