@@ -33,10 +33,11 @@ windows:
   - tests: guard --guardfile ~/exercism/ruby/Guardfile
   - console: irb
   <% elsif lang == "elixir" %>
-  - tests: # placeholder window to run tests
+  <% filename = exercise.tr("-", "_") %>
+  - tests: watchexec --watch <%= filename %>.exs --clear elixir <%= filename %>_test.exs
   - console: iex
   <% elsif lang == "elm" %>
-  - tests: npm run watch
+  - tests: elm-test --watch
   - console: elm repl
   <% end %>
   # brew install grip
