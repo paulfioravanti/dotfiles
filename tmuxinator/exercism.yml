@@ -34,7 +34,11 @@ windows:
   - console: irb
   <% elsif lang == "elixir" %>
   <% filename = exercise.tr("-", "_") %>
-  - tests: watchexec --watch <%= filename %>.exs --clear elixir <%= filename %>_test.exs
+  # brew install watchexec
+  # https://github.com/watchexec/watchexec
+  # Credo used outside of mix as a standalone archive. Installation instructions:
+  # https://github.com/rrrene/credo#using-credo-as-stand-alone
+  - tests: watchexec --watch <%= filename %>.exs --clear sh 'elixir <%= filename %>_test.exs && mix credo --strict'
   - console: iex
   <% elsif lang == "elm" %>
   - tests: elm-test --watch
