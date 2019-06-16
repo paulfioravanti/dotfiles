@@ -20,11 +20,11 @@ pre_window:
   # NOTE: uncomment if I find that I need to use language versions
   # other than the latest.
   # <% if lang == "ruby" %>
-  # - asdf local ruby 2.6.1
+  # - asdf local ruby 2.6.3
   # <% elsif lang == "elixir" %>
-  # - asdf local elixir 1.7.2-otp-21
+  # - asdf local elixir 1.8.2-otp-22
   # <% elsif lang == "elm" %>
-  # - asdf local elm 0.18.0
+  # - asdf local elm 0.19.0
   # <% end %>
 
 startup_window: editor
@@ -46,7 +46,10 @@ windows:
       --watch <%= exercise_filename %>
       --watch <%= test_filename %>
       --clear
-      just tests
+      --
+      just
+      --justfile ~/exercism/elixir/justfile
+      tests
       <%= "#{exercise}/#{exercise_filename}" %>
       <%= "#{exercise}/#{test_filename}" %>
   - console: iex
