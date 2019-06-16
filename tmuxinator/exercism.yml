@@ -10,6 +10,8 @@ root: ~/exercism/<%= lang %>/<%= exercise %>
 on_project_first_start:
   <% if lang == "elm" %>
   - npm install
+  # elm-analyse
+  - open --background http://localhost:3001
   <% end %>
   # Grip
   - open --background http://localhost:6419
@@ -51,6 +53,7 @@ windows:
   <% elsif lang == "elm" %>
   - tests: elm-test --watch
   - console: elm repl
+  - analyse: elm-analyse --serve --port 3001
   <% end %>
   # brew install grip
   # https://github.com/joeyespo/grip
