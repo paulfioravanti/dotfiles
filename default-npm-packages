@@ -5,6 +5,7 @@ elm-analyse
 elm-brunch
 elm-coverage
 elm-css
+elm-debug-transformer
 elm-doc
 elm-format
 elm-github-install
