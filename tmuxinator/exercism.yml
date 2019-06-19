@@ -10,6 +10,7 @@ root: ~/exercism/<%= lang %>/<%= exercise %>
 on_project_first_start:
   <% if lang == "elm" %>
   - npm install
+  - elm install --yes
   # elm-analyse
   - open --background http://localhost:3001
   <% end %>
