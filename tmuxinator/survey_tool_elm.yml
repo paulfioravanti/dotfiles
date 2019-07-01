@@ -5,7 +5,7 @@ root: ~/elm/survey_tool_elm
 
 # Runs before everything. Use it to start daemons etc.
 on_project_first_start:
-  - asdf local elixir 1.8.2-otp-22
+  - asdf local elixir 1.9.0-otp-22
   # NOTE: Cannot currently use Node 12:
   # https://github.com/halfzebra/create-elm-app/issues/356
   - asdf local nodejs 11.12.0
