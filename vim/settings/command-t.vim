@@ -22,4 +22,5 @@ let g:CommandTWildIgnore = &wildignore . '
   \,*/doc
   \,*/elm-stuff
   \,*/node_modules
+  \,*/generated
   \'

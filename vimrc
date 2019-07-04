@@ -88,6 +88,8 @@ set wildignore+=public/uploads/**
 set wildignore+=tmp/cache/**
 " Don't include Rails cached vendor files
 set wildignore+=vendor/cache/**
+" Don't include JS generated code
+set wildignore+=*/generated/**
 
 " Save when losing focus from the window
 au FocusLost * :silent! wall
