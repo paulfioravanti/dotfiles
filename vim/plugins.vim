@@ -67,6 +67,8 @@ Plugin 'kana/vim-textobj-user'
 Plugin 'kchmck/vim-coffee-script'
 " Vim runtime files for Swift
 Plugin 'keith/swift.vim'
+" Typescript syntax files for Vim
+Plugin 'leafgarland/typescript-vim'
 " Expand abbreviations into html tags using Emmet
 " https://github.com/mattn/emmet-vim/blob/master/TUTORIAL
 Plugin 'mattn/emmet-vim'
@@ -82,6 +84,8 @@ Plugin 'othree/html5.vim'
 Plugin 'pangloss/vim-javascript'
 " Automate common Jekyll tasks from Vim
 Plugin 'parkr/vim-jekyll'
+" React JSX syntax highlighting for vim and Typescript
+Plugin 'peitalin/vim-jsx-typescript'
 " Plugin for Dash.app
 " :Dash - will search for method under cursor in filetype's docset
 " :Dash function_name - will search for named method in filetype's docset
