@@ -86,6 +86,9 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'parkr/vim-jekyll'
 " React JSX syntax highlighting for vim and Typescript
 Plugin 'peitalin/vim-jsx-typescript'
+" A vim plugin wrapper for prettier, pre-configured with custom default
+" prettier settings
+Plugin 'prettier/vim-prettier'
 " Plugin for Dash.app
 " :Dash - will search for method under cursor in filetype's docset
 " :Dash function_name - will search for named method in filetype's docset

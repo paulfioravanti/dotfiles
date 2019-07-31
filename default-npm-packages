@@ -23,5 +23,6 @@ sass-lint
 serve
 surge
 markdownlint-cli
+prettier
 tldr
 yarn
