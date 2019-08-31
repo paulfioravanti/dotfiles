@@ -37,8 +37,9 @@ windows:
   - console: irb
   <% elsif lang == "elixir" %>
   <% underscored_filename = exercise.tr("-", "_") %>
-  <% exercise_filename = "#{underscored_filename}.exs" %>
-  <% test_filename = "#{underscored_filename}_test.exs" %>
+  <% exercise_filename = "lib/#{underscored_filename}.ex" %>
+  <% test_filename = "test/#{underscored_filename}_test.exs" %>
+  <% test_helper = "test/test_helper.exs" %>
   # brew install watchexec just
   # https://github.com/watchexec/watchexec
   # https://github.com/casey/just
@@ -53,6 +54,7 @@ windows:
       tests
       <%= "#{exercise}/#{exercise_filename}" %>
       <%= "#{exercise}/#{test_filename}" %>
+      <%= "#{exercise}/#{test_helper}" %>
   - console: iex
   <% elsif lang == "elm" %>
   - tests: elm-test --watch
