@@ -197,7 +197,7 @@ brew "make"
 brew "mas"
 brew "mercurial"
 brew "msgpack"
-brew "mysql", link: false
+brew "mysql"
 brew "nasm"
 brew "ncurses"
 brew "nmap"
