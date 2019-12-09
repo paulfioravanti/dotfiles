@@ -10,6 +10,7 @@ elm-doc
 elm-format
 elm-github-install
 elm-i18n-gen
+elm-json
 elm-outdated
 elm-test
 elm-typescript-interop
