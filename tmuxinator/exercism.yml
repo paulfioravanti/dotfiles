@@ -67,6 +67,8 @@ windows:
   - analyse: elm-analyse --serve --port 3001
   <% elsif lang == "typescript" %>
   - tests: yarn test --watch
+  # npm install -g watch
+  - lint: watch 'yarn lint --fix'
   - console: node
   <% end %>
   # brew install grip
