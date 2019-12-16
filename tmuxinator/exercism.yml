@@ -80,6 +80,12 @@ windows:
   # npm install -g watch
   - lint: watch 'yarn lint --fix'
   - console: node
+  <% elsif lang == "bash" %>
+  <% underscored_filename = exercise.tr("-", "_") %>
+  # brew install bats
+  # npm install -g watch
+  - tests: watch '<%= "bats #{underscored_filename}_test.sh" %>'
+  - lint: watch '<%= "shellcheck #{underscored_filename}.sh" %>'
   <% end %>
   # brew install grip
   # https://github.com/joeyespo/grip
