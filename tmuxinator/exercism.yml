@@ -13,6 +13,11 @@ on_project_first_start:
   # - elm install
   # elm-analyse
   - open --background http://localhost:3001
+  <% elsif lang == "javascript" %>
+  # Remove any existing package-lock.json files so that fsevents can be
+  # installed properly
+  - rm package-lock.json
+  - npm install
   <% elsif lang == "typescript" %>
   # Remove any existing yarn.lock files so that fsevents can be installed
   # properly
@@ -65,6 +70,11 @@ windows:
   - tests: elm-test --watch
   - console: elm repl
   - analyse: elm-analyse --serve --port 3001
+  <% elsif lang == "javascript" %>
+  - tests: npm run test -- --watch
+  # npm install -g watch
+  - lint: watch 'eslint . --ext .js'
+  - console: node
   <% elsif lang == "typescript" %>
   - tests: yarn test --watch
   # npm install -g watch
