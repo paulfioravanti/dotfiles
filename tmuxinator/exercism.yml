@@ -85,6 +85,7 @@ windows:
   # brew install bats
   # npm install -g watch
   - tests: watch '<%= "bats #{underscored_filename}_test.sh" %>'
+  - console: bash
   - lint: watch '<%= "shellcheck #{underscored_filename}.sh" %>'
   <% end %>
   # brew install grip
