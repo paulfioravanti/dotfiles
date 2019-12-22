@@ -26,4 +26,5 @@ surge
 markdownlint-cli
 prettier
 tldr
+watch
 yarn
