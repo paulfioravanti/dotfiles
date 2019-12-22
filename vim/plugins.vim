@@ -146,6 +146,8 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'vim-airline/vim-airline'
 " Themes for Vim airline
 Plugin 'vim-airline/vim-airline-themes'
+" Erlang indentation and syntax for Vim
+Plugin 'vim-erlang/vim-erlang-runtime'
 " Config files for editing, compiling Ruby
 Plugin 'vim-ruby/vim-ruby'
 " Change Ruby hash syntax to 1.9
