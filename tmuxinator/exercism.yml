@@ -87,6 +87,13 @@ windows:
   - tests: watch '<%= "bats #{underscored_filename}_test.sh" %>'
   - console: bash
   - lint: watch '<%= "shellcheck #{underscored_filename}.sh" %>'
+  <% elsif lang == "erlang" %>
+  # npm install -g watch
+  # NOTE: 6 seconds seems to be the magic number to disable the test command
+  # to make sure it doesn't run twice and pollute the test output.
+  # Option reference: https://github.com/mikeal/watch#cli
+  - tests: watch --wait=6 'rebar3 eunit'
+  - console: erl
   <% end %>
   # brew install grip
   # https://github.com/joeyespo/grip
