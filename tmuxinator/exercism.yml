@@ -94,6 +94,11 @@ windows:
   # Option reference: https://github.com/mikeal/watch#cli
   - tests: watch --wait=6 'rebar3 eunit'
   - console: erl
+  <% elsif lang == "rust" %>
+  # https://github.com/passcod/cargo-watch
+  - tests: cargo watch --exec test --clear
+  # No console/repl yet? https://github.com/rust-lang/rfcs/issues/655
+  # - console:
   <% end %>
   # brew install grip
   # https://github.com/joeyespo/grip
