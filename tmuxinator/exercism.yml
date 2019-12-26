@@ -95,8 +95,8 @@ windows:
   - tests: watch --wait=6 'rebar3 eunit'
   - console: erl
   <% elsif lang == "rust" %>
-  # https://github.com/passcod/cargo-watch
-  - tests: cargo watch --exec test --clear
+  # NOTE: cargo install cargo-watch (https://github.com/passcod/cargo-watch)
+  - tests: cargo watch --exec test --exec 'clippy --all-targets' --clear
   # No console/repl yet? https://github.com/rust-lang/rfcs/issues/655
   # - console:
   <% end %>
