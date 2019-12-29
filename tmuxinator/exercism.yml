@@ -1,11 +1,19 @@
 # ~/.tmuxinator/exercism.yml
 
-<% lang = @args[0] %>
-<% exercise = @args[1] %>
+<%
+  lang = @args[0]
+  exercise = @args[1]
+  root_path = "#{Dir.home}/exercism/#{lang}/#{exercise}"
+  if !File.directory?(root_path)
+    STDERR.puts("\e[31mCould not find exercise #{root_path}\e[0m")
+    STDERR.puts("Is \e[33m'#{exercise}'\e[0m a valid exercise name or \e[33m'#{lang}'\e[0m a valid language?")
+    exit 1
+  end
+%>
 
 name: exercism
 # Eg: mux exercism ruby hello-world => exercism/ruby/hello-world
-root: ~/exercism/<%= lang %>/<%= exercise %>
+root: <%= root_path %>
 
 on_project_first_start:
   <% if lang == "elm" %>
