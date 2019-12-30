@@ -107,6 +107,13 @@ windows:
   - tests: cargo watch --exec test --exec 'clippy --all-targets' --clear
   # No console/repl yet? https://github.com/rust-lang/rfcs/issues/655
   # - console:
+  <% elsif lang == "c" %>
+  # NOTE: 6 seconds seems to be the magic number to disable the test command
+  # to make sure it doesn't run twice and pollute the test output.
+  # Option reference: https://github.com/mikeal/watch#cli
+  - tests: watch --wait=6 'make test'
+  # No console/repl?
+  # - console:
   <% end %>
   # brew install grip
   # https://github.com/joeyespo/grip
