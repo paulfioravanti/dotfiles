@@ -16,7 +16,13 @@ name: exercism
 root: <%= root_path %>
 
 on_project_first_start:
-  <% if lang == "elm" %>
+  <% if lang == "cpp" %>
+  <% if !File.directory?("#{root_path}/build") %>
+  - mkdir build
+  - cd build
+  - cmake -G "Unix Makefiles" ..
+  <% end %>
+  <% elsif lang == "elm" %>
   - npm install
   # - elm install
   # elm-analyse
@@ -62,6 +68,15 @@ windows:
   # to make sure it doesn't run twice and pollute the test output.
   # Option reference: https://github.com/mikeal/watch#cli
   - tests: watch --wait=6 'make test'
+  # No console/repl?
+  # - console:
+  <% elsif lang == "cpp" %>
+  # NOTE: 6 seconds seems to be the magic number to disable the test command
+  # to make sure it doesn't run twice and pollute the test output.
+  # Option reference: https://github.com/mikeal/watch#cli
+  - tests:
+      root: <%= "#{root_path}/build" %>
+      panes: watch --wait=6 'make'
   # No console/repl?
   # - console:
   <% elsif lang == "elixir" %>
