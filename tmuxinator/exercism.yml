@@ -76,7 +76,7 @@ windows:
   # Option reference: https://github.com/mikeal/watch#cli
   - tests:
       root: <%= "#{root_path}/build" %>
-      panes: watch --wait=6 'make'
+      panes: watch --wait=6 'make' ..
   # No console/repl?
   # - console:
   <% elsif lang == "elixir" %>
