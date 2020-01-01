@@ -50,9 +50,20 @@ startup_window: editor
 
 windows:
   - editor: vim
-  <% if lang == "ruby" %>
-  - tests: guard --guardfile ~/exercism/ruby/Guardfile
-  - console: irb
+  <% if lang == "bash" %>
+  <% underscored_filename = exercise.tr("-", "_") %>
+  # brew install bats
+  # npm install -g watch
+  - tests: watch '<%= "bats #{underscored_filename}_test.sh" %>'
+  - console: bash
+  - lint: watch '<%= "shellcheck #{underscored_filename}.sh" %>'
+  <% elsif lang == "c" %>
+  # NOTE: 6 seconds seems to be the magic number to disable the test command
+  # to make sure it doesn't run twice and pollute the test output.
+  # Option reference: https://github.com/mikeal/watch#cli
+  - tests: watch --wait=6 'make test'
+  # No console/repl?
+  # - console:
   <% elsif lang == "elixir" %>
   <% underscored_filename = exercise.tr("-", "_") %>
   <% exercise_filename = "lib/#{underscored_filename}.ex" %>
@@ -78,23 +89,6 @@ windows:
   - tests: elm-test --watch
   - console: elm repl
   - analyse: elm-analyse --serve --port 3001
-  <% elsif lang == "javascript" %>
-  - tests: npm run test -- --watch
-  # npm install -g watch
-  - lint: watch 'eslint . --ext .js'
-  - console: node
-  <% elsif lang == "typescript" %>
-  - tests: yarn test --watch
-  # npm install -g watch
-  - lint: watch 'yarn lint --fix'
-  - console: node
-  <% elsif lang == "bash" %>
-  <% underscored_filename = exercise.tr("-", "_") %>
-  # brew install bats
-  # npm install -g watch
-  - tests: watch '<%= "bats #{underscored_filename}_test.sh" %>'
-  - console: bash
-  - lint: watch '<%= "shellcheck #{underscored_filename}.sh" %>'
   <% elsif lang == "erlang" %>
   # npm install -g watch
   # NOTE: 6 seconds seems to be the magic number to disable the test command
@@ -102,18 +96,24 @@ windows:
   # Option reference: https://github.com/mikeal/watch#cli
   - tests: watch --wait=6 'rebar3 eunit'
   - console: erl
+  <% elsif lang == "javascript" %>
+  - tests: npm run test -- --watch
+  # npm install -g watch
+  - lint: watch 'eslint . --ext .js'
+  - console: node
+  <% elsif lang == "ruby" %>
+  - tests: guard --guardfile ~/exercism/ruby/Guardfile
+  - console: irb
   <% elsif lang == "rust" %>
   # NOTE: cargo install cargo-watch (https://github.com/passcod/cargo-watch)
   - tests: cargo watch --exec test --exec 'clippy --all-targets' --clear
   # No console/repl yet? https://github.com/rust-lang/rfcs/issues/655
   # - console:
-  <% elsif lang == "c" %>
-  # NOTE: 6 seconds seems to be the magic number to disable the test command
-  # to make sure it doesn't run twice and pollute the test output.
-  # Option reference: https://github.com/mikeal/watch#cli
-  - tests: watch --wait=6 'make test'
-  # No console/repl?
-  # - console:
+  <% elsif lang == "typescript" %>
+  - tests: yarn test --watch
+  # npm install -g watch
+  - lint: watch 'yarn lint --fix'
+  - console: node
   <% end %>
   # brew install grip
   # https://github.com/joeyespo/grip
