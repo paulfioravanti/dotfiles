@@ -27,3 +27,7 @@ let g:elm_syntastic_show_warnings = 1
 " with Jekyll syntax in them, and issues with scss @import statements.
 " https://github.com/vim-syntastic/syntastic/issues/240#issuecomment-12957317
 let syntastic_mode_map = { 'passive_filetypes': ['html', 'scss'] }
+
+" C++ options
+" let g:syntastic_cpp_compiler = 'clang++'
+let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
