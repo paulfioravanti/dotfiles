@@ -111,6 +111,12 @@ windows:
   # Option reference: https://github.com/mikeal/watch#cli
   - tests: watch --wait=6 'rebar3 eunit'
   - console: erl
+  <% elsif lang == "java" %>
+  - tests: gradle --continuous test
+  - console:
+      # REF: https://tonnygaric.com/blog/how-to-run-jshell-on-mac-os-x-when-java-8-and-java-9-are-installed
+      root: /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/bin/
+      panes: jshell
   <% elsif lang == "javascript" %>
   - tests: npm run test -- --watch
   # npm install -g watch
