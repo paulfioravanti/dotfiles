@@ -5,4 +5,5 @@ numpy
 pylint
 pytest
 pytest-cache
+pytest-pep8
 scipy
