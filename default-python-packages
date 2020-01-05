@@ -1,9 +1,12 @@
 gym
 jupyter
 matplotlib
+mypy
 numpy
+pycodestyle
 pylint
 pytest
 pytest-cache
-pytest-pep8
+pytest-mypy
+pytest-pycodestyle
 scipy

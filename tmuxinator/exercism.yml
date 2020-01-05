@@ -123,9 +123,12 @@ windows:
   - lint: watch 'eslint . --ext .js'
   - console: node
   <% elsif lang == "python" %>
-  # pip install pytest-watch
+  # pip install pytest-watch pycodestyle pytest-pycodestyle mypy pytest-mypy
   # https://github.com/joeyespo/pytest-watch
-  - tests: pytest-watch --runner 'pytest --pep8'
+  # https://github.com/PyCQA/pycodestyle
+  # https://github.com/python/mypy
+  # Why --cache-clear? Because of pytest-cache plugin
+  - tests: pytest-watch --runner 'pytest --pycodestyle --cache-clear --mypy'
   - console: python
   <% elsif lang == "ruby" %>
   - tests: guard --guardfile ~/exercism/ruby/Guardfile
