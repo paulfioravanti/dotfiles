@@ -3,4 +3,6 @@ jupyter
 matplotlib
 numpy
 pylint
+pytest
+pytest-cache
 scipy
