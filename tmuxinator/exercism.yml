@@ -122,6 +122,11 @@ windows:
   # npm install -g watch
   - lint: watch 'eslint . --ext .js'
   - console: node
+  <% elsif lang == "python" %>
+  # pip install pytest-watch
+  # https://github.com/joeyespo/pytest-watch
+  - tests: pytest-watch --runner 'pytest --pep8'
+  - console: python
   <% elsif lang == "ruby" %>
   - tests: guard --guardfile ~/exercism/ruby/Guardfile
   - console: irb
