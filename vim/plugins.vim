@@ -130,6 +130,8 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-git'
 " Runtime files for Haml and Sass
 Plugin 'tpope/vim-haml'
+" Provides granular project configuration
+Plugin 'tpope/vim-projectionist'
 " Mappings for various types of tags
 Plugin 'tpope/vim-ragtag'
 " rails.vim
