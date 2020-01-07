@@ -1,0 +1,15 @@
+# ~/.tmuxinator/typey-type.yml
+
+name: typey-type
+root: ~/steno/typey-type
+
+# on_project_first_start:
+#   - git pull upstream master
+#   - git submodule update
+#   - yarn install
+
+windows:
+  - editor: vim
+  - tests: yarn run test
+  - server: yarn start
+  - grip: grip
