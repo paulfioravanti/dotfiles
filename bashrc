@@ -24,6 +24,8 @@ export EDITOR=vim
 export LSCOLORS=gxfxcxdxbxegedabagacad
 # Enable IEx shell history
 export ERL_AFLAGS="-kernel shell_history enabled"
+# Added for Crystal: https://github.com/crystal-lang/crystal/issues/6875#issuecomment-424999123
+export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/opt/openssl/lib/pkgconfig
 
 ## PATH ##
 export PATH=/usr/local/bin:$PATH
