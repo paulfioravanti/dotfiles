@@ -5,6 +5,7 @@ fuubar
 graphviz
 guard
 guard-minitest
+guard-process
 guard-rubocop
 license_finder
 minitest-focus
