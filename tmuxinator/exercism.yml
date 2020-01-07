@@ -79,6 +79,10 @@ windows:
       panes: watch --wait=6 'make' ..
   # No console/repl?
   # - console:
+  <% elsif lang == "crystal" %>
+  - tests: guard --guardfile ~/exercism/crystal/Guardfile
+  # https://github.com/crystal-community/icr
+  - console: icr
   <% elsif lang == "elixir" %>
   <% underscored_filename = exercise.tr("-", "_") %>
   <% exercise_filename = "lib/#{underscored_filename}.ex" %>
