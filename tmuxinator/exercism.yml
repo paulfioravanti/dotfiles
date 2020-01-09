@@ -46,10 +46,8 @@ pre_window:
   # other than the latest.
   # <% if lang == "ruby" %>
   # - asdf local ruby 2.6.3
-  # <% elsif lang == "elixir" %>
-  # - asdf local elixir 1.8.2-otp-22
-  # <% elsif lang == "elm" %>
-  # - asdf local elm 0.19.0
+  # <% elsif ... %>
+  # - ...
   # <% end %>
 
 startup_window: editor
@@ -80,7 +78,9 @@ windows:
   # No console/repl?
   # - console:
   <% elsif lang == "crystal" %>
-  - tests: guard --guardfile ~/exercism/crystal/Guardfile
+  # NOTE: There's currently a bunch of warning spam in the console, so use
+  # RUBYOPT="-W0" to silence it. REF: https://stackoverflow.com/a/28098594/567863
+  - tests: RUBYOPT="-W0" guard --guardfile ~/exercism/crystal/Guardfile
   # https://github.com/crystal-community/icr
   - console: icr
   <% elsif lang == "elixir" %>
@@ -135,7 +135,9 @@ windows:
   - tests: pytest-watch --runner 'pytest --pycodestyle --cache-clear --mypy'
   - console: python
   <% elsif lang == "ruby" %>
-  - tests: guard --guardfile ~/exercism/ruby/Guardfile
+  # NOTE: There's currently a bunch of warning spam in the console, so use
+  # RUBYOPT="-W0" to silence it. REF: https://stackoverflow.com/a/28098594/567863
+  - tests: RUBYOPT="-W0" guard --guardfile ~/exercism/ruby/Guardfile
   - console: irb
   <% elsif lang == "rust" %>
   # NOTE: cargo install cargo-watch (https://github.com/passcod/cargo-watch)
