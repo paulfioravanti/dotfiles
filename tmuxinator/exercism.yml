@@ -42,13 +42,12 @@ on_project_first_start:
   - open --background http://localhost:6419
 
 pre_window:
-  # NOTE: uncomment if I find that I need to use language versions
+  # NOTE: uncomment if I find that I need to use specific language versions
   # other than the latest.
   # <% if lang == "ruby" %>
   # - asdf local ruby 2.6.3
-  # <% elsif ... %>
-  # - ...
   # <% end %>
+  # Etc...
 
 startup_window: editor
 
