@@ -72,6 +72,8 @@ Plugin 'leafgarland/typescript-vim'
 " Expand abbreviations into html tags using Emmet
 " https://github.com/mattn/emmet-vim/blob/master/TUTORIAL
 Plugin 'mattn/emmet-vim'
+" Vim Haskell Brittany integration plugin
+Plugin 'meck/vim-brittany'
 " Vim integration for the Elixir formatter.
 Plugin 'mhinz/vim-mix-format'
 " Relative/Absolute line numbering for different modes
