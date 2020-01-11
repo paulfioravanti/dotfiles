@@ -114,6 +114,9 @@ windows:
   # Option reference: https://github.com/mikeal/watch#cli
   - tests: watch --wait=6 'rebar3 eunit'
   - console: erl
+  <% elsif lang == "haskell" %>
+  - tests: stack test --file-watch
+  - console: stack ghci
   <% elsif lang == "java" %>
   - tests: gradle --continuous test
   - console:
