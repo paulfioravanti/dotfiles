@@ -43,5 +43,7 @@ conf_layout:
   lconfig_indentPolicy: IndentPolicyLeft
   lconfig_indentWhereSpecial: true
   lconfig_columnAlignMode:
-    tag: ColumnAlignModeMajority
-    contents: 0.7
+    tag: ColumnAlignModeDisabled
+    # DEFAULT:
+    # tag: ColumnAlignModeMajority
+    # contents: 0.7
