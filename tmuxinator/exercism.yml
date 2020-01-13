@@ -146,6 +146,11 @@ windows:
   - tests: cargo watch --exec test --exec 'clippy --all-targets' --clear
   # No console/repl yet? https://github.com/rust-lang/rfcs/issues/655
   # - console:
+  <% elsif lang == "swift" %>
+  # NOTE: There's currently a bunch of warning spam in the console, so use
+  # RUBYOPT="-W0" to silence it. REF: https://stackoverflow.com/a/28098594/567863
+  - tests: RUBYOPT="-W0" guard --guardfile ~/exercism/swift/Guardfile
+  - console: swift
   <% elsif lang == "typescript" %>
   - tests: yarn test --watch
   # npm install -g watch
