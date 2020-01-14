@@ -24,6 +24,8 @@ Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'AndrewRadev/switch.vim'
 " Preview colours in source code while editing
 Plugin 'ap/vim-css-color'
+" Vim plugin for Julia: Automatic docstring generation & code formatting
+Plugin 'AtsushiSakai/julia.vim'
 " Tells Deckset to update it's preview window
 Plugin 'bwmcadams/vim-deckset'
 " Seamless navigation between tmux panes and vim splits
