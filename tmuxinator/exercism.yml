@@ -128,6 +128,11 @@ windows:
   # npm install -g watch
   - lint: watch 'eslint . --ext .js'
   - console: node
+  <% elsif lang == "julia" %>
+  # NOTE: There's currently a bunch of warning spam in the console, so use
+  # RUBYOPT="-W0" to silence it. REF: https://stackoverflow.com/a/28098594/567863
+  - tests: RUBYOPT="-W0" guard --guardfile ~/exercism/julia/Guardfile
+  - console: julia -i
   <% elsif lang == "python" %>
   # pip install pytest-watch pycodestyle pytest-pycodestyle mypy pytest-mypy
   # https://github.com/joeyespo/pytest-watch
