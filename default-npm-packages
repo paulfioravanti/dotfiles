@@ -17,6 +17,7 @@ elm-typescript-interop
 elm-upgrade
 elm-verify-examples
 elm-xref
+eslint
 htmllint-cli
 newman
 npm-check
