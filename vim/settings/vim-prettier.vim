@@ -1,4 +1,4 @@
-let g:prettier#quickfix_enabled = 0
+" let g:prettier#quickfix_enabled = 0
 let g:prettier#autoformat = 0
 
 let g:prettier#config#print_width = 80
