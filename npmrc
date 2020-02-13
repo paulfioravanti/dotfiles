@@ -3,3 +3,5 @@
 # - https://github.com/asdf-vm/asdf/issues/162
 # - https://github.com/npm/npm/issues/14372#issuecomment-274318330
 scripts-prepend-node-path=true
+# Flex app-specific
+@flexapp:registry=https://npm.pkg.github.com
