@@ -21,6 +21,7 @@ eslint
 htmllint-cli
 newman
 npm-check
+pnpm
 sass-lint
 serve
 surge
