@@ -220,3 +220,5 @@ function update() {
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 # Added for Crystal: https://github.com/crystal-lang/crystal/issues/6875#issuecomment-424999123
 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/opt/openssl/lib/pkgconfig
+# Added to hook in direnv: https://direnv.net/docs/hook.html#zsh
+eval "$(direnv hook zsh)"
