@@ -29,4 +29,5 @@ markdownlint-cli
 prettier
 tldr
 watch
+watchman
 yarn
