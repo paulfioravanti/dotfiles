@@ -80,6 +80,9 @@ Plugin 'meck/vim-brittany'
 Plugin 'mhinz/vim-mix-format'
 " Relative/Absolute line numbering for different modes
 Plugin 'myusuf3/numbers.vim'
+" A vim 7.4+ plugin to generate table of contents for Markdown files.
+" :GenTocGFM
+Plugin 'mzlogin/vim-markdown-toc'
 " Highlight all trailing Whitespace characters
 Plugin 'ntpeters/vim-better-whitespace'
 " HTML5 omnicomplete and syntax
