@@ -21,6 +21,7 @@ eslint
 htmllint-cli
 newman
 npm-check
+npm-check-updates
 npx
 pnpm
 sass-lint
