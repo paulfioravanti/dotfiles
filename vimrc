@@ -81,7 +81,7 @@ set wildignore+=docs/**
 " Don't include Elm vendor modules
 set wildignore+=elm-stuff/**
 " Don't include node_modules files
-set wildignore+=node_modules/**
+set wildignore+=**/node_modules/**
 " Don't include locally uploaded files in Rails apps
 set wildignore+=public/uploads/**
 " Don't include any Rails cache files
