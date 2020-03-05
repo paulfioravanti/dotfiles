@@ -29,6 +29,7 @@ serve
 surge
 markdownlint-cli
 prettier
+serverless
 tldr
 watch
 watchman
