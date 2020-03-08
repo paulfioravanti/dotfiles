@@ -25,6 +25,7 @@ npm-check
 npm-check-updates
 npx
 pnpm
+reason-cli@latest-macos
 sass-lint
 serve
 surge
