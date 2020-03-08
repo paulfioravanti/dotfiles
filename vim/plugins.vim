@@ -96,6 +96,8 @@ Plugin 'peitalin/vim-jsx-typescript'
 " A vim plugin wrapper for prettier, pre-configured with custom default
 " prettier settings
 Plugin 'prettier/vim-prettier', { 'do': 'yarn install' }
+" Reason Vim editor integration
+Plugin 'reasonml-editor/vim-reason-plus'
 " Vim plugin for clang-format, a formatter for C, C++, Obj-C, Java, JavaScript,
 " TypeScript and ProtoBuf.
 Plugin 'rhysd/vim-clang-format'
