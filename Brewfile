@@ -75,7 +75,7 @@ brew "carthage"
 brew "eigen"
 brew "mpfr"
 brew "cgal"
-brew "chicken"
+brew "chicken", link: false
 brew "clang-format"
 brew "cmake"
 brew "cmatrix"
