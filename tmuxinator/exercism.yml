@@ -32,6 +32,9 @@ on_project_first_start:
   # installed properly
   - rm package-lock.json
   - npm install
+  <% elsif lang == "reasonml" %>
+  - rm package-lock.json
+  - npm install
   <% elsif lang == "typescript" %>
   # Remove any existing yarn.lock files so that fsevents can be installed
   # properly
@@ -141,6 +144,13 @@ windows:
   # Why --cache-clear? Because of pytest-cache plugin
   - tests: pytest-watch --runner 'pytest --pycodestyle --cache-clear --mypy'
   - console: python
+  <% elsif lang == "reasonml" %>
+  # As you edit the code, the following two processes will continually rebuild
+  # and rerun the tests.
+  - build: npm start
+  - tests: npm test
+  # npm install -g reason-cli@latest-macos
+  - console: rtop
   <% elsif lang == "ruby" %>
   # NOTE: There's currently a bunch of warning spam in the console, so use
   # RUBYOPT="-W0" to silence it. REF: https://stackoverflow.com/a/28098594/567863
