@@ -3,13 +3,13 @@
 crystal 0.32.1
 elixir 1.10.2-otp-22
 elm 0.19.1
-erlang 22.2.6
+erlang 22.3
 golang 1.13.7
 haskell 8.8.2
 nodejs 13.9.0
 python 3.8.1 2.7.17
 redis 5.0.7
-ruby 2.7.0
+ruby 2.7.1
 rust 1.40.0
 julia 1.3.1
 java adopt-openjdk-13.0.1+9
