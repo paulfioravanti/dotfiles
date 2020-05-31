@@ -222,3 +222,5 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/opt/openssl/lib/pkgconfig
 # Added to hook in direnv: https://direnv.net/docs/hook.html#zsh
 eval "$(direnv hook zsh)"
+# Added for Quantum Mechanical Keyboard (QMK) firmware
+export QMK_HOME=~/c/qmk_firmware
