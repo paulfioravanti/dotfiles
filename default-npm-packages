@@ -23,7 +23,6 @@ htmllint-cli
 newman
 npm-check
 npm-check-updates
-npx
 pnpm
 reason-cli@latest-macos
 sass-lint
