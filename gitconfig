@@ -37,11 +37,6 @@
   program = gpg
 [heroku]
   account = personal
-[hooks]
-	symlinksourcerepo = /Users/paul/ruby/githooks
-	require-strict-paren-spacing = false
-[init]
-	templatedir = /Users/paul/ruby/githooks/githooks_bootstrap
 [pull]
   rebase = true
 [push]
