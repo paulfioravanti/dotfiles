@@ -32,6 +32,7 @@ markdownlint-cli
 prettier
 serverless
 tldr
+ts-node
 typescript
 watch
 watchman
