@@ -44,6 +44,8 @@ Plugin 'fatih/vim-go'
 Plugin 'gmarik/Vundle.vim'
 " Automatically insert or delete brackets, parens, quotes
 Plugin 'jiangmiao/auto-pairs'
+" GraphQL file detection, syntax highlighting, and indentation
+Plugin 'jparise/vim-graphql'
 " Toggle the cursor shape in the terminal for Vim
 Plugin 'jszakmeister/vim-togglecursor'
 " Easy code alignment
