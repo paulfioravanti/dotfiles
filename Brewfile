@@ -216,6 +216,7 @@ brew "ossp-uuid"
 brew "perl"
 brew "pgcli"
 brew "pinentry-mac"
+brew "plantuml"
 brew "podofo"
 brew "postgresql", restart_service: true
 brew "postgresql@10"
@@ -224,6 +225,7 @@ brew "python@2"
 brew "qcachegrind"
 brew "reattach-to-user-namespace"
 brew "rebar3"
+brew "redis", restart_service: true
 brew "ripgrep"
 brew "s3cmd"
 brew "sbt"
@@ -312,6 +314,7 @@ cask "keybase"
 cask "keycastr"
 cask "keymou"
 cask "linein"
+cask "microsoft-teams"
 cask "muzzle"
 cask "ngrok"
 cask "notion"
@@ -358,6 +361,7 @@ mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
 mas "Kindle", id: 405399194
 mas "LanguageTranslator", id: 1218781096
+mas "LG Screen Manager", id: 1142051783
 mas "LINE", id: 539883307
 mas "Monosnap", id: 540348655
 mas "Numbers", id: 409203825
