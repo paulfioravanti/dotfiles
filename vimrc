@@ -100,7 +100,7 @@ au VimResized * :wincmd =
 " Plugin Initialisation
 " ======================================================================
 " Loads all plugins specified under ~/.vim/plugins.vim
-" Currently uses Vundle to manage all other plugins
+" Currently uses plug.vim to manage all other plugins
 if filereadable(expand("~/.vim/plugins.vim"))
   source ~/.vim/plugins.vim
 endif
