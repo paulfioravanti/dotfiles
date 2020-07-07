@@ -197,7 +197,7 @@ function update() {
   fi
 
   echo "${yellow}Running Vim plugin updates...${reset}"
-  if vim +PluginUpdate +qall; then
+  if vim +PlugUpdate +qall; then
     echo "${green}Vim plugin updates done.${reset}"
   else
     echo "${red}Vim plugin updates failed.${reset}"

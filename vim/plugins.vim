@@ -174,6 +174,9 @@ Plug 'vim-scripts/ingo-library'
 Plug 'vim-scripts/syntaxrange'
 " Automatic syntax checking
 Plug 'vim-syntastic/syntastic'
+" Vim / Neovim plugin for preview PlantUML
+" Run :PlantumlOpen to open previewer webpage in browser
+Plug 'weirongxu/plantuml-previewer.vim'
 " Fast Sublime Text-style file searching
 " <Leader>t - Bring up fuzzy search
 Plug 'wincent/command-t'
