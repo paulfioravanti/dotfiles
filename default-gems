@@ -14,5 +14,6 @@ pry-doc
 rails
 rspec
 ruby-prof
+solargraph
 sonic-pi-cli
 tmuxinator
