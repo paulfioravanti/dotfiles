@@ -27,6 +27,8 @@ Plug 'AtsushiSakai/julia.vim'
 Plug 'bwmcadams/vim-deckset'
 " Seamless navigation between tmux panes and vim splits
 Plug 'christoomey/vim-tmux-navigator'
+" Fuzzy file, buffer, mru, tag, etc finder
+Plug 'ctrlpvim/ctrlp.vim'
 " SonicPi plugin for Vim
 " <leader>r - send buffer to sonicpi
 " <leader>S - send stop message to sonicpi
@@ -179,9 +181,6 @@ Plug 'vim-syntastic/syntastic'
 " Vim / Neovim plugin for preview PlantUML
 " Run :PlantumlOpen to open previewer webpage in browser
 Plug 'weirongxu/plantuml-previewer.vim'
-" Fast Sublime Text-style file searching
-" <Leader>t - Bring up fuzzy search
-Plug 'wincent/command-t'
 " Copy syntax-highlighted code from vim to the OS X clipboard as RTF tex
 " :CopyRTF
 Plug 'zerowidth/vim-copy-as-rtf'
