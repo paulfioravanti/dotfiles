@@ -43,6 +43,11 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'jparise/vim-graphql'
 " Toggle the cursor shape in the terminal for Vim
 Plug 'jszakmeister/vim-togglecursor'
+" Vim wrapper for Command-line fuzzy finder FZF
+" (assumes install via Homebrew)
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 " Easy code alignment
 " - vipga=
 "     visual-select inner paragraph
@@ -111,9 +116,6 @@ Plug 'rhysd/vim-crystal'
 " :Dash - will search for method under cursor in filetype's docset
 " :Dash function_name - will search for named method in filetype's docset
 Plug 'rizzatti/dash.vim'
-" Ag/The Silver Searcher for text searching
-" :Ag search_term
-Plug 'rking/ag.vim'
 " Rust file detection and syntax hightlighting
 Plug 'rust-lang/rust.vim'
 " .slim file syntax highlighting

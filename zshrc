@@ -73,6 +73,14 @@ export EDITOR=vim
 export LSCOLORS=gxfxcxdxbxegedabagacad
 # Enable IEx shell history
 export ERL_AFLAGS="-kernel shell_history enabled"
+# FZF fuzzy finder default options for Solarized Dark
+# https://github.com/junegunn/fzf/wiki/Color-schemes#alternate-solarized-lightdark-theme
+# NOTE: Not sure if I want to keep this here or move it into a
+# ~/.vim/settings/fzf.vim config file using `let g:fzf_colors`.
+export FZF_DEFAULT_OPTS="
+  --color fg:-1,bg:-1,hl:33,fg+:254,bg+:235,hl+:33
+  --color info:136,prompt:136,pointer:230,marker:230,spinner:136
+"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
