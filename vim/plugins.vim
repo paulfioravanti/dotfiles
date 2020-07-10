@@ -73,6 +73,9 @@ Plug 'kana/vim-textobj-user'
 Plug 'kchmck/vim-coffee-script'
 " Vim runtime files for Swift
 Plug 'keith/swift.vim'
+" Vim syntax highlighting plugin for JSON with C-style line (//)
+" and block (/* */) comments.
+Plug 'kevinoid/vim-jsonc'
 " Typescript syntax files for Vim
 Plug 'leafgarland/typescript-vim'
 " Expand abbreviations into html tags using Emmet
