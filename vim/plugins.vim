@@ -90,6 +90,9 @@ Plug 'myusuf3/numbers.vim'
 " A vim 7.4+ plugin to generate table of contents for Markdown files.
 " :GenTocGFM
 Plug 'mzlogin/vim-markdown-toc'
+" Intellisense engine for Vim8 & Neovim, full language server protocol
+" support as VSCode
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 " Highlight all trailing Whitespace characters
 Plug 'ntpeters/vim-better-whitespace'
 " HTML5 omnicomplete and syntax
