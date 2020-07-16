@@ -20,6 +20,7 @@ elm-verify-examples
 elm-xref
 eslint
 htmllint-cli
+json-server
 newman
 npm-check
 npm-check-updates
