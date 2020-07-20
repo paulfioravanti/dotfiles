@@ -65,29 +65,29 @@ set wildignore+=.git
 " Don't include .keep files
 set wildignore+=*.keep
 " Don't include Elixir _build files
-set wildignore+=_build/**
+set wildignore+=*/_build/**
 " Don't include Jekyll site files
-set wildignore+=_site/**
+set wildignore+=*/_site/**
 " Don't include Python cache files
 set wildignore+=__pycache__
 " Don't include any Rubymotion build files
-set wildignore+=build/**
+set wildignore+=*/build/**
 " Don't include code coverage files
-set wildignore+=coverage/**
+set wildignore+=*/coverage/**
 " Don't include Elixir Phoenix deps files
-set wildignore+=deps/**
+set wildignore+=*/deps/**
 " Don't include any files under docs/
 set wildignore+=docs/**
 " Don't include Elm vendor modules
-set wildignore+=elm-stuff/**
+set wildignore+=*/elm-stuff/**
 " Don't include node_modules files
 set wildignore+=**/node_modules/**
 " Don't include locally uploaded files in Rails apps
-set wildignore+=public/uploads/**
+set wildignore+=*/public/uploads/**
 " Don't include any Rails cache files
-set wildignore+=tmp/cache/**
+set wildignore+=*/tmp/cache/**
 " Don't include Rails cached vendor files
-set wildignore+=vendor/cache/**
+set wildignore+=*/vendor/cache/**
 " Don't include JS generated code
 set wildignore+=*/generated/**
 
