@@ -28,6 +28,7 @@ pnpm
 reason-cli@latest-macos
 sass-lint
 serve
+@stoplight/prism-cli
 surge
 markdownlint-cli
 prettier
