@@ -232,3 +232,5 @@ export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/opt/openssl/lib/pkgconfig
 eval "$(direnv hook zsh)"
 # Added for Quantum Mechanical Keyboard (QMK) firmware
 export QMK_HOME=~/c/qmk_firmware
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
