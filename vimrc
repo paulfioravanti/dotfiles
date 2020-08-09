@@ -139,7 +139,7 @@ nnoremap g, g,zz
 nnoremap <c-o> <c-o>zz
 
 " Show count of matches for the current search
-nnoremap <leader>c :%s///gn<cr>
+nnoremap <leader>c :%s///gn<CR>
 
 " ======================================================================
 "  Syntax, highlighting and spelling
@@ -174,7 +174,7 @@ set colorcolumn=81
 highlight ColorColumn ctermbg=238
 
 " Clean trailing whitespace
-nnoremap <leader>ww mz:%s/\s\+$//<cr>:let @/=''<cr>`z
+nnoremap <leader>ww mz:%s/\s\+$//<CR>:let @/=''<CR>`z
 
 " Make Vim return to the same line when you reopen a file.
 augroup line_return
@@ -198,7 +198,7 @@ function! ExecuteMacroOverVisualRange()
 endfunction
 
 " Edit vimrc whenever I need to
-nnoremap <leader>ev :vsplit ~/.vimrc<cr>
+nnoremap <leader>ev :vsplit ~/.vimrc<CR>
 
 " Add emacs/shell bindings in command mode for beginning/end of command
 cnoremap <c-a> <home>
@@ -220,12 +220,6 @@ nnoremap <leader>I :call IndentGuides()<cr>
 
 " <C-z> is awkward to reach
 nnoremap <leader>z <C-z>
-
-" Toggle Flay for Ruby code
-nnoremap <Leader>f :FlayToggle<CR>
-
-" Toggle NERDTree
-map <C-n> :NERDTreeToggle<CR>
 
 " Pro Mode: Don't use those arrow keys
 nnoremap <Up> <NOP>

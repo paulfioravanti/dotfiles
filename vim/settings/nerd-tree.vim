@@ -12,3 +12,6 @@ let g:NERDTreeShowLineNumbers = 1
 let NERDTreeShowHidden = 1
 " Case-sensitive sorting of filenames
 let NERDTreeCaseSensitiveSort = 1
+" Toggle NERDTree
+map <C-n> :NERDTreeToggle<CR>
+nnoremap <Leader>f :NERDTreeFind<CR>
