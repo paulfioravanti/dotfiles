@@ -8,6 +8,8 @@ call plug#begin('~/.vim/plugged')
 
 " Show git diff indicators in left gutter of screen
 Plug 'airblade/vim-gitgutter'
+" vim syntax file for plantuml
+Plug 'aklt/plantuml-syntax'
 " Solarized colour scheme for Vim
 Plug 'altercation/vim-colors-solarized'
 " Simplifies the transition between multiline and single-line code
@@ -167,6 +169,8 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 " Bracket mappings for various commands
 Plug 'tpope/vim-unimpaired'
+" Open URI with your favorite browser from your most favorite editor
+Plug 'tyru/open-browser.vim'
 " Status line for Vim
 Plug 'vim-airline/vim-airline'
 " Themes for Vim airline
