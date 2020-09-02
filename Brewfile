@@ -86,7 +86,7 @@ brew "coreutils"
 brew "cscope"
 brew "ctags"
 brew "curl"
-brew "dash"
+brew "dash", link: false
 brew "dfu-programmer"
 brew "diff-so-fancy"
 brew "direnv"
