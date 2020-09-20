@@ -126,6 +126,8 @@ Plug 'rhysd/vim-crystal'
 " :Dash - will search for method under cursor in filetype's docset
 " :Dash function_name - will search for named method in filetype's docset
 Plug 'rizzatti/dash.vim'
+" Coc.nvim extension for Tailwind CSS IntelliSense
+Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
 " Rust file detection and syntax hightlighting
 Plug 'rust-lang/rust.vim'
 " .slim file syntax highlighting
