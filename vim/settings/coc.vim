@@ -5,6 +5,7 @@ let g:coc_global_extensions = [
   \ 'coc-prettier',
   \ 'coc-solargraph',
   \ 'coc-tsserver',
+  \ 'coc-elixir'
   \ ]
 
 " NOTE: Lifted pretty much wholesale from:
