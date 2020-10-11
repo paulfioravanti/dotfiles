@@ -1,11 +1,13 @@
 let g:coc_global_extensions = [
   \ 'coc-css',
+  \ 'coc-elixir',
   \ 'coc-eslint',
   \ 'coc-json',
   \ 'coc-prettier',
+  \ 'coc-snippets',
   \ 'coc-solargraph',
+  \ 'coc-tailwindcss',
   \ 'coc-tsserver',
-  \ 'coc-elixir'
   \ ]
 
 " NOTE: Lifted pretty much wholesale from:
