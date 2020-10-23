@@ -33,6 +33,7 @@
 [core]
   autocrlf = input
   editor = vim
+  attributesfile = /Users/paul/.gitattributes
 [gpg]
   program = gpg
 [heroku]
@@ -53,4 +54,4 @@
   process = git-lfs filter-process
   required = true
 [fetch]
-	prune = true
+  prune = true
