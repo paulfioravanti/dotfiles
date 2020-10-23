@@ -99,7 +99,7 @@ brew "pth"
 brew "dirmngr"
 brew "docker", link: false
 brew "docker-machine"
-brew "elasticsearch", restart_service: true
+brew "elasticsearch"
 brew "guile"
 brew "libidn2"
 brew "libtasn1"
