@@ -17,7 +17,6 @@ tap "qmk/qmk"
 tap "raggi/ale"
 tap "stackery/tap"
 tap "thoughtbot/formulae"
-cask "xquartz"
 brew "adns"
 brew "openssl@1.1"
 brew "alpine"
@@ -57,6 +56,7 @@ brew "avro-tools"
 brew "aws-elasticbeanstalk"
 brew "awscli"
 brew "bash"
+brew "bat"
 brew "bats"
 brew "berkeley-db@4"
 brew "bison"
@@ -224,6 +224,7 @@ brew "podofo"
 brew "postgresql", restart_service: true
 brew "postgresql@10"
 brew "postgresql@11"
+brew "postgresql@12"
 brew "python@2", link: false
 brew "qcachegrind"
 brew "reattach-to-user-namespace"
@@ -366,6 +367,7 @@ cask "usb-overdrive"
 cask "visual-studio-code"
 cask "vlc"
 cask "whatsapp"
+cask "xquartz"
 cask "zeplin"
 cask "zoomus"
 cask "zsa-wally"
@@ -378,6 +380,7 @@ mas "LINE", id: 539883307
 mas "Monosnap", id: 540348655
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
+mas "PDF Squeezer 3", id: 504700302
 mas "Prepo", id: 476533227
 mas "Swiftify for Xcode", id: 1183412116
 mas "Swiftpoint Control Panel", id: 1502319732

@@ -14,7 +14,7 @@ on_project_first_start:
   - open --background https://analytics.google.com/analytics
   - open --background https://search.google.com/search-console
   - open --background https://paulfioravanti.disqus.com
-  - open --background https://us2.admin.mailchimp.com/lists/dashboard/overview?id=969734
+  - open --background https://buttondown.email/subscribers
   # Jekyll server
   - open --background http://localhost:<%= jekyll_port %>
   # Grip server
