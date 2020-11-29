@@ -212,7 +212,7 @@ function update() {
   fi
 
   echo "${yellow}Running Oh My Zsh updates...${reset}"
-  if upgrade_oh_my_zsh; then
+  if omz update; then
     echo "${green}Oh My Zsh updates done.${reset}"
   else
     echo "${red}Oh My Zsh updates failed.${reset}"
