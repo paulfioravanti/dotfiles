@@ -2,7 +2,10 @@
 
 name: three_little_pigs
 root: ~/ruby/three_little_pigs
-pre_window: asdf local ruby 2.6.3
+on_project_first_start:
+  - bundle install
+  - bundle update
+pre_window: asdf local ruby 2.7.2
 startup_window: editor
 windows:
   - editor: vim
