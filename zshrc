@@ -95,7 +95,7 @@ export FZF_DEFAULT_OPTS="
 alias ls="exa --header --long --group-directories-first --git --all"
 alias git=hub # use git to execute hub commands as well
 # delete all local branches that have been merged into master, excluding current branch, develop, and master
-alias gsweep='git branch --merged master | command grep -vE "^(\*|\s*develop\s*|\s*master\s*$)" | command xargs -n 1 git branch -d'
+alias gsweep='git branch --merged master | command grep -vE "^(\*|\s*develop\s*|\s*master\s*|\s*main\s*$)" | command xargs -n 1 git branch -d'
 # For whatever reason, the mux alias built into tmuxinator doesn't seem to
 # be working, so just set it manually
 alias mux=tmuxinator
