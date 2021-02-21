@@ -18,9 +18,7 @@ startup_window: editor
 
 windows:
   - editor: vim
-  # Reason for disabling Elm debugger:
-  # https://github.com/elm/compiler/issues/1851
-  - server: ELM_DEBUGGER=false elm-app start
+  - server: elm-app start
   - repl: elm-app repl
   - elm-analyse: elm-analyse --serve --port 3001
   - grip: grip
