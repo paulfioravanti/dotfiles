@@ -19,6 +19,7 @@ elm-upgrade
 elm-verify-examples
 elm-xref
 eslint
+gh-pages
 htmllint-cli
 jest
 json-server
