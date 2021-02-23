@@ -14,6 +14,7 @@ elm-i18n-gen
 elm-json
 elm-outdated
 elm-test
+@elm-tooling/elm-language-server
 elm-typescript-interop
 elm-upgrade
 elm-verify-examples
