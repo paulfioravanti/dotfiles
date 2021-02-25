@@ -101,33 +101,8 @@ alias gsweep='git branch --merged master | command grep -vE "^(\*|\s*develop\s*|
 alias mux=tmuxinator
 # In order to do things like find . -name "*.ex" | map wc -l
 alias map="xargs -n1"
-# Rather than use system Vim 7.4, use MacVim 8 in "vi mode", which enables
-# keeping Command-T compiled with system Ruby, and access to Clipboard, which
-# system Vim doesn't have(!)
-# NOTE: This doesn't seem to be needed anymore as Homebrew vim is now on
-# version 8, and is bundled with Ruby and clipboard that also works in a tmux
-# session, and Command-T can compile with system Ruby and work with this.
-# If this changes and I need to go back to macvim, then `brew install macvim`.
-# alias vim="mvim -v"
-# Allow <C-s> to be used by Command-T in Vim
-# http://stackoverflow.com/q/8616843/567863
-stty -ixon -ixoff
 
 # Functions
-
-# Checks to see whether there is a binstub in the working directory
-# for rspec and uses it.  If not, it falls back to normal behaviour.
-# NOTE: Currently not working: returns the error
-# compdef: unknown command or service: rspec
-# function _rspec_command() {
-#   if [ -e "bin/rspec" ]; then
-#     bin/rspec $@
-#   else
-#     command rspec $@
-#   fi
-# }
-# alias rspec='_rspec_command'
-# compdef _rspec_command=rspec
 
 # One function to update all development dependencies
 function update() {
