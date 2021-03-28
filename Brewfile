@@ -225,7 +225,7 @@ brew "pgcli"
 brew "pinentry-mac"
 brew "plantuml"
 brew "podofo"
-brew "postgresql", restart_service: true
+brew "postgresql"
 brew "postgresql@10"
 brew "postgresql@11"
 brew "postgresql@12"
@@ -267,7 +267,7 @@ brew "zsh-completions"
 brew "aws/tap/aws-sam-cli"
 brew "browsh-org/browsh/browsh"
 brew "gigalixir/brew/gigalixir"
-brew "heroku/brew/heroku-node"
+brew "heroku/brew/heroku-node", link: true
 brew "heroku/brew/heroku"
 brew "osx-cross/arm/arm-gcc-bin@10", link: false
 brew "osx-cross/arm/arm-gcc-bin@8"
