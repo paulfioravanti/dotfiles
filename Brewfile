@@ -225,7 +225,7 @@ brew "pgcli"
 brew "pinentry-mac"
 brew "plantuml"
 brew "podofo"
-brew "postgresql"
+brew "postgresql", restart_service: true
 brew "postgresql@10"
 brew "postgresql@11"
 brew "postgresql@12"
