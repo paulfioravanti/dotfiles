@@ -32,6 +32,9 @@ plugins=(
   z
 )
 
+# REF: https://stackoverflow.com/questions/18371970/ruby-aliased-to-bundled-ruby
+export UNBUNDLED_COMMANDS=(rubocop)
+
 # User configuration
 
 # zsh-specific config:
