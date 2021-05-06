@@ -12,6 +12,7 @@ pry-byebug
 pry-doc
 rails
 rspec
+rubocop
 ruby-prof
 solargraph
 sonic-pi-cli
