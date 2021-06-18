@@ -13,6 +13,6 @@ ruby 3.0.1
 rust 1.52.1
 julia 1.6.1
 java openjdk-15.0.2
-gradle 7.0.2
+gradle 7.1
 dhall 1.39.0
 clojure 1.10.3.855
