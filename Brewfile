@@ -57,7 +57,19 @@ brew "avro-tools"
 brew "aws-elasticbeanstalk"
 brew "libpng"
 brew "freetype"
+brew "fontconfig"
+brew "lzo"
+brew "pixman"
+brew "cairo"
+brew "fribidi"
+brew "gobject-introspection"
+brew "graphite2"
+brew "harfbuzz"
 brew "jpeg"
+brew "libtiff"
+brew "little-cms2"
+brew "openjpeg"
+brew "webp"
 brew "aws-google-auth"
 brew "awscli"
 brew "bash"
@@ -73,10 +85,6 @@ brew "boost-python"
 brew "ghc"
 brew "cabal-install"
 brew "cabextract"
-brew "fontconfig"
-brew "lzo"
-brew "pixman"
-brew "cairo"
 brew "carthage"
 brew "coreutils"
 brew "guile"
@@ -113,22 +121,14 @@ brew "dirmngr"
 brew "docker", link: false
 brew "docker-machine"
 brew "elasticsearch"
-brew "libtiff"
 brew "wxmac"
 brew "exa"
 brew "exercism"
 brew "fasd"
 brew "fdk-aac"
 brew "libogg"
-brew "fribidi"
 brew "giflib"
-brew "gobject-introspection"
-brew "graphite2"
-brew "harfbuzz"
 brew "lame"
-brew "little-cms2"
-brew "openjpeg"
-brew "webp"
 brew "libvorbis"
 brew "opus"
 brew "libvpx"
@@ -198,8 +198,6 @@ brew "libbitcoin-client"
 brew "libbitcoin-network"
 brew "libbitcoin-explorer"
 brew "libcroco"
-brew "proj"
-brew "liblwgeom"
 brew "libssh"
 brew "libsvg"
 brew "libvo-aacenc"
@@ -232,6 +230,7 @@ brew "postgis"
 brew "postgresql@10"
 brew "postgresql@11"
 brew "postgresql@12"
+brew "proj"
 brew "python@2", link: false
 brew "qcachegrind"
 brew "qt"
@@ -265,7 +264,7 @@ brew "yasm"
 brew "youtube-dl"
 brew "zlib"
 brew "zsh"
-brew "zsh-completions", link: false
+brew "zsh-completions"
 brew "aws/tap/aws-sam-cli"
 brew "browsh-org/browsh/browsh"
 brew "gigalixir/brew/gigalixir"
@@ -393,18 +392,34 @@ cask "zeplin"
 cask "zoom"
 cask "zsa-wally"
 mas "iMovie", id: 408981434
+mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
 mas "Keynote", id: 409183694
 mas "Kindle", id: 405399194
+mas "Kindle", id: 405399194
+mas "LanguageTranslator", id: 1218781096
 mas "LanguageTranslator", id: 1218781096
 mas "LG Screen Manager", id: 1142051783
+mas "LG Screen Manager", id: 1142051783
+mas "LINE", id: 539883307
 mas "LINE", id: 539883307
 mas "Monosnap", id: 540348655
+mas "Monosnap", id: 540348655
+mas "Numbers", id: 409203825
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
+mas "Pages", id: 409201541
+mas "PDF Squeezer 3", id: 504700302
 mas "PDF Squeezer 3", id: 504700302
 mas "Prepo", id: 476533227
+mas "Prepo", id: 476533227
+mas "Swiftify for Xcode", id: 1183412116
 mas "Swiftify for Xcode", id: 1183412116
 mas "Swiftpoint Control Panel", id: 1502319732
+mas "Swiftpoint Control Panel", id: 1502319732
+mas "Trello", id: 1278508951
 mas "Trello", id: 1278508951
 mas "TweetDeck", id: 485812721
+mas "TweetDeck", id: 485812721
+mas "Xcode", id: 497799835
 mas "Xcode", id: 497799835
