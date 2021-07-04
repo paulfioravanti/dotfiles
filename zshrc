@@ -146,12 +146,13 @@ function update() {
     echo "${red}ASDF updates failed.${reset}"
   fi
 
-  echo "${yellow}Running App Store updates...${reset}"
-  if mas upgrade; then
-    echo "${green}App Store updates done.${reset}"
-  else
-    echo "${red}App Store updates failed.${reset}"
-  fi
+  # NOTE: Looks like brew bundle takes care of this now.
+  # echo "${yellow}Running App Store updates...${reset}"
+  # if mas upgrade; then
+  #   echo "${green}App Store updates done.${reset}"
+  # else
+  #   echo "${red}App Store updates failed.${reset}"
+  # fi
 
   echo "${yellow}Running Ruby gem updates...${reset}"
   if gem update --system && gem update && gem cleanup; then
