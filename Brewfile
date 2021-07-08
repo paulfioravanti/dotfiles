@@ -392,34 +392,15 @@ cask "zeplin"
 cask "zoom"
 cask "zsa-wally"
 mas "iMovie", id: 408981434
-mas "iMovie", id: 408981434
-mas "Keynote", id: 409183694
 mas "Keynote", id: 409183694
 mas "Kindle", id: 405399194
-mas "Kindle", id: 405399194
 mas "LanguageTranslator", id: 1218781096
-mas "LanguageTranslator", id: 1218781096
-mas "LG Screen Manager", id: 1142051783
-mas "LG Screen Manager", id: 1142051783
-mas "LINE", id: 539883307
 mas "LINE", id: 539883307
 mas "Monosnap", id: 540348655
-mas "Monosnap", id: 540348655
-mas "Numbers", id: 409203825
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
-mas "Pages", id: 409201541
-mas "PDF Squeezer 3", id: 504700302
 mas "PDF Squeezer 3", id: 504700302
 mas "Prepo", id: 476533227
-mas "Prepo", id: 476533227
-mas "Swiftify for Xcode", id: 1183412116
-mas "Swiftify for Xcode", id: 1183412116
-mas "Swiftpoint Control Panel", id: 1502319732
-mas "Swiftpoint Control Panel", id: 1502319732
-mas "Trello", id: 1278508951
 mas "Trello", id: 1278508951
 mas "TweetDeck", id: 485812721
-mas "TweetDeck", id: 485812721
-mas "Xcode", id: 497799835
 mas "Xcode", id: 497799835
