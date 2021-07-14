@@ -401,6 +401,7 @@ mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "PDF Squeezer 3", id: 504700302
 mas "Prepo", id: 476533227
+mas "Swiftpoint Control Panel", id: 1502319732
 mas "Trello", id: 1278508951
 mas "TweetDeck", id: 485812721
 mas "Xcode", id: 497799835
