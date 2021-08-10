@@ -121,7 +121,7 @@ brew "dirmngr"
 brew "docker", link: false
 brew "docker-machine"
 brew "elasticsearch"
-brew "wxmac"
+brew "wxwidgets"
 brew "exa"
 brew "exercism"
 brew "fasd"
@@ -157,7 +157,6 @@ brew "nspr"
 brew "nss"
 brew "openblas"
 brew "numpy"
-brew "poppler"
 brew "gdal", link: false
 brew "gdk-pixbuf"
 brew "geckodriver"
@@ -224,6 +223,8 @@ brew "pgcli"
 brew "pinentry-mac"
 brew "plantuml"
 brew "podofo"
+brew "qt"
+brew "poppler"
 brew "postgresql", restart_service: true
 brew "sfcgal"
 brew "postgis"
@@ -233,7 +234,6 @@ brew "postgresql@12"
 brew "proj"
 brew "python@2", link: false
 brew "qcachegrind"
-brew "qt"
 brew "reattach-to-user-namespace"
 brew "rebar3"
 brew "redis", restart_service: true
@@ -404,4 +404,5 @@ mas "Prepo", id: 476533227
 mas "Swiftpoint Control Panel", id: 1502319732
 mas "Trello", id: 1278508951
 mas "TweetDeck", id: 485812721
+mas "Xcode", id: 497799835
 mas "Xcode", id: 497799835
