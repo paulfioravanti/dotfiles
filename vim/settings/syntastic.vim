@@ -38,3 +38,8 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_haskell_checkers = ['hlint', 'ghc_mod']
+
+" Shell options
+" This flag fixes the following issue:
+" https://vi.stackexchange.com/questions/10007/how-to-make-syntastic-include-sourced-files-for-bash-syntax-as-shellcheck-x
+let g:syntastic_sh_shellcheck_args = "-x"
