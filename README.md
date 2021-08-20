@@ -8,6 +8,15 @@ Before setting up a new development environment on a new machine:
 
 - Install [XCode][xcode]
 - Install XCode Command Line Tools (run `$ xcode-select --install`)
+- Install [Homebrew][]
+
+Then:
+
+```txt
+brew install rcm
+git clone git@github.com:paulfioravanti/dotfiles.git .dotfiles
+cd .dotfiles
+```
 
 ## Initial Setup
 
@@ -17,19 +26,19 @@ symlinked to the home directory:
 #### `bash`:
 
 ```sh
-$ rcup -x README.md -x LICENSE.txt -x setup.sh -x config.sh -x *:vim:setup.sh -x *:tmux:setup.sh -x *:oh-my-zsh:setup.sh -x osx -x keyboards
+rcup -x README.md -x LICENSE.txt -x setup.sh -x config.sh -x '*:vim:setup.sh' -x '*:tmux:setup.sh' -x '*:oh-my-zsh:setup.sh' -x osx -x keyboards
 ```
 
 #### `zsh`:
 
 ```sh
-$ rcup -x README.md -x LICENSE.txt -x setup.sh -x config.sh -x \*:vim:setup.sh -x \*:tmux:setup.sh -x \*:oh-my-zsh:setup.sh -x osx -x keyboards
+rcup -x README.md -x LICENSE.txt -x setup.sh -x config.sh -x \*:vim:setup.sh -x \*:tmux:setup.sh -x \*:oh-my-zsh:setup.sh -x osx -x keyboards
 ```
 
 ## Regenerate Dotfiles
 
 ```sh
-$ rcup
+rcup
 ```
 
 Once initial setup has been run, the `.rcrc` config file for `rcup` will have
@@ -39,21 +48,20 @@ in the future (unless more files to be excluded from being symlinked are added).
 ## Setup Scripts
 
 ```sh
-$ git clone https://github.com/paulfioravanti/dotfiles.git ~/.dotfiles
-$ source ~/.dotfiles/setup.sh
+source ~/.dotfiles/setup.sh
 ```
 
 Regenerate config for all apps and libraries under dotfiles:
 
 ```sh
-$ source ~/.dotfiles/config.sh
+source ~/.dotfiles/config.sh
 ```
 
 Or individually (choose relevant script to regenerate config):
 
 ```sh
-$ source ~/.dotfiles/osx/homebrew/config.sh
-$ source ~/.dotfiles/osx/iterm2/config.sh
+source ~/.dotfiles/osx/homebrew/config.sh
+source ~/.dotfiles/osx/iterm2/config.sh
 ```
 
 ## Social
@@ -61,6 +69,7 @@ $ source ~/.dotfiles/osx/iterm2/config.sh
 [![Contact][twitter-badge]][twitter-url]<br />
 [![Stack Overflow][stackoverflow-badge]][stackoverflow-url]
 
+[Homebrew]: https://brew.sh/
 [rcm]: https://github.com/thoughtbot/rcm
 [stackoverflow-badge]: http://stackoverflow.com/users/flair/567863.png
 [stackoverflow-url]: http://stackoverflow.com/users/567863/paul-fioravanti
