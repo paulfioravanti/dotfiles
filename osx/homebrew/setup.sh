@@ -1,9 +1,6 @@
 #!/bin/bash
 
-# Install Brew, taps, packages, and casks
-
-# Install Brew
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+# Configure Brew, taps, packages, and casks
 
 # Ask for the administrator password upfront.
 sudo -v
@@ -24,5 +21,4 @@ brew update
 brew upgrade
 # Brew cask upgrade
 brew cu
-brew cask cleanup
 brew cleanup

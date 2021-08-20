@@ -6,8 +6,9 @@
 DOTFILES_DIR=$(dirname "${BASH_SOURCE:-$0}")
 
 # Generate ssh key
-ssh-keygen -t rsa -b 4096 -N "" -f ~/.ssh/id_rsa
-ssh-add ~/.ssh/id_rsa
+# https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+ssh-keygen -t ed25519 -C ""
+ssh-add -K ~/.ssh/id_ed25519
 
 # Install brew packages and casks
 source "$DOTFILES_DIR/osx/homebrew/setup.sh"
