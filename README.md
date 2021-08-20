@@ -14,8 +14,7 @@ Then:
 
 ```txt
 brew install rcm
-git clone git@github.com:paulfioravanti/dotfiles.git .dotfiles
-cd .dotfiles
+git clone git@github.com:paulfioravanti/dotfiles.git ~/.dotfiles
 ```
 
 ## Initial Setup
