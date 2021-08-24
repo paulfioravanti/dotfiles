@@ -259,7 +259,6 @@ brew "heroku/brew/heroku"
 brew "osx-cross/arm/arm-gcc-bin@10", link: false
 brew "osx-cross/arm/arm-gcc-bin@8"
 brew "osx-cross/avr/avr-binutils"
-brew "prisma/prisma/prisma"
 brew "px4/px4/gcc-arm-none-eabi"
 brew "qmk/qmk/qmk"
 brew "stackery/tap/stackery-cli"
