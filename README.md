@@ -1,6 +1,7 @@
 ## dotfiles
 
-My configuration files to bootstrap a new macOS machine for web development.
+My configuration files for web development, and scripts to bootstrap a macOS
+machine.
 
 Set up for use with [rcm][rcm].
 
@@ -26,7 +27,8 @@ source ~/.dotfiles/setup.sh
 ```
 
 Once setup has finished, restart computer and run the `update` function that
-is contained in the `zshrc` file (zsh should have been installed during setup):
+is contained in the `zshrc` file (zsh should have been installed during the
+bootstrap process):
 
 ```sh
 update
