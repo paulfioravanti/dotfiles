@@ -60,13 +60,13 @@ bootstrap process above):
 #### `bash`:
 
 ```sh
-rcup -x README.md -x LICENSE.txt -x setup.sh -x config.sh -x '*:vim:setup.sh' -x '*:tmux:setup.sh' -x '*:oh-my-zsh:setup.sh' -x osx -x keyboards
+rcup -x README.md -x LICENSE.txt -x setup.sh -x config.sh -x '*:vim:setup.sh' -x '*:tmux:setup.sh' -x '*:oh-my-zsh:setup.sh' -x osx -x asdf
 ```
 
 #### `zsh`:
 
 ```sh
-rcup -x README.md -x LICENSE.txt -x setup.sh -x config.sh -x \*:vim:setup.sh -x \*:tmux:setup.sh -x \*:oh-my-zsh:setup.sh -x osx -x keyboards
+rcup -x README.md -x LICENSE.txt -x setup.sh -x config.sh -x \*:vim:setup.sh -x \*:tmux:setup.sh -x \*:oh-my-zsh:setup.sh -x osx -x asdf
 ```
 
 ## Regenerate Dotfiles
