@@ -13,11 +13,9 @@ tap "homebrew/core"
 tap "homebrew/services"
 tap "osx-cross/arm"
 tap "osx-cross/avr"
-tap "prisma/prisma"
 tap "px4/px4"
 tap "qmk/qmk"
 tap "raggi/ale"
-tap "stackery/tap"
 tap "thoughtbot/formulae"
 brew "adns"
 brew "openssl@1.1"
@@ -332,5 +330,4 @@ mas "Prepo", id: 476533227
 mas "Swiftpoint Control Panel", id: 1502319732
 mas "Trello", id: 1278508951
 mas "TweetDeck", id: 485812721
-mas "Xcode", id: 497799835
 mas "Xcode", id: 497799835

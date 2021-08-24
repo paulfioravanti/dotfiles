@@ -12,13 +12,19 @@ while true; do
   kill -0 "$$" || exit
 done &
 
+# Install Homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
 # Enable usage of the `brew bundle` command with a `Brewfile`
 brew tap Homebrew/bundle
 # NOTE: `brew bundle` needs to have a `Brewfile` specified when run
 # from here, *and* it can't be passed a symlink ie ~/Brewfile
 brew bundle --file=~/.dotfiles/Brewfile
+# Run brew updates
 brew update
+brew outdated
 brew upgrade
-# Brew cask upgrade
-brew cu
+brew cleanup
+# Run brew cask upgrades
+brew cu --all --cleanup --yes
 brew cleanup

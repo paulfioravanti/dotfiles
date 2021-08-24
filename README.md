@@ -1,26 +1,42 @@
 ## dotfiles
 
+My configuration files to bootstrap a new macOS machine for web development.
+
 Set up for use with [rcm][rcm].
 
-## Apple Machine Setup
-
-Before setting up a new development environment on a new machine:
-
-- Install [XCode][xcode]
-- Install XCode Command Line Tools (run `$ xcode-select --install`)
-- Install [Homebrew][]
-
-Then:
+## Install
 
 ```txt
-brew install rcm
 git clone git@github.com:paulfioravanti/dotfiles.git ~/.dotfiles
 ```
 
-## Initial Setup
+## Bootstrap New Machine
+
+### Pre-Setup
+
+Before setting up a development environment on a new machine:
+
+- Install [XCode][xcode]
+- Install XCode Command Line Tools (run `$ xcode-select --install`)
+
+### Run Install Script
+
+```sh
+source ~/.dotfiles/setup.sh
+```
+
+Once setup has finished, restart computer and run the `update` function that
+is contained in the `zshrc` file (zsh should have been installed during setup):
+
+```sh
+update
+```
+
+## Generate Dotfiles
 
 Generate dotfile directory, excluding (`-x`) files that don't need to be
-symlinked to the home directory:
+symlinked to the home directory (this step will be performed during the
+bootstrap process above):
 
 #### `bash`:
 
@@ -46,11 +62,8 @@ in the future (unless more files to be excluded from being symlinked are added).
 
 ## Setup Scripts
 
-```sh
-source ~/.dotfiles/setup.sh
-```
-
-Regenerate config for all apps and libraries under dotfiles:
+Regenerate config for all apps and libraries under dotfiles (all of these
+scripts get run during the bootstrap process):
 
 ```sh
 source ~/.dotfiles/config.sh

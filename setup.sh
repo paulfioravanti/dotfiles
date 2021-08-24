@@ -14,6 +14,7 @@ ssh-add -K ~/.ssh/id_ed25519
 source "$DOTFILES_DIR/osx/homebrew/setup.sh"
 
 # Get Solarized colors for iTerm.
+# iTerm should have been installed by Homebrew
 git clone https://github.com/altercation/solarized.git ~/solarized
 open ~/solarized/iterm2-colors-solarized/Solarized\ Dark.itermcolors
 open ~/solarized/iterm2-colors-solarized/Solarized\ Light.itermcolors
@@ -23,9 +24,6 @@ open ~/solarized/iterm2-colors-solarized/Solarized\ Light.itermcolors
 # Ignores the README, setup scripts, and the ruby and osx directories
 # for symlinking
 rcup -x README.md -x LICENSE.txt -x setup.sh -x config.sh -x '*:vim:setup.sh' -x '*:tmux:setup.sh' -x '*:oh-my-zsh:setup.sh' -x osx -x keyboards
-
-# Setup vim
-source "$DOTFILES_DIR/vim/setup.sh"
 
 # Setup tmux
 source "$DOTFILES_DIR/tmux/setup.sh"
@@ -48,13 +46,11 @@ echo "You should probably restart the computer now."
 # TODO: Attempt to automate as much as the tasks below as possible
 #
 # Manual App-related follow-up tasks:
-# - Set up Dropbox app to get 1Password vault and Mavis Beacon app
+# - Set up Dropbox app to get 1Password vault
 # - Set up 1Password
 #    - Use vault from Dropbox
 #    - Install 1Password extension for Chrome, Firefox, and Safari
 # - Set up Google Drive
-# - Install the following programs:
-#    - Mavis Beacon (also install update and import user data)
 # - Install the following extensions for Firefox:
 #    - Rikaichan (plus dictionaries)
 #
@@ -63,7 +59,7 @@ echo "You should probably restart the computer now."
 #
 # Manual Mac system settings follow-up tasks:
 # - Add new public key to Github and any other accounts that need it:
-#   - $ pbcopy < ~/.ssh/id_rsa.pub
+#   - $ pbcopy < ~/.ssh/id_ed25519.pub
 # - Organise the Finder favourites bar in the following order:
 #   - Macintosh HD
 #   - <home>
@@ -88,11 +84,9 @@ echo "You should probably restart the computer now."
 #    - iMessages
 #    - Skype
 #    - Twitter
-#    - Flowdock
 #    - Slack
 #    - 1Password
 #    - iTerm2
-#    - Mavis Beacon
 #    - System Preferences
 #    - Activity Monitor
 # - Under System Preferences
@@ -126,7 +120,7 @@ echo "You should probably restart the computer now."
 #      - Set Tracking Speed to max
 #      - Uncheck Scroll direction: natural
 #    - Under User & Groups > Login Items, set the following list:
-#      - Dropbox, Alfred 2, Divvy, Karabiner, Flux, Google Drive
+#      - Dropbox, Alfred 2, Divvy, Karabiner, Google Drive
 #    - Under App Store:
 #      - Uncheck Install App updates and Install OSX updates
 #    - Under Date & Time
