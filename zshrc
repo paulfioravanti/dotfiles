@@ -140,7 +140,7 @@ function update() {
 
   echo "${yellow}Running ASDF updates...${reset}"
   [ -d "~/.asdf/plugins/nodejs" ] && bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring || echo "ASDF NodeJS not installed yet. Skipping import release team keyring..."
-  if asdf update && asdf plugin-update --all && asdf plugin list | xargs -I lang sh -c 'asdf install lang latest && asdf global lang $(asdf latest lang)'; then
+  if asdf plugin-update --all && asdf plugin list | xargs -I lang sh -c 'asdf install lang latest && asdf global lang $(asdf latest lang)'; then
     echo "${green}ASDF updates done.${reset}"
   else
     echo "${red}ASDF updates failed.${reset}"
