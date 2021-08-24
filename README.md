@@ -7,6 +7,21 @@ Set up for use with [rcm][rcm].
 
 ## Install
 
+For a new macOS install, open up the Terminal application.
+
+### New Machines
+
+For new machines, where no Github account has been logged into:
+
+```txt
+git clone https://github.com/paulfioravanti/dotfiles.git ~/.dotfiles
+```
+
+On a new machine, running the `git` command will prompt you to install the
+XCode Command Line Tools.
+
+### Established Machines
+
 ```txt
 git clone git@github.com:paulfioravanti/dotfiles.git ~/.dotfiles
 ```
