@@ -32,8 +32,10 @@ git clone git@github.com:paulfioravanti/dotfiles.git ~/.dotfiles
 
 Before setting up a development environment on a new machine:
 
-- Install [XCode][xcode]
-- Install XCode Command Line Tools (run `$ xcode-select --install`)
+- Install XCode Command Line Tools if not done already
+  (run `$ xcode-select --install`)
+- Install [XCode][xcode] (if you run into any other issues that would
+  actually necessitate installing it or you are going to do Mac/iOS development)
 
 ### Run Install Script
 
