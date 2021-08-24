@@ -34,9 +34,6 @@ source "$DOTFILES_DIR/osx/iterm2/setup.sh"
 # Install and setup oh-my-zsh
 source "$DOTFILES_DIR/oh-my-zsh/setup.sh"
 
-# Change the remote url to use the ssh version
-cd ~/.dotfiles || exit
-
 # Clean up
 rm -rf ~/solarized
 
