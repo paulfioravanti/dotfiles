@@ -1,0 +1,80 @@
+# /Users/paul/.tmuxinator/qh.yml
+
+<% root_dir = "~/alembic/qantas" %>
+
+<% shari_event_ui_port = 5150 %>
+<% shari_event_proxy_port = 5160 %>
+<% bookings_port = 5400 %>
+<% bookings_api_port = 5401 %>
+<% synchrobook_port = 5300 %>
+<% reservations_port = 5500 %>
+<% flight_reservations_port = 5501 %>
+<% fraud_port = 5750 %>
+<% customer_payments_port = 5790 %>
+<% transact_data_port = 9999 %>
+
+name: qh
+root: <%= root_dir %>
+
+# Run on project start, the first time
+on_project_first_start:
+  # Open Shari Event Viewer
+  - open --background http://localhost:5150/bookings/aggregates
+  # Open Insomnia
+  - open --background -a "Insomnia"
+
+startup_window: editor
+
+# NOTE: Port names here are determined based on what the bookings app is
+# expecting them to be.
+windows:
+  - editor:
+      panes:
+        - vim
+  - bookings-api:
+      root: <%= "#{root_dir}/bookings-api" %>
+      panes:
+        - bin/rails server -p <%= bookings_api_port %>
+        - bundle exec bin/sqs_worker
+  - bookings:
+      root: <%= "#{root_dir}/bookings" %>
+      panes:
+        - bin/rails server -p <%= bookings_port %>
+        - bundle exec bin/sqs_worker
+  - synchrobook:
+      root: <%= "#{root_dir}/synchrobook" %>
+      panes:
+        - PORT=<%= synchrobook_port %> bundle exec rackup
+  - fraud:
+      root: <%= "#{root_dir}/fraud" %>
+      panes:
+        - bin/rails server -p <%= fraud_port %>
+        - bundle exec bin/sqs_worker
+  - customer-payments:
+      root: <%= "#{root_dir}/customer-payments" %>
+      panes:
+        - bin/rails server -p <%= customer_payments_port %>
+        - bundle exec bin/sqs_worker
+  - reservations:
+      root: <%= "#{root_dir}/reservations" %>
+      panes:
+        - bin/rails server -p <%= reservations_port %>
+        - bundle exec bin/sqs_worker
+  - flight_reservations:
+      root: <%= "#{root_dir}/flight_reservations" %>
+      panes:
+        - bin/rails server -p <%= flight_reservations_port %>
+        - bundle exec bin/sqs_worker
+  - transact_data:
+      root: <%= "#{root_dir}/transact_data" %>
+      panes:
+        - bin/rails server -p <%= transact_data_port %>
+        - bundle exec bin/sqs_worker
+  - shari-event-proxy:
+      root: <%= "#{root_dir}/shari-event-proxy" %>
+      panes:
+        - bin/rails server -p <%= shari_event_proxy_port %>
+  - shari-event_ui:
+      root: <%= "#{root_dir}/shari-event_ui" %>
+      panes:
+        - ember serve --port <%= shari_event_ui_port %>
