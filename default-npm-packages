@@ -19,6 +19,7 @@ elm-typescript-interop
 elm-upgrade
 elm-verify-examples
 elm-xref
+ember-cli
 eslint
 gh-pages
 htmllint-cli
