@@ -21,3 +21,6 @@ asdf plugin add rust https://github.com/code-lever/asdf-rust.git
 
 # Install latest version of each language and set it to be the global default
 asdf plugin list | xargs -I lang sh -c "asdf install lang latest && asdf global lang $(asdf latest lang)"
+
+# Import NodeJS release team keyring
+bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
