@@ -76,19 +76,19 @@ echo "You should probably restart the computer now."
 # - Organise the OSX dock to have the following apps in it (and set them up
 #    appropriately):
 #    - Finder
-#    - Launchpad
 #    - Chrome
-#    - Keynote
 #    - Photos
 #    - App Store
 #    - iMessages
-#    - Skype
-#    - Twitter
 #    - Slack
-#    - 1Password
+#    - Discord
 #    - iTerm2
 #    - System Preferences
 #    - Activity Monitor
+#    - 1Password
+#    - Trello
+#    - Twitter
+#    - Plover
 # - Under System Preferences
 #   - Under Keyboard > Modifier Keys:
 #     - On the Caps Lock dropdown, select  "^ Control"
@@ -107,24 +107,24 @@ echo "You should probably restart the computer now."
 #     - Under Shortcuts Tab:
 #       - For Input Sources, check both shortcuts
 #       - The above will conflict with Spotlight shortcuts, so change the
-#         Spotlight shortcuts to: ^CmdSpace and ^OptionSpace
+#         Spotlight shortcuts to: ^CmdSpace and ^OptionCmdSpace
 #     - Under Input Sources Tab:
 #       - Add Alphanumeric (Google)
 #       - Add U.S.
 #       - Add Hiragana (Google)
 #       - Remove Australian
-#    - Under Energy Saver:
+#    - Under Battery:
 #      - Under Battery Tab, set turn off display after 15 mins
 #      - Under Power Adapter Tab, set turn off display after 3 hours
 #    - Under Trackpad:
 #      - Set Tracking Speed to max
 #      - Uncheck Scroll direction: natural
 #    - Under User & Groups > Login Items, set the following list:
-#      - Dropbox, Alfred 2, Divvy, Karabiner, Google Drive
-#    - Under App Store:
-#      - Uncheck Install App updates and Install OSX updates
+#      - Dropbox, Alfred 4, Divvy, Karabiner, Google Drive
+#    - Under Software Update:
+#      - Under Advaced Tab: Uncheck Install App updates and Install OSX updates
 #    - Under Date & Time
 #      - Check Show Date and Time in menu bar, show the day of the week,
-#        and show date
+#        and show date (seems like this happens by default now...)
 #    - Under Time Machine
 #      - Check Show Time Machine in Menu Bar
