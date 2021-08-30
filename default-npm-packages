@@ -28,6 +28,7 @@ json-server
 newman
 npm-check
 npm-check-updates
+phantomjs
 pnpm
 reason-cli@latest-macos
 sass-lint
