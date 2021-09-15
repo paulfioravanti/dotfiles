@@ -313,18 +313,3 @@ cask "sonic-visualiser"
 cask "spotify"
 cask "steam"
 cask "sublime-text"
-mas "iMovie", id: 408981434
-mas "Keynote", id: 409183694
-mas "Kindle", id: 405399194
-mas "LanguageTranslator", id: 1218781096
-mas "LINE", id: 539883307
-mas "Monosnap", id: 540348655
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
-mas "PDF Squeezer 3", id: 504700302
-mas "Prepo", id: 476533227
-mas "Swiftpoint Control Panel", id: 1502319732
-mas "Trello", id: 1278508951
-mas "TweetDeck", id: 485812721
-mas "Xcode", id: 497799835
-mas "Xcode", id: 497799835
