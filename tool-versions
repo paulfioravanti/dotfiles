@@ -16,4 +16,4 @@ java openjdk-15.0.2
 gradle 7.2
 dhall 1.40.1
 clojure 1.10.3.967
-php 8.0.10
+php 8.1.0RC2
