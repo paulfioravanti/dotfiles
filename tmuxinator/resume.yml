@@ -9,19 +9,12 @@ on_project_first_start:
   # Grip
   - open --background http://localhost:6419
 
-pre_window: asdf local ruby 2.7.2
+pre_window: asdf local ruby 3.0.2
 
 startup_window: editor
 
 windows:
   - editor: vim
   - specs: bin/guard -w lib spec
-  - console: bin/console
-  # Basic Ruby server for running the GitPitch presentation offline.
-  # Assumes that you'll download the offline version of the presentation
-  # into the Downloads directory.
-  - pitch:
-      root: ~/Downloads
-      panes:
-        - ruby -run -e httpd . -p8000
+  - console: irb
   - grip: grip
