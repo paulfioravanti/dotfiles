@@ -22,7 +22,7 @@ plugins=(
   # all of a sudden, rendering *all* terminals unusable.
   gitfast
   github
-  osx
+  macos
   rails
   rake
   ruby
