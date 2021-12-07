@@ -12,7 +12,7 @@ on_project_first_start:
   - bundle install
   - bundle update
   - open --background https://analytics.google.com/analytics
-  - open --background https://search.google.com/search-console/links/drilldown?resource_id=sc-domain%3Apaulfioravanti.com&type=EXTERNAL&target=&domain=
+  - open --background https://search.google.com/search-console/links?resource_id=sc-domain%3Apaulfioravanti.com
   - open --background https://paulfioravanti.disqus.com
   - open --background https://buttondown.email/subscribers
   # Jekyll server
