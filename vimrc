@@ -31,18 +31,30 @@ set nrformats=
 set splitbelow
 " Make vertical splits split to the right
 set splitright
-
 set autoindent
-set smartindent
 set smarttab
-" Tab characters are two spaces wide
-set tabstop=2
-" Fine tunes amount of whitespace to be inserted
-set softtabstop=2
-" Default indent of two spaces
-set shiftwidth=2
 " Make tabs insert spaces
 set expandtab
+
+" NOTE: This was added specifically for stenography usage in txt files.
+" No need to have code-style fancy indenting or tabbing.
+if &ft =~ 'text'
+  set nosmartindent
+  " Tab characters are four spaces wide
+  set tabstop=4
+  " Fine tunes amount of whitespace to be inserted
+  set softtabstop=4
+  " Default indent of four spaces
+  set shiftwidth=4
+else
+  set smartindent
+  " Tab characters are two spaces wide
+  set tabstop=2
+  " Fine tunes amount of whitespace to be inserted
+  set softtabstop=2
+  " Default indent of two spaces
+  set shiftwidth=2
+end
 
 " no swap files
 set noswapfile
