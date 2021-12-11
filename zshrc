@@ -84,6 +84,9 @@ export FZF_DEFAULT_OPTS="
   --color info:136,prompt:136,pointer:230,marker:230,spinner:136
 "
 
+# Enable call outs to scripts in steno command dictionaries.
+export STENO_DICTIONARIES="$HOME/steno/steno-dictionaries"
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.

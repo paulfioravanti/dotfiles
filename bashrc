@@ -26,6 +26,8 @@ export LSCOLORS=gxfxcxdxbxegedabagacad
 export ERL_AFLAGS="-kernel shell_history enabled"
 # Added for Crystal: https://github.com/crystal-lang/crystal/issues/6875#issuecomment-424999123
 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/opt/openssl/lib/pkgconfig
+# Enable call outs to scripts in steno command dictionaries.
+export STENO_DICTIONARIES="$HOME/steno/steno-dictionaries"
 
 ## PATH ##
 export PATH=/usr/local/bin:$PATH
