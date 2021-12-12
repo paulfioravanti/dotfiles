@@ -87,6 +87,8 @@ Plug 'mattn/emmet-vim'
 Plug 'meck/vim-brittany'
 " Vim integration for the Elixir formatter.
 Plug 'mhinz/vim-mix-format'
+" Vim utility scripts for AppleScript
+Plug 'mityu/vim-applescript'
 " Relative/Absolute line numbering for different modes
 Plug 'myusuf3/numbers.vim'
 " A vim 7.4+ plugin to generate table of contents for Markdown files.
