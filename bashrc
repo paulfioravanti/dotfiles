@@ -49,7 +49,8 @@ alias mux=tmuxinator
 # http://stackoverflow.com/q/8616843/567863
 stty -ixon -ixoff
 
+# Not following: ./.travis/travis.sh: openBinaryFile: does not exist (No such file or directory) [SC1091]
+# Maybe remove..?
 # added by travis gem
-[ -f "$HOME/.travis/travis.sh" ] && . "$HOME/.travis/travis.sh"
-
-[ -f "$HOME/.fzf.bash" ] && . "$HOME/.fzf.bash"
+# [ -f "$HOME/.travis/travis.sh" ] && . "$HOME/.travis/travis.sh"
+# [ -f "$HOME/.fzf.bash" ] && . "$HOME/.fzf.bash"
