@@ -87,6 +87,8 @@ Plug 'mattn/emmet-vim'
 Plug 'meck/vim-brittany'
 " Vim integration for the Elixir formatter.
 Plug 'mhinz/vim-mix-format'
+" Vim plugin for the Perl module / CLI script 'ack'
+Plug 'mileszs/ack.vim'
 " Vim utility scripts for AppleScript
 Plug 'mityu/vim-applescript'
 " Relative/Absolute line numbering for different modes
