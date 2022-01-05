@@ -83,6 +83,10 @@ export FZF_DEFAULT_OPTS="
   --color fg:-1,bg:-1,hl:33,fg+:254,bg+:235,hl+:33
   --color info:136,prompt:136,pointer:230,marker:230,spinner:136
 "
+# REF: https://github.com/junegunn/fzf/issues/128#issuecomment-313638882
+# REF: https://github.com/ggreer/the_silver_searcher/wiki/Advanced-Usage
+# export FZF_DEFAULT_COMMAND='ag --path-to-ignore ~/.ignore --filename-pattern ""'
+export FZF_CTRL_T_COMMAND='ag --path-to-ignore ~/.ignore --filename-pattern ""'
 
 # Enable call outs to scripts in steno command dictionaries.
 export STENO_DICTIONARIES="$HOME/steno/steno-dictionaries"
