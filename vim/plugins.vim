@@ -98,7 +98,9 @@ Plug 'myusuf3/numbers.vim'
 Plug 'mzlogin/vim-markdown-toc'
 " Intellisense engine for Vim8 & Neovim, full language server protocol
 " support as VSCode
-Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+Plug 'neoclide/coc.nvim', {
+  \ 'branch': 'release',
+  \ 'for': ['ruby', 'elixir', 'javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 " Highlight all trailing Whitespace characters
 Plug 'ntpeters/vim-better-whitespace'
 " HTML5 omnicomplete and syntax
