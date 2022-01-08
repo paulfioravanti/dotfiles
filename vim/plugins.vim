@@ -98,9 +98,9 @@ Plug 'myusuf3/numbers.vim'
 Plug 'mzlogin/vim-markdown-toc'
 " Intellisense engine for Vim8 & Neovim, full language server protocol
 " support as VSCode
-Plug 'neoclide/coc.nvim', {
-  \ 'branch': 'release',
-  \ 'for': ['ruby', 'elixir', 'javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
+" Plug 'neoclide/coc.nvim', {
+"   \ 'branch': 'release',
+"   \ 'for': ['ruby', 'elixir', 'javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 " Highlight all trailing Whitespace characters
 Plug 'ntpeters/vim-better-whitespace'
 " HTML5 omnicomplete and syntax
@@ -133,7 +133,7 @@ Plug 'rhysd/vim-crystal'
 " :Dash function_name - will search for named method in filetype's docset
 Plug 'rizzatti/dash.vim'
 " Coc.nvim extension for Tailwind CSS IntelliSense
-Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
+" Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
 " Rust file detection and syntax hightlighting
 Plug 'rust-lang/rust.vim'
 " .slim file syntax highlighting
