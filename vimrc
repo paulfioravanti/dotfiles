@@ -31,15 +31,18 @@ set nrformats=
 set splitbelow
 " Make vertical splits split to the right
 set splitright
-set autoindent
-set smarttab
 " Make tabs insert spaces
 set expandtab
 
 " NOTE: This was added specifically for stenography usage in txt files.
 " No need to have code-style fancy indenting or tabbing.
-if &ft =~ 'text'
+" https://linuxhint.com/use-auto-indent-in-vim/
+if &filetype =~ 'text'
+  set noautoindent
   set nosmartindent
+  set nosmarttab
+  set indentexpr=
+  set nocindent
   " Tab characters are four spaces wide
   set tabstop=4
   " Fine tunes amount of whitespace to be inserted
@@ -47,7 +50,9 @@ if &ft =~ 'text'
   " Default indent of four spaces
   set shiftwidth=4
 else
+  set autoindent
   set smartindent
+  set smarttab
   " Tab characters are two spaces wide
   set tabstop=2
   " Fine tunes amount of whitespace to be inserted
