@@ -136,6 +136,8 @@ Plug 'rizzatti/dash.vim'
 " Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
 " Rust file detection and syntax hightlighting
 Plug 'rust-lang/rust.vim'
+" UltiSnips - The ultimate snippet solution for Vim
+Plug 'SirVer/ultisnips'
 " .slim file syntax highlighting
 Plug 'slim-template/vim-slim'
 " Allows you to visually select increasingly larger regions of text using the
