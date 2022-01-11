@@ -1,1 +1,56 @@
 extends html
+
+snippet "render collection" "render named partial with collection"
+<%= render partial: "${1:partial}", collection: @${2:collection} %>
+endsnippet
+
+snippet "render collection as" "render named partial with collection and custom local variable"
+<%= render partial: "${1:partial}", collection: @${2:collection}, as: :${3:item} %>
+endsnippet
+
+snippet "render collection as locals" "render named partial with collection, custom local variable, and local variable set"
+<%= render partial: "${1:partial}",
+           collection: @${2:collection},
+					 as: :${3:item},
+					 locals: { ${4:var}: ${5:"value"}${0} } %>
+endsnippet
+
+snippet "render collection layout" "render named partial with collection and layout"
+<%= render partial: "${1:partial}", collection: @${2:collection}, layout: "${3:layout}" %>
+endsnippet
+
+snippet "render instance" "render partial for model instance"
+<%= render @${1:instance}${0} %>
+endsnippet
+
+snippet "render partial" "render named partial"
+<%= render "${1:partial}" %>
+endsnippet
+
+snippet "render partial block" "render named partial with block"
+<%= render "${1:partial}" do |${2:yielded}| %>
+  ${0}
+<% end %>
+endsnippet
+
+snippet "render partial instance" "render named partial with model instance"
+<%= render "${1:partial}", ${2:model}: @${3:$2}${0} %>
+endsnippet
+
+snippet "render partial layout" "render named partial with named layout"
+<%= render partial: "${1:partial}", layout: "${2:layout}" %>
+endsnippet
+
+snippet "render partial locals" "render named partial with local variable set"
+<%= render partial: "${1:partial}", locals: { ${2:var}: ${3:"value"}${0} } %>
+endsnippet
+
+snippet "render partial object" "render named partial with named object variable set"
+<%= render partial: "${1:partial}", object: @${2:var}${0} %>
+endsnippet
+
+snippet "render partial var block" "render named partial with local variable and block"
+<%= render "${1:partial}", ${2:var}: ${3:"value"} do |${4:yielded}| %>
+  ${0}
+<% end %>
+endsnippet
