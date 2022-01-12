@@ -42,7 +42,9 @@ Plug 'elmcast/elm-vim'
 " Go development plugin for Vim
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " Automatically insert or delete brackets, parens, quotes
-Plug 'jiangmiao/auto-pairs'
+" NOTE: There is a <BS> remap that is screwing with steno undos, so disable
+" for now.
+" Plug 'jiangmiao/auto-pairs'
 " GraphQL file detection, syntax highlighting, and indentation
 Plug 'jparise/vim-graphql'
 " Toggle the cursor shape in the terminal for Vim
