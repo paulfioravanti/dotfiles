@@ -37,32 +37,17 @@ set backspace=indent,eol,start
 set list
 set listchars=tab:⇥·
 
-" NOTE: This was added specifically for stenography usage in txt files.
-" No need to have code-style fancy indenting or tabbing.
-" https://linuxhint.com/use-auto-indent-in-vim/
-if &filetype =~ 'text'
-  set noautoindent
-  set nosmartindent
-  set nosmarttab
-  set indentexpr=
-  set nocindent
-  " Tab characters are four spaces wide
-  set tabstop=4
-  " Fine tunes amount of whitespace to be inserted
-  set softtabstop=4
-  " Default indent of four spaces
-  set shiftwidth=4
-else
-  set autoindent
-  set smartindent
-  set smarttab
-  " Tab characters are two spaces wide
-  set tabstop=2
-  " Fine tunes amount of whitespace to be inserted
-  set softtabstop=2
-  " Default indent of two spaces
-  set shiftwidth=2
-end
+set autoindent
+set smartindent
+set smarttab
+" Tab characters are two spaces wide
+set tabstop=2
+" Fine tunes amount of whitespace to be inserted
+set softtabstop=2
+" Default indent of two spaces
+set shiftwidth=2
+" Make tabs insert spaces
+set expandtab
 
 " no swap files
 set noswapfile
