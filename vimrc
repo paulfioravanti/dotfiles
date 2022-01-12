@@ -270,17 +270,6 @@ endfunction
 " <C-z> is awkward to reach
 nnoremap <leader>z <C-z>
 
-" Pro Mode: Don't use those arrow keys
-" NOTE: Re-enabled since they're handy for steno.
-" nnoremap <Up> <NOP>
-" nnoremap <Down> <NOP>
-" nnoremap <Left> <NOP>
-" nnoremap <Right> <NOP>
-" inoremap <Up> <NOP>
-" inoremap <Down> <NOP>
-" inoremap <Left> <NOP>
-" inoremap <Right> <NOP>
-
 " Don't lose selection on indenting
 vnoremap > >gv
 vnoremap < <gv
