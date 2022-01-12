@@ -31,8 +31,11 @@ set nrformats=
 set splitbelow
 " Make vertical splits split to the right
 set splitright
-" Make tabs insert spaces
-set expandtab
+" Make backspace work like most other programs
+set backspace=indent,eol,start
+" Allow visual differentiation between spaces and tabs
+set list
+set listchars=tab:⇥·
 
 " NOTE: This was added specifically for stenography usage in txt files.
 " No need to have code-style fancy indenting or tabbing.
