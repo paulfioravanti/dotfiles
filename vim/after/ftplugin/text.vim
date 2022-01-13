@@ -13,3 +13,7 @@ setlocal tabstop=4
 setlocal softtabstop=4
 " Default indent of four spaces
 setlocal shiftwidth=4
+
+" Force linebreaks for text at 80 characters
+setlocal textwidth=80
+setlocal formatoptions+=t
