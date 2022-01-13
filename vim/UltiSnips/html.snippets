@@ -1,3 +1,27 @@
+snippet div "<div>" w
+<div>
+  ${0:${VISUAL}}
+</div>
+endsnippet
+
+snippet "div class" "<div> with class" w
+<div`!p snip.rv=' class="' if t[1] else ""`${1:name}`!p snip.rv = '"' if t[1] else ""`>
+  ${0:${VISUAL}}
+</div>
+endsnippet
+
+snippet "div id" "<div> with id" w
+<div`!p snip.rv=' id="' if t[1] else ""`${1:name}`!p snip.rv = '"' if t[1] else ""`>
+  ${0:${VISUAL}}
+</div>
+endsnippet
+
+snippet "div id class" "<div> with id and class" w
+<div`!p snip.rv=' id="' if t[1] else ""`${1:name}`!p snip.rv = '"' if t[1] else ""``!p snip.rv=' class="' if t[2] else ""`${2:name}`!p snip.rv = '"' if t[2] else ""`>
+  ${0:${VISUAL}}
+</div>
+endsnippet
+
 snippet h1 "HTML <h1>" w
 <h1>${0:${VISUAL}}</h1>
 endsnippet
@@ -22,26 +46,12 @@ snippet h6 "HTML <h6>" w
 <h6>${0:${VISUAL}}</h6>
 endsnippet
 
-snippet div "<div>" w
-<div>
+snippet p "<p>" w
+<p>
   ${0:${VISUAL}}
-</div>
+</p>
 endsnippet
 
-snippet "div id" "<div> with id" w
-<div`!p snip.rv=' id="' if t[1] else ""`${1:name}`!p snip.rv = '"' if t[1] else ""`>
-  ${0:${VISUAL}}
-</div>
-endsnippet
-
-snippet "div class" "<div> with class" w
-<div`!p snip.rv=' class="' if t[1] else ""`${1:name}`!p snip.rv = '"' if t[1] else ""`>
-  ${0:${VISUAL}}
-</div>
-endsnippet
-
-snippet "div id class" "<div> with id and class" w
-<div`!p snip.rv=' id="' if t[1] else ""`${1:name}`!p snip.rv = '"' if t[1] else ""``!p snip.rv=' class="' if t[2] else ""`${2:name}`!p snip.rv = '"' if t[2] else ""`>
-  ${0:${VISUAL}}
-</div>
+snippet strong "<strong>" w
+<strong>${0:${VISUAL}}</strong>
 endsnippet

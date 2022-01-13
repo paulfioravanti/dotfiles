@@ -1,0 +1,43 @@
+extends ruby
+
+snippet "before action" "Rails before_action callback"
+before_action :${0:method}
+endsnippet
+
+snippet "controller class" "Create controller class"
+class ${1:Resource}sController < ApplicationController
+  before_action :set_${2:`!p snip.rv = t[1].lower()`}
+
+  $0
+
+  private
+
+  def set_$2
+    @$2 = ${3:`!p snip.rv = t[2].capitalize()`}.find(params[:${4:`!p snip.rv = "id" if t[1].lower() == t[2] else t[2] + "_id"`}])
+  end
+
+  def `!p snip.rv = t[1].lower()`_params
+    params.require(:`!p snip.rv = t[1].lower()`).permit(:${5:param})
+  end
+end
+endsnippet
+
+snippet "redirect action" "Rails redirect_to action"
+redirect_to action: "${1:action}"${2:, id: ${3:id}}
+endsnippet
+
+snippet "redirect controller" "Rails redirect_to controller"
+redirect_to controller: "${1:controller}"${2:, action: "${3:instance}"${4:, id: ${5:id}}}
+endsnippet
+
+snippet "redirect instance" "Rails redirect_to instance"
+redirect_to @${0:`!p snip.rv = snip.fn.replace("s_controller.rb", "")`}
+endsnippet
+
+snippet "redirect instance url" "Rails redirect_to named url of instance"
+redirect_to ${1:`!p snip.rv = snip.fn.replace("s_controller.rb", "")`}_url(@${2:$1})${0}
+endsnippet
+
+snippet "redirect plural url" "Rails redirect_to named url"
+redirect_to ${1:`!p snip.rv = snip.fn.replace("_controller.rb", "")`}_url${0}
+endsnippet

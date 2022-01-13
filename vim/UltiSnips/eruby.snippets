@@ -1,7 +1,93 @@
 extends html
 
+snippet "dom id" "ERB tag calling the Rails dom_id method" i
+<%= dom_id ${1:object}${0} %>
+endsnippet
+
+snippet erb "ERB executable tag"
+<% ${0} %>
+endsnippet
+
 snippet "erb comment" "ERB comment"
 <%# ${0} %>
+endsnippet
+
+snippet "erb display" "ERB display content"
+<%= ${0} %>
+endsnippet
+
+snippet "erb raw" "ERB display (unsafe) verbatim content"
+<%== ${0} %>
+endsnippet
+
+snippet "form submit" "Rails form.text_area method"
+<%= form.submit %>
+endsnippet
+
+snippet "form text area" "Rails form.text_area method"
+<%= form.text_area :${1:method}${0} %>
+endsnippet
+
+snippet "form text area options" "Rails form.text_area method with options"
+<%= form.text_area :${1:method}, ${2:key}: ${3:value}${0} %>
+endsnippet
+
+snippet "form with" "Rails form_with method with custom options"
+<%= form_with ${1:key}: ${2:value} do |form| %>
+  ${0}
+<% end %>
+endsnippet
+
+snippet "form with associated model" "Rails form_with method with associated model"
+<%= form_with model: [${1:model}, ${2:new_association}] do |form| %>
+  ${0}
+<% end %>
+endsnippet
+
+snippet "form with model" "Rails form_with method with model option"
+<%= form_with model: ${1:model} do |form| %>
+  ${0}
+<% end %>
+endsnippet
+
+snippet "form with namespaced model" "Rails form_with method with namespaced model"
+<%= form_with model: [:${1:namespace}, ${2:model}] do |form| %>
+  ${0}
+<% end %>
+endsnippet
+
+snippet "form with scope" "Rails form_with method with scope option"
+<%= form_with scope: :${1:scope} do |form| %>
+  ${0}
+<% end %>
+endsnippet
+
+snippet "form with scope url" "Rails form_with method with scope and url options"
+<%= form_with scope: :${1:scope}, url: ${2:resource}_path do |form| %>
+  ${0}
+<% end %>
+endsnippet
+
+snippet "form with url" "Rails form_with method with url option"
+<%= form_with url: ${1:resource}_path do |form| %>
+  ${0}
+<% end %>
+endsnippet
+
+snippet pluralize "Rails pluralize method" i
+<%= pluralize ${1:count}, "${2:singular}"${0} %>
+endsnippet
+
+snippet "pluralize locale" "Rails pluralize method with locale option" i
+<%= pluralize ${1:count}, "${2:singular}"${0}, locale: :${3:locale}${0} %>
+endsnippet
+
+snippet "pluralize plural" "Rails pluralize method with plural option" i
+<%= pluralize ${1:count}, "${2:singular}", plural: "${3:plural}"${0} %>
+endsnippet
+
+snippet "pluralize plural locale" "Rails pluralize method with plural and locale options" i
+<%= pluralize ${1:count}, "${2:singular}", plural: "${3:plural}", :${4:locale}${0} %>
 endsnippet
 
 snippet "render collection" "render named partial with collection"
@@ -61,4 +147,12 @@ snippet "render partial var block" "render named partial with local variable and
 <%= render "${1:partial}", ${2:var}: ${3:"value"} do |${4:yielded}| %>
   ${0}
 <% end %>
+endsnippet
+
+snippet "time tag" "display Rails time_tag"
+<%= time_tag ${1:time}${0} %>
+endsnippet
+
+snippet "time tag options" "display Rails time_tag with options"
+<%= time_tag ${1:time}, ${2:key}: ${3:value}${0} %>
 endsnippet
