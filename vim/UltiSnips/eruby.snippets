@@ -1,5 +1,9 @@
 extends html
 
+snippet "erb comment" "ERB comment"
+<%# ${0} %>
+endsnippet
+
 snippet "render collection" "render named partial with collection"
 <%= render partial: "${1:partial}", collection: ${2:@${3:collection}} %>
 endsnippet
@@ -7,20 +11,20 @@ endsnippet
 snippet "render collection as" "render named partial with collection and custom local variable"
 <%= render partial: "${1:partial}",
            collection: ${2:@${3:collection}},
-					 as: :${4:item}${0} %>
+           as: :${4:item}${0} %>
 endsnippet
 
 snippet "render collection as locals" "render named partial with collection, custom local variable, and local variable set"
 <%= render partial: "${1:partial}",
            collection: ${2:@${3:collection}},
-					 as: :${4:item},
-					 locals: { ${5:var}: ${6:"value"}${0} } %>
+           as: :${4:item},
+           locals: { ${5:var}: ${6:"value"}${0} } %>
 endsnippet
 
 snippet "render collection layout" "render named partial with collection and layout"
 <%= render partial: "${1:partial}",
            collection: ${2:@${3:collection}},
-					 layout: "${4:layout}"${0} %>
+           layout: "${4:layout}"${0} %>
 endsnippet
 
 snippet "render instance" "render partial for model instance"
