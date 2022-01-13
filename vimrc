@@ -101,6 +101,10 @@ au FocusLost * :silent! wall
 " Resize splits when the window is resized
 au VimResized * :wincmd =
 
+" Specify that `par` is called when reformatting text chunks with `gq` command
+" REF: http://vimcasts.org/episodes/formatting-text-with-par/
+set formatprg=par\ -w80req
+
 " ======================================================================
 " Plugin Initialisation
 " ======================================================================
