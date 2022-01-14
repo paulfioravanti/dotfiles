@@ -4,6 +4,10 @@ snippet "before action" "Rails before_action callback"
 before_action :${0:method}
 endsnippet
 
+snippet "broadcasts to" "turbo-rails broadcasts_to method"
+broadcasts_to :${1:stream}${2:, inserts_by: ${3::append}${4:, target: ${5:broadcast_target_default}}}${0}
+endsnippet
+
 snippet "controller class" "Create controller class"
 class ${1:Resource}sController < ApplicationController
   before_action :set_${2:`!p snip.rv = t[1].lower()`}

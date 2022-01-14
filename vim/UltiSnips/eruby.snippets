@@ -156,3 +156,11 @@ endsnippet
 snippet "time tag options" "display Rails time_tag with options"
 <%= time_tag ${1:time}, ${2:key}: ${3:value}${0} %>
 endsnippet
+
+snippet "turbo stream from instance" "turbo-rails turbo_stream_from method using instance variable"
+<%= turbo_stream_from @${1:time}${0} %>
+endsnippet
+
+snippet "turbo stream from instance channel" "turbo-rails turbo_stream_from method using instance variable and channel attribute"
+<%= turbo_stream_from @${1:time}, channel: ${2:ChannelName}${0} %>
+endsnippet
