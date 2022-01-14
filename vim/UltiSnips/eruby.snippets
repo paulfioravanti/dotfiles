@@ -25,11 +25,7 @@ snippet "form submit" "Rails form.text_area method"
 endsnippet
 
 snippet "form text area" "Rails form.text_area method"
-<%= form.text_area :${1:method}${0} %>
-endsnippet
-
-snippet "form text area options" "Rails form.text_area method with options"
-<%= form.text_area :${1:method}, ${2:key}: ${3:value}${0} %>
+<%= form.text_area :${1:method}${2:, ${3:key}: ${4:value}}${0} %>
 endsnippet
 
 snippet "form with" "Rails form_with method with custom options"
@@ -57,13 +53,7 @@ snippet "form with namespaced model" "Rails form_with method with namespaced mod
 endsnippet
 
 snippet "form with scope" "Rails form_with method with scope option"
-<%= form_with scope: :${1:scope} do |form| %>
-  ${0}
-<% end %>
-endsnippet
-
-snippet "form with scope url" "Rails form_with method with scope and url options"
-<%= form_with scope: :${1:scope}, url: ${2:resource}_path do |form| %>
+<%= form_with scope: :${1:scope}${2:, url: ${3:resource}_path} do |form| %>
   ${0}
 <% end %>
 endsnippet
@@ -75,19 +65,7 @@ snippet "form with url" "Rails form_with method with url option"
 endsnippet
 
 snippet pluralize "Rails pluralize method" i
-<%= pluralize ${1:count}, "${2:singular}"${0} %>
-endsnippet
-
-snippet "pluralize locale" "Rails pluralize method with locale option" i
-<%= pluralize ${1:count}, "${2:singular}"${0}, locale: :${3:locale}${0} %>
-endsnippet
-
-snippet "pluralize plural" "Rails pluralize method with plural option" i
-<%= pluralize ${1:count}, "${2:singular}", plural: "${3:plural}"${0} %>
-endsnippet
-
-snippet "pluralize plural locale" "Rails pluralize method with plural and locale options" i
-<%= pluralize ${1:count}, "${2:singular}", plural: "${3:plural}", :${4:locale}${0} %>
+<%= pluralize ${1:count}, "${2:singular}"${3:${4:, plural: "${5:plural}"}${6:, locale: :${7:locale}}}${0} %>
 endsnippet
 
 snippet "render collection" "render named partial with collection"
@@ -111,6 +89,14 @@ snippet "render collection layout" "render named partial with collection and lay
 <%= render partial: "${1:partial}",
            collection: ${2:@${3:collection}},
            layout: "${4:layout}"${0} %>
+endsnippet
+
+snippet "render collection options" "render named partial with collection and all options"
+<%= render partial: "${1:partial}",
+           collection: ${2:@${3:collection}}${4:${5:,
+           layout: "${6:layout}"}${7:,
+           as: :${8:item}}${9:,
+           locals: { ${10:var}: ${11:"value"} }}}${0} %>
 endsnippet
 
 snippet "render instance" "render partial for model instance"
@@ -149,18 +135,10 @@ snippet "render partial var block" "render named partial with local variable and
 <% end %>
 endsnippet
 
-snippet "time tag" "display Rails time_tag"
-<%= time_tag ${1:time}${0} %>
+snippet "time tag" "display Rails time_tag with options"
+<%= time_tag ${1:time}${2:, ${3:key}: ${4:value}}${0} %>
 endsnippet
 
-snippet "time tag options" "display Rails time_tag with options"
-<%= time_tag ${1:time}, ${2:key}: ${3:value}${0} %>
-endsnippet
-
-snippet "turbo stream from instance" "turbo-rails turbo_stream_from method using instance variable"
-<%= turbo_stream_from @${1:time}${0} %>
-endsnippet
-
-snippet "turbo stream from instance channel" "turbo-rails turbo_stream_from method using instance variable and channel attribute"
-<%= turbo_stream_from @${1:time}, channel: ${2:ChannelName}${0} %>
+snippet "turbo stream from" "turbo-rails turbo_stream_from method"
+<%= turbo_stream_from @${1:time}${2:, channel: ${3:ChannelName}}${0} %>
 endsnippet

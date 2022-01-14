@@ -1,53 +1,15 @@
 snippet div "<div>" w
-<div>
+<div${1:${2: id="${3:id}"}${4: class="${5:class}"}}>
   ${0:${VISUAL}}
 </div>
 endsnippet
 
-snippet "div class" "<div> with class" w
-<div`!p snip.rv=' class="' if t[1] else ""`${1:name}`!p snip.rv = '"' if t[1] else ""`>
-  ${0:${VISUAL}}
-</div>
-endsnippet
-
-snippet "div id" "<div> with id" w
-<div`!p snip.rv=' id="' if t[1] else ""`${1:name}`!p snip.rv = '"' if t[1] else ""`>
-  ${0:${VISUAL}}
-</div>
-endsnippet
-
-snippet "div id class" "<div> with id and class" w
-<div`!p snip.rv=' id="' if t[1] else ""`${1:name}`!p snip.rv = '"' if t[1] else ""``!p snip.rv=' class="' if t[2] else ""`${2:name}`!p snip.rv = '"' if t[2] else ""`>
-  ${0:${VISUAL}}
-</div>
-endsnippet
-
-snippet h1 "HTML <h1>" w
-<h1>${0:${VISUAL}}</h1>
-endsnippet
-
-snippet h2 "HTML <h2>" w
-<h2>${0:${VISUAL}}</h2>
-endsnippet
-
-snippet h3 "HTML <h3>" w
-<h3>${0:${VISUAL}}</h3>
-endsnippet
-
-snippet h4 "HTML <h4>" w
-<h4>${0:${VISUAL}}</h4>
-endsnippet
-
-snippet h5 "HTML <h5>" w
-<h5>${0:${VISUAL}}</h5>
-endsnippet
-
-snippet h6 "HTML <h6>" w
-<h6>${0:${VISUAL}}</h6>
+snippet "h([1-6])" "HTML heading" r
+<h`!p snip.rv = match.group(1)`>${0:${VISUAL}}</h`!p snip.rv = match.group(1)`>
 endsnippet
 
 snippet p "<p>" w
-<p>
+<p${1:${2: id="${3:id}"}${4: class="${5:class}"}}>
   ${0:${VISUAL}}
 </p>
 endsnippet
