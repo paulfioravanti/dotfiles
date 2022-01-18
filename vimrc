@@ -158,15 +158,6 @@ set background=dark
 " This was added due to using vim in setup scripts
 " before vim plugins have been installed
 silent! colorscheme solarized
-" Make the background colour of italicised Markdown elements a different
-" colour than the cursor so the cursor can actually be seen when moving over
-" characters
-autocmd FileType markdown highlight htmlItalic ctermfg=243
-
-" Set spellcheck on Markdown files
-autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_au
-highlight SpellBad cterm=underline ctermfg=red
-set complete+=kspell
 
 " Highlight current line
 set cursorline
