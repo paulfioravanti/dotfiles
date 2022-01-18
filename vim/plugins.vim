@@ -203,6 +203,9 @@ Plug 'vim-syntastic/syntastic'
 " Vim / Neovim plugin for preview PlantUML
 " Run :PlantumlOpen to open previewer webpage in browser
 Plug 'weirongxu/plantuml-previewer.vim'
+" Display the indention levels with thin vertical lines
+" :IndentLinesToggle
+Plug 'Yggdroot/indentLine'
 " Copy syntax-highlighted code from vim to the OS X clipboard as RTF tex
 " :CopyRTF
 Plug 'zerowidth/vim-copy-as-rtf'
