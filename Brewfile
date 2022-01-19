@@ -87,7 +87,7 @@ brew "libevent"
 brew "libsodium"
 brew "miniupnpc"
 brew "zeromq"
-brew "bitcoin", restart_service: true
+brew "bitcoin"
 brew "ghc"
 brew "cabal-install"
 brew "cabextract"
@@ -226,7 +226,7 @@ brew "podofo"
 brew "qt"
 brew "poppler"
 brew "postgresql", restart_service: true
-brew "postgresql@13", restart_service: true
+brew "postgresql@13"
 brew "proj"
 brew "pth"
 brew "qcachegrind"
