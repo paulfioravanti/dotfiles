@@ -3,7 +3,7 @@
 crystal 1.3.2
 elixir 1.13.2-otp-24
 elm 0.19.1
-erlang 24.2
+erlang 24.2.1
 golang 1.17.6
 haskell 9.0.1
 nodejs 17.4.0
@@ -15,6 +15,6 @@ julia 1.7.1
 java openjdk-15.0.2
 gradle 7.3.3
 dhall 1.40.2
-clojure 1.10.3.1058
+clojure 1.10.3.1069
 php 8.1.0RC2
-deno 1.18.0
+deno 1.18.1
