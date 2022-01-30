@@ -1,0 +1,23 @@
+snippet array "Array" b
+${1:"${2:key}": }[
+  ${VISUAL}$0
+]${3:,}
+endsnippet
+
+snippet bool "Boolean" b
+"${1:key}": ${2:true}${3:,}$0
+endsnippet
+
+snippet number "Number" b
+"${1:key}": ${2:value}${3:,}$0
+endsnippet
+
+snippet object "Object" b
+${1:"${2:key}": }{
+  ${VISUAL}$0
+}${3:,}
+endsnippet
+
+snippet string "String" b
+"${1:key}": "${2:value}"${3:,}$0
+endsnippet
