@@ -18,9 +18,11 @@ ${1:"${2:key}": }{
 }${3:,}
 endsnippet
 
-# Specifically for steno dictionary entries
+# Specifically for steno dictionary entries.
+# Copy a single/multi-stroke outline from the steno tape and it gets auto-filled
+# by the snippet, swapping out new line characters for slashes.
 snippet steno "String" b
-"$1": "${2:value}"${3:,}$0
+"${1:`!v substitute(@+, '\n', '/', 'g')`}": "${2:value}"${3:,}$0
 endsnippet
 
 snippet string "String" b
