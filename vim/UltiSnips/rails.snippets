@@ -5,7 +5,7 @@ before_action :${0:method}
 endsnippet
 
 snippet "broadcasts to" "turbo-rails broadcasts_to method"
-broadcasts_to :${1:stream}${2:, inserts_by: ${3::append}${4:, target: ${5:broadcast_target_default}}}${0}
+broadcasts_to :${1:stream}${2:, inserts_by: ${3::append}${4:, target: ${5:broadcast_target_default}}}$0
 endsnippet
 
 snippet "controller class" "Create controller class"
@@ -27,11 +27,11 @@ end
 endsnippet
 
 snippet "redirect action" "Rails redirect_to action"
-redirect_to action: "${1:action}"${2:, id: ${3:id}}
+redirect_to action: "${1:action}"${2:, id: ${3:id}}$0
 endsnippet
 
 snippet "redirect controller" "Rails redirect_to controller"
-redirect_to controller: "${1:controller}"${2:, action: "${3:instance}"${4:, id: ${5:id}}}
+redirect_to controller: "${1:controller}"${2:, action: "${3:instance}"${4:, id: ${5:id}}}$0
 endsnippet
 
 snippet "redirect instance" "Rails redirect_to instance"
@@ -39,9 +39,9 @@ redirect_to @${0:`!p snip.rv = snip.fn.replace("s_controller.rb", "")`}
 endsnippet
 
 snippet "redirect instance url" "Rails redirect_to named url of instance"
-redirect_to ${1:`!p snip.rv = snip.fn.replace("s_controller.rb", "")`}_url(@${2:$1})${0}
+redirect_to ${1:`!p snip.rv = snip.fn.replace("s_controller.rb", "")`}_url(@${2:$1})$0
 endsnippet
 
 snippet "redirect plural url" "Rails redirect_to named url"
-redirect_to ${1:`!p snip.rv = snip.fn.replace("_controller.rb", "")`}_url${0}
+redirect_to ${1:`!p snip.rv = snip.fn.replace("_controller.rb", "")`}_url$0
 endsnippet
