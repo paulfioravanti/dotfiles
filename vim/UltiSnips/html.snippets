@@ -5,7 +5,11 @@ snippet div "<div>" w
 endsnippet
 
 snippet "h([1-6])" "HTML heading" r
-<h`!p snip.rv = match.group(1)`>${0:${VISUAL}}</h`!p snip.rv = match.group(1)`>
+<h`!p snip.rv = match.group(1)`>${1:${VISUAL}}</h`!p snip.rv = match.group(1)`>$0
+endsnippet
+
+snippet "heading ([1-6])" "HTML heading" r
+<h`!p snip.rv = match.group(1)`>${1:${VISUAL}}</h`!p snip.rv = match.group(1)`>$0
 endsnippet
 
 snippet p "<p>" w
@@ -15,5 +19,5 @@ snippet p "<p>" w
 endsnippet
 
 snippet strong "<strong>" w
-<strong>${0:${VISUAL}}</strong>
+<strong>${1:${VISUAL}}</strong>$0
 endsnippet

@@ -1,27 +1,31 @@
 extends html
 
 snippet "dom id" "ERB tag calling the Rails dom_id method" i
-<%= dom_id ${1:object}$0 %>
+<%= dom_id ${1:object} %>$0
 endsnippet
 
 snippet erb "ERB executable tag"
-<% $0 %>
+<% $1 %>$0
 endsnippet
 
 snippet "erb comment" "ERB comment"
-<%# $0 %>
+<%# $1 %>$0
 endsnippet
 
 snippet "erb display" "ERB display content"
-<%= $0 %>
+<%= $1 %>$0
+endsnippet
+
+snippet "erb exec" "ERB display content"
+<%= $1 %>$0
 endsnippet
 
 snippet "erb raw" "ERB display (unsafe) verbatim content"
-<%== $0 %>
+<%== $1 %>$0
 endsnippet
 
 snippet "form submit" "Rails form.submit method"
-<%= form.submit %>
+<%= form.submit %>$0
 endsnippet
 
 snippet "form text area" "Rails form.text_area method"
@@ -100,7 +104,7 @@ snippet "render collection options" "render named partial with collection and al
 endsnippet
 
 snippet "render instance" "render partial for model instance"
-<%= render ${1:@${2:instance}}$0 %>
+<%= render ${1:@${2:instance}} %>$0
 endsnippet
 
 snippet "render partial" "render named partial"
@@ -111,6 +115,10 @@ snippet "render partial block" "render named partial with block"
 <%= render "${1:partial}" do |${2:yielded}| %>
   $0
 <% end %>
+endsnippet
+
+snippet "render partial collection" "render named partial with collection"
+<%= render partial: "${1:partial}", collection: ${2:@${3:collection}}$0 %>
 endsnippet
 
 snippet "render partial instance" "render named partial with model instance"
@@ -133,6 +141,10 @@ snippet "render partial var block" "render named partial with local variable and
 <%= render "${1:partial}", ${2:var}: ${3:"value"} do |${4:yielded}| %>
   $0
 <% end %>
+endsnippet
+
+snippet "render var" "render partial for some variable"
+<%= render ${1:var} %>$0
 endsnippet
 
 snippet "time tag" "display Rails time_tag with options"
