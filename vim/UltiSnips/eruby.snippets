@@ -86,7 +86,7 @@ snippet "render collection as locals" "render named partial with collection, cus
 <%= render partial: "${1:partial}",
            collection: ${2:@${3:collection}},
            as: :${4:item},
-           locals: { ${5:var}: ${6:"value"}$0 } %>
+           locals: { ${5:var}: ${6:value}$0 } %>
 endsnippet
 
 snippet "render collection layout" "render named partial with collection and layout"
@@ -100,7 +100,7 @@ snippet "render collection options" "render named partial with collection and al
            collection: ${2:@${3:collection}}${4:${5:,
            layout: "${6:layout}"}${7:,
            as: :${8:item}}${9:,
-           locals: { ${10:var}: ${11:"value"} }}}$0 %>
+           locals: { ${10:var}: ${11:value} }}}$0 %>
 endsnippet
 
 snippet "render instance" "render partial for model instance"
@@ -129,16 +129,20 @@ snippet "render partial layout" "render named partial with named layout"
 <%= render partial: "${1:partial}", layout: "${2:layout}"$0 %>
 endsnippet
 
-snippet "render partial locals" "render named partial with local variable set"
-<%= render partial: "${1:partial}", locals: { ${2:var}: ${3:"value"}$0 } %>
+snippet "render partial locals" "render named partial with explicit locals options"
+<%= render partial: "${1:partial}", locals: { ${2:var}: ${3:value}$0 } %>
 endsnippet
 
 snippet "render partial object" "render named partial with named object variable set"
 <%= render partial: "${1:partial}", object: ${2:@${3:var}}$0 %>
 endsnippet
 
+snippet "render partial var" "render named partial with local variable"
+<%= render "${1:partial}", ${2:var}: ${3:value}$0 %>
+endsnippet
+
 snippet "render partial var block" "render named partial with local variable and block"
-<%= render "${1:partial}", ${2:var}: ${3:"value"} do |${4:yielded}| %>
+<%= render "${1:partial}", ${2:var}: ${3:value} do |${4:yielded}| %>
   $0
 <% end %>
 endsnippet

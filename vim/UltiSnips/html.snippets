@@ -1,23 +1,23 @@
-snippet div "<div>" w
+snippet div "<div> HTML tag" w
 <div${1:${2: id="${3:id}"}${4: class="${5:class}"}}>
   ${0:${VISUAL}}
 </div>
 endsnippet
 
 snippet "h([1-6])" "HTML heading" r
-<h`!p snip.rv = match.group(1)`>${1:${VISUAL}}</h`!p snip.rv = match.group(1)`>$0
+<h`!p snip.rv = match.group(1)`${1:${2: id="${3:id}"}${4: class="${5:class}"}}>${6:${VISUAL}}</h`!p snip.rv = match.group(1)`>$0
 endsnippet
 
 snippet "heading ([1-6])" "HTML heading" r
-<h`!p snip.rv = match.group(1)`>${1:${VISUAL}}</h`!p snip.rv = match.group(1)`>$0
+<h`!p snip.rv = match.group(1)`${1:${2: id="${3:id}"}${4: class="${5:class}"}}>${6:${VISUAL}}</h`!p snip.rv = match.group(1)`>$0
 endsnippet
 
-snippet p "<p>" w
+snippet p "<p> HTML tag" w
 <p${1:${2: id="${3:id}"}${4: class="${5:class}"}}>
   ${0:${VISUAL}}
 </p>
 endsnippet
 
-snippet strong "<strong>" w
+snippet strong "<strong> HTML tag" w
 <strong>${1:${VISUAL}}</strong>$0
 endsnippet
