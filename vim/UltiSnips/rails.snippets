@@ -26,6 +26,14 @@ class ${1:Resource}sController < ApplicationController
 end
 endsnippet
 
+snippet "has many" "Rails has_many"
+has_many :${1:object}s${2:, ${3:class_name: "${4:$1}"}${5:, foreign_key: "${6:reference}_id"}}
+endsnippet
+
+snippet "has rich text" "Rails has_rich_text"
+has_rich_text :${1:object}${2:, encrypted: ${3:false}}
+endsnippet
+
 snippet "redirect action" "Rails redirect_to action"
 redirect_to action: "${1:action}"${2:, id: ${3:id}}$0
 endsnippet
@@ -44,4 +52,8 @@ endsnippet
 
 snippet "redirect plural url" "Rails redirect_to named url"
 redirect_to ${1:`!p snip.rv = snip.fn.replace("_controller.rb", "")`}_url$0
+endsnippet
+
+snippet "validates presence of" "validates_presence_of"
+validates_presence_of :${1:attribute}${2:, on: :${3:create}, message: "${4:can't be blank}"}
 endsnippet
