@@ -9,7 +9,7 @@ haskell 9.0.1
 nodejs 17.5.0
 python 3.10.2
 redis 6.2.6
-ruby 3.1.0
+ruby 3.1.1
 rust 1.58.1
 julia 1.7.2
 java openjdk-15.0.2
@@ -17,4 +17,4 @@ gradle 7.4
 dhall 1.40.2
 clojure 1.10.3.1075
 php 8.1.3RC1
-deno 1.18.2
+deno 1.19.0
