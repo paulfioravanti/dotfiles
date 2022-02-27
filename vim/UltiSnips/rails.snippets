@@ -1,5 +1,16 @@
 extends ruby
 
+global !p
+def controller_class_name(snip):
+  return snip.basename.replace("_", " ").title().replace(" ", "")
+
+def controller_plural_variable(snip):
+  return snip.basename.replace("_controller", "")
+
+def controller_singular_variable(snip):
+  return snip.basename.replace("s_controller", "")
+endglobal
+
 snippet "before action" "Rails before_action callback"
 before_action :${0:method}
 endsnippet
@@ -9,15 +20,15 @@ broadcasts_to :${1:stream}${2:, inserts_by: ${3::append}${4:, target: ${5:broadc
 endsnippet
 
 snippet "controller class" "Create controller class"
-class `!p snip.rv = snip.basename.replace("_", " ").title().replace(" ", "")` < ApplicationController
-  before_action :set_${1:`!p snip.rv = snip.basename.replace("s_controller", "")`}
+class `!p snip.rv = controller_class_name(snip)` < ApplicationController
+  before_action :set_${1:`!p snip.rv = controller_singular_variable(snip)`}
 
   $0
 
   private
 
   def set_$1
-    @$1 = ${2:`!p snip.rv = t[1].capitalize()`}.find(params[:${3:`!p snip.rv = "id" if snip.basename.replace("s_controller", "") == t[1] else t[1] + "_id"`}])
+    @$1 = ${2:`!p snip.rv = t[1].capitalize()`}.find(params[:${3:`!p snip.rv = "id" if t[1] == controller_singular_variable(snip) else t[1] + "_id"`}])
   end
 
   def `!p snip.rv = t[1]`_params
@@ -43,15 +54,15 @@ redirect_to controller: "${1:controller}"${2:, action: "${3:instance}"${4:, id: 
 endsnippet
 
 snippet "redirect instance" "Rails redirect_to instance"
-redirect_to @${0:`!p snip.rv = snip.basename.replace("s_controller", "")`}
+redirect_to @${0:`!p snip.rv = controller_singular_variable(snip)`}
 endsnippet
 
 snippet "redirect instance url" "Rails redirect_to named url of instance"
-redirect_to ${1:`!p snip.rv = snip.basename.replace("s_controller", "")`}_url(@${2:$1})$0
+redirect_to ${1:`!p snip.rv = controller_singular_variable(snip)`}_url(@${2:$1})$0
 endsnippet
 
 snippet "redirect plural url" "Rails redirect_to named url"
-redirect_to ${1:`!p snip.rv = snip.basename.replace("_controller", "")`}_url$0
+redirect_to ${1:`!p snip.rv = controller_plural_variable(snip)`}_url$0
 endsnippet
 
 snippet "validates presence of" "validates_presence_of"
