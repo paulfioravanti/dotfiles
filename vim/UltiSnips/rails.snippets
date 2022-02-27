@@ -9,19 +9,19 @@ broadcasts_to :${1:stream}${2:, inserts_by: ${3::append}${4:, target: ${5:broadc
 endsnippet
 
 snippet "controller class" "Create controller class"
-class ${1:Resource}sController < ApplicationController
-  before_action :set_${2:`!p snip.rv = t[1].lower()`}
+class `!p snip.rv = snip.basename.replace("_", " ").title().replace(" ", "")` < ApplicationController
+  before_action :set_${1:`!p snip.rv = snip.basename.replace("s_controller", "")`}
 
   $0
 
   private
 
-  def set_$2
-    @$2 = ${3:`!p snip.rv = t[2].capitalize()`}.find(params[:${4:`!p snip.rv = "id" if t[1].lower() == t[2] else t[2] + "_id"`}])
+  def set_$1
+    @$1 = ${2:`!p snip.rv = t[1].capitalize()`}.find(params[:${3:`!p snip.rv = "id" if snip.basename.replace("s_controller", "") == t[1] else t[1] + "_id"`}])
   end
 
-  def `!p snip.rv = t[1].lower()`_params
-    params.require(:`!p snip.rv = t[1].lower()`).permit(:${5:param})
+  def `!p snip.rv = t[1]`_params
+    params.require(:`!p snip.rv = t[1]`).permit(:${4:param})
   end
 end
 endsnippet
