@@ -33,38 +33,44 @@ snippet "form text area" "Rails form.text_area method"
 endsnippet
 
 snippet "form with" "Rails form_with method with custom options"
-<%= form_with ${1:key}: ${2:value} do |form| %>
+<%= form_with ${1:key}: ${2:value} do |${3:form}| %>
   $0
+  <%= $3.submit %>
 <% end %>
 endsnippet
 
 snippet "form with associated model" "Rails form_with method with associated model"
-<%= form_with model: [${1:model}, ${2:new_association}] do |form| %>
+<%= form_with model: [${1:model}, ${2:new_association}] do |${3:form}| %>
   $0
+  <%= $3.submit %>
 <% end %>
 endsnippet
 
 snippet "form with model" "Rails form_with method with model option"
-<%= form_with model: ${1:model} do |form| %>
+<%= form_with model: ${1:model} do |${2:form}| %>
   $0
+  <%= $2.submit %>
 <% end %>
 endsnippet
 
 snippet "form with namespaced model" "Rails form_with method with namespaced model"
-<%= form_with model: [:${1:namespace}, ${2:model}] do |form| %>
+<%= form_with model: [:${1:namespace}, ${2:model}] do |${3:form}| %>
   $0
+  <%= $3.submit %>
 <% end %>
 endsnippet
 
 snippet "form with scope" "Rails form_with method with scope option"
-<%= form_with scope: :${1:scope}${2:, url: ${3:resource}_path} do |form| %>
+<%= form_with scope: :${1:scope}${2:, url: ${3:resource}_path} do |${4:form}| %>
   $0
+  <%= $4.submit %>
 <% end %>
 endsnippet
 
 snippet "form with url" "Rails form_with method with url option"
-<%= form_with url: ${1:resource}_path do |form| %>
+<%= form_with url: ${1:resource}_path do |${2:form}| %>
   $0
+  <%= $2.submit %>
 <% end %>
 endsnippet
 
