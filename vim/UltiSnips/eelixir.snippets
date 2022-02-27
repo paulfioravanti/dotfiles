@@ -1,0 +1,19 @@
+snippet eex "EEx inline with output"
+<% $1 %>$0
+endsnippet
+
+snippet "eex comment" "EEx comment - discarded from source"
+<%# $1 %>$0
+endsnippet
+
+snippet "eex exec" "EEx replace with result"
+<%= $1 %>$0
+endsnippet
+
+snippet "eex quotation" "EEx returns the contents inside"
+<%% $1 %>$0
+endsnippet
+
+snippet "eex quotation exec" "EEx returns the contents inside"
+<%%= $1 %>$0
+endsnippet
