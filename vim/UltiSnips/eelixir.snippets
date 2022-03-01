@@ -17,3 +17,28 @@ endsnippet
 snippet "eex quotation exec" "EEx returns the contents inside"
 <%%= $1 %>$0
 endsnippet
+
+snippet form "LiveView form function component"
+<.form
+  let={${1:f}}
+  for={${2:@changeset}}
+  ${3:id="${4:form-id}"}
+  ${4:phx-target={${5:@myself}}}
+  ${6:phx-change="${7:validate}"}
+  ${8:phx-submit="${9:save}"}>
+
+  $0
+
+  <div>
+    <%= submit "${10:Save}", ${11:phx_disable_with: "${12:Saving...}"} %>
+  </div>
+</.form>
+endsnippet
+
+snippet "live component" "LiveView Phoenix.LiveComponent function component"
+<.live_component
+  module={${1:component-module}}
+  id={${2:live-component-id}}
+  $0
+/>
+endsnippet
