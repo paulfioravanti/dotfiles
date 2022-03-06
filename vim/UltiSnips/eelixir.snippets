@@ -1,3 +1,16 @@
+global !p
+import re
+
+def module_name():
+  pattern = "lib/(.+?)/.+?/(.+?)/.+"
+  module_parts = re.search(pattern, path).group(1, 2)
+  top, sub = map(snake_to_pascal, module_parts)
+  return f'{top}.{sub}.'
+
+def snake_to_pascal(string):
+  return string.replace("_", " ").title().replace(" ", "")
+endglobal
+
 snippet eex "EEx inline with output"
 <% $1 %>$0
 endsnippet
@@ -37,7 +50,7 @@ endsnippet
 
 snippet "live component" "LiveView Phoenix.LiveComponent function component"
 <.live_component
-  module={${1:component-module}}
+  module={${1:`!p snip.rv = module_name()`}}
   id={${2:live-component-id}}
   $0
 />
