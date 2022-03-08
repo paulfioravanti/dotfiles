@@ -1,9 +1,10 @@
 global !p
 import re
 
+PHOENIX_MODULE_FILEPATH = re.compile("lib/(.+?)/.+?/(.+?)/.+")
+
 def module_name():
-  pattern = "lib/(.+?)/.+?/(.+?)/.+"
-  module_parts = re.search(pattern, path).group(1, 2)
+  module_parts = re.search(PHOENIX_MODULE_FILEPATH, path).group(1, 2)
   top, sub = map(snake_to_pascal, module_parts)
   return f'{top}.{sub}.'
 
