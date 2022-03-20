@@ -1,3 +1,15 @@
+global !p
+import re
+
+def path_to_module_name(string):
+  return re.sub(r"[_-]", " ", string).title().replace(" ", "")
+
+endglobal
+
+snippet "live route" "Defines a LiveView route"
+live "/${1:path}", ${2:`!p snip.rv = path_to_module_name(t[1])`}Live${3:, :${4:action}${5:, ${6:opts}}}$0
+endsnippet
+
 snippet "validate length" "ecto validate_length"
-validate_length(${1:${2:changeset}, }:${3:field}, ${4:is: ${5:length}${6:, }}${7:min: ${8:length}${9:, }}${10:max: ${11:length}${12:, }}${13:count: :${14:length_type}${15:, }}${16:message: "${17:message}"})
+validate_length(${1:${2:changeset}, }:${3:field}, ${4:is: ${5:length}${6:, }}${7:min: ${8:length}${9:, }}${10:max: ${11:length}${12:, }}${13:count: :${14:length_type}${15:, }}${16:message: "${17:message}"})$0
 endsnippet
