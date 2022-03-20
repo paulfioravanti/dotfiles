@@ -1,6 +1,7 @@
 extends ruby
 
 global !p
+
 def controller_class_name(snip):
   return snip.basename.replace("_", " ").title().replace(" ", "")
 
@@ -9,6 +10,7 @@ def controller_plural_variable(snip):
 
 def controller_singular_variable(snip):
   return snip.basename.replace("s_controller", "")
+
 endglobal
 
 snippet "before action" "Rails before_action callback"
