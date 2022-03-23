@@ -3,13 +3,13 @@ extends ruby
 global !p
 
 def controller_class_name(snip):
-  return snip.basename.replace("_", " ").title().replace(" ", "")
+    return snip.basename.replace("_", " ").title().replace(" ", "")
 
 def controller_plural_variable(snip):
-  return snip.basename.replace("_controller", "")
+    return snip.basename.replace("_controller", "")
 
 def controller_singular_variable(snip):
-  return snip.basename.replace("s_controller", "")
+    return snip.basename.replace("s_controller", "")
 
 endglobal
 
