@@ -1,13 +1,28 @@
 global !p
+
 import re
 
-def path_to_module_name(string):
-  return re.sub(r"[_-]", " ", string).title().replace(" ", "")
+_MODULE_FILEPATH = re.compile("lib\/([^\/]+)\/(?:(?:[^\/]+)\/)*([^\/]+).ex")
+_DASHES_AND_UNDERSCORES = re.compile("[-_]")
+
+def module_name():
+    module_parts = re.search(_MODULE_FILEPATH, path).group(1, 2)
+    top, sub = map(to_module_name, module_parts)
+    return f'{top}.{sub}'
+
+def to_module_name(string):
+    return re.sub(_DASHES_AND_UNDERSCORES, " ", string).title().replace(" ", "")
 
 endglobal
 
+snippet "def module" "Defines a module block"
+defmodule ${1:`!p snip.rv = module_name()`} do
+  $0
+end
+endsnippet
+
 snippet "live route" "Defines a LiveView route"
-live "/${1:path}", ${2:`!p snip.rv = path_to_module_name(t[1])`}Live${3:, :${4:action}${5:, ${6:opts}}}$0
+live "/${1:path}", ${2:`!p snip.rv = to_module_name(t[1])`}Live${3:, :${4:action}${5:, ${6:opts}}}$0
 endsnippet
 
 snippet "validate length" "ecto validate_length"

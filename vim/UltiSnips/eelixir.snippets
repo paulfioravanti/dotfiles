@@ -1,15 +1,18 @@
 global !p
+
 import re
 
-PHOENIX_MODULE_FILEPATH = re.compile("lib/(.+?)/.+?/(.+?)/.+")
+_PHOENIX_TEMPLATE_FILEPATH = re.compile(
+    "lib/(.+_web)/templates/(.+)/(.+)\.html\.heex"
+)
 
-def module_name():
-  module_parts = re.search(PHOENIX_MODULE_FILEPATH, path).group(1, 2)
-  top, sub = map(snake_to_pascal, module_parts)
-  return f'{top}.{sub}.'
+def module_name(regex):
+    module_parts = re.search(regex, path).group(1, 2, 3)
+    top, sub, template = map(snake_to_pascal, module_parts)
+    return f'{top}.{sub}.{template}'
 
 def snake_to_pascal(string):
-  return string.replace("_", " ").title().replace(" ", "")
+    return string.replace("_", " ").title().replace(" ", "")
 
 endglobal
 
@@ -52,7 +55,7 @@ endsnippet
 
 snippet "live component" "LiveView Phoenix.LiveComponent function component"
 <.live_component
-  module={${1:`!p snip.rv = module_name()`}}
+  module={${1:`!p snip.rv = module_name(_PHOENIX_TEMPLATE_FILEPATH)`}Live}
   id={${2:live-component-id}}
   $0
 />
