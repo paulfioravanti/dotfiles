@@ -26,8 +26,24 @@ def _module_path_match():
 
 endglobal
 
+snippet def "define a single line public function"
+def ${1:function_name}${2:(${3:args})}, do: $0
+endsnippet
+
+snippet "def do" "define a multiline public function"
+def ${1:function_name}${2:(${3:args})} do
+  $0
+end
+endsnippet
+
 snippet "def module" "Defines a module block"
 defmodule ${1:`!p snip.rv = module_name()`} do
+  $0
+end
+endsnippet
+
+snippet "def mount" "Phoenix.LiveView.mount/3"
+def mount(${1:_}params, ${2:_}session, socket) do
   $0
 end
 endsnippet
