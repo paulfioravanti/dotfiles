@@ -6,12 +6,23 @@ _MODULE_FILEPATH = re.compile("lib\/([^\/]+)\/(?:(?:[^\/]+)\/)*([^\/]+).ex")
 _DASHES_AND_UNDERSCORES = re.compile("[-_]")
 
 def module_name():
-    module_parts = re.search(_MODULE_FILEPATH, path).group(1, 2)
-    top, sub = map(to_module_name, module_parts)
-    return f'{top}.{sub}'
+    module_path_parts = _module_path_match().group(1, 2)
+    module_parts = map(to_module_name, module_parts)
+    return ".".join(module_parts)
+
+def outer_module_name():
+    outer_module_path = _module_path_match().group(1)
+    return to_module_name(outer_module_path)
 
 def to_module_name(string):
-    return re.sub(_DASHES_AND_UNDERSCORES, " ", string).title().replace(" ", "")
+    return (
+        re.sub(_DASHES_AND_UNDERSCORES, " ", string)
+        .title()
+        .replace(" ", "")
+    )
+
+def _module_path_match():
+    return re.search(_MODULE_FILEPATH, path)
 
 endglobal
 
@@ -23,6 +34,34 @@ endsnippet
 
 snippet "live route" "Defines a LiveView route"
 live "/${1:path}", ${2:`!p snip.rv = to_module_name(t[1])`}Live${3:, :${4:action}${5:, ${6:opts}}}$0
+endsnippet
+
+snippet "use channel" "use Phoenix channel module"
+use ${1:`!p snip.rv = outer_module_name()`}, :channel$0
+endsnippet
+
+snippet "use component" "use Phoenix component module"
+use ${1:`!p snip.rv = outer_module_name()`}, :component$0
+endsnippet
+
+snippet "use controller" "use Phoenix controller module"
+use ${1:`!p snip.rv = outer_module_name()`}, :controller$0
+endsnippet
+
+snippet "use live component" "use LiveView component module"
+use ${1:`!p snip.rv = outer_module_name()`}, :live_component$0
+endsnippet
+
+snippet "use live view" "use LiveView module"
+use ${1:`!p snip.rv = outer_module_name()`}, :live_view$0
+endsnippet
+
+snippet "use router" "use Phoenix router module"
+use ${1:`!p snip.rv = outer_module_name()`}, :router$0
+endsnippet
+
+snippet "use view" "use Phoenix view module"
+use ${1:`!p snip.rv = outer_module_name()`}, :view$0
 endsnippet
 
 snippet "validate length" "ecto validate_length"
