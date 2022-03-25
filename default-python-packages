@@ -2,6 +2,7 @@ py-applescript
 gym
 jupyter
 matplotlib
+monkeytype
 mypy
 numpy
 pycodestyle
