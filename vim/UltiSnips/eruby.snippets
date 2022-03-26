@@ -1,27 +1,23 @@
 extends html
 
+global !p
+
+def erb_placeholder(tag):
+    if tag == "%#":
+        return "comment"
+    if tag == "%==":
+        return "raw_expression"
+
+    return "expression"
+
+endglobal
+
 snippet "dom id" "ERB tag calling the Rails dom_id method" i
 <%= dom_id ${1:object} %>$0
 endsnippet
 
 snippet erb "ERB executable tag"
-<% $1 %>$0
-endsnippet
-
-snippet "erb comment" "ERB comment"
-<%# $1 %>$0
-endsnippet
-
-snippet "erb display" "ERB display content"
-<%= $1 %>$0
-endsnippet
-
-snippet "erb exec" "ERB display content"
-<%= $1 %>$0
-endsnippet
-
-snippet "erb raw" "ERB display (unsafe) verbatim content"
-<%== $1 %>$0
+<${1|%,%=,%==,%#|} ${2:`!p snip.rv = erb_placeholder(t[1])`} %>$0
 endsnippet
 
 snippet "form submit" "Rails form.submit method"

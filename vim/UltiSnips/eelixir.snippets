@@ -6,6 +6,14 @@ _PHOENIX_TEMPLATE_FILEPATH = re.compile(
     "lib/(.+_web)/templates/(.+)/(.+)\.html\.heex"
 )
 
+def eex_placeholder(tag):
+    if tag == "%#":
+        return "comment"
+    if tag in ["%%", "%%="]:
+        return "quotation"
+
+    return "expression"
+
 def module_name(regex):
     module_path_parts = _path_match(regex).group(1, 2, 3)
     module_parts = map(_snake_to_pascal, module_path_parts)
@@ -19,24 +27,8 @@ def _path_match(regex):
 
 endglobal
 
-snippet eex "EEx inline with output"
-<% $1 %>$0
-endsnippet
-
-snippet "eex comment" "EEx comment - discarded from source"
-<%# $1 %>$0
-endsnippet
-
-snippet "eex exec" "EEx replace with result"
-<%= $1 %>$0
-endsnippet
-
-snippet "eex quotation" "EEx returns the contents inside"
-<%% $1 %>$0
-endsnippet
-
-snippet "eex quotation exec" "EEx returns the contents inside"
-<%%= $1 %>$0
+snippet eex "EEx tag"
+<${1|%,%=,%#,%%,%%=|} ${2:`!p snip.rv = eex_placeholder(t[1])`} %>$0
 endsnippet
 
 snippet form "LiveView form function component"

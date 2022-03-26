@@ -15,8 +15,8 @@ snippet comment "Markdown comment"
 <!-- ${1:${VISUAL}} -->$0
 endsnippet
 
-snippet em "Markdown emphasis" w
-_${1:${VISUAL}}_$0
+snippet em "Markdown emphasis, strong, combination" w
+${1|_,**,**_|}${2:${VISUAL}}`!p snip.rv = "" if any(char.isdigit() for char in t[1]) else t[1]`$0
 endsnippet
 
 snippet footnote "Markdown Footnote"
@@ -45,12 +45,4 @@ endsnippet
 
 snippet "link inline" "Inline link"
 [${1:${VISUAL:Text}}](${2:url})$0
-endsnippet
-
-snippet strong "Markdown strong" w
-**${1:${VISUAL}}**$0
-endsnippet
-
-snippet "strong emphasis" "Markdown strong emphasis" w
-**_${1:${VISUAL}}_**$0
 endsnippet
