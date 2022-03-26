@@ -9,7 +9,20 @@ def controller_plural_variable(snip):
     return snip.basename.replace("_controller", "")
 
 def controller_singular_variable(snip):
-    return snip.basename.replace("s_controller", "")
+    basename = snip.basename
+    if basename.endswith("s_controller"):
+        return basename.replace("s_controller", "")
+
+    # Plural does not end in "s", and we do not have a plural/singular
+    # dictionary to work with, so just return the plural name and correct it
+    # within the snippet inline.
+    return controller_plural_variable(snip)
+
+def params_id(variable, snip):
+    if variable == controller_singular_variable(snip):
+        return "id"
+
+    return variable + "_id"
 
 endglobal
 
@@ -30,11 +43,11 @@ class `!p snip.rv = controller_class_name(snip)` < ApplicationController
   private
 
   def set_$1
-    @$1 = ${2:`!p snip.rv = t[1].capitalize()`}.find(params[:${3:`!p snip.rv = "id" if t[1] == controller_singular_variable(snip) else t[1] + "_id"`}])
+    @$1 = ${2:`!p snip.rv = t[1].capitalize()`}.find(params[:${3:`!p snip.rv = params_id(t[1], snip)`}])
   end
 
-  def `!p snip.rv = t[1]`_params
-    params.require(:`!p snip.rv = t[1]`).permit(:${4:param})
+  def $1_params
+    params.require(:$1).permit(:${4:param})
   end
 end
 endsnippet

@@ -24,6 +24,19 @@ def to_module_name(string):
         .replace(" ", "")
     )
 
+def closing_character(opening):
+    if opening == "{":
+        return "}"
+    if opening == "[":
+        return "]"
+    if opening == "\"":
+        return opening
+
+    return ""
+
+def binding_name(match):
+    return match.group(1).replace(" ", "-")
+
 def _module_path_match():
     return re.search(_MODULE_FILEPATH, path)
 
@@ -68,7 +81,7 @@ IO.inspect(${1:item}${2:, ${3:opts}})$0
 endsnippet
 
 snippet keyword "Defines a literal Elixir keyword list"
-${1:[}${2:key}: ${3:value}$0`!p snip.rv = "]" if t[1] == "[" else ""`
+${1:[}${2:key}: ${3:value}$0`!p snip.rv = closing_character(t[1])`
 endsnippet
 
 snippet map "Defines a literal Elixir map"
@@ -90,6 +103,10 @@ snippet "ok tuple" "define an :ok tuple"
 {:ok, ${1:value}}$0
 endsnippet
 
+snippet "phx (.+)" "phx-x binding" r
+phx-`!p snip.rv = binding_name(match)`=${1|",{|}$0`!p snip.rv = closing_character(t[1])`
+endsnippet
+
 snippet render "LiveView/LiveComponent render/1"
 @impl true
 def render(assigns) do
@@ -109,6 +126,7 @@ snippet "sigil N" "Kernel.sigil_N/2"
 ~N[${1:`date "+%Y-%m-%d %T"`}]$0
 endsnippet
 
+# https://hexdocs.pm/elixir/1.12/Regex.html#module-modifiers
 snippet "sigil r" "Kernel.sigil_r/2"
 ~r/${2:regex}/${1|f,i,m,s,u,x,U|}$0
 endsnippet
@@ -121,6 +139,7 @@ snippet "sigil T" "Kernel.sigil_T/2"
 ~T[${1:`date +%T`}]$0
 endsnippet
 
+# https://hexdocs.pm/elixir/1.12/Kernel.html#sigil_w/2
 snippet "sigil w" "Kernel.sigil_w/2"
 ~w(${2:words})${1|s,a,c|}$0
 endsnippet
