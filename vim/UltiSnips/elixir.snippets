@@ -26,11 +26,15 @@ def _module_path_match():
 
 endglobal
 
-snippet def "define a single line public function"
-def ${1:function_name}${2:(${3:args})}, do: $0
+snippet "assign 2" "Phoenix.LiveView.assign/2"
+assign(socket, ${1:keyword_or_map})$0
 endsnippet
 
-snippet "def do" "define a multiline public function"
+snippet "assign 3" "Phoenix.LiveView.assign/2"
+assign(socket, :${1:key}, ${2:value})$0
+endsnippet
+
+snippet def "define a multiline public function"
 def ${1:function_name}${2:(${3:args})} do
   $0
 end
@@ -42,43 +46,39 @@ defmodule ${1:`!p snip.rv = module_name()`} do
 end
 endsnippet
 
-snippet "def mount" "Phoenix.LiveView.mount/3"
-@impl true
-def mount(${1:_}params, ${2:_}session, socket) do
-  $0
-end
+snippet "def single" "define a single line public function"
+def ${1:function_name}${2:(${3:args})}, do: $0
+endsnippet
+
+snippet "error tuple" "define an :error tuple"
+{:error, ${1:value}}$0
+endsnippet
+
+snippet keyword "Defines a literal Elixir keyword list"
+${1:[}${2:key}: ${3:value}$0`!p snip.rv = "]" if t[1] == "[" else ""`
+endsnippet
+
+snippet map "Defines a literal Elixir map"
+%{${1:key}: ${2:value}$0}
 endsnippet
 
 snippet "live route" "Defines a LiveView route"
 live "/${1:path}", ${2:`!p snip.rv = to_module_name(t[1])`}Live${3:, :${4:action}${5:, ${6:opts}}}$0
 endsnippet
 
-snippet "use channel" "use Phoenix channel module"
-use ${1:`!p snip.rv = outer_module_name()`}, :channel$0
+snippet mount "Phoenix.LiveView.mount/3"
+@impl true
+def mount(${1|_params,params|}, ${2|_session,session|}, socket) do
+  $0
+end
 endsnippet
 
-snippet "use component" "use Phoenix component module"
-use ${1:`!p snip.rv = outer_module_name()`}, :component$0
+snippet "ok tuple" "define an :ok tuple"
+{:ok, ${1:value}}$0
 endsnippet
 
-snippet "use controller" "use Phoenix controller module"
-use ${1:`!p snip.rv = outer_module_name()`}, :controller$0
-endsnippet
-
-snippet "use live component" "use LiveView component module"
-use ${1:`!p snip.rv = outer_module_name()`}, :live_component$0
-endsnippet
-
-snippet "use live view" "use LiveView module"
-use ${1:`!p snip.rv = outer_module_name()`}, :live_view$0
-endsnippet
-
-snippet "use router" "use Phoenix router module"
-use ${1:`!p snip.rv = outer_module_name()`}, :router$0
-endsnippet
-
-snippet "use view" "use Phoenix view module"
-use ${1:`!p snip.rv = outer_module_name()`}, :view$0
+snippet "use phx" "use Phoenix module"
+use ${1:`!p snip.rv = outer_module_name()`}, :${2|channel,component,controller,live_component,live_view,router,view|}$0
 endsnippet
 
 snippet "validate length" "ecto validate_length"
