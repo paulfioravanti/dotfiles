@@ -54,6 +54,12 @@ snippet "error tuple" "define an :error tuple"
 {:error, ${1:value}}$0
 endsnippet
 
+snippet heex "Phoenix.LiveView.Helpers.sigil_H/2"
+~H"""
+$0
+"""
+endsnippet
+
 snippet "IO inspect" "IO.inspect/2"
 IO.inspect(${1:item}${2:, ${3:opts}})$0
 endsnippet
@@ -79,6 +85,13 @@ endsnippet
 
 snippet "ok tuple" "define an :ok tuple"
 {:ok, ${1:value}}$0
+endsnippet
+
+snippet render "LiveView/LiveComponent render/1"
+@impl true
+def render(assigns) do
+  $0
+end
 endsnippet
 
 snippet "use phx" "use Phoenix module"
