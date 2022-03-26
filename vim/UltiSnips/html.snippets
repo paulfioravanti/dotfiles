@@ -1,23 +1,17 @@
-snippet div "<div> HTML tag" w
-<div${1:${2: id="${3:id}"}${4: class="${5:class}"}}>
+snippet "\b(button|div|p|span)" "HTML tag with id and class options" r
+<`!p snip.rv = match.group(1)`${1:${2: id="${3:id}"}${4: class="${5:class}"}}>
   ${0:${VISUAL}}
-</div>
+</`!p snip.rv = match.group(1)`>
 endsnippet
 
-snippet "h([1-6])" "HTML heading" r
+snippet "\b(?:h|heading )([1-6])" "HTML heading" r
 <h`!p snip.rv = match.group(1)`${1:${2: id="${3:id}"}${4: class="${5:class}"}}>${6:${VISUAL}}</h`!p snip.rv = match.group(1)`>$0
 endsnippet
 
-snippet "heading ([1-6])" "HTML heading" r
-<h`!p snip.rv = match.group(1)`${1:${2: id="${3:id}"}${4: class="${5:class}"}}>${6:${VISUAL}}</h`!p snip.rv = match.group(1)`>$0
+snippet "\b(span|strong) inline" "Inline HTML tag with id and class options" r
+<`!p snip.rv = match.group(1)`${1:${2: id="${3:id}"}${4: class="${5:class}"}}>${6:${VISUAL}}</`!p snip.rv = match.group(1)`>$0
 endsnippet
 
-snippet p "<p> HTML tag" w
-<p${1:${2: id="${3:id}"}${4: class="${5:class}"}}>
-  ${0:${VISUAL}}
-</p>
-endsnippet
-
-snippet strong "<strong> HTML tag" w
-<strong>${1:${VISUAL}}</strong>$0
+snippet "\bimg" "HTML img tag" r
+<img src="${1:src}"${2: alt="${3:alt}"}>$0
 endsnippet
