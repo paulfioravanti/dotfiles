@@ -54,6 +54,10 @@ snippet "error tuple" "define an :error tuple"
 {:error, ${1:value}}$0
 endsnippet
 
+snippet "IO inspect" "IO.inspect/2"
+IO.inspect(${1:item}${2:, ${3:opts}})$0
+endsnippet
+
 snippet keyword "Defines a literal Elixir keyword list"
 ${1:[}${2:key}: ${3:value}$0`!p snip.rv = "]" if t[1] == "[" else ""`
 endsnippet
