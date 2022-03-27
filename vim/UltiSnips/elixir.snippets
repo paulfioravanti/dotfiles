@@ -80,7 +80,7 @@ endsnippet
 
 snippet "handle event" "Phoenix.(LiveView|LiveCompoment).handle_event/3"
 @impl true
-def handle_event("${1:event}", ${2|params,_params|}, socket) do
+def handle_event("${1:event}", ${2|params,_unsigned_params|}, socket) do
   $0
   ${3|{:noreply\, socket},{:reply\, reply_map\, socket}|}
 end
@@ -100,6 +100,10 @@ snippet keyword "Defines a literal Elixir keyword list"
 ${1:[}${2:key}: ${3:value}$0`!p snip.rv = closing_character(t[1])`
 endsnippet
 
+snippet list "Literal Elixir list"
+[$0]
+endsnippet
+
 snippet "live route" "Defines a LiveView route"
 live "/${1:path}", ${2:`!p snip.rv = to_module_name(t[1])`}Live${3:, :${4:action}${5:, ${6:opts}}}$0
 endsnippet
@@ -108,7 +112,7 @@ snippet map "Defines a literal Elixir map with atom keys"
 %{${1:key}: ${2:value}$0}
 endsnippet
 
-snippet "map string" "Defines a literal Elixir map with string keys"
+snippet "map string" "Literal Elixir map with string keys"
 %{"${1:key}" => ${2:value}$0}
 endsnippet
 
@@ -126,6 +130,14 @@ endsnippet
 
 snippet "phx (.+)" "phx- binding" r
 phx-`!p snip.rv = binding_name(match)`=${1|",{|}$0`!p snip.rv = closing_character(t[1])`
+endsnippet
+
+snippet random "Enum.random/1"
+Enum.random(${1:enumerable})$0
+endsnippet
+
+snippet range "Literal Elixir range" i
+${1:first}..${2:last}${3://${4:step}}$0
 endsnippet
 
 snippet render "LiveView/LiveComponent render/1"
