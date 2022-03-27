@@ -37,6 +37,7 @@ def closing_character(opening):
 def binding_name(match):
     return match.group(1).replace(" ", "-")
 
+# REF path variable: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt#L894
 def _module_path_match():
     return re.search(_MODULE_FILEPATH, path)
 
