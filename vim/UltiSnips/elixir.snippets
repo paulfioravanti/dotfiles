@@ -46,7 +46,7 @@ snippet "assign 2" "Phoenix.LiveView.assign/2"
 assign(socket, ${1:keyword_or_map})$0
 endsnippet
 
-snippet "assign 3" "Phoenix.LiveView.assign/2"
+snippet "assign 3" "Phoenix.LiveView.assign/3"
 assign(socket, :${1:key}, ${2:value})$0
 endsnippet
 
@@ -70,6 +70,22 @@ snippet "error tuple" "define an :error tuple"
 {:error, ${1:value}}$0
 endsnippet
 
+snippet fn "Elixir anonymous function"
+fn ${1:args} -> $0 end
+endsnippet
+
+snippet "fn &" "Elixir shorthand anonymous function"
+&(&1$0)
+endsnippet
+
+snippet "handle event" "Phoenix.(LiveView|LiveCompoment).handle_event/3"
+@impl true
+def handle_event("${1:event}", ${2|params,_params|}, socket) do
+  $0
+  ${3|{:noreply\, socket},{:reply\, reply_map\, socket}|}
+end
+endsnippet
+
 snippet heex "Phoenix.LiveView.Helpers.sigil_H/2"
 ~H"""
 $0
@@ -84,18 +100,23 @@ snippet keyword "Defines a literal Elixir keyword list"
 ${1:[}${2:key}: ${3:value}$0`!p snip.rv = closing_character(t[1])`
 endsnippet
 
-snippet map "Defines a literal Elixir map"
-%{${1:key}: ${2:value}$0}
-endsnippet
-
 snippet "live route" "Defines a LiveView route"
 live "/${1:path}", ${2:`!p snip.rv = to_module_name(t[1])`}Live${3:, :${4:action}${5:, ${6:opts}}}$0
 endsnippet
 
+snippet map "Defines a literal Elixir map with atom keys"
+%{${1:key}: ${2:value}$0}
+endsnippet
+
+snippet "map string" "Defines a literal Elixir map with string keys"
+%{"${1:key}" => ${2:value}$0}
+endsnippet
+
 snippet mount "Phoenix.LiveView.mount/3"
 @impl true
-def mount(${1|_params,params|}, ${2|_session,session|}, socket) do
+def mount(${1|params,_params,:not_mounted_at_router|}, ${2|_session,session|}, socket) do
   $0
+  {:ok, socket}
 end
 endsnippet
 
@@ -142,6 +163,10 @@ endsnippet
 # https://hexdocs.pm/elixir/1.12/Kernel.html#sigil_w/2
 snippet "sigil w" "Kernel.sigil_w/2"
 ~w(${2:words})${1|s,a,c|}$0
+endsnippet
+
+snippet "update 3" "Phoenix.LiveView.update/3"
+update(${1|socket,assigns|}, :${2:key}, ${3:fun})$0
 endsnippet
 
 snippet "use phx" "use Phoenix module"
