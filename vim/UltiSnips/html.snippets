@@ -12,6 +12,10 @@ snippet "\b(span|strong) inline" "Inline HTML tag with id and class options" r
 <`!p snip.rv = match.group(1)`${1:${2: id="${3:id}"}${4: class="${5:class}"}}>${6:${VISUAL}}</`!p snip.rv = match.group(1)`>$0
 endsnippet
 
+snippet "\b(strong)" "Inline HTML tag without options" r
+<`!p snip.rv = match.group(1)`>${0:${VISUAL}}</`!p snip.rv = match.group(1)`>$0
+endsnippet
+
 snippet "\bimg" "HTML img tag" r
 <img src="${1:src}"${2: alt="${3:alt}"} />$0
 endsnippet
