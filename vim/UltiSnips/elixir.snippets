@@ -44,7 +44,7 @@ def _module_path_match():
 endglobal
 
 snippet "assign 2" "Phoenix.LiveView.assign/2"
-assign(socket, ${1:keyword_or_map})$0
+assign(socket, ${1:key}: ${2:value}$0)
 endsnippet
 
 snippet "assign 3" "Phoenix.LiveView.assign/3"
@@ -97,6 +97,10 @@ snippet "IO inspect" "IO.inspect/2"
 IO.inspect(${1:item}${2:, ${3:opts}})$0
 endsnippet
 
+snippet key-value "key-value pair"
+${1:key}: ${2:value}
+endsnippet
+
 snippet keyword "Defines a literal Elixir keyword list"
 ${1:[}${2:key}: ${3:value}$0`!p snip.rv = closing_character(t[1])`
 endsnippet
@@ -120,7 +124,7 @@ endsnippet
 snippet mount "Phoenix.LiveView.mount/3"
 @impl true
 def mount(${1|params,_params,:not_mounted_at_router|}, ${2|session,_session|}, socket) do
-  $0
+  ${3:socket = ${4:assign(socket, ${5:key}: ${6:value})}}$0
   {:ok, socket}
 end
 endsnippet
