@@ -1,0 +1,61 @@
+global !p
+
+import re
+
+_DASHES_AND_UNDERSCORES = re.compile("[-_]")
+
+def to_module_name(string):
+    return (
+        re.sub(_DASHES_AND_UNDERSCORES, " ", string)
+        .title()
+        .replace(" ", "")
+    )
+
+endglobal
+
+snippet "assign 2" "Phoenix.LiveView.assign/2"
+assign(socket, ${1:key}: ${2:value}$0)
+endsnippet
+
+snippet "assign 3" "Phoenix.LiveView.assign/3"
+assign(socket, :${1:key}, ${2:value})$0
+endsnippet
+
+snippet "handle event" "Phoenix.(LiveView|LiveComponent).handle_event/3"
+@impl true
+def handle_event("${1:event}", ${2|params,_unsigned_params|}, socket) do
+  $0
+  ${3|{:noreply\, socket},{:reply\, reply_map\, socket}|}
+end
+endsnippet
+
+snippet heex "Phoenix.LiveView.Helpers.sigil_H/2"
+~H"""
+$0
+"""
+endsnippet
+
+snippet "live route" "Defines a LiveView route"
+live "/${1:path}", ${2:`!p snip.rv = to_module_name(t[1])`}Live${3:, :${4:action}${5:, ${6:opts}}}$0
+endsnippet
+
+snippet mount "Phoenix.LiveView.mount/3"
+@impl true
+def mount(${1|params,_params,:not_mounted_at_router|}, ${2|session,_session|}, socket) do
+  ${3:socket = ${4:assign(socket, ${5:key}: ${6:value})}}$0
+  {:ok, socket}
+end
+endsnippet
+
+snippet render "LiveView/LiveComponent render/1"
+@impl true
+def render(assigns) do
+  ~H"""
+  $0
+  """
+end
+endsnippet
+
+snippet "update 3" "Phoenix.LiveView.update/3"
+update(${1|socket,assigns|}, :${2:key}, ${3:fun})$0
+endsnippet
