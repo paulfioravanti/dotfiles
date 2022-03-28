@@ -119,7 +119,7 @@ endsnippet
 
 snippet mount "Phoenix.LiveView.mount/3"
 @impl true
-def mount(${1|params,_params,:not_mounted_at_router|}, ${2|_session,session|}, socket) do
+def mount(${1|params,_params,:not_mounted_at_router|}, ${2|session,_session|}, socket) do
   $0
   {:ok, socket}
 end
