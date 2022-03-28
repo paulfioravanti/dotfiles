@@ -10,7 +10,7 @@ _DASHES_AND_UNDERSCORES = re.compile("[-_]")
 
 def module_name():
     module_path_parts = _module_path_match().group(1, 2)
-    module_parts = map(to_module_name, module_parts)
+    module_parts = map(to_module_name, module_path_parts)
     return ".".join(module_parts)
 
 def outer_module_name():
