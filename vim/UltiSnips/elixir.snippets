@@ -55,20 +55,38 @@ snippet "assign 3" "Phoenix.LiveView.assign/3"
 assign(socket, :${1:key}, ${2:value})$0
 endsnippet
 
+snippet case "Elixir case statement"
+case ${1:value} do
+  ${2:pattern} ->
+    ${3:${VISUAL}}
+  _ ->
+    $0
+end
+endsnippet
+
+snippet cond "Elixir cond statement"
+cond do
+  ${1:condition} ->
+    ${2:${VISUAL}}
+  true ->
+    $0
+end
+endsnippet
+
 snippet def "define a multiline public function"
 def ${1:function_name}${2:(${3:args})} do
   $0
 end
 endsnippet
 
+snippet def: "define a single line public function"
+def ${1:function_name}${2:(${3:args})}, do: $0
+endsnippet
+
 snippet "def module" "Defines a module block"
 defmodule ${1:`!p snip.rv = module_name()`} do
   $0
 end
-endsnippet
-
-snippet "def single" "define a single line public function"
-def ${1:function_name}${2:(${3:args})}, do: $0
 endsnippet
 
 snippet "error tuple" "define an :error tuple"
