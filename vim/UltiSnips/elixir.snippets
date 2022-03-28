@@ -43,6 +43,10 @@ def _module_path_match():
 
 endglobal
 
+snippet alias "Kernel.SpecialForms.alias/2"
+alias ${1:`!p snip.rv = outer_module_name()`}.${2:ModuleName}$0
+endsnippet
+
 snippet "assign 2" "Phoenix.LiveView.assign/2"
 assign(socket, ${1:key}: ${2:value}$0)
 endsnippet
