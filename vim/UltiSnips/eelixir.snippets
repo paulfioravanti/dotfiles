@@ -3,9 +3,14 @@ extends html
 global !p
 
 import re
+# ~/.vim/pythonx/elixir_helpers.py
+from elixir_helpers import (
+    module_path_match,
+    to_module_name
+)
 
 _PHOENIX_TEMPLATE_FILEPATH = re.compile(
-    "lib/(.+_web)/templates/(.+)/(.+)\.html\.heex"
+    r"lib/(.+_web)/templates/(.+)/(.+)\.html\.(?:h|l)?eex"
 )
 
 def eex_placeholder(tag):
@@ -17,16 +22,9 @@ def eex_placeholder(tag):
     return "expression"
 
 def module_name(regex):
-    module_path_parts = _path_match(regex).group(1, 2, 3)
-    module_parts = map(_snake_to_pascal, module_path_parts)
+    module_path_parts = module_path_match(path, regex).group(1, 2, 3)
+    module_parts = map(to_module_name, module_path_parts)
     return ".".join(module_parts)
-
-def _snake_to_pascal(string):
-    return string.replace("_", " ").title().replace(" ", "")
-
-# REF path variable: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt#L894
-def _path_match(regex):
-    return re.search(regex, path)
 
 endglobal
 
@@ -34,7 +32,7 @@ snippet eex "EEx tag" i
 <${1|%,%=,%#,%%,%%=|} ${2:`!p snip.rv = eex_placeholder(t[1])`} %>$0
 endsnippet
 
-snippet form "LiveView form function component"
+snippet form "Phoenix.LiveView.Helpers.form/1"
 <.form
   let={${1:f}}
   for={${2:@changeset}}
@@ -51,9 +49,11 @@ snippet form "LiveView form function component"
 </.form>
 endsnippet
 
-snippet "live component" "LiveView Phoenix.LiveComponent function component"
-<.live_component
-  module={${1:`!p snip.rv = module_name(_PHOENIX_TEMPLATE_FILEPATH)`}Live}
+snippet "live component" "Phoenix.LiveView.Helpers.live_component/1"
+`!p
+module = module_name(_PHOENIX_TEMPLATE_FILEPATH)
+`<.live_component
+  module={${1:`!p snip.rv = module`}Live}
   id={${2:live-component-id}}
   $0
 />

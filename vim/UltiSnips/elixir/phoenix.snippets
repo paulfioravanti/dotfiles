@@ -1,34 +1,13 @@
 global !p
 
-import re
-
-_MODULE_FILEPATH = re.compile("lib\/([^\/]+)\/(?:(?:[^\/]+)\/)*([^\/]+).ex")
-
-def outer_module_name():
-    outer_module_path = _module_path_match().group(1)
-    return _to_module_name(outer_module_path)
+# ~/.vim/pythonx/elixir_helpers.py
+from elixir_helpers import (
+    closing_character,
+    outer_module_name
+)
 
 def binding_name(match):
     return match.group(1).replace(" ", "-")
-
-def closing_character(opening):
-    if opening == "\"":
-        return opening
-    if opening == "{":
-        return "}"
-
-    return ""
-
-# REF path variable: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt#L894
-def _module_path_match():
-    return re.search(_MODULE_FILEPATH, path)
-
-def _to_module_name(string):
-    return (
-        re.sub(_DASHES_AND_UNDERSCORES, " ", string)
-        .title()
-        .replace(" ", "")
-    )
 
 endglobal
 
@@ -36,6 +15,7 @@ snippet "phx (.+)" "phx- binding" r
 phx-`!p snip.rv = binding_name(match)`=${1|",{|}$0`!p snip.rv = closing_character(t[1])`
 endsnippet
 
-snippet "use phx" "use Phoenix module"
-use ${1:`!p snip.rv = outer_module_name()`}, :${2|channel,component,controller,live_component,live_view,router,view|}$0
+# REF path variable: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt#L894
+snippet "use phx" "Kernel.use/2 with a Phoenix module"
+use ${1:`!p snip.rv = outer_module_name(path)`}, :${2|channel,component,controller,live_component,live_view,router,view|}$0
 endsnippet

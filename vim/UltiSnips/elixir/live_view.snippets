@@ -1,16 +1,7 @@
 global !p
 
-import re
-
-_DASHES_AND_UNDERSCORES = re.compile("[-_]")
-
-def to_module_name(string):
-    return (
-        re.sub(_DASHES_AND_UNDERSCORES, " ", string)
-        .title()
-        .replace(" ", "")
-    )
-
+# ~/.vim/pythonx/elixir_helpers.py
+from elixir_helpers import to_module_name
 endglobal
 
 snippet "assign 2" "Phoenix.LiveView.assign/2"
