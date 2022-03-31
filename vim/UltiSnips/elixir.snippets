@@ -26,11 +26,16 @@ endsnippet
 
 snippet case "Kernel.SpecialForms.case/2"
 case ${1:value} do
-  ${2:pattern} ->
-    ${3:${VISUAL}}
+  ${2:pattern} ${3:when ${4:condition} }->
+    ${5:${VISUAL}}
   _ ->
     $0
 end
+endsnippet
+
+snippet pattern "Kernel.SpecialForms.case/2 pattern match"
+${1:pattern} ${2:when ${3:condition} }->
+  $0
 endsnippet
 
 snippet cond "Kernel.SpecialForms.cond/2"
@@ -40,6 +45,11 @@ cond do
   true ->
     $0
 end
+endsnippet
+
+snippet condition "Kernel.SpecialForms.cond/2 condition"
+${1:condition} ->
+  $0
 endsnippet
 
 snippet def "Kernel.def/2 multiline"
@@ -156,6 +166,28 @@ endsnippet
 # https://hexdocs.pm/elixir/1.12/Kernel.html#sigil_w/2
 snippet "sigil w" "Kernel.sigil_w/2"
 ~w(${2:words})${1|s,a,c|}$0
+endsnippet
+
+snippet unless "Kernel.unless/2 no else"
+unless ${1:condition} do
+  ${0:${VISUAL}}
+end
+endsnippet
+
+snippet unless: "Kernel.unless/2 single-line no else"
+unless ${1:condition}, do: ${0:${VISUAL}}
+endsnippet
+
+snippet "unless else" "Kernel.unless/2 with else"
+unless ${1:condition} do
+  ${2:${VISUAL}}
+else
+  $0
+end
+endsnippet
+
+snippet "unless else:" "Kernel.unless/2 single-line with else"
+unless ${1:condition}, do: ${2:${VISUAL}}, else: $0
 endsnippet
 
 snippet "validate length" "Ecto.Changeset.validate_length/3"
