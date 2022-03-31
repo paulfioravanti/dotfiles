@@ -12,7 +12,7 @@ while true; do
   kill -0 "$$" || exit
 done &
 
-# Install Homebrew
+# Install Homebrew: https://brew.sh/
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Enable usage of the `brew bundle` command with a `Brewfile`

@@ -11,7 +11,7 @@ ssh-keygen -t ed25519 -C ""
 ssh-add -K ~/.ssh/id_ed25519
 
 # Install brew packages and casks
-source "$DOTFILES_DIR/osx/homebrew/setup.sh"
+source "${DOTFILES_DIR}/osx/homebrew/setup.sh"
 
 # Get Solarized colors for iTerm.
 # iTerm should have been installed by Homebrew
@@ -26,16 +26,16 @@ open ~/solarized/iterm2-colors-solarized/Solarized\ Light.itermcolors
 rcup -x README.md -x LICENSE.txt -x setup.sh -x config.sh -x '*:vim:setup.sh' -x '*:tmux:setup.sh' -x '*:oh-my-zsh:setup.sh' -x osx -x asdf
 
 # Setup asdf
-source "$DOTFILES_DIR/asdf/setup.sh"
+source "${DOTFILES_DIR}/asdf/setup.sh"
 
 # Setup tmux
-source "$DOTFILES_DIR/tmux/setup.sh"
+source "${DOTFILES_DIR}/tmux/setup.sh"
 
 # Setup iterm2
-source "$DOTFILES_DIR/osx/iterm2/setup.sh"
+source "${DOTFILES_DIR}/osx/iterm2/setup.sh"
 
 # Install and setup oh-my-zsh
-source "$DOTFILES_DIR/oh-my-zsh/setup.sh"
+source "${DOTFILES_DIR}/oh-my-zsh/setup.sh"
 
 # Clean up
 rm -rf ~/solarized

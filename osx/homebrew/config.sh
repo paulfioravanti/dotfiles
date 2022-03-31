@@ -1,10 +1,10 @@
 #!/bin/bash
 # Re-generate the Homebrew Brewfile
 
-yellow=$(tput setaf 3)
-green=$(tput setaf 2)
-reset=$(tput sgr0)
+YELLOW=$(tput setaf 3)
+GREEN=$(tput setaf 2)
+RESET=$(tput sgr0)
 
-echo "${yellow}Generating Brewfile...${reset}"
+echo "${YELLOW}Generating Brewfile...${RESET}"
 brew bundle dump --file=~/.dotfiles/Brewfile --force
-echo "${green}Complete!${reset}"
+echo "${GREEN}Complete!${RESET}"
