@@ -1,3 +1,11 @@
+snippet "\b(form)" "HTML tag without options" r
+`!p
+tag = match.group(1)
+`<`!p snip.rv = tag`>
+  ${0:${VISUAL}}
+</`!p snip.rv = tag`>
+endsnippet
+
 snippet "\b(button|div|p|span)" "HTML tag with id and class options" r
 `!p
 tag = match.group(1)
@@ -6,10 +14,10 @@ tag = match.group(1)
 </`!p snip.rv = tag`>
 endsnippet
 
-snippet "\b(?:h|heading )([1-6])" "HTML heading" r
+snippet "\b(em|strong)" "Inline HTML tag without options" r
 `!p
-level = match.group(1)
-`<h`!p snip.rv = level`${1:${2: id="${3:id}"}${4: class="${5:class}"}}>${6:${VISUAL}}</h`!p snip.rv = level`>$0
+tag = match.group(1)
+`<`!p snip.rv = tag`>${1:${VISUAL}}</`!p snip.rv = tag`>$0
 endsnippet
 
 snippet "\b(span|strong) inline" "Inline HTML tag with id and class options" r
@@ -18,12 +26,44 @@ tag = match.group(1)
 `<`!p snip.rv = tag`${1:${2: id="${3:id}"}${4: class="${5:class}"}}>${6:${VISUAL}}</`!p snip.rv = tag`>$0
 endsnippet
 
-snippet "\b(strong)" "Inline HTML tag without options" r
+snippet "\b(?:h|heading )([1-6])" "HTML heading" r
 `!p
-tag = match.group(1)
-`<`!p snip.rv = tag`>${0:${VISUAL}}</`!p snip.rv = tag`>$0
+level = match.group(1)
+`<h`!p snip.rv = level`${1:${2: id="${3:id}"}${4: class="${5:class}"}}>${6:${VISUAL}}</h`!p snip.rv = level`>$0
 endsnippet
 
-snippet "\bimg" "HTML img tag" r
+snippet img "HTML img tag" i
 <img src="${1:src}"${2: alt="${3:alt}"} />$0
+endsnippet
+
+snippet input "HTML input tag of type 'text'"
+<input type="text"${1:${2: id="${3:id}"}${4: class="${5:class}"}${6: name="${7:name}"}${8: value="${9:value}"}} />$0
+endsnippet
+
+snippet "\binput (button|checkbox|color|datetime-local|email|file|hidden|month|password|radio|reset|search|submit|text|time|url|week)" "HTML input tag of (type) with id, class, name, value" r
+`!p
+input_type = match.group(1)
+`<input type="`!p snip.rv = input_type`"${1:${2: id="${3:id}"}${4: class="${5:class}"}${6: name="${7:name}"}${8: value="${9:value}"}} />$0
+endsnippet
+
+snippet "\binput (date|number|range)" "HTML input tag of (type) with id, name, min, max" r
+`!p
+input_type = match.group(1)
+`<input type="`!p snip.rv = input_type`"${1:${2: id="${3:id}"}${4: class="${5:class}"}${6: name="${7:name}"}${8: value="${9:value}"}${10: min="${11:min}"}${12: max="${13:max}"}} />$0
+endsnippet
+
+snippet "input tel" "HTML input tag of telephone number type"
+<input type="tel"${1:${2: id="${3:id}"}${4: class="${5:class}"}${6: name="${7:name}"}${8: value="${9:value}"}${10: pattern="${11:pattern}"}} />$0
+endsnippet
+
+snippet label "Inline label tag" i
+<label ${1:for="${2:input-id}}>${3:${VISUAL}}</label>$0
+endsnippet
+
+snippet method "<form> method attribute" i
+method="${1|post,get|}"$0
+endsnippet
+
+snippet target "<form> target attribute" i
+target="${1|_blank,_self,_parent,_top,framename|}"$0
 endsnippet
