@@ -5,101 +5,19 @@ extends eelixir
 global !p
 
 # ~/.vim/pythonx/elixir_helpers.py
-from elixir_helpers import (
-    closing_character,
-    module_path_match,
-    outer_module_name,
-    to_module_name
-)
-
-def module_name():
-    # REF path variable: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt#L894
-    module_path_parts = module_path_match(path).group(1, 2)
-    module_parts = map(to_module_name, module_path_parts)
-    return ".".join(module_parts)
+from elixir_helpers import closing_character
 
 endglobal
 
-snippet alias "Kernel.SpecialForms.alias/2"
-alias ${1:`!p snip.rv = outer_module_name(path)`}.${2:ModuleName}$0
-endsnippet
-
-snippet case "Kernel.SpecialForms.case/2"
-case ${1:value} do
-  ${2:pattern} ${3:when ${4:condition} }->
-    ${5:${VISUAL}}
-  _ ->
-    $0
-end
-endsnippet
-
-snippet pattern "Kernel.SpecialForms.case/2 pattern match"
-${1:pattern} ${2:when ${3:condition} }->
-  $0
-endsnippet
-
-snippet cond "Kernel.SpecialForms.cond/2"
-cond do
-  ${1:condition} ->
-    ${2:${VISUAL}}
-  true ->
-    $0
-end
-endsnippet
-
-snippet condition "Kernel.SpecialForms.cond/2 condition"
-${1:condition} ->
-  $0
-endsnippet
-
-snippet def "Kernel.def/2 multiline"
-def ${1:function_name}${2:(${3:args})} do
-  $0
-end
-endsnippet
-
-snippet def: "Kernel.def/2 single line"
-def ${1:function_name}${2:(${3:args})}, do: $0
-endsnippet
-
-snippet "def module" "Kernel.defmodule/2 block"
-defmodule ${1:`!p snip.rv = module_name()`} do
+snippet exception "Exception.exception/1"
+@impl true
+def exception(${1:term}) do
   $0
 end
 endsnippet
 
 snippet "error tuple" ":error tuple"
 {:error, ${1:value}}$0
-endsnippet
-
-snippet fn "Kernel.SpecialForms.fn/2"
-fn ${1:args} -> $0 end
-endsnippet
-
-snippet "fn &" "Kernel.SpecialForms.&/1"
-&(&1$0)
-endsnippet
-
-snippet if "Kernel.if/2 no else"
-if ${1:condition} do
-  ${0:${VISUAL}}
-end
-endsnippet
-
-snippet if: "Kernel.if/2 single-line no else"
-if ${1:condition}, do: ${0:${VISUAL}}
-endsnippet
-
-snippet "if else" "Kernel.if/2 with else"
-if ${1:condition} do
-  ${2:${VISUAL}}
-else
-  $0
-end
-endsnippet
-
-snippet "if else:" "Kernel.if/2 single-line with else"
-if ${1:condition}, do: ${2:${VISUAL}}, else: $0
 endsnippet
 
 snippet "IO inspect" "IO.inspect/2"
@@ -130,64 +48,15 @@ snippet "ok tuple" "define an :ok tuple"
 {:ok, ${1:value}}$0
 endsnippet
 
-snippet random "Enum.random/1"
-Enum.random(${1:enumerable})$0
-endsnippet
-
-snippet range "Kernel...///3" i
-${1:first}..${2:last}${3://${4:step}}$0
-endsnippet
-
-snippet "sigil c" "Kernel.sigil_c/2"
-~c(${1:chars})$0
-endsnippet
-
-snippet "sigil D" "Kernel.sigil_D/2"
-~D[${1:`date +%Y-%m-%d`}]$0
-endsnippet
-
-snippet "sigil N" "Kernel.sigil_N/2"
-~N[${1:`date "+%Y-%m-%d %T"`}]$0
-endsnippet
-
-# https://hexdocs.pm/elixir/1.12/Regex.html#module-modifiers
-snippet "sigil r" "Kernel.sigil_r/2"
-~r/${2:regex}/${1|f,i,m,s,u,x,U|}$0
-endsnippet
-
-snippet "sigil s" "Kernel.sigil_s/2"
-~s(${1:string})$0
-endsnippet
-
-snippet "sigil T" "Kernel.sigil_T/2"
-~T[${1:`date +%T`}]$0
-endsnippet
-
-# https://hexdocs.pm/elixir/1.12/Kernel.html#sigil_w/2
-snippet "sigil w" "Kernel.sigil_w/2"
-~w(${2:words})${1|s,a,c|}$0
-endsnippet
-
-snippet unless "Kernel.unless/2 no else"
-unless ${1:condition} do
-  ${0:${VISUAL}}
-end
-endsnippet
-
-snippet unless: "Kernel.unless/2 single-line no else"
-unless ${1:condition}, do: ${0:${VISUAL}}
-endsnippet
-
-snippet "unless else" "Kernel.unless/2 with else"
-unless ${1:condition} do
-  ${2:${VISUAL}}
-else
+snippet message "Exception.message/1"
+@impl true
+def message(${1:exception}) do
   $0
 end
 endsnippet
 
-snippet "unless else:" "Kernel.unless/2 single-line with else"
-unless ${1:condition}, do: ${2:${VISUAL}}, else: $0
+snippet random "Enum.random/1"
+Enum.random(${1:enumerable})$0
 endsnippet
 
 snippet "validate length" "Ecto.Changeset.validate_length/3"
