@@ -17,7 +17,7 @@ def module_name():
 endglobal
 
 snippet alias "Kernel.SpecialForms.alias/2"
-alias ${1:`!p snip.rv = outer_module_name(path)`}.${2:ModuleName}$0
+alias ${1:`!p snip.rv = outer_module_name(path)`}${2:.${3:ModuleName}}${4: as: ${5:Keyword}}$0
 endsnippet
 
 snippet case "Kernel.SpecialForms.case/2"
@@ -117,6 +117,10 @@ endsnippet
 
 snippet "if else:" "Kernel.if/2 single-line with else"
 if ${1:condition}, do: ${2:${VISUAL}}, else: $0
+endsnippet
+
+snippet import "Kernel.SpecialForms.import/2"
+import ${1:`!p snip.rv = outer_module_name(path)`}${2:.${3:ModuleName}}${4:, ${5|only,except|}: [${6:function}: ${7:arity}]}$0
 endsnippet
 
 snippet "is nil" "Kernel.is_nil/1"
