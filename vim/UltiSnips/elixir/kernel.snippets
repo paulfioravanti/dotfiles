@@ -32,7 +32,7 @@ endsnippet
 snippet cond "Kernel.SpecialForms.cond/2"
 cond do
   ${1:condition} ->
-    ${2:${VISUAL:do_somthing}}
+    ${2:${VISUAL:do_something}}
   true ->
     $0
 end
@@ -43,14 +43,14 @@ ${1:condition} ->
   $0
 endsnippet
 
-snippet def "Kernel.def/2 multiline"
-def ${1:function_name}${2:(${3:args})} do
+snippet def "Kernel.(def|defp)/2 multiline"
+${1|def,defp|} ${2:function_name}${3:(${4:args})} do
   $0
 end
 endsnippet
 
-snippet def: "Kernel.def/2 single line"
-def ${1:function_name}${2:(${3:args})}, do: $0
+snippet def: "Kernel.(def|defp)/2 single line"
+${|def,defp|} ${2:function_name}${3:(${4:args})}, do: $0
 endsnippet
 
 snippet "def delegate" "Kernel.defdelegate/2"
@@ -61,28 +61,14 @@ snippet "def exception" "Kernel.defexception/1"
 defexception [:${1:field}]$0
 endsnippet
 
-snippet "def guard" "Kernel.defguard/1"
-defguard ${1:guard}(${2:value}) when ${3:condition}$0
-endsnippet
-
-snippet "def guard p" "Kernel.defguardp/1"
-defguardp ${1:guard}(${2:value}) when ${3:condition}$0
+snippet "def guard" "Kernel.(defguard|defguardp)/1"
+${1|defguard,defguardp|} ${2:guard}(${3:value}) when ${4:condition}$0
 endsnippet
 
 snippet "def module" "Kernel.defmodule/2"
 defmodule ${1:`!p snip.rv = module_name()`} do
   $0
 end
-endsnippet
-
-snippet "def p" "Kernel.defp/2 multiline"
-defp ${1:function_name}${2:(${3:args})} do
-  ${0:do_something}
-end
-endsnippet
-
-snippet "def p:" "Kernel.defp/2 single line"
-defp ${1:function_name}${2:(${3:args})}, do: ${0:do_something}
 endsnippet
 
 snippet "def struct" "Kernel.defstruct/1"
@@ -97,16 +83,16 @@ snippet "fn &" "Kernel.SpecialForms.&/1"
 &(&1${0:do_something})
 endsnippet
 
-snippet if "Kernel.if/2"
-if ${1:condition} do
+snippet "\b(if|unless)" "Kernel.(if|unless)/2" r
+`!p snip.rv = match.group(1)` ${1:condition} do
   ${2:${VISUAL:do_something}}${3:
 else
   ${4:do_something_else}}$0
 end
 endsnippet
 
-snippet if: "Kernel.if/2 single-line"
-if ${1:condition}, do: ${2:${VISUAL:do_something}}${3:, else: ${4:do_something_else}$0}
+snippet "\b(if|unless):" "Kernel.(if|unless)/2 single-line"
+`!p snip.rv = match.group(1)` ${1:condition}, do: ${2:${VISUAL:do_something}}${3:, else: ${4:do_something_else}$0}
 endsnippet
 
 snippet import "Kernel.SpecialForms.import/2"
@@ -154,16 +140,4 @@ endsnippet
 # https://hexdocs.pm/elixir/1.12/Kernel.html#sigil_w/2
 snippet "sigil w" "Kernel.sigil_w/2"
 ~w(${2:words})${1|s,a,c|}$0
-endsnippet
-
-snippet unless "Kernel.unless/2 no else"
-unless ${1:condition} do
-  ${2:${VISUAL:do_something}}${3:
-else
-  ${4:do_something_else}}$0
-end
-endsnippet
-
-snippet unless: "Kernel.unless/2 single-line no else"
-unless ${1:condition}, do: ${2:${VISUAL:do_something}}${3:, else: ${4:do_something_else}$0}
 endsnippet

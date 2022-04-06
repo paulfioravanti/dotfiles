@@ -2,14 +2,14 @@ global !p
 
 # ~/.vim/pythonx/elixir_helpers.py
 from elixir_helpers import to_module_name
+
+def key_closing(opening):
+    return "," if opening == ":" else ":"
+
 endglobal
 
-snippet "assign(?: 2)?" "Phoenix.LiveView.assign/2" r
-assign(socket, ${1:key}: ${2:$1}$0)
-endsnippet
-
-snippet "assign 3" "Phoenix.LiveView.assign/3"
-assign(socket, :${1:key}, ${2:$1})$0
+snippet assign "Phoenix.LiveView.assign/(2|3)"
+assign(socket, ${1::}${2:key}`!p snip.rv = key_closing(t[1])` ${3:$2})$0
 endsnippet
 
 snippet "handle event" "Phoenix.(LiveView|LiveComponent).handle_event/3"
@@ -33,7 +33,7 @@ endsnippet
 snippet mount "Phoenix.LiveView.mount/3"
 @impl true
 def mount(${1|params,_params,:not_mounted_at_router|}, ${2|session,_session|}, socket) do
-  ${3:socket = ${4:assign(socket, ${5:key}: ${6:value})}}$0
+  ${3:socket = ${4:assign(socket, ${5::}${6:key}`!p snip.rv = key_closing(t[5])` ${7:$6}}})$0
   {:ok, socket}
 end
 endsnippet

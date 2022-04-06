@@ -21,7 +21,7 @@ def eex_placeholder(tag):
 
     return "expression"
 
-def module_name(regex):
+def module_name(regex=_PHOENIX_TEMPLATE_FILEPATH):
     module_path_parts = module_path_match(path, regex).group(1, 2, 3)
     module_parts = map(to_module_name, module_path_parts)
     return ".".join(module_parts)
@@ -50,10 +50,8 @@ snippet form "Phoenix.LiveView.Helpers.form/1"
 endsnippet
 
 snippet "live component" "Phoenix.LiveView.Helpers.live_component/1"
-`!p
-module = module_name(_PHOENIX_TEMPLATE_FILEPATH)
-`<.live_component
-  module={${1:`!p snip.rv = module`}Live}
+<.live_component
+  module={${1:`!p snip.rv = module_name()`}Live}
   id={${2:live-component-id}}
   $0
 />
