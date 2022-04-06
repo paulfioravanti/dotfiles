@@ -23,7 +23,7 @@ endsnippet
 snippet case "Kernel.SpecialForms.case/2"
 case ${1:value} do
   ${2:pattern} ${3:when ${4:condition} }->
-    ${5:${VISUAL}}
+    ${5:${VISUAL:do_something}}
   _ ->
     $0
 end
@@ -32,7 +32,7 @@ endsnippet
 snippet cond "Kernel.SpecialForms.cond/2"
 cond do
   ${1:condition} ->
-    ${2:${VISUAL}}
+    ${2:${VISUAL:do_somthing}}
   true ->
     $0
 end
@@ -69,7 +69,7 @@ snippet "def guard p" "Kernel.defguardp/1"
 defguardp ${1:guard}(${2:value}) when ${3:condition}$0
 endsnippet
 
-snippet "def module" "Kernel.defmodule/2 block"
+snippet "def module" "Kernel.defmodule/2"
 defmodule ${1:`!p snip.rv = module_name()`} do
   $0
 end
@@ -77,12 +77,12 @@ endsnippet
 
 snippet "def p" "Kernel.defp/2 multiline"
 defp ${1:function_name}${2:(${3:args})} do
-  $0
+  ${0:do_something}
 end
 endsnippet
 
 snippet "def p:" "Kernel.defp/2 single line"
-defp ${1:function_name}${2:(${3:args})}, do: $0
+defp ${1:function_name}${2:(${3:args})}, do: ${0:do_something}
 endsnippet
 
 snippet "def struct" "Kernel.defstruct/1"
@@ -90,33 +90,23 @@ defstruct ${1:[}:${2:field}$0`!p snip.rv = closing_character(t[1])`
 endsnippet
 
 snippet fn "Kernel.SpecialForms.fn/2"
-fn ${1:args} -> $0 end
+fn ${1:args} -> ${0:do_something} end
 endsnippet
 
 snippet "fn &" "Kernel.SpecialForms.&/1"
-&(&1$0)
+&(&1${0:do_something})
 endsnippet
 
-snippet if "Kernel.if/2 no else"
+snippet if "Kernel.if/2"
 if ${1:condition} do
-  ${0:${VISUAL}}
-end
-endsnippet
-
-snippet if: "Kernel.if/2 single-line no else"
-if ${1:condition}, do: ${0:${VISUAL}}
-endsnippet
-
-snippet "if else" "Kernel.if/2 with else"
-if ${1:condition} do
-  ${2:${VISUAL}}
+  ${2:${VISUAL:do_something}}${3:
 else
-  $0
+  ${4:do_something_else}}$0
 end
 endsnippet
 
-snippet "if else:" "Kernel.if/2 single-line with else"
-if ${1:condition}, do: ${2:${VISUAL}}, else: $0
+snippet if: "Kernel.if/2 single-line"
+if ${1:condition}, do: ${2:${VISUAL:do_something}}${3:, else: ${4:do_something_else}$0}
 endsnippet
 
 snippet import "Kernel.SpecialForms.import/2"
@@ -129,7 +119,7 @@ endsnippet
 
 snippet pattern "Kernel.SpecialForms.case/2 pattern match"
 ${1:pattern} ${2:when ${3:condition} }->
-  $0
+  ${0:do_something}
 endsnippet
 
 snippet range "Kernel...///3" i
@@ -168,22 +158,12 @@ endsnippet
 
 snippet unless "Kernel.unless/2 no else"
 unless ${1:condition} do
-  ${0:${VISUAL}}
+  ${2:${VISUAL:do_something}}${3:
+else
+  ${4:do_something_else}}$0
 end
 endsnippet
 
 snippet unless: "Kernel.unless/2 single-line no else"
-unless ${1:condition}, do: ${0:${VISUAL}}
-endsnippet
-
-snippet "unless else" "Kernel.unless/2 with else"
-unless ${1:condition} do
-  ${2:${VISUAL}}
-else
-  $0
-end
-endsnippet
-
-snippet "unless else:" "Kernel.unless/2 single-line with else"
-unless ${1:condition}, do: ${2:${VISUAL}}, else: $0
+unless ${1:condition}, do: ${2:${VISUAL:do_something}}${3:, else: ${4:do_something_else}$0}
 endsnippet
