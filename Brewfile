@@ -332,5 +332,6 @@ cask "sonic-visualiser"
 cask "spotify"
 cask "steam"
 cask "sublime-text"
+cask "wine-stable"
 mas "Swiftpoint Control Panel", id: 1502319732
 mas "Xcode", id: 497799835
