@@ -19,7 +19,7 @@ def exception(${1:term}) do
 end
 endsnippet
 
-snippet "IO inspect" "IO.inspect/2"
+snippet "(?:IO )?inspect" "IO.inspect/2" r
 IO.inspect(${1:item}${2:, ${3:opts}})$0
 endsnippet
 
@@ -35,7 +35,7 @@ snippet list "Literal Elixir list"
 [$0]
 endsnippet
 
-snippet map "Defines a literal Elixir map" i
+snippet map "Literal Elixir map" i
 %{${1:"}${2:key}`!p snip.rv = key_closing(t[1])` ${3:$2}$0}
 endsnippet
 
@@ -50,7 +50,7 @@ snippet "n get text(?: 3)?" "Gettext.Backend.ngettext/3" r
 ngettext("${1:msgid}", "${2:msgid_plural}", ${3:n})$0
 endsnippet
 
-snippet random "Enum.random/1"
+snippet "(?:enum )?random" "Enum.random/1" r
 Enum.random(${1:enumerable})$0
 endsnippet
 
