@@ -6,16 +6,16 @@ import re
 _DASHES_AND_UNDERSCORES = re.compile("[-_]")
 _MODULE_FILEPATH = re.compile(r"lib\/([^\/]+)\/(?:(?:[^\/]+)\/)*([^\/]+).ex")
 
-def closing_character(opening):
+def closing_character(tabstop):
     '''
-    Return closing character for an opening one.
+    Return closing character for a tabstop containing an opening character.
     '''
-    if opening == "{":
+    if tabstop.startswith("{"):
         return "}"
-    if opening == "[":
+    if tabstop.startswith("["):
         return "]"
-    if opening == "\"":
-        return opening
+    if tabstop.startswith("\""):
+        return "\""
 
     return ""
 
