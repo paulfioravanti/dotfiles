@@ -54,6 +54,10 @@ snippet "(?:enum )?random" "Enum.random/1" r
 Enum.random(${1:enumerable})$0
 endsnippet
 
+snippet "send after(?: 4)?" "Process.send_after/4" r
+Process.send_after(${1:dest}, ${2::}${3:msg}`!p snip.rv = closing_character(t[2])`, ${4:time}${5:, {:abs, ${6:true}}})
+endsnippet
+
 snippet tuple "literal tuple" i
 {${1:first}, ${2:second}$0}
 endsnippet
