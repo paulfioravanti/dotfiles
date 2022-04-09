@@ -54,11 +54,11 @@ snippet "(?:enum )?random" "Enum.random/1" r
 Enum.random(${1:enumerable})$0
 endsnippet
 
-snippet tuple "define a literal tuple" i
+snippet tuple "literal tuple" i
 {${1:first}, ${2:second}$0}
 endsnippet
 
-snippet "tuple (.+)" "define a tagged tuple" r
+snippet "tuple (.+)" "tagged tuple" r
 `!p
 tag = match.group(1)
 `{:`!p snip.rv = tag`, ${1:value}}$0

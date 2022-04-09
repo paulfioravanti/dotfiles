@@ -5,6 +5,7 @@ global !p
 import re
 # ~/.vim/pythonx/elixir_helpers.py
 from elixir_helpers import (
+    closing_character,
     module_path_match,
     to_module_name
 )
@@ -27,6 +28,20 @@ def module_name(regex=_PHOENIX_TEMPLATE_FILEPATH):
     return ".".join(module_parts)
 
 endglobal
+
+snippet assign-value "Assign-value pair"
+${1:assign}=${2:"}${3:value}`!p snip.rv = closing_character(t[2])`
+endsnippet
+
+# NOTE: Choice tabstop cannot be used here to select between a potential
+# assign="x" or assign={x} due to issues around having no spaces between the
+# choice tabstop definition.
+snippet component "Phoenix.LiveView.Helpers.component/2"
+<${1:Module}.${2:function}
+  ${3:assign}=${4:"}${5:value}`!p snip.rv = closing_character(t[4])`
+  $0
+/>
+endsnippet
 
 snippet eex "EEx tag" i
 <${1|%,%=,%#,%%,%%=|} ${2:`!p snip.rv = eex_placeholder(t[1])`} %>$0
