@@ -64,10 +64,32 @@ snippet form "Phoenix.LiveView.Helpers.form/1"
 </.form>
 endsnippet
 
+snippet "img tag" "Phoenix.HTML.Tag.img_tag/2"
+<%= img_tag "${1:src}"${2:, class: "${3:class}"${4:, }${5:srcset: %{"${6:$1}" => "${7:1x}", "${8:2x-$1}" => "${9:2x}"}}} %>
+endsnippet
+
+snippet label "Phoenix.HTML.Form.label/4"
+<%= label ${1:form}, :${2:field}, "${3:text}"${4:, ${5:id: "${6:id}"}${7:, }${8:class: "${9:class}"}} %>
+endsnippet
+
 snippet "live component" "Phoenix.LiveView.Helpers.live_component/1"
 <.live_component
   module={${1:`!p snip.rv = module_name()`}Live}
   id={${2:live-component-id}}
   $0
 />
+endsnippet
+
+snippet select "Phoenix.HTML.Form.select/4"
+<%= select ${1:form}, :${2:field}, ${3:options}${4:, ${5:selected: ${6:selected}}${7:, }${8:prompt: ${9:[key: "${10:prompt_string}", disabled: ${11:true}]}}} %>
+endsnippet
+
+snippet submit "Phoenix.HTML.Form.submit/2"
+<%= submit "${1:value}"${2:, ${3:class: "${4:class}"}${5:, }${6:phx_disable_with: "${7:Saving...}"}} %>
+endsnippet
+
+snippet "submit do" "Phoenix.HTML.Form.submit/1"
+<%= submit do %>
+  ${0:value}
+<% end %>
 endsnippet

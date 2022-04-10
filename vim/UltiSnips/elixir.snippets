@@ -12,6 +12,10 @@ def key_closing(opening):
 
 endglobal
 
+snippet "cancel timer(?: 2)?" "Process.cancel_timer/2" r
+Process.cancel_timer(${1:timer_ref}${2:${3:, async: ${4:true}}${5:, info: ${6:false}}})
+endsnippet
+
 snippet exception "Exception.exception/1"
 @impl true
 def exception(${1:term}) do
@@ -56,6 +60,14 @@ endsnippet
 
 snippet "send after(?: 4)?" "Process.send_after/4" r
 Process.send_after(${1:dest}, ${2::}${3:msg}`!p snip.rv = closing_character(t[2])`, ${4:time}${5:, {:abs, ${6:true}}})
+endsnippet
+
+snippet "Timex format" "Timex.format/(1|2)"
+Timex.format!(${1:${2:datetime}, }"${3:%FT%T%:z}", :${4:strftime})$0
+endsnippet
+
+snippet "Timex now" "Timex.now/(0|1)"
+Timex.now(${1:time_zone})$0
 endsnippet
 
 snippet tuple "literal tuple" i
