@@ -1,0 +1,14 @@
+snippet from "Python single import from statement" b
+from ${1:module} import ${2:function}${3: as ${4:alias}}
+endsnippet
+
+snippet "from multi" "Python multi import from statement" b
+from ${1:module} import (
+    ${2:function}${3: as ${4:alias}},
+    ${5:function}${6: as ${7:alias}}$0
+)
+endsnippet
+
+snippet import "Python single import statement" b
+import ${1:module}${2: as ${3:alias}}
+endsnippet
