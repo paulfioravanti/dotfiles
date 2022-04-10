@@ -21,3 +21,7 @@ ${0:${VISUAL:python_code}}
 
 `!p snip.rv = "endglobal"`
 endsnippet
+
+snippet python "Inline python code" i
+`!p snip.rv = "\`!p "`${1:snip.rv = }$0`!p snip.rv = "\`"`
+endsnippet

@@ -14,7 +14,8 @@ import ${1:module}${2: as ${3:alias}}
 endsnippet
 
 snippet def "module or instance method"
-`!p maybe_self = "self, " if snip.indent else ""
+`!p
+maybe_self = "self, " if snip.indent else ""
 `def ${1:method_name}(`!p snip.rv = maybe_self`${2:args}):
     """
     ${3:TODO: Docstring for $1.}
