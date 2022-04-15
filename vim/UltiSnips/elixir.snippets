@@ -23,12 +23,16 @@ def exception(${1:term}) do
 end
 endsnippet
 
+snippet filter "(Enum|Keyword|Map|Stream).filter/2"
+${1|Enum,Map,Stream,Keyword|}.filter(${2:${1:enumerable}, }${3:fun})$0
+endsnippet
+
 snippet "(?:IO )?inspect" "IO.inspect/2" r
 IO.inspect(${1:item}${2:, ${3:opts}})$0
 endsnippet
 
 snippet key-value "Key-value pair"
-${1:"}${2:key}`!p snip.rv = key_closing(t[1])` ${3:$2}$0
+${1:"}${2:key}`!p snip.rv = key_closing(t[1])` ${3:$2}${4:,}$0
 endsnippet
 
 snippet keyword "Literal Elixir keyword list"
@@ -60,6 +64,10 @@ endsnippet
 
 snippet "send after(?: 4)?" "Process.send_after/4" r
 Process.send_after(${1:dest}, ${2::}${3:msg}`!p snip.rv = closing_character(t[2])`, ${4:time}${5:, {:abs, ${6:true}}})
+endsnippet
+
+snippet string "Literal Elixir string"
+"$0"
 endsnippet
 
 snippet "Timex format" "Timex.format/(1|2)"
