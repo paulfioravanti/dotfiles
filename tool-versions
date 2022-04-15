@@ -17,4 +17,4 @@ gradle 7.4.2
 dhall 1.41.1
 clojure 1.10.3.1087
 php 8.1.5RC1
-deno 1.20.5
+deno 1.20.6
