@@ -15,7 +15,7 @@ elm-json
 elm-outdated
 elm-test
 @elm-tooling/elm-language-server
-elm-typescript-interop
+elm-ts-interop
 elm-upgrade
 elm-verify-examples
 elm-xref
@@ -28,7 +28,6 @@ json-server
 newman
 npm-check
 npm-check-updates
-phantomjs
 pnpm
 reason-cli@latest-macos
 sass-lint
