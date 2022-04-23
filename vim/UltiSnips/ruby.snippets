@@ -4,28 +4,6 @@ def ${1:method_name}${2:(${3:*args})}
 end
 endsnippet
 
-snippet "\.map" ".map { |<element>| <block> }" r
-.map { |${1:element}| $0 }
-endsnippet
-
-snippet "\.map block" ".map(&block)" r
-.map(&${1:block})$0
-endsnippet
-
-snippet "\.map do" ".map do |<element>| <block> end" r
-.map do |${1:element}|
-  $0
-end
-endsnippet
-
-snippet "\.map external method" ".map(&Module.method(:method))" r
-.map(&${1:Module}.method(:${2:method}))$0
-endsnippet
-
-snippet "\.map local method" ".map(&method(:method))" r
-.map(&method(:${1:method}))$0
-endsnippet
-
-snippet "\.map method" ".map(&:method)" r
-.map(&:${1:method})$0
+snippet .map ".map" i
+.map${1|inline block,do block,explicit block,local proc,local method,external method|}
 endsnippet
