@@ -38,6 +38,26 @@ snippet footnote "Markdown Footnote"
 [^$1]:${2:Text}$0
 endsnippet
 
+snippet "front matter" "Jekyll front matter for blog posts"
+---
+title: "${1:title}"
+date: ${2:`date "+%Y-%m-%d %T"`} +${3:1100}
+last_modified_at: $2 $3
+tags: ${4:tags}
+audio_narration: ${5:true}
+header:
+  image: /assets/images/${6:`date "+%Y-%m-%d"`}/${7:image.jpg}
+  image_description: "${7:description}"
+  teaser: /assets/images/$6/$7
+  overlay_image: /assets/images/$6/$7
+  overlay_filter: ${8:0.4}
+  caption: >
+    Photo by <a href="${9:author_link}">${10:author_name}</a> on <a href="${11:source_link}">${12:source_name}</a>
+excerpt: >
+  ${13:some excerpt}
+---$0
+endsnippet
+
 snippet "heading ([1-6])" "Markdown heading" r
 `!p snip.rv = heading(match)` ${0:${VISUAL}}
 endsnippet
