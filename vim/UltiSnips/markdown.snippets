@@ -43,8 +43,8 @@ snippet "front matter" "Jekyll front matter for blog posts"
 title: "${1:title}"
 date: ${2:`date "+%Y-%m-%d %T"`} +${3:1100}
 last_modified_at: $2 $3
-tags: ${4:tags}
-audio_narration: ${5:true}
+tags: ${4:tags separated by spaces}
+${5:narration_video_id: "video-id-goes-here"}
 header:
   image: /assets/images/${6:`date "+%Y-%m-%d"`}/${7:image.jpg}
   image_description: "${7:description}"
