@@ -47,15 +47,16 @@ tags: ${4:tags separated by spaces}
 ${5:narration_video_id: "video-id-goes-here"}
 header:
   image: /assets/images/${6:`date "+%Y-%m-%d"`}/${7:image.jpg}
-  image_description: "${7:description}"
+  image_description: "${8:description}"
   teaser: /assets/images/$6/$7
   overlay_image: /assets/images/$6/$7
-  overlay_filter: ${8:0.4}
-  caption: >
-    Photo by <a href="${9:author_link}">${10:author_name}</a> on <a href="${11:source_link}">${12:source_name}</a>
+  overlay_filter: ${9:0.4}
+${10:  caption: >
+    Photo by <a href="${11:author_link}">${12:author_name}</a> on <a href="${13:source_link}">${14:source_name}</a>}
 excerpt: >
-  ${13:some excerpt}
----$0
+  ${15:some excerpt}
+---
+$0
 endsnippet
 
 snippet "heading ([1-6])" "Markdown heading" r
