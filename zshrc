@@ -220,3 +220,5 @@ source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.
 export PATH="/usr/local/opt/libiconv/bin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+alias plover=/Applications/Plover.app/Contents/MacOS/Plover
