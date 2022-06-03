@@ -11,7 +11,6 @@ python 3.10.4
 redis 7.0.0
 ruby 3.1.2
 rust 1.61.0
-julia 1.7.3
 java openjdk-15.0.2
 gradle 7.5-milestone-1
 dhall 1.41.1
