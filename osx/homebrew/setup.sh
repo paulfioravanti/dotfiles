@@ -15,6 +15,9 @@ done &
 # Install Homebrew: https://brew.sh/
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+# Add Homebrew to the main PATH
+export PATH=/opt/homebrew/bin:$PATH
+
 # Enable usage of the `brew bundle` command with a `Brewfile`
 brew tap Homebrew/bundle
 # NOTE: `brew bundle` needs to have a `Brewfile` specified when run

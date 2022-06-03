@@ -10,6 +10,12 @@ DOTFILES_DIR=$(dirname "${BASH_SOURCE:-$0}")
 ssh-keygen -t ed25519 -C ""
 ssh-add -K ~/.ssh/id_ed25519
 
+# Install needed Apple/XCode CLI tools
+softwareupdate --all --install --force
+sudo rm -rf /Library/Developer/CommandLineTools
+xcode-select --install
+sudo xcodebuild -license accept
+
 # Install brew packages and casks
 source "${DOTFILES_DIR}/osx/homebrew/setup.sh"
 
