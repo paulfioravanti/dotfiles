@@ -3,8 +3,11 @@
 
 # Install needed Apple/XCode CLI tools
 softwareupdate --all --install --force --install-rosetta
-sudo rm -rf /Library/Developer/CommandLineTools
-xcode-select --install
+# NOTE: use of git requires xcode-select to be installed, so this step very
+# likely not needed during bootstrap, as it will have already been done before
+# this repo is cloned.
+# sudo rm -rf /Library/Developer/CommandLineTools
+# xcode-select --install
 sudo xcodebuild -license accept
 
 # Generate ssh key
