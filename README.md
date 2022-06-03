@@ -32,12 +32,22 @@ git clone git@github.com:paulfioravanti/dotfiles.git ~/.dotfiles
 
 Before setting up a development environment on a new machine:
 
-- Install XCode Command Line Tools if not done already
-  (run `$ xcode-select --install`)
 - Install [XCode][xcode] (if you run into any other issues that would
   actually necessitate installing it or you are going to do Mac/iOS development)
 
-### Run Install Script
+### Run Bootstrap Script
+
+This script updates macOS to the latest version, installs XCode command line
+tools, and gets the machine in a state where other developer tools can be
+installed.
+
+```sh
+source ~/.dotfiles/bootstrap.sh
+```
+
+### Run Setup Script
+
+This script will install a bunch of developer-related tools.
 
 ```sh
 source ~/.dotfiles/setup.sh
