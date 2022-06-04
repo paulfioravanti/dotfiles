@@ -210,12 +210,6 @@ eval "$(direnv hook zsh)"
 # Added for Quantum Mechanical Keyboard (QMK) firmware
 export QMK_HOME=~/c/qmk_firmware
 
-# Added for Google Cloud SDK. Instructions to add these lines suggested by
-# running `brew cask info google-cloud-sdk`.
-export CLOUDSDK_PYTHON="/usr/local/opt/python@3.8/libexec/bin/python"
-source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
-source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
-
 # Added for iconv library since asdf PHP couldn't build without this being here.
 export PATH="/usr/local/opt/libiconv/bin:$PATH"
 
