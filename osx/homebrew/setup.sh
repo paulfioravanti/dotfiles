@@ -16,7 +16,7 @@ done &
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Add Homebrew to the main PATH as per post-installation instructions
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+echo "eval $(/opt/homebrew/bin/brew shellenv)" >> ~/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Enable usage of the `brew bundle` command with a `Brewfile`
