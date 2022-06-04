@@ -198,7 +198,7 @@ function update() {
 # added by travis gem
 [ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
 
-. /usr/local/opt/asdf/libexec/asdf.sh
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
 # . $HOME/.asdf/asdf.sh
 # . $HOME/.asdf/completions/asdf.bash
 
