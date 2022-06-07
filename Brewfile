@@ -329,5 +329,6 @@ cask "steam"
 cask "telegram"
 cask "the-unarchiver"
 cask "zandronum"
+mas "KeyLimePie", id: 1575163350
 mas "Swiftpoint Control Panel", id: 1502319732
 mas "Xcode", id: 497799835
