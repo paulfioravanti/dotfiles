@@ -8,7 +8,7 @@ golang 1.18.3
 haskell 9.0.1
 nodejs 18.3.0
 python 3.10.5
-redis 7.0.0
+redis 7.0.1
 ruby 3.1.2
 rust 1.61.0
 java openjdk-15.0.2
@@ -16,4 +16,4 @@ gradle 7.5-milestone-1
 dhall 1.41.1
 clojure 1.10.3.1087
 php 8.1.7RC1
-deno 1.22.2
+deno 1.22.3
