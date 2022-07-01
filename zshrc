@@ -208,7 +208,7 @@ export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/opt/openssl/lib/pkgconfig
 # Added to hook in direnv: https://direnv.net/docs/hook.html#zsh
 eval "$(direnv hook zsh)"
 # Added for Quantum Mechanical Keyboard (QMK) firmware
-export QMK_HOME=~/c/qmk_firmware
+export QMK_HOME="$HOME/c/qmk_firmware"
 
 # Added for iconv library since asdf PHP couldn't build without this being here.
 export PATH="/usr/local/opt/libiconv/bin:$PATH"
