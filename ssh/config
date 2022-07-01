@@ -1,5 +1,4 @@
 Host *
-  IdentityFile ~/.ssh/id_hooroo
   IdentityFile ~/.ssh/id_ed25519
   AddKeysToAgent yes
 # Use SSH over the HTTPS port for when port 22 is blocked but port 443
