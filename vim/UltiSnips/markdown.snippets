@@ -81,3 +81,12 @@ endsnippet
 snippet "link inline" "Inline link"
 [${1:${VISUAL:Text}}](${2:url})$0
 endsnippet
+
+# Specifically for steno dictionary entries.
+# Copy a single/multi-stroke outline from the steno tape and it gets auto-filled
+# by the snippet, swapping out new line characters for slashes.
+# Final substitution is just to remove my final "copy" (KP*EU) brief from the
+# entry, as sometimes gets highlighted in the Plover paper tape.
+snippet steno "String" b
+"${1:`!v substitute(@+, '\n', '/', 'g')->substitute('\/KP\*EU$', '', 'g')->substitute('\s', '', 'g')`}": "${2:value}"$0
+endsnippet
