@@ -199,7 +199,7 @@ Plug 'vim-scripts/ingo-library'
 " Define a different filetype syntax on regions of a buffer
 Plug 'vim-scripts/syntaxrange'
 " Automatic syntax checking
-Plug 'vim-syntastic/syntastic'
+" Plug 'vim-syntastic/syntastic'
 " Vim / Neovim plugin for preview PlantUML
 " Run :PlantumlOpen to open previewer webpage in browser
 Plug 'weirongxu/plantuml-previewer.vim'

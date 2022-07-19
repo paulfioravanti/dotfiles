@@ -54,3 +54,5 @@ stty -ixon -ixoff
 # added by travis gem
 # [ -f "$HOME/.travis/travis.sh" ] && . "$HOME/.travis/travis.sh"
 # [ -f "$HOME/.fzf.bash" ] && . "$HOME/.fzf.bash"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

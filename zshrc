@@ -40,6 +40,7 @@ export UNBUNDLED_COMMANDS=(rubocop)
 # https://superuser.com/questions/598810/zsh-config-to-export-or-not-to-export/598924#598924
 typeset -U path
 path=(
+  /opt/homebrew/bin
   /usr/local/bin
   /usr/local/heroku/bin
   /usr/local/share/npm/bin
@@ -198,20 +199,17 @@ function update() {
 # added by travis gem
 [ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
 
-. /usr/local/opt/asdf/libexec/asdf.sh
+. $(brew --prefix asdf)/libexec/asdf.sh
 # . $HOME/.asdf/asdf.sh
 # . $HOME/.asdf/completions/asdf.bash
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 # Added for Crystal: https://github.com/crystal-lang/crystal/issues/6875#issuecomment-424999123
-export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/opt/openssl/lib/pkgconfig
+# export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/opt/openssl/lib/pkgconfig
 # Added to hook in direnv: https://direnv.net/docs/hook.html#zsh
 eval "$(direnv hook zsh)"
 # Added for Quantum Mechanical Keyboard (QMK) firmware
 export QMK_HOME="$HOME/c/qmk_firmware"
-
-# Added for iconv library since asdf PHP couldn't build without this being here.
-export PATH="/usr/local/opt/libiconv/bin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
