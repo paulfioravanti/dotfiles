@@ -208,6 +208,7 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 eval "$(direnv hook zsh)"
 # Added for Quantum Mechanical Keyboard (QMK) firmware
 export QMK_HOME="$HOME/c/qmk_firmware"
+export SHELL=/bin/zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
