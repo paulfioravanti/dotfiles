@@ -14,7 +14,6 @@ asdf plugin add gradle https://github.com/rfrancis/asdf-gradle.git
 asdf plugin add haskell https://github.com/vic/asdf-haskell.git
 asdf plugin add java https://github.com/halcyon/asdf-java.git
 asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
-asdf plugin add php https://github.com/asdf-community/asdf-php.git
 asdf plugin add python https://github.com/tuvistavie/asdf-python.git
 asdf plugin add redis https://github.com/smashedtoatoms/asdf-redis.git
 asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git
