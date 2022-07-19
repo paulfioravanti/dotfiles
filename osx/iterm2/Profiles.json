@@ -505,7 +505,7 @@
     "Blue Component" : 0.83529411764705885,
     "Green Component" : 0.90980392156862744
   },
-  "Command" : "\/usr\/local\/bin\/zsh --login",
+  "Command" : "\/bin\/zsh --login",
   "Terminal Type" : "xterm-256color",
   "Horizontal Spacing" : 1,
   "Option Key Sends" : 0,
@@ -947,7 +947,7 @@
     "Blue Component" : 0.79781103134155273,
     "Red Component" : 0.91611063480377197
   },
-  "Command" : "\/usr\/local\/bin\/zsh --login",
+  "Command" : "\/bin\/zsh --login",
   "Terminal Type" : "xterm-256color",
   "Horizontal Spacing" : 1,
   "Option Key Sends" : 0,
@@ -1370,7 +1370,7 @@
   },
   "Space" : -1,
   "HotKey Window AutoHides" : true,
-  "Command" : "\/usr\/local\/bin\/zsh --login",
+  "Command" : "\/bin\/zsh --login",
   "Terminal Type" : "xterm-256color",
   "Horizontal Spacing" : 1,
   "Option Key Sends" : 0,
@@ -1920,7 +1920,7 @@
     "Blue Component" : 0.83529411764705885,
     "Green Component" : 0.90980392156862744
   },
-  "Command" : "\/usr\/local\/bin\/zsh --login",
+  "Command" : "\/bin\/zsh --login",
   "Terminal Type" : "xterm-256color",
   "Horizontal Spacing" : 1,
   "Option Key Sends" : 0,
