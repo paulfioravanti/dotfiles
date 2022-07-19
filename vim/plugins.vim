@@ -50,8 +50,6 @@ Plug 'jparise/vim-graphql'
 " Toggle the cursor shape in the terminal for Vim
 Plug 'jszakmeister/vim-togglecursor'
 " Vim wrapper for Command-line fuzzy finder FZF
-" (assumes install via Homebrew)
-Plug '/opt/homebrew/opt/fzf'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 " Easy code alignment
