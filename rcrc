@@ -1,2 +1,2 @@
-EXCLUDES="README.md LICENSE.txt setup.sh config.sh *:vim:setup.sh *:tmux:setup.sh *:oh-my-zsh/setup.sh osx"
+EXCLUDES="README.md LICENSE.txt setup.sh config.sh *:vim:setup.sh *:tmux:setup.sh *:oh-my-zsh/setup.sh macos"
 UNDOTTED="Brewfile"

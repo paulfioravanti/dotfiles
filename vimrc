@@ -63,7 +63,7 @@ set term=xterm-256color
 set wildmenu
 " Don't include any compiled beam files from Elixir
 set wildignore+=*.beam
-" Don't include OSX-specific files
+" Don't include macOS-specific files
 set wildignore+=*.DS_Store
 " Don't include vcs files
 set wildignore+=.git

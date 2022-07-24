@@ -6,7 +6,7 @@
 DOTFILES_DIR=$(dirname "${BASH_SOURCE:-$0}")
 
 # Install brew packages and casks
-source "${DOTFILES_DIR}/osx/homebrew/setup.sh"
+source "${DOTFILES_DIR}/macos/homebrew/setup.sh"
 
 # Get Solarized colors for iTerm.
 # iTerm should have been installed by Homebrew
@@ -16,9 +16,9 @@ open ~/solarized/iterm2-colors-solarized/Solarized\ Light.itermcolors
 
 # Bootstrap rcup: the exclusions here are enumerated in the rcrc file so
 # you should be able to just run `$ rcup` when doing this again
-# Ignores the README, setup scripts, and the ruby and osx directories
+# Ignores the README, setup scripts, and the ruby and macos directories
 # for symlinking
-rcup -x README.md -x LICENSE.txt -x setup.sh -x config.sh -x '*:vim:setup.sh' -x '*:tmux:setup.sh' -x '*:oh-my-zsh:setup.sh' -x osx -x asdf
+rcup -x README.md -x LICENSE.txt -x setup.sh -x config.sh -x '*:vim:setup.sh' -x '*:tmux:setup.sh' -x '*:oh-my-zsh:setup.sh' -x macos -x asdf
 
 # Setup asdf
 source "${DOTFILES_DIR}/asdf/setup.sh"
@@ -27,7 +27,7 @@ source "${DOTFILES_DIR}/asdf/setup.sh"
 source "${DOTFILES_DIR}/tmux/setup.sh"
 
 # Setup iterm2
-source "${DOTFILES_DIR}/osx/iterm2/setup.sh"
+source "${DOTFILES_DIR}/macos/iterm2/setup.sh"
 
 # Install and setup oh-my-zsh
 source "${DOTFILES_DIR}/oh-my-zsh/setup.sh"
@@ -68,7 +68,7 @@ echo "You should probably restart the computer now."
 #   - Dropbox (Personal)
 #   - Google Drive
 #   - Airdrop
-# - Organise the OSX dock to have the following apps in it (and set them up
+# - Organise the macOS dock to have the following apps in it (and set them up
 #    appropriately):
 #    - Finder
 #    - Chrome
@@ -117,7 +117,7 @@ echo "You should probably restart the computer now."
 #    - Under User & Groups > Login Items, set the following list:
 #      - Dropbox, Alfred 4, Divvy, Karabiner, Google Drive
 #    - Under Software Update:
-#      - Under Advaced Tab: Uncheck Install App updates and Install OSX updates
+#      - Under Advaced Tab: Uncheck Install App updates and Install macOS updates
 #    - Under Date & Time
 #      - Check Show Date and Time in menu bar, show the day of the week,
 #        and show date (seems like this happens by default now...)

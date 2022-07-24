@@ -70,13 +70,13 @@ bootstrap process above):
 #### `bash`:
 
 ```sh
-rcup -x README.md -x LICENSE.txt -x setup.sh -x config.sh -x '*:vim:setup.sh' -x '*:tmux:setup.sh' -x '*:oh-my-zsh:setup.sh' -x osx -x asdf
+rcup -x README.md -x LICENSE.txt -x setup.sh -x config.sh -x '*:vim:setup.sh' -x '*:tmux:setup.sh' -x '*:oh-my-zsh:setup.sh' -x macos -x asdf
 ```
 
 #### `zsh`:
 
 ```sh
-rcup -x README.md -x LICENSE.txt -x setup.sh -x config.sh -x \*:vim:setup.sh -x \*:tmux:setup.sh -x \*:oh-my-zsh:setup.sh -x osx -x asdf
+rcup -x README.md -x LICENSE.txt -x setup.sh -x config.sh -x \*:vim:setup.sh -x \*:tmux:setup.sh -x \*:oh-my-zsh:setup.sh -x macos -x asdf
 ```
 
 ## Regenerate Dotfiles
@@ -101,8 +101,8 @@ source ~/.dotfiles/config.sh
 Or individually (choose relevant script to regenerate config):
 
 ```sh
-source ~/.dotfiles/osx/homebrew/config.sh
-source ~/.dotfiles/osx/iterm2/config.sh
+source ~/.dotfiles/macos/homebrew/config.sh
+source ~/.dotfiles/macos/iterm2/config.sh
 ```
 
 ## Social
