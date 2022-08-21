@@ -8,12 +8,6 @@ DOTFILES_DIR=$(dirname "${BASH_SOURCE:-$0}")
 # Install brew packages and casks
 source "${DOTFILES_DIR}/macos/homebrew/setup.sh"
 
-# Get Solarized colors for iTerm.
-# iTerm should have been installed by Homebrew
-git clone https://github.com/altercation/solarized.git ~/solarized
-open ~/solarized/iterm2-colors-solarized/Solarized\ Dark.itermcolors
-open ~/solarized/iterm2-colors-solarized/Solarized\ Light.itermcolors
-
 # Bootstrap rcup: the exclusions here are enumerated in the rcrc file so
 # you should be able to just run `$ rcup` when doing this again
 # Ignores the README, setup scripts, and the ruby and macos directories
@@ -28,6 +22,12 @@ source "${DOTFILES_DIR}/tmux/setup.sh"
 
 # Setup iterm2
 source "${DOTFILES_DIR}/macos/iterm2/setup.sh"
+
+# Get Solarized colors for iTerm.
+# iTerm should have been installed by Homebrew
+git clone https://github.com/altercation/solarized.git ~/solarized
+open ~/solarized/iterm2-colors-solarized/Solarized\ Dark.itermcolors
+open ~/solarized/iterm2-colors-solarized/Solarized\ Light.itermcolors
 
 # Install and setup oh-my-zsh
 source "${DOTFILES_DIR}/oh-my-zsh/setup.sh"
