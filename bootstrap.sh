@@ -15,4 +15,5 @@ sudo xcodebuild -license accept
 ssh-keygen -t ed25519 -C ""
 ssh-add --apple-use-keychain ~/.ssh/id_ed25519
 
-defaults write com.apple.Finder AppleShowAllFiles true
+# macOS Preferences
+defaults write com.apple.Finder AppleShowAllFiles -bool YES; killall -HUP Finder
