@@ -14,6 +14,9 @@ source "${DOTFILES_DIR}/macos/homebrew/setup.sh"
 # for symlinking
 rcup -x README.md -x LICENSE.txt -x setup.sh -x config.sh -x '*:vim:setup.sh' -x '*:tmux:setup.sh' -x '*:oh-my-zsh:setup.sh' -x macos -x asdf
 
+# Install and setup oh-my-zsh
+source "${DOTFILES_DIR}/oh-my-zsh/setup.sh"
+
 # Setup asdf
 source "${DOTFILES_DIR}/asdf/setup.sh"
 
@@ -22,18 +25,6 @@ source "${DOTFILES_DIR}/tmux/setup.sh"
 
 # Setup iterm2
 source "${DOTFILES_DIR}/macos/iterm2/setup.sh"
-
-# Get Solarized colors for iTerm.
-# iTerm should have been installed by Homebrew
-git clone https://github.com/altercation/solarized.git ~/solarized
-open ~/solarized/iterm2-colors-solarized/Solarized\ Dark.itermcolors
-open ~/solarized/iterm2-colors-solarized/Solarized\ Light.itermcolors
-
-# Install and setup oh-my-zsh
-source "${DOTFILES_DIR}/oh-my-zsh/setup.sh"
-
-# Clean up
-rm -rf ~/solarized
 
 echo "Finished initial setup!"
 echo "You should probably restart the computer now."
