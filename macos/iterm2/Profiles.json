@@ -543,7 +543,7 @@
   },
   "Columns" : 80,
   "Visual Bell" : true,
-  "Custom Directory" : "Recycle",
+  "Custom Directory" : "Yes",
   "Ansi 5 Color" : {
     "Red Component" : 0.82745098039215681,
     "Color Space" : "sRGB",
