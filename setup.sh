@@ -26,13 +26,14 @@ source "${DOTFILES_DIR}/tmux/setup.sh"
 # Setup iterm2
 source "${DOTFILES_DIR}/macos/iterm2/setup.sh"
 
+# REF: https://stackoverflow.com/a/59637792/567863
 __dock_item() {
-    printf '%s%s%s%s%s' \
-           '<dict><key>tile-data</key><dict><key>file-data</key><dict>' \
-           '<key>_CFURLString</key><string>' \
-           "$1" \
-           '</string><key>_CFURLStringType</key><integer>0</integer>' \
-           '</dict></dict></dict>'
+  printf '%s%s%s%s%s' \
+         '<dict><key>tile-data</key><dict><key>file-data</key><dict>' \
+         '<key>_CFURLString</key><string>' \
+         "$1" \
+         '</string><key>_CFURLStringType</key><integer>0</integer>' \
+         '</dict></dict></dict>'
 }
 
 defaults write com.apple.dock persistent-apps -array \
