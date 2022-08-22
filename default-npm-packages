@@ -1,6 +1,5 @@
 bs-platform
 create-elm-app
-css-burrito
 elm
 elm-analyse
 elm-brunch
@@ -19,7 +18,6 @@ elm-ts-interop
 elm-upgrade
 elm-verify-examples
 elm-xref
-ember-cli
 eslint
 gh-pages
 htmllint-cli
@@ -29,14 +27,11 @@ newman
 npm-check
 npm-check-updates
 pnpm
-reason-cli@latest-macos
 sass-lint
 serve
-@stoplight/prism-cli
 surge
 markdownlint-cli
 prettier
-serverless
 tldr
 ts-node
 typescript
