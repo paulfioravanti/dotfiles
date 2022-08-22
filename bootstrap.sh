@@ -16,4 +16,9 @@ ssh-keygen -t ed25519 -C ""
 ssh-add --apple-use-keychain ~/.ssh/id_ed25519
 
 # macOS Preferences
-defaults write com.apple.Finder AppleShowAllFiles -bool YES; killall -HUP Finder
+# Show hidden files
+defaults write com.apple.Finder AppleShowAllFiles -bool TRUE; killall -HUP Finder
+# Autohide dock
+defaults write com.apple.Dock autohide -bool TRUE; killall Dock
+# Turn off "Natural" scrolling everywhere
+defaults write -globalDomain com.apple.swipescrolldirection -bool FALSE

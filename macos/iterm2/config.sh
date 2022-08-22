@@ -8,5 +8,5 @@ GREEN=$(tput setaf 2)
 RESET=$(tput sgr0)
 
 echo "${YELLOW}Generating iterm2 config...${RESET}"
-# cp ~/Library/Preferences/com.googlecode.iterm2.plist "${ITERM_DIR}/."
+cp "$HOME/Library/Preferences/com.googlecode.iterm2.plist" "${ITERM_DIR}/."
 echo "${GREEN}Complete!${RESET}"

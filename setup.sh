@@ -26,6 +26,26 @@ source "${DOTFILES_DIR}/tmux/setup.sh"
 # Setup iterm2
 source "${DOTFILES_DIR}/macos/iterm2/setup.sh"
 
+__dock_item() {
+    printf '%s%s%s%s%s' \
+           '<dict><key>tile-data</key><dict><key>file-data</key><dict>' \
+           '<key>_CFURLString</key><string>' \
+           "$1" \
+           '</string><key>_CFURLStringType</key><integer>0</integer>' \
+           '</dict></dict></dict>'
+}
+
+defaults write com.apple.dock persistent-apps -array \
+  "$(__dock_item /System/Applications/Photos.app)" \
+  "$(__dock_item /Applications/Slack.app)" \
+  "$(__dock_item /Applications/Discord.app)" \
+  "$(__dock_item /Applications/Google\ Chrome.app)" \
+  "$(__dock_item /Applications/Trello.app)" \
+  "$(__dock_item /System/Applications/App\ Store.app)" \
+  "$(__dock_item /Applications/iTerm.app)" \
+  "$(__dock_item /System/Applications/System\ Preferences.app)" \
+  "$(__dock_item /System/Applications/Utilities/Activity\ Monitor.app)" \
+
 echo "Finished initial setup!"
 echo "You should probably restart the computer now."
 
