@@ -11,7 +11,7 @@ from elixir_helpers import (
 )
 
 _PHOENIX_TEMPLATE_FILEPATH = re.compile(
-    r"lib/(.+_web)/templates/(.+)/(.+)\.html\.(?:h|l)?eex"
+    r"lib/(.+_web)/(?:templates|live)/(.+)/(.+)\.html\.(?:h|l)?eex"
 )
 
 def eex_placeholder(tag):
