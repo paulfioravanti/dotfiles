@@ -36,7 +36,7 @@ endsnippet
 # NOTE: Choice tabstop cannot be used here to select between a potential
 # assign="x" or assign={x} due to issues around having no spaces between the
 # choice tabstop definition.
-snippet component "Phoenix.LiveView.Helpers.component/2"
+snippet component "Phoenix.LiveView.Helpers.component/2" b
 <${1:Module}.${2:function}
   ${3:assign}=${4:"}${5:value}`!p snip.rv = closing_character(t[4])`
   $0
@@ -72,7 +72,7 @@ snippet label "Phoenix.HTML.Form.label/4"
 <%= label ${1:form}, :${2:field}, "${3:text}"${4:, ${5:id: "${6:id}"}${7:, }${8:class: "${9:class}"}} %>
 endsnippet
 
-snippet "live component" "Phoenix.LiveView.Helpers.live_component/1"
+snippet "live component" "Phoenix.LiveView.Helpers.live_component/1" b
 <.live_component
   module={${1:`!p snip.rv = module_name()`}Live}
   id={${2:live-component-id}}
