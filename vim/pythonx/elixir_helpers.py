@@ -4,7 +4,7 @@ Elixir-related Ultisnips snippet helper functions.
 import re
 
 _DASHES_AND_UNDERSCORES = re.compile("[-_]")
-_MODULE_FILEPATH = re.compile(r"lib\/([^\/]+)\/(?:(?:[^\/]+)\/)*([^\/]+).ex")
+_MODULE_FILEPATH = re.compile(r"lib\/([^\/]+)\/([\w+\/]+)*\/([^\/]+).ex")
 
 def closing_character(tabstop):
     """
