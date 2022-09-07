@@ -9,7 +9,8 @@ from elixir_helpers import (
 )
 
 def module_name():
-    # REF path variable: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt#L894
+    # REF path variable:
+    # https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt#L894
     module_path_parts = module_path_match(path).group(1, 2)
     module_parts = map(to_module_name, module_path_parts)
     return ".".join(module_parts)

@@ -23,6 +23,8 @@ def eex_placeholder(tag):
     return "expression"
 
 def module_name(regex=_PHOENIX_TEMPLATE_FILEPATH):
+    # REF path variable:
+    # https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt#L894
     module_path_parts = module_path_match(path, regex).group(1, 2, 3)
     module_parts = map(to_module_name, module_path_parts)
     return ".".join(module_parts)
