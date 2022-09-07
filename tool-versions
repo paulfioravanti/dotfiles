@@ -4,10 +4,10 @@ crystal 1.5.0
 elixir 1.14.0-otp-25
 elm 0.19.1
 erlang 25.0.4
-golang 1.19
+golang 1.19.1
 haskell 9.4.2
 nodejs 18.8.0
-python 3.10.6
+python 3.10.7
 redis 7.0.4
 ruby 3.1.2
 rust 1.63.0
