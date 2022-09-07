@@ -150,6 +150,7 @@ brew "poppler"
 brew "gdal"
 brew "gdk-pixbuf"
 brew "geckodriver"
+brew "gh"
 brew "jbig2dec"
 brew "ghostscript"
 brew "gifsicle"
@@ -330,4 +331,5 @@ cask "vlc"
 mas "KeyLimePie", id: 1575163350
 mas "Swiftpoint Control Panel", id: 1502319732
 mas "Trello", id: 1278508951
+mas "Vimari", id: 1480933944
 mas "Xcode", id: 497799835
