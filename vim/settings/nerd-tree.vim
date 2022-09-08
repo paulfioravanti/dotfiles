@@ -19,6 +19,10 @@ nnoremap <Leader>f :NERDTreeFind<CR>
 " REF: https://stackoverflow.com/a/65743329/567863
 map <C-n> :call NERDTreeToggleAndRefresh()<CR>
 
+" NOTE: WORKAROUND for https://github.com/preservim/nerdtree/issues/1321
+" Remove this when that PR is fixed/merged.
+let g:NERDTreeMinimalMenu=1
+
 function NERDTreeToggleAndRefresh()
   :NERDTreeToggle
   if g:NERDTree.IsOpen()
