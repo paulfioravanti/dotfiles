@@ -16,6 +16,6 @@ phx-`!p snip.rv = binding_name(match)`=${1|",{|}`!p snip.rv = closing_character(
 endsnippet
 
 # REF path variable: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt#L894
-snippet "use phx" "Kernel.use/2 with a Phoenix module"
+snippet "\buse (phx|phoenix)" "Kernel.use/2 with a Phoenix module" r
 use ${1:`!p snip.rv = outer_module_name(path)`}, :${2|channel,component,controller,live_component,live_view,router,view|}$0
 endsnippet
