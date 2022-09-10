@@ -66,10 +66,22 @@ snippet label "Inline label tag" i
 <label ${1:for="${2:input-id}}>${3:${VISUAL}}</label>$0
 endsnippet
 
+snippet "(link|anchor)" "HTML <a> tag" ri
+<a href="${1:url}"${2: target="${3|_blank,_parent,_top|}"}>${4:text}</a>$0
+endsnippet
+
+snippet "(link|anchor) (mail|email)" "HTML <a> tag link to telephone number" ri
+<a href="mailto:${1:address}">${2:$1}</a>$0
+endsnippet
+
+snippet "(link|anchor) phone" "HTML <a> tag link to telephone number" ri
+<a href="tel:${1:number}">${2:$1}</a>$0
+endsnippet
+
 snippet method "<form> method attribute" i
 method="${1|post,get|}"$0
 endsnippet
 
 snippet target "<form> target attribute" i
-target="${1|_blank,_self,_parent,_top,framename|}"$0
+target="${1|_blank,_parent,_top|}"$0
 endsnippet
