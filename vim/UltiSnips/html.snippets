@@ -6,7 +6,7 @@ tag = match.group(1)
 </`!p snip.rv = tag`>
 endsnippet
 
-snippet "\b(article|button|div|p|select|span)" "HTML tag with id and class options" r
+snippet "\b(article|audio|body|button|code|div|figcaption|figure|footer|head|html|kbd|li|main|nav|ol|p|pre|rt|ruby|samp|section|select|span|style|table|tbody|td|textarea|tf|th|thead|title|tr|ul|var|video)" "HTML tag with id and class options" r
 `!p
 tag = match.group(1)
 `<`!p snip.rv = tag`${1:${2: id="${3:id}"}${4: class="${5:class}"}}>
@@ -36,6 +36,10 @@ snippet "\b(?:h|heading )([1-6])" "HTML heading" r
 `!p
 level = match.group(1)
 `<h`!p snip.rv = level`${1:${2: id="${3:id}"}${4: class="${5:class}"}}>${6:${VISUAL}}</h`!p snip.rv = level`>$0
+endsnippet
+
+snippet iframe "HTML iframe tag" i
+<iframe src="${1:src}">$0</iframe>
 endsnippet
 
 snippet img "HTML img tag" i
@@ -80,6 +84,14 @@ endsnippet
 
 snippet method "<form> method attribute" i
 method="${1|post,get|}"$0
+endsnippet
+
+snippet option "HTML option tag" i
+<option value="${1:value}">${2:text}</option>$0
+endsnippet
+
+snippet source "HTML source tag" i
+<source src="${1:url}" type="${2:type}" />$0
 endsnippet
 
 snippet target "<form> target attribute" i
