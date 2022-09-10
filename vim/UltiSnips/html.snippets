@@ -6,7 +6,7 @@ tag = match.group(1)
 </`!p snip.rv = tag`>
 endsnippet
 
-snippet "\b(button|div|p|span)" "HTML tag with id and class options" r
+snippet "\b(article|button|div|p|select|span)" "HTML tag with id and class options" r
 `!p
 tag = match.group(1)
 `<`!p snip.rv = tag`${1:${2: id="${3:id}"}${4: class="${5:class}"}}>
