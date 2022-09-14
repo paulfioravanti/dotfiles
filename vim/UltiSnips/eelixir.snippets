@@ -49,6 +49,10 @@ snippet "\beex" "EEx tag" r
 <${1|%,%=,%#,%%,%%=|} ${2:`!p snip.rv = eex_placeholder(t[1])`} %>$0
 endsnippet
 
+snippet end "EEx <% end %> tag" b
+<% end %>
+endsnippet
+
 snippet form "Phoenix.LiveView.Helpers.form/1"
 <.form
   let={${1:f}}
