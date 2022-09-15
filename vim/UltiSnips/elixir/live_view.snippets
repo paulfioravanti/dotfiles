@@ -84,7 +84,7 @@ snippet "live component" "Phoenix.LiveView.Helpers.live_component/1" b
 endsnippet
 
 snippet "live patch" "Phoenix.LiveView.Helpers.live_patch/2"
-<%= live_patch${1: "${2:text}" }`!p if not snip.c and not t[2]: vim.command('+,+2d'); snip.rv = " "`to: Routes.${3:path_function}(@socket, :${4:action}${5:, ${6:param}})${7:, replace: true}`!p snip.rv = " do" if t[2] else ""` %>
+<%= live_patch${1: "${2:text}" }`!p if not snip.c and not t[2]: vim.command('+,+2d'); snip.rv = " "`to: Routes.${3:path_function}(@socket, :${4:action}${5:, ${6:param}})${7:, replace: true}`!p snip.rv = " do" if t[2] else ""` %>$8
   $0
 <% end %>
 endsnippet
