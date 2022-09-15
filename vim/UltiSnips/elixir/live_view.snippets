@@ -6,8 +6,19 @@ from elixir_helpers import (
     to_module_name
 )
 
+_PHOENIX_TEMPLATE_FILEPATH = re.compile(
+    r"lib/(.+_web)/(?:templates|live)/(.+)/(.+)\.html\.(?:h|l)?eex"
+)
+
 def key_closing(opening):
     return "," if opening == ":" else ":"
+
+def module_name(regex=_PHOENIX_TEMPLATE_FILEPATH):
+    # REF path variable:
+    # https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt#L894
+    module_path_parts = module_path_match(path, regex).group(1, 2, 3)
+    module_parts = map(to_module_name, module_path_parts)
+    return ".".join(module_parts)
 
 endglobal
 
@@ -19,8 +30,35 @@ snippet "assign new" "Phoenix.LiveView.assign_new/3"
 assign_new(${1:${2|assigns,socket|}, }:${3:key}, fn -> ${4:do_something} end)
 endsnippet
 
+# NOTE: Choice tabstop cannot be used here to select between a potential
+# assign="x" or assign={x} due to issues around having no spaces between the
+# choice tabstop definition.
+snippet component "Phoenix.LiveView.Helpers.component/2" b
+<${1:Module}.${2:function}
+  ${3:assign}=${4:"}${5:value}`!p snip.rv = closing_character(t[4])`
+  $0
+/>
+endsnippet
+
 snippet "connected(:??)?" "Phoenix.LiveView.connected?/1" r
 connected?(socket)$0
+endsnippet
+
+snippet form "Phoenix.LiveView.Helpers.form/1"
+<.form
+  let={${1:f}}
+  for={${2:@changeset}}
+  ${3:id="${4:form-id}"}
+  ${4:phx-target={${5:@myself}}}
+  ${6:phx-change="${7:validate}"}
+  ${8:phx-submit="${9:save}"}>
+
+  $0
+
+  <div>
+    <%= submit "${10:Save}", ${11:phx_disable_with: "${12:Saving...}"} %>
+  </div>
+</.form>
 endsnippet
 
 snippet "handle event" "Phoenix.(LiveView|LiveComponent).handle_event/3"
@@ -35,6 +73,14 @@ snippet heex "Phoenix.LiveView.Helpers.sigil_H/2"
 ~H"""
 $0
 """
+endsnippet
+
+snippet "live component" "Phoenix.LiveView.Helpers.live_component/1" b
+<.live_component
+  module={${1:`!p snip.rv = module_name()`}Component}
+  id={${2:live-component-id}}
+  $0
+/>
 endsnippet
 
 snippet "live patch" "Phoenix.LiveView.Helpers.live_patch/2"
