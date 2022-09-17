@@ -27,6 +27,10 @@ snippet "\beex" "EEx tag" r
 <${1|%,%=,%#,%%,%%=|} ${2:`!p snip.rv = eex_placeholder(t[1])`} %>$0
 endsnippet
 
+snippet "\bdata" "Phoenix.HTML data param" r
+data: [${1:confirm}: ${2:"${3:Really?}"}]$0
+endsnippet
+
 snippet end "EEx <% end %> tag" b
 <% end %>
 endsnippet
