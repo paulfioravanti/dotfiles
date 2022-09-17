@@ -9,10 +9,15 @@ from elixir_helpers import (
 def binding_name(match):
     return match.group(1).replace(" ", "-")
 
+def binding_assign_character(character):
+    if character == "\"":
+        return ": "
+    return "="
+
 endglobal
 
-snippet "phx (.+)" "phx- binding" r
-phx-`!p snip.rv = binding_name(match)`=${1|",{|}`!p snip.rv = closing_character(t[1])`$0
+snippet "\b(?:phx|phoenix) (.+)" "phx- binding" ri
+${1:"}phx-`!p snip.rv = binding_name(match)``!p snip.rv = closing_character(t[1])``!p snip.rv = binding_assign_character(t[1])`${2|",{,@|}`!p snip.rv = closing_character(t[2])`$0
 endsnippet
 
 # REF path variable: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt#L894
