@@ -44,9 +44,13 @@ snippet label "Phoenix.HTML.Form.label/4"
 endsnippet
 
 snippet link "Phoenix.HTML.link.link/2"
-<%= link${1: "${2:text}",} to: "${3:/href}"${4:${5:, method: ${6|:get,:post,:put,:patch,:delete|}}${7:, class: "${8:class}"}${9:, data: [${10:confirm}: "${11:Really?}"]}} ${12:do %>
+<%= link${1: "${2:text}",} to: "${3:/href}"$4 ${5:do %>
   $0
-<% end %>}`!p snip.rv = "" if t[12] else "%>"`
+<% end %>}`!p snip.rv = "" if t[5] else "%>"`
+endsnippet
+
+snippet "\bmethod" "Phoenix.HTML method param" r
+method: ${1|:get,:post,:put,:patch,:delete|}$0
 endsnippet
 
 snippet select "Phoenix.HTML.Form.select/4"
