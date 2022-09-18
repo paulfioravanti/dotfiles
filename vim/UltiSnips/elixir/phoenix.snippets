@@ -16,8 +16,10 @@ def binding_assign_character(character):
 
 endglobal
 
+# NOTE: $3 may seem like an unnecessary tabstop, but it's needed when this
+# snippet is used in a nested way.
 snippet "\b(?:phx|phoenix) (.+)" "phx- binding" ri
-${1:"}phx-`!p snip.rv = binding_name(match)``!p snip.rv = closing_character(t[1])``!p snip.rv = binding_assign_character(t[1])`${2|",{,@|}`!p snip.rv = closing_character(t[2])`$0
+${1:"}phx-`!p snip.rv = binding_name(match) + closing_character(t[1]) + binding_assign_character(t[1])`${2|",{,@|}$3`!p snip.rv = closing_character(t[2])`$0
 endsnippet
 
 # REF path variable: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt#L894
