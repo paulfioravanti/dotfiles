@@ -46,10 +46,12 @@ endsnippet
 # NOTE: Due to issues with usage of nested snippets for link function params,
 # and the way the do/end block is implemented as a default value for a tabstop,
 # $6 is used to force the tabstop into the block.
-snippet link "Phoenix.HTML.link.link/2"
-<%= link${1: "${2:text}",} to: "${3:/href}"$4 ${5:do %>
+snippet link "Phoenix.HTML.Link.link/2" "snip.before.lstrip()[0:3]" e
+`!p
+is_eex = snip.context == "<%="
+`link${1: "${2:text}",} to: "${3:/href}"$4 ${5:do`!p snip.rv = " %>" if is_eex else ""`
   $6$0
-<% end %>}`!p snip.rv = "" if t[5] else "%>"`
+`!p snip.rv = "<% end" if is_eex else "end"`}
 endsnippet
 
 snippet "\bmethod" "Phoenix.HTML method param" r
