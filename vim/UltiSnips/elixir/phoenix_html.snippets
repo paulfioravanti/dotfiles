@@ -18,7 +18,7 @@ endsnippet
 snippet link "Phoenix.HTML.Link.link/2" "snip.before.lstrip()[0:3]" e
 `!p
 is_eex = snip.context == "<%="
-`link${1: "${2:text}",} to: "${3:/href}"$4 ${5:do`!p snip.rv = " %>" if is_eex else ""`
+`link${1: "${2:text}",} to: "${3:/href}"$4${5: do`!p snip.rv = " %>" if is_eex else ""`
   $6$0
 `!p snip.rv = "<% end" if is_eex else "end"`}
 endsnippet
