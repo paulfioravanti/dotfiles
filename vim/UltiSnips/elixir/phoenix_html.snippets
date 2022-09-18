@@ -1,0 +1,42 @@
+extends html
+
+snippet "\bdata" "Phoenix.HTML data param" r
+data: [${1:confirm}: ${2:"${3:Really?}"}]$0
+endsnippet
+
+snippet "img tag" "Phoenix.HTML.Tag.img_tag/2"
+<%= img_tag "${1:src}"${2:, class: "${3:class}"${4:, }${5:srcset: %{"${6:$1}" => "${7:1x}", "${8:2x-$1}" => "${9:2x}"}}} %>
+endsnippet
+
+snippet label "Phoenix.HTML.Form.label/4"
+<%= label ${1:form}, :${2:field}, "${3:text}"${4:, ${5:id: "${6:id}"}${7:, }${8:class: "${9:class}"}} %>
+endsnippet
+
+# NOTE: Due to issues with usage of nested snippets for link function params,
+# and the way the do/end block is implemented as a default value for a tabstop,
+# $6 is used to force the tabstop into the block.
+snippet link "Phoenix.HTML.Link.link/2" "snip.before.lstrip()[0:3]" e
+`!p
+is_eex = snip.context == "<%="
+`link${1: "${2:text}",} to: "${3:/href}"$4 ${5:do`!p snip.rv = " %>" if is_eex else ""`
+  $6$0
+`!p snip.rv = "<% end" if is_eex else "end"`}
+endsnippet
+
+snippet "\bmethod" "Phoenix.HTML method param" r
+method: ${1|:get,:post,:put,:patch,:delete|}$0
+endsnippet
+
+snippet select "Phoenix.HTML.Form.select/4"
+<%= select ${1:form}, :${2:field}, ${3:options}${4:, ${5:selected: ${6:selected}}${7:, }${8:prompt: ${9:[key: "${10:prompt_string}", disabled: ${11:true}]}}} %>
+endsnippet
+
+snippet submit "Phoenix.HTML.Form.submit/2"
+<%= submit "${1:value}"${2:, ${3:class: "${4:class}"}${5:, }${6:phx_disable_with: "${7:Saving...}"}} %>
+endsnippet
+
+snippet "submit do" "Phoenix.HTML.Form.submit/1"
+<%= submit do %>
+  ${0:value}
+<% end %>
+endsnippet
