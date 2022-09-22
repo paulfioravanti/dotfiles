@@ -22,7 +22,8 @@ endsnippet
 # NOTE: Due to issues with usage of nested snippets for link function params,
 # and the way the do/end block is implemented as a default value for a tabstop,
 # $6 is used to force the tabstop into the block.
-snippet link "Phoenix.HTML.Link.link/2" "maybe_eex_tag(snip)" e
+context "maybe_eex_tag(snip)"
+snippet link "Phoenix.HTML.Link.link/2"
 `!p
 is_eex = snip.context == "<%="
 `link${1: "${2:text}",} to: "${3:/href}"$4${5: do`!p snip.rv = " %>" if is_eex else ""`
