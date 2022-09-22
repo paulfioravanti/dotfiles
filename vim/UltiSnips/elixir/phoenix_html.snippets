@@ -5,6 +5,21 @@ global !p
 def maybe_eex_tag(snip):
     return snip.before.lstrip()[0:3]
 
+def initial_eex_tag(snip):
+    return "<%= " if not has_eex_context(snip) else ""
+
+def do_eex_tag(snip, t):
+    return " %>" if has_eex_context(snip) or t else ""
+
+def initial_end_eex_tag(snip, t):
+    return "<% " if has_eex_context(snip) or t else ""
+
+def final_eex_tag(snip, t):
+    return " %>" if not has_eex_context(snip) and t else ""
+
+def has_eex_context(snip):
+    return snip.context == "<%="
+
 endglobal
 
 snippet "\bdata" "Phoenix.HTML data param" r
@@ -26,9 +41,9 @@ context "maybe_eex_tag(snip)"
 snippet link "Phoenix.HTML.Link.link/2"
 `!p
 in_eex = snip.context == "<%="
-`${1:`!p snip.rv = "<%= " if not in_eex else ""`}link${2: "${3:text}",} to: "${4:/href}"$5${6: do`!p snip.rv = " %>" if in_eex or t[1] else ""`
+`${1:`!p snip.rv = initial_eex_tag(snip)`}link${2: "${3:text}",} to: "${4:/href}"$5${6: do`!p snip.rv = do_eex_tag(snip, t[1])`
   $7$0
-`!p snip.rv = "<% " if in_eex or t[1] else ""`end}`!p snip.rv = " %>" if not in_eex and t[1] else ""`
+`!p snip.rv = initial_end_eex_tag(snip, t[1])`end}`!p snip.rv = final_eex_tag(snip, t[1])`
 endsnippet
 
 snippet "\bmethod" "Phoenix.HTML method param" r
