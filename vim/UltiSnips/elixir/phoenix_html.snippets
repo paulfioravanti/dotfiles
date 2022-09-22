@@ -25,10 +25,10 @@ endsnippet
 context "maybe_eex_tag(snip)"
 snippet link "Phoenix.HTML.Link.link/2"
 `!p
-is_eex = snip.context == "<%="
-`link${1: "${2:text}",} to: "${3:/href}"$4${5: do`!p snip.rv = " %>" if is_eex else ""`
-  $6$0
-`!p snip.rv = "<% end" if is_eex else "end"`}
+in_eex = snip.context == "<%="
+`${1:`!p snip.rv = "<%= " if not in_eex else ""`}link${2: "${3:text}",} to: "${4:/href}"$5${6: do`!p snip.rv = " %>" if in_eex or t[1] else ""`
+  $7$0
+`!p snip.rv = "<% " if in_eex or t[1] else ""`end}`!p snip.rv = " %>" if not in_eex and t[1] else ""`
 endsnippet
 
 snippet "\bmethod" "Phoenix.HTML method param" r

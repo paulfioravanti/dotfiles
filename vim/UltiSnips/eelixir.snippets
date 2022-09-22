@@ -19,7 +19,7 @@ def eex_placeholder(tag):
 endglobal
 
 snippet assign-value "Assign-value pair"
-${1:assign}=${2:"}${3:value}`!p snip.rv = closing_character(t[2])`
+${1:assign}=${2:"}${3:value}`!p snip.rv = closing_character(t[2])`$0
 endsnippet
 
 snippet "\beex" "EEx tag" r
@@ -27,5 +27,5 @@ snippet "\beex" "EEx tag" r
 endsnippet
 
 snippet end "EEx <% end %> tag" b
-<% end %>
+<% end %>$0
 endsnippet
