@@ -1,5 +1,9 @@
+snippet border "CSS border property"
+border: ${1:{style|width}}${2: ${3:{style|color}}${4: ${5:{color}}}};$0
+endsnippet
+
 snippet "border radius" "CSS border-radius property"
-border-radius: ${1:{all/top-left-bottom-right/top-left}}${2|px,em,%|}${3: ${4:{top-right/top-right-bottom-left}}${5|px,em,%|}${6: ${7:{bottom-right}}${8|px,em,%|}${9: ${10:{bottom-left}}${11|px,em,%|}}}};$0
+border-radius: ${1:{all|top-left-bottom-right|top-left}}${2|px,em,%|}${3: ${4:{top-right|top-right-bottom-left}}${5|px,em,%|}${6: ${7:{bottom-right}}${8|px,em,%|}${9: ${10:{bottom-left}}${11|px,em,%|}}}};$0
 endsnippet
 
 snippet "box shadow" "CSS box-shadow property"
@@ -21,7 +25,7 @@ snippet import "@import directive"
 endsnippet
 
 snippet "(margin|padding)" "CSS properties that deal with sides of an element" r
-`!p snip.rv = match.group(1)`: ${1:{all/vertical/top}}${2|px,em,rem,%|}${3: ${4:{horizontal/right}}${5|px,em,rem,%|}${6: ${7:{bottom}}${8|px,em,rem,%|}${9: ${10:{right}}${11|px,em,rem,%|}}}};$0
+`!p snip.rv = match.group(1)`: ${1:{all|vertical|top}}${2|px,em,rem,%|}${3: ${4:{horizontal|right}}${5|px,em,rem,%|}${6: ${7:{bottom}}${8|px,em,rem,%|}${9: ${10:{right}}${11|px,em,rem,%|}}}};$0
 endsnippet
 
 snippet "(margin|padding) (top)" "CSS properties that deal with top of an element" r
