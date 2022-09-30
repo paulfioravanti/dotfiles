@@ -40,4 +40,5 @@ def to_module_name(string):
         re.sub(_DASHES_AND_UNDERSCORES, " ", string)
         .title()
         .replace(" ", "")
+        .replace(".ex", "")
     )
