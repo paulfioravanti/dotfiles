@@ -22,6 +22,10 @@ def module_name(regex=_PHOENIX_TEMPLATE_FILEPATH):
 
 endglobal
 
+# NOTE: Choice tabstops cannot be used to select between a potential
+# assign="x" or assign={x} due to issues around having no spaces between the
+# choice tabstop definition. Might be a bug with Ultisnips...
+
 snippet assign "Phoenix.LiveView.assign/(2|3)"
 assign(${1:socket, }${2::}${3:key}`!p snip.rv = key_closing(t[2])` ${4:$3})$0
 endsnippet
@@ -30,9 +34,6 @@ snippet "assign new" "Phoenix.LiveView.assign_new/3"
 assign_new(${1:${2|assigns,socket|}, }:${3:key}, fn -> ${4:do_something} end)
 endsnippet
 
-# NOTE: Choice tabstop cannot be used here to select between a potential
-# assign="x" or assign={x} due to issues around having no spaces between the
-# choice tabstop definition.
 snippet component "Phoenix.LiveView.Helpers.component/2" b
 <${1:Module}.${2:function}
   ${3:assign}=${4:"}${5:value}`!p snip.rv = closing_character(t[4])`
