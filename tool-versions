@@ -6,7 +6,7 @@ elm 0.19.1
 erlang 25.1
 golang 1.19.1
 haskell 9.4.2
-nodejs 18.9.1
+nodejs 18.10.0
 python 3.10.7
 redis 7.0.5
 ruby 3.1.2
@@ -16,4 +16,4 @@ gradle 7.5.1
 dhall 1.41.2
 clojure 1.10.3.1087
 php 8.1.8RC1
-deno 1.25.4
+deno 1.26.0
