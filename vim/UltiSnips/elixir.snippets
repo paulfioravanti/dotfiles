@@ -78,14 +78,19 @@ snippet "Timex now" "Timex.now/(0|1)"
 Timex.now(${1:time_zone})$0
 endsnippet
 
-snippet tuple "literal tuple" i
+snippet "[^(ok|okay|error|tagged)] tuple" "literal tuple" r
 {${1:first}, ${2:second}$0}
 endsnippet
 
-snippet "tuple (.+)" "tagged tuple" r
+snippet "(ok|okay|error) tuple" "ok/error tagged tuple" r
 `!p
 tag = match.group(1)
+tag = "ok" if tag == "okay" else tag
 `{:`!p snip.rv = tag`, ${1:value}}$0
+endsnippet
+
+snippet "tagged tuple" "tagged tuple" r
+{:${1:tag}, ${2:value}}$0
 endsnippet
 
 snippet "validate length" "Ecto.Changeset.validate_length/3"
