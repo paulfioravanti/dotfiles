@@ -24,6 +24,10 @@ snippet "(margin|padding)" "CSS properties that deal with sides of an element" r
 `!p snip.rv = match.group(1)`: ${1:{all/vertical/top}}${2|px,em,rem,%|}${3: ${4:{horizontal/right}}${5|px,em,rem,%|}${6: ${7:{bottom}}${8|px,em,rem,%|}${9: ${10:{right}}${11|px,em,rem,%|}}}};$0
 endsnippet
 
+snippet "(margin|padding) (top)" "CSS properties that deal with top of an element" r
+`!p snip.rv = "-".join(match.group(1, 2))`: ${1:value}${2|px,em,rem,%|};$0
+endsnippet
+
 snippet rgba "CSS rgba() function"
 rgba(${1:red}, ${2:green}, ${3:blue}, ${4:alpha})$0
 endsnippet
