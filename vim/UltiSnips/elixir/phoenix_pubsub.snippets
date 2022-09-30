@@ -1,0 +1,25 @@
+global !p
+
+import re
+
+# ~/.vim/pythonx/elixir_helpers.py
+from elixir_helpers import (
+    to_module_name
+)
+
+def full_module_parts():
+    # REF path variable:
+    # https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt#L894
+    path_parts = path.split("/")
+    path_parts.remove("lib")
+    return list(map(to_module_name, path_parts))
+
+def root_module_name():
+    return full_module_parts()[0]
+
+
+endglobal
+
+snippet broadcast "Phoenix.Pubsub.broadcast/4"
+${1:Phoenix.PubSub.}broadcast(${2:${3:`!p snip.rv = root_module_name()`.PubSub}, }"${4:topic}", ${5:message}${6:, ${7:dispatcher \\ __MODULE__}})
+endsnippet
