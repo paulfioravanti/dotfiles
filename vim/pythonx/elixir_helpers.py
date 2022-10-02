@@ -1,5 +1,6 @@
 """
 Elixir-related Ultisnips snippet helper functions.
+NOTE: Changes to this file require restarting Vim!
 """
 import re
 
@@ -10,6 +11,8 @@ def closing_character(tabstop):
     """
     Return closing character for a tabstop containing an opening character.
     """
+    if tabstop.startswith("("):
+        return ")"
     if tabstop.startswith("{"):
         return "}"
     if tabstop.startswith("["):
