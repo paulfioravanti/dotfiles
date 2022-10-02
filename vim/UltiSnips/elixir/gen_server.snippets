@@ -1,15 +1,6 @@
-global !p
-
-# ~/.vim/pythonx/elixir_helpers.py
-from elixir_helpers import (
-    closing_character
-)
-
-endglobal
-
 snippet "handle info" "(GenServer|Phoenix.LiveView).handle_info/2"
 @impl true
-def handle_info(${1|:,"|}${2:msg}`!p snip.rv = closing_character(t[1])`, ${3|state,socket|}) do
+def handle_info(${1::${2:msg}}, ${3|state,socket|}) do
   $0
   {:${4|noreply,stop\, reason|}, $3}
 end
