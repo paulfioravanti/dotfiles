@@ -7,19 +7,22 @@ from elixir_helpers import (
     to_module_name
 )
 
-def full_module_parts():
-    # REF path variable:
+def root_module_name():
+    return _full_module_parts()[0]
+
+def _full_module_parts():
+    # REF `path` variable:
     # https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt#L894
     path_parts = path.split("/")
     path_parts.remove("lib")
     return list(map(to_module_name, path_parts))
 
-def root_module_name():
-    return full_module_parts()[0]
-
-
 endglobal
 
-snippet broadcast "Phoenix.Pubsub.broadcast/4"
-${1:Phoenix.PubSub.}broadcast(${2:${3:`!p snip.rv = root_module_name()`.PubSub}, }"${4:topic}", ${5:message}${6:, ${7:dispatcher \\ __MODULE__}})
+snippet broadcast "Phoenix.PubSub.broadcast/4"
+${1:Phoenix.PubSub.}broadcast(${2:${3:`!p snip.rv = root_module_name()`.PubSub}, }"${4:topic}", ${5:message}${6:, ${7:dispatcher \\ __MODULE__}})$0
+endsnippet
+
+snippet subscribe "Phoenix.PubSub.subscribe/4"
+${1:Phoenix.PubSub.}subscribe(${2:${3:`!p snip.rv = root_module_name()`.PubSub}, }"${4:topic}"${6:, metadata: ${7:some_metadata}})$0
 endsnippet
