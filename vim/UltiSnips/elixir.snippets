@@ -82,15 +82,11 @@ snippet tuple "literal tuple" i
 {${1:first}, ${2:second}$0}
 endsnippet
 
-snippet "tuple (ok(?:ay)?|error)" "ok/error tagged tuple" ri
+snippet "tuple (.+)" "tagged tuple" ri
 `!p
 tag = match.group(1)
 tag = "ok" if tag == "okay" else tag
 `{:`!p snip.rv = tag`, ${1:value}}$0
-endsnippet
-
-snippet "tuple tagged" "tagged tuple" i
-{:${1:tag}, ${2:value}}$0
 endsnippet
 
 snippet "validate length" "Ecto.Changeset.validate_length/3"
