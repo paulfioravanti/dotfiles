@@ -79,11 +79,11 @@ snippet "def struct" "Kernel.defstruct/1"
 defstruct ${1:[}:${2:field}$3`!p snip.rv = closing_character(t[1])`$0
 endsnippet
 
-snippet fn "Kernel.SpecialForms.fn/2" i
+snippet "f(:?u)?n(:?ction)?" "Kernel.SpecialForms.fn/2" ri
 fn ${1:args} -> ${0:do_something} end
 endsnippet
 
-snippet "fn &" "Kernel.SpecialForms.&/1" i
+snippet "f(:?u)?n(:?ction)? (?:(&|capture))" "Kernel.SpecialForms.&/1" ri
 &(&1${0:do_something})
 endsnippet
 
