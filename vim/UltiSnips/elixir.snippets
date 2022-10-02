@@ -40,7 +40,11 @@ ${1:[}${2:key}: ${3:value}$4`!p snip.rv = closing_character(t[1])`$0
 endsnippet
 
 snippet list "Literal Elixir list"
-[$0]
+[$1]$0
+endsnippet
+
+snippet "list prepend" "prepend to literal Elixir list"
+[${1:element} | ${2:list}]$0
 endsnippet
 
 snippet map "Literal Elixir map" i
