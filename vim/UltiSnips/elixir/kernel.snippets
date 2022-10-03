@@ -18,6 +18,11 @@ def module_name():
     module_parts = map(to_module_name, module_path_parts)
     return ".".join(module_parts)
 
+def maybe_single_line(tabstop):
+    if not tabstop:
+        return ", do: "
+    return ""
+
 endglobal
 
 snippet alias "Kernel.SpecialForms.alias/2"
@@ -48,9 +53,9 @@ ${1:condition} ->
 endsnippet
 
 snippet def "Kernel.(def|defp)/2 multiline"
-def${1:p} ${2:function_name}${3:(${4:args})} do
-  $0
-end
+def${1:p} ${2:function_name}${3:(${4:args})}${5: do
+  $6
+end}`!p snip.rv = maybe_single_line(t[5])`$0
 endsnippet
 
 snippet "def(:| single line)" "Kernel.(def|defp)/2 single line" r
@@ -96,7 +101,7 @@ end
 endsnippet
 
 snippet "\b(if|unless):" "Kernel.(if|unless)/2 single-line" r
-`!p snip.rv = match.group(1)` ${1:condition}, do: ${2:${VISUAL:do_something}}${3:, else: ${4:do_something_else}$0}
+`!p snip.rv = match.group(1)` ${1:condition}, do: ${2:${VISUAL:do_something}}${3:, else: ${4:do_something_else}}$0
 endsnippet
 
 snippet import "Kernel.SpecialForms.import/2"
