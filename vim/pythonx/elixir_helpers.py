@@ -12,6 +12,12 @@ _CLOSING_CHARACTERS = {
     "[": "]",
     "\"": "\""
 }
+_NON_MODULE_DIRNAMES = [
+    "controllers",
+    "lib",
+    "live",
+    "views"
+]
 
 def closing_character(tabstop):
     """
@@ -21,18 +27,17 @@ def closing_character(tabstop):
         return _CLOSING_CHARACTERS.get(tabstop[0], "")
     return ""
 
+def root_module_name(path):
+    """
+    Return name for a root Elixir module from a file path.
+    """
+    return _module_parts(path)[0]
+
 def module_path_match(path, regex=_MODULE_FILEPATH):
     """
     Return match data for an Elixir module from a file path.
     """
     return re.search(regex, path)
-
-def outer_module_name(path):
-    """
-    Return name for an outer Elixir module from a file path.
-    """
-    outer_module_path = module_path_match(path).group(1)
-    return to_module_name(outer_module_path)
 
 def to_module_name(string):
     """
@@ -44,3 +49,10 @@ def to_module_name(string):
         .replace(" ", "")
         .replace(".ex", "")
     )
+
+def _module_parts(path):
+    path_parts = path.split("/")
+    for dirname in _NON_MODULE_DIRNAMES:
+        if dirname in path_parts:
+            path_parts.remove(dirname)
+    return list(map(to_module_name, path_parts))

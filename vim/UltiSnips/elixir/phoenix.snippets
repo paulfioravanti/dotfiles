@@ -3,7 +3,7 @@ global !p
 # ~/.vim/pythonx/elixir_helpers.py
 from elixir_helpers import (
     closing_character,
-    outer_module_name
+    root_module_name
 )
 
 def binding_name(match):
@@ -24,5 +24,5 @@ endsnippet
 
 # REF path variable: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt#L894
 snippet "\buse (phx|phoenix)" "Kernel.use/2 with a Phoenix module" r
-use ${1:`!p snip.rv = outer_module_name(path)`}, :${2|channel,component,controller,live_component,live_view,router,view|}$0
+use ${1:`!p snip.rv = root_module_name(path)`}, :${2|channel,component,controller,live_component,live_view,router,view|}$0
 endsnippet

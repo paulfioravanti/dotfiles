@@ -4,7 +4,7 @@ global !p
 from elixir_helpers import (
     closing_character,
     module_path_match,
-    outer_module_name,
+    root_module_name,
     to_module_name
 )
 
@@ -26,7 +26,7 @@ def maybe_single_line(tabstop):
 endglobal
 
 snippet alias "Kernel.SpecialForms.alias/2"
-alias ${1:`!p snip.rv = outer_module_name(path)`}${2:.${3:ModuleName}}${4: as: ${5:Keyword}}$0
+alias ${1:`!p snip.rv = root_module_name(path)`}${2:.${3:ModuleName}}${4: as: ${5:Keyword}}$0
 endsnippet
 
 snippet case "Kernel.SpecialForms.case/2"
@@ -105,7 +105,7 @@ snippet "\b(if|unless):" "Kernel.(if|unless)/2 single-line" r
 endsnippet
 
 snippet import "Kernel.SpecialForms.import/2"
-import ${1:`!p snip.rv = outer_module_name(path)`}${2:.${3:ModuleName}}${4:, ${5|only,except|}: [${6:function}: ${7:arity}]}$0
+import ${1:`!p snip.rv = root_module_name(path)`}${2:.${3:ModuleName}}${4:, ${5|only,except|}: [${6:function}: ${7:arity}]}$0
 endsnippet
 
 snippet "is nil" "Kernel.is_nil/1"
