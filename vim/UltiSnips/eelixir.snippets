@@ -1,4 +1,6 @@
 extends html
+extends elixir/live_view
+extends elixir/live_view_html
 
 global !p
 
@@ -6,8 +8,7 @@ import re
 
 # ~/.vim/pythonx/elixir_helpers.py
 from elixir_helpers import (
-    closing_character,
-    module_path_match
+    closing_character
 )
 
 def eex_placeholder(tag):

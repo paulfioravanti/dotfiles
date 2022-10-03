@@ -4,8 +4,8 @@ NOTE: Changes to this file require restarting Vim!
 """
 import re
 
-_DASHES_AND_UNDERSCORES = re.compile("[-_]")
-_MODULE_FILEPATH = re.compile(r"lib\/([^\/]+)\/([\w+\/]+)*\/([^\/]+).ex")
+_DASHES_AND_UNDERSCORES = re.compile(r"[-_]")
+_FILE_EXTENSIONS = re.compile(r"\.(?:html\.(?:h|l)?eex|ex)$")
 _CLOSING_CHARACTERS = {
     "(": ")",
     "{": "}",
@@ -27,28 +27,25 @@ def closing_character(tabstop):
         return _CLOSING_CHARACTERS.get(tabstop[0], "")
     return ""
 
+def module_name(path):
+    """
+    Return a full Elixir module name from a file path.
+    """
+    return ".".join(_module_parts(path))
+
 def root_module_name(path):
     """
     Return name for a root Elixir module from a file path.
     """
     return _module_parts(path)[0]
 
-def module_path_match(path, regex=_MODULE_FILEPATH):
-    """
-    Return match data for an Elixir module from a file path.
-    """
-    return re.search(regex, path)
-
 def to_module_name(string):
     """
     Convert string into an Elixir module name
     """
-    return (
-        re.sub(_DASHES_AND_UNDERSCORES, " ", string)
-        .title()
-        .replace(" ", "")
-        .replace(".ex", "")
-    )
+    string = re.sub(_FILE_EXTENSIONS, "", string)
+    string = re.sub(_DASHES_AND_UNDERSCORES, " ", string)
+    return string.title().replace(" ", "")
 
 def _module_parts(path):
     path_parts = path.split("/")

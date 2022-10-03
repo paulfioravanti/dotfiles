@@ -5,7 +5,9 @@ extends eelixir
 global !p
 
 # ~/.vim/pythonx/elixir_helpers.py
-from elixir_helpers import closing_character
+from elixir_helpers import (
+    closing_character
+)
 
 def key_closing(opening):
     return "\" =>" if opening == "\"" else ":"

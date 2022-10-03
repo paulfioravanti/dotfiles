@@ -3,20 +3,9 @@ global !p
 # ~/.vim/pythonx/elixir_helpers.py
 from elixir_helpers import (
     closing_character,
-    module_path_match,
-    root_module_name,
-    to_module_name
+    module_name,
+    root_module_name
 )
-
-def module_name():
-    # REF path variable:
-    # https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt#L894
-    root, dirs, filename = module_path_match(path).group(1, 2, 3)
-    module_path_parts = [root, *dirs.split("/"), filename]
-    # It seems Elixir convention is to not have Live as part of a module name.
-    module_path_parts.remove("live")
-    module_parts = map(to_module_name, module_path_parts)
-    return ".".join(module_parts)
 
 def maybe_single_line(tabstop):
     if not tabstop:
@@ -75,7 +64,7 @@ defguard${1:p} ${2:guard}(${3:value}) when ${4:condition}$0
 endsnippet
 
 snippet "def module" "Kernel.defmodule/2"
-defmodule ${1:`!p snip.rv = module_name()`} do
+defmodule ${1:`!p snip.rv = module_name(path)`} do
   $0
 end
 endsnippet

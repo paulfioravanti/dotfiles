@@ -3,22 +3,12 @@ global !p
 # ~/.vim/pythonx/elixir_helpers.py
 from elixir_helpers import (
     closing_character,
+    module_name,
     to_module_name
-)
-
-_PHOENIX_TEMPLATE_FILEPATH = re.compile(
-    r"lib/(.+_web)/(?:templates|live)/(.+)/(.+)\.html\.(?:h|l)?eex"
 )
 
 def key_closing(opening):
     return "," if opening == ":" else ":"
-
-def module_name(regex=_PHOENIX_TEMPLATE_FILEPATH):
-    # REF path variable:
-    # https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt#L894
-    module_path_parts = module_path_match(path, regex).group(1, 2, 3)
-    module_parts = map(to_module_name, module_path_parts)
-    return ".".join(module_parts)
 
 endglobal
 
@@ -77,8 +67,10 @@ $0
 endsnippet
 
 snippet "live component" "Phoenix.LiveView.Helpers.live_component/1" b
-<.live_component
-  module={${1:`!p snip.rv = module_name()`}Component}
+`!p
+module, file = module_name(path).rsplit(".", 1)
+`<.live_component
+  module={`!p snip.rv = module`.${1:`!p snip.rv = file`}Component}
   id={${2:live-component-id}}
   $0
 />
