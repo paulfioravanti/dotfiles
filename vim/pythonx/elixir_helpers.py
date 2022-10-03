@@ -6,20 +6,19 @@ import re
 
 _DASHES_AND_UNDERSCORES = re.compile("[-_]")
 _MODULE_FILEPATH = re.compile(r"lib\/([^\/]+)\/([\w+\/]+)*\/([^\/]+).ex")
+_CLOSING_CHARACTERS = {
+    "(": ")",
+    "{": "}",
+    "[": "]",
+    "\"": "\""
+}
 
 def closing_character(tabstop):
     """
     Return closing character for a tabstop containing an opening character.
     """
-    if tabstop.startswith("("):
-        return ")"
-    if tabstop.startswith("{"):
-        return "}"
-    if tabstop.startswith("["):
-        return "]"
-    if tabstop.startswith("\""):
-        return "\""
-
+    if tabstop:
+        return _CLOSING_CHARACTERS.get(tabstop[0], "")
     return ""
 
 def module_path_match(path, regex=_MODULE_FILEPATH):
