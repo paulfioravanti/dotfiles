@@ -5,6 +5,11 @@ from elixir_helpers import (
     closing_character
 )
 
+def first_visual_character(snip):
+    if visual_text := snip.v.text:
+        return visual_text[0].lower()
+    return "x"
+
 endglobal
 
 snippet asc "Ecto.Query.order_by/3 asc direction list" i
@@ -16,7 +21,7 @@ ${1|desc,desc_nulls_last,desc_nulls_first|}: ${2:field}$0
 endsnippet
 
 snippet from "Ecto.Query.from/2" i
-from${1:(}${2:${3:x} in }${4:${VISUAL:Queryable}}`!p snip.rv = closing_character(t[1])`$0
+from${1:(}${2:${3:`!p snip.rv = first_visual_character(snip)`} in }${4:${VISUAL:Queryable}}`!p snip.rv = closing_character(t[1])`$0
 endsnippet
 
 snippet "validate length" "Ecto.Changeset.validate_length/3"
