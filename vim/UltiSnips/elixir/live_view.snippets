@@ -103,6 +103,10 @@ def render(assigns) do
 end
 endsnippet
 
+snippet "temporary assigns" "temporary_assigns parameter"
+temporary_assigns: [${1:assign}: ${2:reset_value}]$0
+endsnippet
+
 snippet update "Phoenix.LiveView.update/3"
 update(${1|socket,assigns|}, :${2:key}, ${3:fun})$0
 endsnippet
