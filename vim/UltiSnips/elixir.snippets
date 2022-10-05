@@ -80,6 +80,12 @@ snippet string "Literal Elixir string"
 "$0"
 endsnippet
 
+snippet "struct (.+)" "Elixir struct" ri
+`!p
+name = match.group(1).title()
+`%${1:`!p snip.rv = name`}{${2:${3:field}: ${4:value}}}$0
+endsnippet
+
 snippet "Timex format" "Timex.format/(1|2)"
 Timex.format!(${1:${2:datetime}, }"${3:%FT%T%:z}", :${4:strftime})$0
 endsnippet
