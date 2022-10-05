@@ -10,6 +10,11 @@ def first_visual_character(snip):
         return visual_text[0].lower()
     return "x"
 
+def query_expression_name(match):
+    name = match.group(1)
+    name = "order_by" if name == "order" or name == "order by" else name
+    return name
+
 endglobal
 
 snippet asc "Ecto.Query.order_by/3 asc direction list" i
@@ -28,6 +33,10 @@ snippet "validate length" "Ecto.Changeset.validate_length/3"
 validate_length(${1:${2:changeset}, }:${3:field}, ${4:is: ${5:length}${6:, }}${7:min: ${8:length}${9:, }}${10:max: ${11:length}${12:, }}${13:count: :${14:length_type}${15:, }}${16:message: "${17:message}"})$0
 endsnippet
 
-snippet "order( by)?" "Ecto.Query.order_by/3" ri
-order_by: [${1:expr}]$0
+snippet "\b(order(?: by)?|where)" "Ecto.Query.(order_by|where)/3" r
+`!p snip.rv = query_expression_name(match)`: ${1:expression}$0
+endsnippet
+
+snippet "\b(order(?: by)?|where) (?:function|expression)" "Ecto.Query.(order_by|where)/3" r
+`!p snip.rv = query_expression_name(match)`(${1:${2:query}, }${3:[${4:binding}], }${5:expression})$0
 endsnippet
