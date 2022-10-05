@@ -54,12 +54,12 @@ method: ${1|:get,:post,:put,:patch,:delete|}$0
 endsnippet
 
 context "maybe_eex_tag(snip)"
-snippet select "Phoenix.HTML.Form.select/4"
+snippet "form select" "Phoenix.HTML.Form.select/4"
 ${1:`!p snip.rv = initial_eex_tag(snip)`}select ${2:form}, :${3:field}, ${4:options}${5:, ${6:selected: ${7:selected}}${8:, }${9:prompt: ${10:[key: "${11:prompt_string}", disabled: ${12:true}]}}}`!p snip.rv = final_eex_tag(snip, t[1])`$0
 endsnippet
 
 context "maybe_eex_tag(snip)"
-snippet submit "Phoenix.HTML.Form.submit/2"
+snippet "\b(form )?submit" "Phoenix.HTML.Form.submit/2" r
 ${1:`!p snip.rv = initial_eex_tag(snip)`}submit "${2:value}"${3:, ${4:class: "${5:class}"}${6:, }${7:phx_disable_with: "${8:Saving...}"}}`!p snip.rv = final_eex_tag(snip, t[1])`$0
 endsnippet
 
