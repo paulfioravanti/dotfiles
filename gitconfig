@@ -35,7 +35,7 @@
   editor = vim
   attributesfile = /Users/paul/.gitattributes
 [gpg]
-  program = gpg
+  program = gpg2
 [heroku]
   account = personal
 [pull]
@@ -47,7 +47,7 @@
 [user]
   email = paul.fioravanti@gmail.com
   name = Paul Fioravanti
-  signingkey = 085A6D9C
+	signingkey = 085A6D9C
 [filter "lfs"]
   clean = git-lfs clean -- %f
   smudge = git-lfs smudge -- %f
