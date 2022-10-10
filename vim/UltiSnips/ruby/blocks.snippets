@@ -1,7 +1,7 @@
 snippet "do block" "do |<element>| <block> end" i
  do |${1:element}|
-  $0
-end
+  $2
+end$0
 endsnippet
 
 snippet "explicit block" "(&block)" i
@@ -13,7 +13,7 @@ snippet "external method" "(&Module.method(:method))" i
 endsnippet
 
 snippet "inline block" "{ |<element>| <block> }" i
- { |${1:element}| $0 }
+ { |${1:element}| $2 }$0
 endsnippet
 
 snippet "local method" "(&method(:method))" i
@@ -23,5 +23,3 @@ endsnippet
 snippet "local proc" "(&:method)" i
 (&:${1:method})$0
 endsnippet
-
-

@@ -42,7 +42,7 @@ ${1:[}${2:key}: ${3:value}$4`!p snip.rv = closing_character(t[1])`$0
 endsnippet
 
 snippet "line length" "Elixir formatter line_length parameter"
-line_length: ${1:80}
+line_length: ${0:80}
 endsnippet
 
 snippet list "Literal Elixir list"
@@ -54,14 +54,14 @@ snippet "list prepend" "prepend to literal Elixir list"
 endsnippet
 
 snippet map "Literal Elixir map" i
-%{${1:"}${2:key}`!p snip.rv = key_closing(t[1])` ${3:$2}$0}
+%{${1:"}${2:key}`!p snip.rv = key_closing(t[1])` ${3:$2}$4}$0
 endsnippet
 
 snippet message "Exception.message/1"
 @impl true
 def message(${1:exception}) do
-  $0
-end
+  $2
+end$0
 endsnippet
 
 snippet "n get text(?: 3)?" "Gettext.Backend.ngettext/3" r
@@ -73,11 +73,11 @@ Enum.random(${1:enumerable})$0
 endsnippet
 
 snippet "send after(?: 4)?" "Process.send_after/4" r
-Process.send_after(${1:dest}, ${2::}${3:msg}`!p snip.rv = closing_character(t[2])`, ${4:time}${5:, {:abs, ${6:true}}})
+Process.send_after(${1:dest}, ${2::}${3:msg}`!p snip.rv = closing_character(t[2])`, ${4:time}${5:, {:abs, ${6:true}}})$0
 endsnippet
 
 snippet string "Literal Elixir string"
-"$0"
+"$1"$0
 endsnippet
 
 snippet "struct( .+)?" "Elixir struct" ri
