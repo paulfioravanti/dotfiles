@@ -1,6 +1,6 @@
 # Postgres can be managed with asdf once the issue regarding plugins
 # is resolved: https://github.com/asdf-vm/asdf/issues/196
-crystal 1.6.0
+crystal 1.6.1
 elixir 1.14.1-otp-25
 elm 0.19.1
 erlang 25.1.1
