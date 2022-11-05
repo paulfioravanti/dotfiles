@@ -3,11 +3,11 @@
 crystal 1.6.1
 elixir 1.14.1-otp-25
 elm 0.19.1
-erlang 25.1.1
-golang 1.19.2
+erlang 25.1.2
+golang 1.19.3
 haskell 9.4.2
 nodejs 19.0.0
-python 3.10.8
+python 3.11.0
 redis 7.0.5
 ruby 3.1.2
 rust 1.64.0
@@ -16,4 +16,4 @@ gradle 7.5.1
 dhall 1.41.2
 clojure 1.10.3.1087
 php 8.1.8RC1
-deno 1.26.2
+deno 1.27.0
