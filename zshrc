@@ -90,7 +90,7 @@ export FZF_DEFAULT_OPTS="
 export FZF_CTRL_T_COMMAND='ag --path-to-ignore ~/.ignore --filename-pattern ""'
 
 # Enable call outs to scripts in steno command dictionaries.
-export STENO_DICTIONARIES="$HOME/steno/steno-dictionaries"
+export STENO_COMMAND="$HOME/steno/steno-dictionaries/src/command"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
