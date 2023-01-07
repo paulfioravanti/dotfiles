@@ -16,6 +16,7 @@ plugins=(
   asdf
   brew
   bundler
+  dotenv
   fasd
   git
   # not sure what happened here, but this started causing pipe errors

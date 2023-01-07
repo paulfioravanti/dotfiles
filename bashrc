@@ -15,6 +15,11 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 # Enable call outs to scripts in steno command dictionaries.
 export STENO_COMMAND="$HOME/steno/steno-dictionaries/src/command"
 
+## Dotenv
+set -o allexport
+source "$HOME/.env"
+set +o allexport
+
 ## PATH ##
 export PATH="/usr/local/bin:$PATH"
 export PATH="$PATH:/usr/local/sbin" # Add sbin to PATH for icu4c
