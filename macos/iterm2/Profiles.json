@@ -2317,7 +2317,7 @@
     "Green Component" : 0.21176470588235294
   },
   "Silence Bell" : true,
-  "Use Custom Tab Title" : false,
+  "Use Custom Tab Title" : true,
   "Rows" : 7,
   "Guid" : "D63279D2-FC91-4C8B-8FBD-03183846C1C0",
   "Automatically Log" : false,
@@ -2400,7 +2400,7 @@
   "Scrollback With Status Bar" : false,
   "HotKey Window Floats" : false,
   "Non-ASCII Anti Aliased" : true,
-  "Allow Title Reporting" : false,
+  "Allow Title Reporting" : true,
   "Ansi 10 Color" : {
     "Red Component" : 0.34509803921568627,
     "Color Space" : "sRGB",
@@ -2497,7 +2497,7 @@
     "Green Component" : 0.59999999999999998
   },
   "Hide After Opening" : false,
-  "Normal Font" : "SourceCodePro-Regular 29",
+  "Normal Font" : "SourceCodePro-Regular 31",
   "Unlimited Scrollback" : false,
   "Ansi 15 Color" : {
     "Red Component" : 0.99215686274509807,
