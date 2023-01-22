@@ -29,6 +29,8 @@ Plug 'AtsushiSakai/julia.vim'
 Plug 'bwmcadams/vim-deckset'
 " Seamless navigation between tmux panes and vim splits
 Plug 'christoomey/vim-tmux-navigator'
+" Text objects and movements for markdown and Rmarkdown files
+Plug 'coachshea/vim-textobj-markdown'
 " Fuzzy file, buffer, mru, tag, etc finder
 Plug 'ctrlpvim/ctrlp.vim'
 " SonicPi plugin for Vim
