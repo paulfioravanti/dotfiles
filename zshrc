@@ -17,6 +17,7 @@ plugins=(
   brew
   bundler
   dotenv
+  fancy-ctrl-z
   fasd
   git
   # not sure what happened here, but this started causing pipe errors
