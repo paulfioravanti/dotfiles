@@ -141,6 +141,7 @@ brew "krb5"
 brew "proj"
 brew "libgeotiff"
 brew "shared-mime-info"
+brew "libheif"
 brew "libpq"
 brew "libspatialite"
 brew "nspr"
@@ -328,6 +329,7 @@ cask "the-unarchiver"
 cask "vlc"
 mas "KeyLimePie", id: 1575163350
 mas "Keynote", id: 409183694
+mas "Pages", id: 409201541
 mas "Swiftpoint Control Panel", id: 1502319732
 mas "Trello", id: 1278508951
 mas "Vimari", id: 1480933944
