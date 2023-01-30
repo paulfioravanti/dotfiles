@@ -2398,7 +2398,7 @@
     "Green Component" : 0.58039215686274515
   },
   "Scrollback With Status Bar" : false,
-  "HotKey Window Floats" : false,
+  "HotKey Window Floats" : true,
   "Non-ASCII Anti Aliased" : true,
   "Allow Title Reporting" : true,
   "Ansi 10 Color" : {
