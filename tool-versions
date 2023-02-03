@@ -3,8 +3,8 @@
 crystal 1.7.2
 elixir 1.14.3-otp-25
 elm 0.19.1
-erlang 25.2.1
-golang 1.19.5
+erlang 25.2.2
+golang 1.20
 haskell 9.4.4
 nodejs 19.5.0
 python 3.11.1
