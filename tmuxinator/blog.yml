@@ -22,8 +22,8 @@ on_project_first_start:
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
 pre_window:
-  - asdf local ruby 3.1.3
-  - asdf local nodejs 19.2.0
+  - asdf local ruby 3.2.1
+  - asdf local nodejs 19.6.0
 
 # Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
 startup_window: editor
