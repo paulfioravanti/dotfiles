@@ -13,7 +13,7 @@ export LSCOLORS=gxfxcxdxbxegedabagacad
 # Enable IEx shell history
 export ERL_AFLAGS="-kernel shell_history enabled"
 # Enable call outs to scripts in steno command dictionaries.
-export STENO_COMMAND="$HOME/steno/steno-dictionaries/src/command"
+export STENO_DICTIONARIES="$HOME/steno/steno-dictionaries"
 
 ## Dotenv
 set -o allexport
