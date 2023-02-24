@@ -212,6 +212,7 @@ brew "miniupnpc"
 brew "mitmproxy"
 brew "moreutils"
 brew "msgpack"
+brew "multitail"
 brew "zlib"
 brew "mysql", restart_service: true
 brew "nasm"
