@@ -12,7 +12,7 @@ source "${DOTFILES_DIR}/macos/homebrew/setup.sh"
 # you should be able to just run `$ rcup` when doing this again
 # Ignores the README, setup scripts, and the ruby and macos directories
 # for symlinking
-rcup -x README.md -x LICENSE.txt -x setup.sh -x config.sh -x '*:vim:setup.sh' -x '*:tmux:setup.sh' -x '*:oh-my-zsh:setup.sh' -x macos -x asdf
+rcup -x README.md -x LICENSE.txt -x setup.sh -x config.sh -x '*:vim:setup.sh' -x '*:tmux:setup.sh' -x '*:oh-my-zsh:setup.sh' -x macos -x asdf -x 'Library/Services'
 
 # Install and setup oh-my-zsh
 source "${DOTFILES_DIR}/oh-my-zsh/setup.sh"
