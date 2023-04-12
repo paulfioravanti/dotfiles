@@ -12,8 +12,8 @@ redis 7.0.10
 ruby 3.2.2
 rust 1.68.2
 java openjdk-18.0.2
-gradle 8.0.2
+gradle 8.1
 dhall 1.41.2
 clojure 1.11.1.1273
 php 8.1.8RC1
-deno 1.32.3
+deno 1.32.4
