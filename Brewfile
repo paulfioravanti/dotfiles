@@ -286,6 +286,7 @@ cask "1password"
 cask "alfred"
 cask "anki"
 cask "applepi-baker"
+cask "audio-hijack"
 cask "bettertouchtool"
 cask "blurred"
 cask "calibre"
@@ -339,6 +340,7 @@ cask "the-unarchiver"
 cask "vlc"
 mas "KeyLimePie", id: 1575163350
 mas "Keynote", id: 409183694
+mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Swiftpoint Control Panel", id: 1502319732
 mas "Trello", id: 1278508951
