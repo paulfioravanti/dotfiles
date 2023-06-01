@@ -342,3 +342,6 @@ mas "Swiftpoint Control Panel", id: 1502319732
 mas "Trello", id: 1278508951
 mas "Vimari", id: 1480933944
 mas "Xcode", id: 497799835
+vscode "ms-vsliveshare.vsliveshare"
+vscode "ms-vsliveshare.vsliveshare-audio"
+vscode "ms-vsliveshare.vsliveshare-pack"
