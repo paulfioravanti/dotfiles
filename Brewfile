@@ -271,8 +271,8 @@ brew "yt-dlp"
 brew "zsh"
 brew "zsh-completions"
 brew "browsh-org/browsh/browsh"
-brew "heroku/brew/heroku-node", link: true
 brew "heroku/brew/heroku"
+brew "heroku/brew/heroku-node", link: true
 brew "osx-cross/arm/arm-gcc-bin@10", link: false
 brew "osx-cross/arm/arm-gcc-bin@8"
 brew "osx-cross/avr/avr-gcc@9"
