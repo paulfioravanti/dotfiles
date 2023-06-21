@@ -24,9 +24,12 @@ map <C-n> :call NERDTreeToggleAndRefresh()<CR>
 let g:NERDTreeMinimalMenu=1
 
 function NERDTreeToggleAndRefresh()
-  :NERDTreeToggle
   if g:NERDTree.IsOpen()
     :NERDTreeRefreshRoot
+  else
+    :NERDTreeToggle
+    :NERDTreeRefreshRoot
+    :NERDTreeToggle
   endif
 endfunction
 
