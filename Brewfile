@@ -223,7 +223,7 @@ brew "mysql", restart_service: true
 brew "nasm"
 brew "ninja"
 brew "nmap"
-brew "node", link: false
+brew "node"
 brew "npth"
 brew "nvm"
 brew "openconnect"
