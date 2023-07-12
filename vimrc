@@ -10,8 +10,6 @@ set nocompatible
 " ======================================================================
 " Enable buffers to exist in the background without being in a window
 set hidden
-" Enable user configured syntax highlighting and turn on syntax
-syntax enable
 " Map leader key from slash to comma
 let mapleader = ","
 " Map reverse character search to backslash
@@ -153,7 +151,10 @@ nnoremap <leader>c :%s///gn<CR>
 " ======================================================================
 "  Syntax, highlighting and spelling
 " ======================================================================
+" Enable user configured syntax highlighting and turn on syntax
+syntax enable
 set background=dark
+" let g:solarized_contrast = 'high'
 " If solarized hasn't been installed, suppress error.
 " This was added due to using vim in setup scripts
 " before vim plugins have been installed
