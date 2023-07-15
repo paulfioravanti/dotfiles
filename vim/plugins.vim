@@ -125,6 +125,8 @@ Plug 'prettier/vim-prettier', {
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 " Reason Vim editor integration
 Plug 'reasonml-editor/vim-reason-plus'
+" Python libraries for making coding in vim easier
+Plug 'reconquest/vim-pythonx'
 " Vim plugin for clang-format, a formatter for C, C++, Obj-C, Java, JavaScript,
 " TypeScript and ProtoBuf.
 Plug 'rhysd/vim-clang-format'
