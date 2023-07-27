@@ -1,0 +1,54 @@
+# ~/.tmuxinator/elm-examples.yml
+
+name: elm-examples
+root: ~/elm/elm-examples
+
+# Runs before everything. Use it to start daemons etc.
+on_project_first_start:
+  - asdf local elm 0.19.1
+  - open --background https://elm-lang.org/examples
+  - open --background https://elm-lang.org/examples/buttons
+  - open --background https://elm-lang.org/examples/numbers
+  - open --background https://elm-lang.org/examples/time
+  - open --background https://elm-lang.org/examples/quotes
+  - open --background http://localhost:8000/src/Main.elm
+  - open --background http://localhost:8001/src/Main.elm
+  - open --background http://localhost:8002/src/Main.elm
+  - open --background http://localhost:8003/src/Main.elm
+
+# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
+startup_window: buttons
+
+windows:
+  - buttons:
+      root: ~/elm/elm-examples/buttons
+      panes:
+        - vim
+  - numbers:
+      root: ~/elm/elm-examples/numbers
+      panes:
+        - vim
+  - time:
+      root: ~/elm/elm-examples/time
+      panes:
+        - vim
+  - quotes:
+      root: ~/elm/elm-examples/quotes
+      panes:
+        - vim
+  - buttons reactor:
+      root: ~/elm/elm-examples/buttons
+      panes:
+        - elm reactor --port=8000
+  - numbers reactor:
+      root: ~/elm/elm-examples/numbers
+      panes:
+        - elm reactor --port=8001
+  - time reactor:
+      root: ~/elm/elm-examples/time
+      panes:
+        - elm reactor --port=8002
+  - quotes reactor:
+      root: ~/elm/elm-examples/quotes
+      panes:
+        - elm reactor --port=8003
