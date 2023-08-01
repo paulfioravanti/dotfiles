@@ -23,20 +23,24 @@ windows:
   - buttons:
       root: ~/elm/elm-examples/buttons
       panes:
-        - vim
+        - vim src/Main.elm
   - numbers:
       root: ~/elm/elm-examples/numbers
       panes:
-        - vim
+        - vim src/Main.elm
   - time:
       root: ~/elm/elm-examples/time
       panes:
-        - vim
+        - vim src/Main.elm
   - quotes:
       root: ~/elm/elm-examples/quotes
       panes:
-        - vim
-  - buttons-go:
+        - vim src/Main.elm
+  - quotes2:
+      root: ~/elm/elm-examples/quotes2
+      panes:
+        - vim src/Main.elm
+  - button-go:
       root: ~/elm/elm-examples/buttons
       panes:
         - elm-go src/Main.elm --port=8000 -- --debug
@@ -52,3 +56,7 @@ windows:
       root: ~/elm/elm-examples/quotes
       panes:
         - elm-go src/Main.elm --port=8003 -- --debug
+  - quotes2-go:
+      root: ~/elm/elm-examples/quotes2
+      panes:
+        - elm-go src/Main.elm --port=8004 -- --debug
