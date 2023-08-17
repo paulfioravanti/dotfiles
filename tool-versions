@@ -8,7 +8,7 @@ golang 1.21.0
 haskell 9.6.2
 nodejs 20.5.1
 python 3.11.4
-redis 7.0.12
+redis 7.2.0
 ruby 3.2.2
 rust 1.71.1
 java openjdk-18.0.2
