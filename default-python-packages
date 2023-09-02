@@ -13,3 +13,4 @@ pytest-mypy
 pytest-pycodestyle
 scipy
 twine
+wheel
