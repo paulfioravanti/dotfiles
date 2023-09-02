@@ -15,9 +15,9 @@ let NERDTreeCaseSensitiveSort = 1
 " Toggle NERDTree
 nnoremap <Leader>f :NERDTreeFind<CR>
 
-" map <C-n> :NERDTreeToggle<CR>
+map <C-n> :NERDTreeToggle<CR>
 " REF: https://stackoverflow.com/a/65743329/567863
-map <C-n> :call NERDTreeToggleAndRefresh()<CR>
+" map <C-n> :call NERDTreeToggleAndRefresh()<CR>
 
 " NOTE: WORKAROUND for https://github.com/preservim/nerdtree/issues/1321
 " Remove this when that PR is fixed/merged.
