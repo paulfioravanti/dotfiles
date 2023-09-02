@@ -12,3 +12,4 @@ pytest-cache
 pytest-mypy
 pytest-pycodestyle
 scipy
+twine
