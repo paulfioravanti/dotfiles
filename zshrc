@@ -204,7 +204,8 @@ function update() {
 
 . $(brew --prefix asdf)/libexec/asdf.sh
 
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+# pyqt5 install REF: https://stackoverflow.com/questions/74393139/pipenv-cant-install-pyqt5
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:/opt/homebrew/opt/qt@5/bin:$PATH"
 # Added for Crystal: https://github.com/crystal-lang/crystal/issues/6875#issuecomment-424999123
 # export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/opt/openssl/lib/pkgconfig
 # Added to hook in direnv: https://direnv.net/docs/hook.html#zsh
