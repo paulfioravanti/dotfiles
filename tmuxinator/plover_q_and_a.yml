@@ -4,7 +4,6 @@ name: plover_q_and_a
 root: ~/python/plover-q-and-a
 
 on_project_first_start:
-  - pip install --upgrade pip
   # Grip
   - open --background http://localhost:6419
 
