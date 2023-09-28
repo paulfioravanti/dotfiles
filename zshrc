@@ -213,6 +213,12 @@ eval "$(direnv hook zsh)"
 # Added for Quantum Mechanical Keyboard (QMK) firmware
 export QMK_HOME="$HOME/c/qmk_firmware"
 export SHELL=/bin/zsh
+## Dotenv
+# NOTE: oh-my-zsh dotenv doesn't seem to expand these in a way that Plover is
+# able to read them from an interactive shell. So, expand them manually here.
+set -o allexport
+source "$HOME/.env"
+set +o allexport
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
