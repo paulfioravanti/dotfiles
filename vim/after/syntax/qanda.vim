@@ -1,5 +1,5 @@
 " Define highlighting for names, roles, bylines, Q, A, and set command
-syntax match qandaName /\v(MR\.|MRS\.|MS\.)\s+[A-Z][A-Za-z\.]+\ze:/
+syntax match qandaName /\v(MR\.|MRS\.|MS\.)\s+[A-Z][A-Za-z\. ]+\ze:/
 syntax match qandaCourtRole /\vTHE\s+[A-Z][A-Za-z\. ]+\ze:/
 syntax match qandaCourt /\vTHE COURT\ze:/
 syntax match qandaWitness /\vTHE WITNESS\ze:/
