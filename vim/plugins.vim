@@ -109,6 +109,8 @@ Plug 'othree/html5.vim'
 Plug 'pangloss/vim-javascript'
 " Automate common Jekyll tasks from Vim
 Plug 'parkr/vim-jekyll'
+" Steno Q&A
+Plug 'paulfioravanti/vim-steno-q-and-a'
 " React JSX syntax highlighting for vim and Typescript
 Plug 'peitalin/vim-jsx-typescript'
 " File tree browser
