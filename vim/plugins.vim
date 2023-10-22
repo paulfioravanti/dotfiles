@@ -41,8 +41,6 @@ Plug 'dermusikman/sonicpi.vim'
 Plug 'elixir-editors/vim-elixir'
 " Syntax highlighting for Elm
 Plug 'elmcast/elm-vim'
-" Go development plugin for Vim
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " Automatically insert or delete brackets, parens, quotes
 " NOTE: There is a <BS> remap that is screwing with steno undos, so disable
 " for now.
