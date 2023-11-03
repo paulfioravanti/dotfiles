@@ -23,7 +23,7 @@ on_project_first_start:
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
 pre_window:
   - asdf local ruby 3.2.2
-  - asdf local nodejs 19.8.1
+  - asdf local nodejs 21.1.0
 
 # Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
 startup_window: editor
@@ -31,5 +31,5 @@ startup_window: editor
 windows:
   - editor: vim
   - guard: bundle exec guard
-  - server: bundle exec jekyll serve --incremental --drafts --port <%= jekyll_port %> --livereload
+  - server: bundle exec jekyll serve --incremental --drafts --port <%= jekyll_port %> --livereload --future
   - grip: grip <%= grip_port %>
