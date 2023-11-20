@@ -4,6 +4,6 @@
 " (error windows opening up for no reason etc)
 let g:mix_format_on_save = 1
 " Set options for the formatter
-let g:mix_format_options = '--check-equivalent'
+let g:mix_format_options = ''
 " Don't open a window containing the stacktrace on errors
 let g:mix_format_silent_errors = 1
