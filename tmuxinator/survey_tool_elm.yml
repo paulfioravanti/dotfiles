@@ -5,8 +5,8 @@ root: ~/elm/survey_tool_elm
 
 # Runs before everything. Use it to start daemons etc.
 on_project_first_start:
-  - asdf local elixir 1.9.2-otp-22
-  - asdf local nodejs 13.0.1
+  - asdf local elixir 1.15.7-otp-26
+  - asdf local nodejs 21.2.0
   - asdf local elm 0.19.1
   # Back end
   - open --background http://localhost:4000/survey_results
@@ -17,9 +17,7 @@ on_project_first_start:
   # Grip
   - open --background http://localhost:6419
   # Elm coverage
-  # NOTE: Not currently compatible with Elm 0.19.1
-  # Track progress at: https://github.com/zwilias/elm-coverage
-  # - open ~/elm/survey_tool_elm/front_end/.coverage/coverage.html
+  - open ~/elm/survey_tool_elm/front_end/.coverage/coverage.html
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
 # pre_window:
@@ -34,7 +32,7 @@ windows:
       panes:
         # Uses `just` and `watchexec` to run both
         # elm-verify-examples and elm-test when any src code is modified
-        - watchexec --watch src --clear just test
+        - watchexec --watch src --clear=reset just test
   # - front_coverage:
   #     root: ~/elm/survey_tool_elm/front_end
   #     panes:
@@ -43,7 +41,7 @@ windows:
   #       # the tests are modified. The src directory is not included here because
   #       # elm-coverage ends up touching every src file during its
   #       # instrumentation phase, leading to infinite loops.
-  #       - watchexec --watch tests --ignore tests/elm-package.json --clear just coverage
+  #       - watchexec --watch tests --ignore tests/elm-package.json --clear=reset just coverage
   - front_console:
       root: ~/elm/survey_tool_elm/front_end
       panes:
@@ -51,7 +49,7 @@ windows:
   - front_server:
       root: ~/elm/survey_tool_elm/front_end
       panes:
-        - elm-app start
+        - NODE_OPTIONS=--openssl-legacy-provider elm-app start
   - back_tests:
       root: ~/elm/survey_tool_elm/back_end
       panes:
