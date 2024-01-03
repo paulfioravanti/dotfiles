@@ -13,5 +13,6 @@ pytest-cache
 pytest-mypy
 pytest-pycodestyle
 scipy
+tox
 twine
 wheel
