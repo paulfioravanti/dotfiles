@@ -1,19 +1,19 @@
 # Postgres can be managed with asdf once the issue regarding plugins
 # is resolved: https://github.com/asdf-vm/asdf/issues/196
 crystal 1.10.1
-elixir 1.15.7-otp-26
+elixir 1.16.0-otp-26
 elm 0.19.1
 erlang 26.2.1
 golang 1.21.5
 haskell 9.8.1
-nodejs 21.4.0
+nodejs 21.5.0
 python 3.12.1
 redis 7.2.3
-ruby 3.2.2
-rust 1.74.1
+ruby 3.3.0
+rust 1.75.0
 java openjdk-21.0.1
 gradle 8.5
-dhall 1.42.0
-clojure 1.11.1.1429
+dhall 1.42.1
+clojure 1.11.1.1435
 php 8.1.8RC1
-deno 1.39.0
+deno 1.39.1
