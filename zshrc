@@ -20,8 +20,6 @@ plugins=(
   fancy-ctrl-z
   fasd
   git
-  # not sure what happened here, but this started causing pipe errors
-  # all of a sudden, rendering *all* terminals unusable.
   gitfast
   github
   macos
@@ -52,7 +50,7 @@ path=(
   /sbin
   /bin
   ~/.local/bin
-  $path
+  $PATH
 )
 
 # Force ASDF bins and shims to be before anything else in the path, otherwise,
