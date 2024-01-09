@@ -12,6 +12,7 @@ pylint
 pytest
 pytest-cache
 pytest-mypy
+pytest-cov
 pytest-pycodestyle
 scipy
 tox
