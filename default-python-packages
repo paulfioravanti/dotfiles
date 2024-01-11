@@ -11,6 +11,7 @@ pycodestyle
 pylint
 pytest
 pytest-cache
+pytest-mock
 pytest-mypy
 pytest-cov
 pytest-pycodestyle
