@@ -4,11 +4,11 @@ crystal 1.11.0
 elixir 1.16.0-otp-26
 elm 0.19.1
 erlang 26.2.1
-golang 1.21.5
+golang 1.21.6
 haskell 9.8.1
 nodejs 21.5.0
 python 3.12.1
-redis 7.2.3
+redis 7.2.4
 ruby 3.3.0
 rust 1.75.0
 java openjdk-21.0.1
