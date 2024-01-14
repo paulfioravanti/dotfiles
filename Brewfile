@@ -88,7 +88,7 @@ brew "libidn2"
 brew "libtasn1"
 brew "nettle"
 brew "p11-kit"
-brew "unbound", restart_service: true
+brew "unbound"
 brew "gnutls"
 brew "emacs", restart_service: true
 brew "cask"
@@ -190,7 +190,7 @@ brew "hub"
 brew "imagemagick"
 brew "innoextract"
 brew "irssi"
-brew "jpeg", link: true
+brew "jpeg"
 brew "jq"
 brew "just"
 brew "kerl"
