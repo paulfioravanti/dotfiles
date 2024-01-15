@@ -1,0 +1,19 @@
+# ~/.tmuxinator/plover_local_env_var.yml
+
+name: plover_local_env_var
+root: ~/python/plover-local-env-var
+
+# Plover currently uses Python 3.9
+pre_window: asdf local python 3.9.18
+
+startup_window: editor
+
+windows:
+  - editor: vim
+  - tests: >
+      watchmedo shell-command
+      --patterns="*.py;*.txt"
+      --recursive
+      --command="just --working-directory . --justfile test/justfile"
+  - console: python
+  - grip: grip
