@@ -18,4 +18,5 @@ pytest-pycodestyle
 scipy
 tox
 twine
+watchdog
 wheel
