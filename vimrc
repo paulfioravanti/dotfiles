@@ -71,6 +71,10 @@ set wildignore+=*.keep
 set wildignore+=*/_build/**
 " Don't include Jekyll site files
 set wildignore+=*/_site/**
+" Don't include sass-cache code
+set wildignore+=*/.sass-cache/**
+" Don't include jekyll-cache code
+set wildignore+=*/.jekyll-cache/**
 " Don't include Python cache files
 set wildignore+=__pycache__
 " Don't include any Rubymotion build files
