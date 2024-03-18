@@ -4,7 +4,7 @@ name: 80sfy
 root: ~/elm/80sfy
 
 on_project_first_start:
-  - asdf local nodejs 15.9.0
+  - asdf local nodejs 21.6.2
   - asdf local elm 0.19.1
   # Server
   - open --background http://localhost:3000
@@ -18,7 +18,8 @@ startup_window: editor
 
 windows:
   - editor: vim
-  - server: elm-app start
+  # REF: https://stackoverflow.com/questions/69692842/error-message-error0308010cdigital-envelope-routinesunsupported
+  - server: NODE_OPTIONS=--openssl-legacy-provider elm-app start
   - repl: elm-app repl
   - elm-analyse: elm-analyse --serve --port 3001
   - grip: grip
