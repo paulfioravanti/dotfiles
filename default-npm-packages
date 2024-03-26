@@ -23,6 +23,7 @@ htmllint-cli
 jest
 json-server
 newman
+ngrok
 npm-check
 npm-check-updates
 pnpm
