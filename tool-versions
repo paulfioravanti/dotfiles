@@ -9,11 +9,11 @@ haskell 9.8.2
 nodejs 21.7.3
 python 3.12.3
 redis 7.2.4
-ruby 3.3.0
+ruby 3.3.1
 rust 1.77.2
 java openjdk-21.0.1
 gradle 8.7
 dhall 1.42.1
-clojure 1.11.2.1446
+clojure 1.11.3.1456
 php 8.1.8RC1
-deno 1.42.3
+deno 1.42.4
