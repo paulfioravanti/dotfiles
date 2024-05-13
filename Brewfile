@@ -30,7 +30,7 @@ brew "freetype"
 brew "fontconfig"
 brew "gettext"
 brew "pcre2"
-brew "glib", link: false
+brew "glib"
 brew "lzo"
 brew "pixman"
 brew "cairo"
