@@ -10,7 +10,7 @@ nodejs 22.5.1
 python 3.12.4
 redis 7.2.5
 ruby 3.3.4
-rust 1.79.0
+rust 1.80.0
 java openjdk-21.0.1
 gradle 8.9
 dhall 1.42.1
