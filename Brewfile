@@ -347,6 +347,7 @@ cask "steam"
 cask "telegram"
 cask "the-unarchiver"
 cask "vlc"
+cask "zoom"
 mas "KeyLimePie", id: 1575163350
 mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
