@@ -1,7 +1,7 @@
-# ~/.tmuxinator/plover_1password.yml
+# ~/.tmuxinator/plover_platform_specific_translation.yml
 
-name: plover_1password
-root: ~/python/plover-1password_specific_translation
+name: plover_platform_specific_translation
+root: ~/python/plover-platform-specific-translation
 
 # Plover currently uses Python 3.9
 pre_window: asdf local python 3.9.18
