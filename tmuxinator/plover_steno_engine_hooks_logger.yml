@@ -14,6 +14,6 @@ windows:
       watchmedo shell-command
       --patterns="*.py;*.txt"
       --recursive
-      --command="just --working-directory . --justfile test/justfile"
+      --command="just"
   - console: python
   - grip: grip
