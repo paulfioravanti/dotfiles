@@ -6,11 +6,11 @@ elm 0.19.1
 erlang 27.0.1
 golang 1.23.0
 haskell 9.10.1
-nodejs 22.7.0
+nodejs 22.8.0
 python 3.12.5
 redis 7.4.0
-ruby 3.3.4
+ruby 3.3.5
 rust 1.80.1
 java openjdk-21.0.1
-gradle 8.9
+gradle 8.10
 dhall 1.42.1
