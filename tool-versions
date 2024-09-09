@@ -4,13 +4,13 @@ crystal 1.13.2
 elixir 1.17.2-otp-27
 elm 0.19.1
 erlang 27.0.1
-golang 1.23.0
+golang 1.23.1
 haskell 9.10.1
 nodejs 22.8.0
-python 3.12.5
+python 3.12.6
 redis 7.4.0
 ruby 3.3.5
-rust 1.80.1
+rust 1.81.0
 java openjdk-21.0.1
 gradle 8.10
 dhall 1.42.1
