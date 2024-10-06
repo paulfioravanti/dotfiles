@@ -14,3 +14,4 @@ rust 1.81.0
 java openjdk-21.0.1
 gradle 8.10.2
 dhall 1.42.1
+perl 5.40.0
