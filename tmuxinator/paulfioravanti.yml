@@ -1,0 +1,10 @@
+# ~/.tmuxinator/paulfioravanti.yml
+
+name: paulfioravanti
+root: ~/code/paulfioravanti
+
+startup_window: editor
+
+windows:
+  - editor: vim
+  - grip: grip
