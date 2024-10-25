@@ -15,7 +15,6 @@ pytest-mock
 pytest-mypy
 pytest-cov
 pytest-pycodestyle
-scipy
 tox
 twine
 watchdog
