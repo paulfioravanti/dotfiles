@@ -7,7 +7,7 @@ erlang 27.1.2
 golang 1.23.2
 haskell 9.10.1
 nodejs 23.1.0
-python 3.12.7
+python 3.13.0
 redis 7.4.1
 ruby 3.3.5
 rust 1.82.0
