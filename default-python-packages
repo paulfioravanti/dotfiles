@@ -1,13 +1,8 @@
 coverage
 grip
-gym
 jupyter
-matplotlib
-monkeytype
 mypy
-numpy
 py-applescript
-pycodestyle
 pylint
 pytest
 pytest-cache
