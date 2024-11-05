@@ -13,7 +13,6 @@ ZSH_THEME="paulfioravanti"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  asdf
   brew
   bundler
   dotenv
@@ -23,9 +22,6 @@ plugins=(
   gitfast
   github
   macos
-  rails
-  rake
-  ruby
   tmux
   tmuxinator
   z
@@ -42,7 +38,6 @@ typeset -U path
 path=(
   /opt/homebrew/bin
   /usr/local/bin
-  /usr/local/heroku/bin
   /usr/local/share/npm/bin
   /usr/local/sbin
   /usr/bin
