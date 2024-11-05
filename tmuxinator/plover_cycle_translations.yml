@@ -4,7 +4,7 @@ name: plover_cycle_translations
 root: ~/python/plover-cycle-translations
 
 # Plover currently uses Python 3.9
-pre_window: asdf local python 3.9.19
+pre_window: asdf local python 3.9.20
 
 startup_window: editor
 

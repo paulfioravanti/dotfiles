@@ -4,7 +4,7 @@ name: plover_q_and_a
 root: ~/python/plover-q-and-a
 
 # Plover currently uses Python 3.9
-pre_window: asdf local python 3.9.19
+pre_window: asdf local python 3.9.20
 
 startup_window: editor
 
