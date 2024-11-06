@@ -48,13 +48,7 @@ path=(
   $PATH
 )
 
-# Force ASDF bins and shims to be before anything else in the path, otherwise,
-# for whatever reason, Tmux won't prioritise the shims. This happened
-# specifically for Python, where the `pip` binary was pointing at the ASDF shim,
-# but `python` was pointing at `usr/bin`
-ASDF_DIR="$HOME/.asdf"
-export PATH="$ASDF_DIR/bin:$ASDF_DIR/shims:$PATH"
-# export MANPATH="/usr/local/man:$MANPATH"
+export MANPATH="/usr/local/man:$MANPATH"
 
 # Disable Oh-My-Zsh updates: it will get done when the `update` function
 # is run
@@ -106,6 +100,32 @@ alias gsweep='git branch --merged master | command grep -vE "^(\*|\s*develop\s*|
 alias mux=tmuxinator
 # In order to do things like find . -name "*.ex" | map wc -l
 alias map="xargs -n1"
+
+
+# REF: https://asdf-vm.com/guide/getting-started.html#_3-install-asdf
+. $(brew --prefix asdf)/libexec/asdf.sh
+
+# pyqt5 install
+# REF: https://stackoverflow.com/questions/74393139/pipenv-cant-install-pyqt5
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:/opt/homebrew/opt/qt@5/bin:$PATH"
+# Added to hook in direnv.
+# REF: https://direnv.net/docs/hook.html#zsh
+eval "$(direnv hook zsh)"
+# Added for Quantum Mechanical Keyboard (QMK) firmware
+export QMK_HOME="$HOME/c/qmk_firmware"
+export SHELL=/bin/zsh
+## Dotenv
+# NOTE: oh-my-zsh dotenv doesn't seem to expand these in a way that Plover is
+# able to read them from an interactive shell. So, expand them manually here.
+set -o allexport
+source "$HOME/.env"
+set +o allexport
+
+# REF: https://github.com/junegunn/fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# REF: https://plover.readthedocs.io/en/latest/cli_reference.html
+alias plover=/Applications/Plover.app/Contents/MacOS/Plover
 
 # Functions
 
@@ -191,28 +211,3 @@ function update() {
     echo "${red}Oh My Zsh updates failed.${reset}"
   fi
 }
-
-# added by travis gem
-[ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
-
-. $(brew --prefix asdf)/libexec/asdf.sh
-
-# pyqt5 install REF: https://stackoverflow.com/questions/74393139/pipenv-cant-install-pyqt5
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:/opt/homebrew/opt/qt@5/bin:$PATH"
-# Added for Crystal: https://github.com/crystal-lang/crystal/issues/6875#issuecomment-424999123
-# export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/opt/openssl/lib/pkgconfig
-# Added to hook in direnv: https://direnv.net/docs/hook.html#zsh
-eval "$(direnv hook zsh)"
-# Added for Quantum Mechanical Keyboard (QMK) firmware
-export QMK_HOME="$HOME/c/qmk_firmware"
-export SHELL=/bin/zsh
-## Dotenv
-# NOTE: oh-my-zsh dotenv doesn't seem to expand these in a way that Plover is
-# able to read them from an interactive shell. So, expand them manually here.
-set -o allexport
-source "$HOME/.env"
-set +o allexport
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-alias plover=/Applications/Plover.app/Contents/MacOS/Plover
