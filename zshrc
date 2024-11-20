@@ -5,7 +5,7 @@ export ZSH=/Users/paul/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="paulfioravanti"
+export ZSH_THEME="paulfioravanti"
 
 # Which plugins would you like to load?
 # (plugins can be found in ~/.oh-my-zsh/plugins/*)
@@ -27,9 +27,6 @@ plugins=(
   z
 )
 
-# REF: https://stackoverflow.com/questions/18371970/ruby-aliased-to-bundled-ruby
-export UNBUNDLED_COMMANDS=(rubocop)
-
 # User configuration
 
 # zsh-specific config:
@@ -49,6 +46,9 @@ path=(
 )
 
 export MANPATH="/usr/local/man:$MANPATH"
+
+# REF: https://stackoverflow.com/questions/18371970/ruby-aliased-to-bundled-ruby
+export UNBUNDLED_COMMANDS=(rubocop)
 
 # Disable Oh-My-Zsh updates: it will get done when the `update` function
 # is run
@@ -81,6 +81,14 @@ export FZF_CTRL_T_COMMAND='ag --path-to-ignore ~/.ignore --filename-pattern ""'
 # Enable call outs to scripts in steno command dictionaries.
 export STENO_DICTIONARIES="$HOME/steno/steno-dictionaries"
 
+# pyqt5 install
+# REF: https://stackoverflow.com/questions/74393139/pipenv-cant-install-pyqt5
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:/opt/homebrew/opt/qt@5/bin:$PATH"
+
+# Added for Quantum Mechanical Keyboard (QMK) firmware
+export QMK_HOME="$HOME/c/qmk_firmware"
+export SHELL=/bin/zsh
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -92,28 +100,27 @@ export STENO_DICTIONARIES="$HOME/steno/steno-dictionaries"
 # alias ls="ls -FlAagG" # more detail with default `ls`
 # NOTE: Use Eza (https://eza.rocks/) for ls
 alias ls="eza --header --long --group-directories-first --git --all"
-alias git=hub # use git to execute hub commands as well
-# delete all local branches that have been merged into master, excluding current branch, develop, and master
-alias gsweep='git branch --merged master | command grep -vE "^(\*|\s*develop\s*|\s*master\s*|\s*main\s*$)" | command xargs -n 1 git branch -d'
+# delete all local branches that have been merged into master, excluding current
+# branch, develop, and master
+alias gsweep='
+    git branch --merged master
+    | command grep -vE "^(\*|\s*develop\s*|\s*master\s*|\s*main\s*$)"
+    | command xargs -n 1 git branch -d
+'
 # For whatever reason, the mux alias built into tmuxinator doesn't seem to
 # be working, so just set it manually
 alias mux=tmuxinator
 # In order to do things like find . -name "*.ex" | map wc -l
 alias map="xargs -n1"
-
+# REF: https://plover.readthedocs.io/en/latest/cli_reference.html
+alias plover=/Applications/Plover.app/Contents/MacOS/Plover
 
 # REF: https://asdf-vm.com/guide/getting-started.html#_3-install-asdf
 . $(brew --prefix asdf)/libexec/asdf.sh
 
-# pyqt5 install
-# REF: https://stackoverflow.com/questions/74393139/pipenv-cant-install-pyqt5
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:/opt/homebrew/opt/qt@5/bin:$PATH"
 # Added to hook in direnv.
 # REF: https://direnv.net/docs/hook.html#zsh
 eval "$(direnv hook zsh)"
-# Added for Quantum Mechanical Keyboard (QMK) firmware
-export QMK_HOME="$HOME/c/qmk_firmware"
-export SHELL=/bin/zsh
 ## Dotenv
 # NOTE: oh-my-zsh dotenv doesn't seem to expand these in a way that Plover is
 # able to read them from an interactive shell. So, expand them manually here.
@@ -123,9 +130,6 @@ set +o allexport
 
 # REF: https://github.com/junegunn/fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# REF: https://plover.readthedocs.io/en/latest/cli_reference.html
-alias plover=/Applications/Plover.app/Contents/MacOS/Plover
 
 # Functions
 
