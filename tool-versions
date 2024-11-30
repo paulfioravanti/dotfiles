@@ -3,7 +3,7 @@
 elixir 1.17.3-otp-27
 elm 0.19.1
 erlang 27.1.2
-nodejs 23.2.0
+nodejs 23.3.0
 python 3.13.0
 redis 7.4.1
 ruby 3.3.6
