@@ -1,0 +1,17 @@
+# ~/.tmuxinator/vim_snippets.yml
+
+name: vim_snippets
+root: ~/vim/vim-snippets
+
+pre_window: asdf local python 3.13.1
+
+
+startup_window: editor
+
+windows:
+  - editor: vim
+  - tests: >
+      watchmedo shell-command
+      --patterns="*.py;*.snippets"
+      --recursive
+      --command="just --working-directory . --justfile justfile"
