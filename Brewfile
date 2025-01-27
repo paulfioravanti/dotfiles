@@ -90,9 +90,9 @@ brew "libidn2"
 brew "libtasn1"
 brew "nettle"
 brew "p11-kit"
-brew "unbound", restart_service: true
+brew "unbound", restart_service: :changed
 brew "gnutls"
-brew "emacs", restart_service: true
+brew "emacs", restart_service: :changed
 brew "cask"
 brew "eigen"
 brew "mpfr"
@@ -239,7 +239,7 @@ brew "plantuml"
 brew "podofo"
 brew "qt@5"
 brew "poppler-qt5"
-brew "postgresql@14", restart_service: true
+brew "postgresql@14", restart_service: :changed
 brew "pth"
 brew "pylint"
 brew "pyqt@5"
@@ -250,7 +250,7 @@ brew "rcm"
 brew "re2c"
 brew "reattach-to-user-namespace"
 brew "rebar3"
-brew "redis", restart_service: true
+brew "redis", restart_service: :changed
 brew "rename"
 brew "ripgrep"
 brew "s3cmd"
@@ -346,8 +346,8 @@ mas "Pages", id: 409201541
 mas "Swiftpoint Control Panel", id: 1502319732
 mas "Trello", id: 1278508951
 mas "Vimari", id: 1480933944
+mas "WhatsApp", id: 310633997
 mas "Xcode", id: 497799835
-mas "‎WhatsApp", id: 310633997
 vscode "ms-vsliveshare.vsliveshare"
 vscode "ms-vsliveshare.vsliveshare-audio"
 vscode "ms-vsliveshare.vsliveshare-pack"
