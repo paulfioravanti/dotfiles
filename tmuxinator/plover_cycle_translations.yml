@@ -3,9 +3,7 @@
 name: plover_cycle_translations
 root: ~/python/plover-cycle-translations
 
-# Plover currently uses Python 3.9, but macOS currently has issues with
-# python version <3.11
-pre_window: asdf local python 3.11.10
+pre_window: asdf local python 3.9.21
 
 
 startup_window: editor
