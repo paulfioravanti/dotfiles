@@ -221,7 +221,7 @@ brew "msgpack"
 brew "multitail"
 brew "mvfst"
 brew "zlib"
-brew "mysql"
+brew "mysql", restart_service: :changed
 brew "nasm"
 brew "ninja"
 brew "nmap"

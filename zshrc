@@ -89,6 +89,10 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:/opt/ho
 export QMK_HOME="$HOME/c/qmk_firmware"
 export SHELL=/bin/zsh
 
+# REF: https://asdf-vm.com/guide/getting-started.html#_3-install-asdf
+# . $(brew --prefix asdf)/libexec/asdf.sh
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -114,9 +118,6 @@ alias mux=tmuxinator
 alias map="xargs -n1"
 # REF: https://plover.readthedocs.io/en/latest/cli_reference.html
 alias plover=/Applications/Plover.app/Contents/MacOS/Plover
-
-# REF: https://asdf-vm.com/guide/getting-started.html#_3-install-asdf
-. $(brew --prefix asdf)/libexec/asdf.sh
 
 # Added to hook in direnv.
 # REF: https://direnv.net/docs/hook.html#zsh
@@ -165,10 +166,18 @@ function update() {
   fi
 
   echo "${yellow}Running ASDF updates...${reset}"
-  if asdf plugin-update --all && asdf plugin list | xargs -I lang sh -c 'asdf install lang latest && asdf global lang $(asdf latest lang)'; then
-    echo "${green}ASDF updates done.${reset}"
+  success=1
+  asdf install elixir latest:1 && asdf set --home elixir latest:1 || success=0
+  asdf install elm latest:0 && asdf set --home elm latest:0 || success=0
+  asdf install erlang latest:27 && asdf set --home erlang latest:27 || success=0
+  asdf install nodejs latest:23 && asdf set --home nodejs latest:23 || success=0
+  asdf install python latest:3 && asdf set --home python latest:3 || success=0
+  asdf install redis latest:7 && asdf set --home redis latest:7 || success=0
+  asdf install ruby latest:3 && asdf set --home ruby latest:3 || success=0
+  if ((success)); then
+    echo "${red}Some ASDF updates failed.${reset}"
   else
-    echo "${red}ASDF updates failed.${reset}"
+    echo "${green}All ASDF updates succeeded.${reset}"
   fi
 
   echo "${yellow}Running Ruby gem updates...${reset}"
@@ -195,7 +204,7 @@ function update() {
   fi
 
   echo "${yellow}Re-shimming ASDF binaries...${reset}"
-  if rm -rf ~/.asdf/shims && asdf plugin-list | xargs -L 1 asdf reshim; then
+  if rm -rf ~/.asdf/shims && asdf plugin list | xargs -L 1 asdf reshim; then
     echo "${green}Re-shimming of ASDF binaries done.${reset}"
   else
     echo "${red}Re-shimming of ASDF binaries failed.${reset}"

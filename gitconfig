@@ -47,7 +47,7 @@
 [user]
   email = paul.fioravanti@gmail.com
   name = Paul Fioravanti
-	signingkey = 085A6D9C
+  signingkey = 085A6D9C
 [filter "lfs"]
   clean = git-lfs clean -- %f
   smudge = git-lfs smudge -- %f
