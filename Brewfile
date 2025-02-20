@@ -221,7 +221,7 @@ brew "msgpack"
 brew "multitail"
 brew "mvfst"
 brew "zlib"
-brew "mysql", restart_service: :changed
+brew "mysql"
 brew "nasm"
 brew "ninja"
 brew "nmap"
@@ -348,3 +348,6 @@ mas "Trello", id: 1278508951
 mas "Vimari", id: 1480933944
 mas "WhatsApp", id: 310633997
 mas "Xcode", id: 497799835
+vscode "ms-vsliveshare.vsliveshare"
+vscode "ms-vsliveshare.vsliveshare-audio"
+vscode "ms-vsliveshare.vsliveshare-pack"
