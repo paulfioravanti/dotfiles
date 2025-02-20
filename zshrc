@@ -166,15 +166,15 @@ function update() {
   fi
 
   echo "${yellow}Running ASDF updates...${reset}"
-  success=1
-  asdf install elixir latest:1 && asdf set --home elixir latest:1 || success=0
-  asdf install elm latest:0 && asdf set --home elm latest:0 || success=0
-  asdf install erlang latest:27 && asdf set --home erlang latest:27 || success=0
-  asdf install nodejs latest:23 && asdf set --home nodejs latest:23 || success=0
-  asdf install python latest:3 && asdf set --home python latest:3 || success=0
-  asdf install redis latest:7 && asdf set --home redis latest:7 || success=0
-  asdf install ruby latest:3 && asdf set --home ruby latest:3 || success=0
-  if ((success)); then
+  failed=1
+  asdf install elixir latest:1 && asdf set --home elixir latest:1 || failed=0
+  asdf install elm latest:0 && asdf set --home elm latest:0 || failed=0
+  asdf install erlang latest:27 && asdf set --home erlang latest:27 || failed=0
+  asdf install nodejs latest:23 && asdf set --home nodejs latest:23 || failed=0
+  asdf install python latest:3 && asdf set --home python latest:3 || failed=0
+  asdf install redis latest:7 && asdf set --home redis latest:7 || failed=0
+  asdf install ruby latest:3 && asdf set --home ruby latest:3 || failed=0
+  if ((failed)); then
     echo "${red}Some ASDF updates failed.${reset}"
   else
     echo "${green}All ASDF updates succeeded.${reset}"
